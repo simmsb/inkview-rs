@@ -78,7 +78,7 @@ impl slint::platform::Platform for Backend {
                 self.height as u32,
             ));
 
-        let mut fulfill_dynamic_updates_after: Option<Duration> = None;
+        let mut fulfill_dynamic_updates_after: Option<Instant> = None;
         let mut dynamic_region_to_redraw: Option<euclid::Rect<i32, euclid::UnknownUnit>> = None;
         let mut last_draw_at = Instant::now();
 
@@ -89,8 +89,14 @@ impl slint::platform::Platform for Backend {
                 let delay = if window.has_active_animations() {
                     None
                 } else {
-                    slint::platform::duration_until_next_timer_update()
-                        .or(fulfill_dynamic_updates_after)
+                    match (
+                        slint::platform::duration_until_next_timer_update(),
+                        fulfill_dynamic_updates_after.map(|i| i.duration_since(Instant::now())),
+                    ) {
+                        (Some(a), Some(b)) => Some(a.min(b)),
+                        (Some(a), None) => Some(a),
+                        (_, b) => b,
+                    }
                 };
 
                 let evt = if let Some(delay) = delay {
@@ -98,8 +104,10 @@ impl slint::platform::Platform for Backend {
                         .recv_timeout(delay)
                         .ok()
                         .and_then(ink_evt_to_slint)
-                } else {
+                } else if window.has_active_animations() {
                     self.evts.try_recv().ok().and_then(ink_evt_to_slint)
+                } else {
+                    self.evts.recv().ok().and_then(ink_evt_to_slint)
                 };
 
                 if let Some(redraw_region) = dynamic_region_to_redraw.clone() {
@@ -158,6 +166,9 @@ impl slint::platform::Platform for Backend {
                         } else {
                             dynamic_region_to_redraw = Some(rect_from_phys(damage));
                         }
+
+                        fulfill_dynamic_updates_after =
+                            Some(Instant::now() + Duration::from_millis(200));
                     } else {
                         screen.partial_update(
                             damage.bounding_box_origin().x,
