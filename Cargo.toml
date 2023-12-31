@@ -1,0 +1,7 @@
+[workspace]
+resolver = "2"
+members = ["inkview", "inkview-slint", "inkview-slint-demo"]
+
+[profile.release]
+strip = true
+# lto = 'fat'

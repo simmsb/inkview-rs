@@ -1,0 +1,204 @@
+use inkview::{screen::Screen, Event};
+use rgb::RGB;
+use slint::platform::{
+    software_renderer::{self as renderer, PhysicalRegion},
+    WindowEvent,
+};
+use std::{
+    cell::RefCell,
+    rc::Rc,
+    sync::mpsc::Receiver,
+    time::{Duration, Instant},
+};
+
+#[repr(transparent)]
+#[derive(Clone, Copy)]
+struct GrayScalePixel(u8);
+
+impl GrayScalePixel {
+    fn from_rgb(red: u8, green: u8, blue: u8) -> Self {
+        Self(((red as u16 + green as u16 + blue as u16) / 3) as u8)
+    }
+}
+
+pub struct Backend {
+    screen: RefCell<Screen<'static>>,
+    evts: Receiver<Event>,
+    width: usize,
+    height: usize,
+    window: RefCell<Option<Rc<renderer::MinimalSoftwareWindow>>>,
+    buffer: RefCell<Vec<RGB<u8>>>,
+}
+
+impl Backend {
+    pub fn new(screen: Screen<'static>, evts: Receiver<Event>) -> Self {
+        let width = screen.width();
+        let height = screen.height();
+
+        let buffer = vec![Default::default(); width * height];
+
+        Self {
+            screen: screen.into(),
+            evts,
+            width,
+            height,
+            window: Default::default(),
+            buffer: buffer.into(),
+        }
+    }
+}
+
+fn rect_from_phys(r: PhysicalRegion) -> euclid::Rect<i32, euclid::UnknownUnit> {
+    euclid::Rect::new(
+        euclid::Point2D::new(r.bounding_box_origin().x, r.bounding_box_origin().y),
+        euclid::Size2D::new(
+            r.bounding_box_size().width as i32,
+            r.bounding_box_size().height as i32,
+        ),
+    )
+}
+
+impl slint::platform::Platform for Backend {
+    fn create_window_adapter(
+        &self,
+    ) -> Result<Rc<dyn slint::platform::WindowAdapter>, slint::PlatformError> {
+        let window =
+            renderer::MinimalSoftwareWindow::new(renderer::RepaintBufferType::ReusedBuffer);
+        self.window.replace(Some(window.clone()));
+        Ok(window)
+    }
+
+    fn run_event_loop(&self) -> Result<(), slint::PlatformError> {
+        self.window
+            .borrow()
+            .as_ref()
+            .unwrap()
+            .set_size(slint::PhysicalSize::new(
+                self.width as u32,
+                self.height as u32,
+            ));
+
+        let mut fulfill_dynamic_updates_after: Option<Duration> = None;
+        let mut dynamic_region_to_redraw: Option<euclid::Rect<i32, euclid::UnknownUnit>> = None;
+        let mut last_draw_at = Instant::now();
+
+        loop {
+            slint::platform::update_timers_and_animations();
+
+            if let Some(window) = self.window.borrow().clone() {
+                let delay = if window.has_active_animations() {
+                    None
+                } else {
+                    slint::platform::duration_until_next_timer_update()
+                        .or(fulfill_dynamic_updates_after)
+                };
+
+                let evt = if let Some(delay) = delay {
+                    self.evts
+                        .recv_timeout(delay)
+                        .ok()
+                        .and_then(ink_evt_to_slint)
+                } else {
+                    self.evts.try_recv().ok().and_then(ink_evt_to_slint)
+                };
+
+                if let Some(redraw_region) = dynamic_region_to_redraw.clone() {
+                    if last_draw_at.elapsed() > Duration::from_millis(200) {
+                        dynamic_region_to_redraw = None;
+                        fulfill_dynamic_updates_after = None;
+
+                        let mut screen = self.screen.borrow_mut();
+                        screen.partial_update(
+                            redraw_region.origin.x,
+                            redraw_region.origin.y,
+                            redraw_region.width() as u32,
+                            redraw_region.height() as u32,
+                        );
+                        last_draw_at = Instant::now();
+                    }
+                }
+
+                slint::platform::update_timers_and_animations();
+
+                if let Some(evt) = evt {
+                    window.dispatch_event(evt);
+                }
+
+                window.draw_if_needed(|renderer| {
+                    let mut buffer = self.buffer.borrow_mut();
+                    let damage = renderer.render(buffer.as_mut_slice(), self.width);
+                    let mut screen = self.screen.borrow_mut();
+
+                    for dy in 0..damage.bounding_box_size().height {
+                        for dx in 0..damage.bounding_box_size().width {
+                            let x = damage.bounding_box_origin().x + dx as i32;
+                            let y = damage.bounding_box_origin().y + dy as i32;
+                            let c = buffer[y as usize * self.width + x as usize];
+
+                            let c = GrayScalePixel::from_rgb(c.r, c.g, c.b);
+
+                            screen.draw(x as usize, y as usize, c.0);
+                        }
+                    }
+
+                    // println!("Drawing to: {:?}", damage);
+
+                    if screen.is_updating() {
+                        if last_draw_at.elapsed() < Duration::from_millis(30) {
+                            screen.dynamic_update(
+                                damage.bounding_box_origin().x,
+                                damage.bounding_box_origin().y,
+                                damage.bounding_box_size().width,
+                                damage.bounding_box_size().height,
+                            );
+                        }
+
+                        if let Some(r) = dynamic_region_to_redraw.as_mut() {
+                            *r = r.union(&rect_from_phys(damage));
+                        } else {
+                            dynamic_region_to_redraw = Some(rect_from_phys(damage));
+                        }
+                    } else {
+                        screen.partial_update(
+                            damage.bounding_box_origin().x,
+                            damage.bounding_box_origin().y,
+                            damage.bounding_box_size().width,
+                            damage.bounding_box_size().height,
+                        );
+                    }
+                    last_draw_at = Instant::now();
+                });
+            }
+        }
+    }
+}
+
+fn ink_evt_to_slint(evt: Event) -> Option<WindowEvent> {
+    let evt = match evt {
+        Event::PointerDown { x, y } => WindowEvent::PointerPressed {
+            position: slint::LogicalPosition {
+                x: x as f32,
+                y: y as f32,
+            },
+            button: slint::platform::PointerEventButton::Left,
+        },
+        Event::PointerMove { x, y } => WindowEvent::PointerMoved {
+            position: slint::LogicalPosition {
+                x: x as f32,
+                y: y as f32,
+            },
+        },
+        Event::PointerUp { x, y } => WindowEvent::PointerReleased {
+            position: slint::LogicalPosition {
+                x: x as f32,
+                y: y as f32,
+            },
+            button: slint::platform::PointerEventButton::Left,
+        },
+        Event::Foreground { .. } => WindowEvent::WindowActiveChanged(true),
+        Event::Background { .. } => WindowEvent::WindowActiveChanged(false),
+        _ => return None,
+    };
+
+    return Some(evt);
+}

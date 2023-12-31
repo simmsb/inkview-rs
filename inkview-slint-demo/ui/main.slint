@@ -1,0 +1,96 @@
+import { AboutSlint, Button, VerticalBox } from "std-widgets.slint";
+
+global Palette  {
+    out property <color> window-background: #FFFFFF;
+    out property <color> widget-background: #4F378B;
+    out property <color> label-color: #E6E1E5;
+    out property <color> value-color: #E6E1E5;
+}
+
+global Theme {
+    out property <length> label-size: 16px;
+    out property <int> label-weight: 500;
+    
+    out property <length> value-size: 26px;
+    out property <int> value-weight: 500;
+}
+
+export component MySlider inherits Rectangle {
+    in-out property<float> maximum: 100;
+    in-out property<float> minimum: 0;
+    in-out property<float> value;
+
+    min-height: 24px;
+    min-width: 100px;
+    horizontal-stretch: 1;
+    vertical-stretch: 0;
+
+    border-radius: root.height/2;
+    background: #ddd;
+    border-width: 1px;
+    border-color: root.background.darker(25%);
+
+    handle := Rectangle {
+        width: self.height;
+        height: parent.height;
+        border-width: 3px;
+        border-radius: self.height / 2;
+        background: touch.pressed ? #f8f: touch.has-hover ? #66f : #0000ff;
+        border-color: self.background.darker(15%);
+        x: (root.width - handle.width) * (root.value - root.minimum)/(root.maximum - root.minimum);
+    }
+    touch := TouchArea {
+        property <float> pressed-value;
+        pointer-event(event) => {
+            if (event.button == PointerEventButton.left && event.kind == PointerEventKind.down) {
+                self.pressed-value = root.value;
+            }
+        }
+        moved => {
+            if (self.enabled && self.pressed) {
+                root.value = max(root.minimum, min(root.maximum,
+                    self.pressed-value + (touch.mouse-x - touch.pressed-x) * (root.maximum - root.minimum) / (root.width - handle.width)));
+
+            }
+        }
+    }
+}
+
+export component MainWindow inherits Window {
+    width: 1264px;
+    height: 1680px;
+
+    VerticalBox {
+        alignment: start;
+
+        Text {
+            text: "Hello World!";
+            font-size: 48px;
+            horizontal-alignment: center;
+        }
+        HorizontalLayout { 
+            alignment: center; 
+            
+            Button { 
+                text: "OK!"; 
+                width: 100px;
+                preferred-height: 70px; 
+            }
+        }
+
+        HorizontalLayout { 
+            alignment: center; 
+            
+        slider := MySlider {
+            maximum: 100;
+            height: 100px;
+            width: 400px;
+        }
+        }
+        Text {
+            horizontal-alignment: center;
+            text: "Value: \{round(slider.value)}";
+            font-size: 64px;
+        }
+    }
+}
