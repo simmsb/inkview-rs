@@ -11,6 +11,8 @@ use std::{
     time::{Duration, Instant},
 };
 
+const SCALE_FACTOR: f32 = 3.0;
+
 #[repr(transparent)]
 #[derive(Clone, Copy)]
 struct GrayScalePixel(u8);
@@ -69,17 +71,31 @@ impl slint::platform::Platform for Backend {
     }
 
     fn run_event_loop(&self) -> Result<(), slint::PlatformError> {
-        self.window
-            .borrow()
-            .as_ref()
-            .unwrap()
-            .set_size(slint::PhysicalSize::new(
-                self.width as u32,
-                self.height as u32,
-            ));
+        // self.window
+        //     .borrow()
+        //     .as_ref()
+        //     .unwrap()
+        //     .set_size(slint::PhysicalSize::new(
+        //         self.width as u32,
+        //         self.height as u32,
+        //     ));
 
+        slint::Window::set_size(
+            self.window.borrow().as_ref().unwrap().as_ref(),
+            slint::PhysicalSize::new(self.width as u32, self.height as u32).to_logical(SCALE_FACTOR),
+        );
+
+        self.window.borrow().as_ref().unwrap().dispatch_event(WindowEvent::ScaleFactorChanged { scale_factor: SCALE_FACTOR });
+
+        // slint::Window::set_size(
+        //     self.window.borrow().as_ref().unwrap().as_ref(),
+        //     slint::PhysicalSize::new(self.width as u32, self.height as u32).to_logical(SCALE_FACTOR),
+        // );
+
+        // bad naming, oops
         let mut fulfill_dynamic_updates_after: Option<Instant> = None;
         let mut dynamic_region_to_redraw: Option<euclid::Rect<i32, euclid::UnknownUnit>> = None;
+        let mut accumulated_updates: Option<euclid::Rect<i32, euclid::UnknownUnit>> = None;
         let mut last_draw_at = Instant::now();
 
         loop {
@@ -152,13 +168,21 @@ impl slint::platform::Platform for Backend {
                     // println!("Drawing to: {:?}", damage);
 
                     if screen.is_updating() {
-                        if last_draw_at.elapsed() < Duration::from_millis(30) {
+                        if let Some(r) = accumulated_updates.as_mut() {
+                            *r = r.union(&rect_from_phys(damage.clone()));
+                        } else {
+                            accumulated_updates = Some(rect_from_phys(damage.clone()));
+                        }
+
+                        if last_draw_at.elapsed() > Duration::from_millis(20) {
+                            let redraw_region = accumulated_updates.take().unwrap();
                             screen.dynamic_update(
-                                damage.bounding_box_origin().x,
-                                damage.bounding_box_origin().y,
-                                damage.bounding_box_size().width,
-                                damage.bounding_box_size().height,
+                                redraw_region.origin.x,
+                                redraw_region.origin.y,
+                                redraw_region.width() as u32,
+                                redraw_region.height() as u32,
                             );
+                            last_draw_at = Instant::now();
                         }
 
                         if let Some(r) = dynamic_region_to_redraw.as_mut() {
@@ -176,8 +200,8 @@ impl slint::platform::Platform for Backend {
                             damage.bounding_box_size().width,
                             damage.bounding_box_size().height,
                         );
+                        last_draw_at = Instant::now();
                     }
-                    last_draw_at = Instant::now();
                 });
             }
         }
@@ -185,25 +209,26 @@ impl slint::platform::Platform for Backend {
 }
 
 fn ink_evt_to_slint(evt: Event) -> Option<WindowEvent> {
+    println!("evt: {:?}", evt);
     let evt = match evt {
         Event::PointerDown { x, y } => WindowEvent::PointerPressed {
-            position: slint::LogicalPosition {
-                x: x as f32,
-                y: y as f32,
-            },
+            position: slint::PhysicalPosition {
+                x,
+                y,
+            }.to_logical(SCALE_FACTOR),
             button: slint::platform::PointerEventButton::Left,
         },
         Event::PointerMove { x, y } => WindowEvent::PointerMoved {
-            position: slint::LogicalPosition {
-                x: x as f32,
-                y: y as f32,
-            },
+            position: slint::PhysicalPosition {
+                x,
+                y,
+            }.to_logical(SCALE_FACTOR),
         },
         Event::PointerUp { x, y } => WindowEvent::PointerReleased {
-            position: slint::LogicalPosition {
-                x: x as f32,
-                y: y as f32,
-            },
+            position: slint::PhysicalPosition {
+                x,
+                y,
+            }.to_logical(SCALE_FACTOR),
             button: slint::platform::PointerEventButton::Left,
         },
         Event::Foreground { .. } => WindowEvent::WindowActiveChanged(true),

@@ -5816,6 +5816,17 @@ pub struct inkview {
     pub FullUpdateHQ: Result<unsafe extern "C" fn(), ::libloading::Error>,
     pub SoftUpdate: Result<unsafe extern "C" fn(), ::libloading::Error>,
     pub SoftUpdateHQ: Result<unsafe extern "C" fn(), ::libloading::Error>,
+    pub do_partial_update: Result<
+        unsafe extern "C" fn(
+            x: ::std::os::raw::c_int,
+            y: ::std::os::raw::c_int,
+            w: ::std::os::raw::c_int,
+            h: ::std::os::raw::c_int,
+            flag: ::std::os::raw::c_uint,
+            dynamic: ::std::os::raw::c_int,
+        ),
+        ::libloading::Error,
+    >,
     pub PartialUpdate: Result<
         unsafe extern "C" fn(
             x: ::std::os::raw::c_int,
@@ -7274,6 +7285,7 @@ impl inkview {
         let FullUpdateHQ = __library.get(b"FullUpdateHQ\0").map(|sym| *sym);
         let SoftUpdate = __library.get(b"SoftUpdate\0").map(|sym| *sym);
         let SoftUpdateHQ = __library.get(b"SoftUpdateHQ\0").map(|sym| *sym);
+        let do_partial_update = __library.get(b"do_partial_update\0").map(|sym| *sym);
         let PartialUpdate = __library.get(b"PartialUpdate\0").map(|sym| *sym);
         let PartialUpdateBlack = __library.get(b"PartialUpdateBlack\0").map(|sym| *sym);
         let PartialUpdateBW = __library.get(b"PartialUpdateBW\0").map(|sym| *sym);
@@ -7697,6 +7709,7 @@ impl inkview {
             FullUpdateHQ,
             SoftUpdate,
             SoftUpdateHQ,
+            do_partial_update,
             PartialUpdate,
             PartialUpdateBlack,
             PartialUpdateBW,
@@ -8717,6 +8730,20 @@ impl inkview {
             .SoftUpdateHQ
             .as_ref()
             .expect("Expected function, got error."))()
+    }
+    pub unsafe fn do_partial_update(
+        &self,
+        x: ::std::os::raw::c_int,
+        y: ::std::os::raw::c_int,
+        w: ::std::os::raw::c_int,
+        h: ::std::os::raw::c_int,
+        flag: ::std::os::raw::c_uint,
+        dynamic: ::std::os::raw::c_int,
+    ) {
+        (self
+            .do_partial_update
+            .as_ref()
+            .expect("Expected function, got error."))(x, y, w, h, flag, dynamic)
     }
     pub unsafe fn PartialUpdate(
         &self,

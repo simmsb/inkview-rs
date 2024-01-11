@@ -1,96 +1,111 @@
-import { AboutSlint, Button, VerticalBox } from "std-widgets.slint";
+import { LineEdit, Button, Slider, StandardListView, VerticalBox } from "std-widgets.slint";
 
-global Palette  {
-    out property <color> window-background: #FFFFFF;
-    out property <color> widget-background: #4F378B;
-    out property <color> label-color: #E6E1E5;
-    out property <color> value-color: #E6E1E5;
-}
-
-global Theme {
-    out property <length> label-size: 16px;
-    out property <int> label-weight: 500;
-    
-    out property <length> value-size: 26px;
-    out property <int> value-weight: 500;
-}
-
-export component MySlider inherits Rectangle {
-    in-out property<float> maximum: 100;
-    in-out property<float> minimum: 0;
-    in-out property<float> value;
-
-    min-height: 24px;
-    min-width: 100px;
-    horizontal-stretch: 1;
-    vertical-stretch: 0;
-
-    border-radius: root.height/2;
-    background: #ddd;
-    border-width: 1px;
-    border-color: root.background.darker(25%);
-
-    handle := Rectangle {
-        width: self.height;
-        height: parent.height;
-        border-width: 3px;
-        border-radius: self.height / 2;
-        background: touch.pressed ? #f8f: touch.has-hover ? #66f : #0000ff;
-        border-color: self.background.darker(15%);
-        x: (root.width - handle.width) * (root.value - root.minimum)/(root.maximum - root.minimum);
-    }
-    touch := TouchArea {
-        property <float> pressed-value;
-        pointer-event(event) => {
-            if (event.button == PointerEventButton.left && event.kind == PointerEventKind.down) {
-                self.pressed-value = root.value;
-            }
-        }
-        moved => {
-            if (self.enabled && self.pressed) {
-                root.value = max(root.minimum, min(root.maximum,
-                    self.pressed-value + (touch.mouse-x - touch.pressed-x) * (root.maximum - root.minimum) / (root.width - handle.width)));
-
-            }
-        }
-    }
-}
+struct Circle  { x: length, y: length, d: length }
 
 export component MainWindow inherits Window {
-    width: 1264px;
-    height: 1680px;
+    in property <[Circle]> model;
+    in property <bool> undoable: false;
+    in property <bool> redoable: false;
+
+    callback undo_clicked();
+    callback redo_clicked();
+    callback background_clicked(length,length);
+    callback circle_resized(int, length);
+
+    private property <int> clicked-idx: -1;
+    private property <Circle> selected-circle;
+
+    preferred-width: 500px;
+    preferred-height: 400px;
 
     VerticalBox {
-        alignment: start;
+        HorizontalLayout {
+            alignment: center;
+            spacing: 12px;
 
-        Text {
-            text: "Hello World!";
-            font-size: 48px;
-            horizontal-alignment: center;
-        }
-        HorizontalLayout { 
-            alignment: center; 
-            
-            Button { 
-                text: "OK!"; 
-                width: 100px;
-                preferred-height: 70px; 
+            Button {
+                text: "Undo";
+                enabled <=> root.undoable;
+                clicked => { root.undo-clicked() }
+            }
+            Button {
+                text: "Redo";
+                enabled <=> root.redoable;
+                clicked => { root.redo-clicked() }
             }
         }
+        Rectangle {
+            background: white;
+            border-color: black;
+            border-width: 2px;
+            clip: true;
 
-        HorizontalLayout { 
-            alignment: center; 
-            
-        slider := MySlider {
-            maximum: 100;
-            height: 100px;
-            width: 400px;
+            TouchArea {
+                clicked => {
+                    root.background_clicked(self.pressed_x, self.pressed_y);
+                }
+
+                width: 100%;
+                height: 100%;
+            }
+
+            for circle[idx] in root.model : Rectangle {
+                background: root.clicked-idx == idx ? gray : white;
+                border-color: black;
+                border-width: 2px;
+                border-radius: self.width / 2;
+                height: self.width;
+                width: circle.d;
+                x: circle.x - self.width/2;
+                y: circle.y - self.height/2;
+
+                TouchArea {
+                    clicked => {
+                        root.selected-circle = circle;
+                        root.clicked-idx = idx;
+                    }
+
+                    height: 100%;
+                    width: 100%;
+                }
+            }
         }
+    }
+
+    if (root.clicked-idx != -1) : TouchArea {
+        clicked => { root.clicked-idx = -1; }
+
+        height: 100%;
+        width: 100%;
+    }
+
+    if (root.clicked-idx != -1) : Rectangle {
+        background: lightgray;
+        height: 30%;
+        width: 70%;
+        x: (parent.width - self.width) / 2;
+        y: parent.height - self.height - parent.height * 5%;
+
+        TouchArea {
+            height: 100%;
+            width: 100%;
         }
-        Text {
-            horizontal-alignment: center;
-            text: "Value: \{round(slider.value)}";
-            font-size: 64px;
+
+        VerticalBox {
+            Text {
+                text: "Adjust diameter of circle at (" + root.selected-circle.x / 1px + ", " +  root.selected-circle.y / 1px + ").";
+                wrap: word-wrap;
+            }
+
+            Slider {
+                changed(diameter) => {
+                    root.circle_resized(root.clicked-idx, diameter *1px);
+                }
+
+                minimum: 4;
+                maximum: 100;
+                value: root.selected-circle.d / 1px;
+            }
         }
     }
 }

@@ -43,15 +43,43 @@ impl<'a> Screen<'a> {
 
     /// High res partial update
     pub fn partial_update(&mut self, x: i32, y: i32, w: u32, h: u32) {
+        let y = (y)
         unsafe {
-            self.iv.PartialUpdate(x, y, w as i32, h as i32);
+            // PartialUpdate:      0,    0 -- normal high quality non-flashing update
+            // PartialUpdateBlack: 0xee, 0 -- seems to do a full flash
+            // PartialUpdateBW:    1,    0 -- not really any noticeable difference from 0,0
+            // PartialUpdateHQ:    0xe9, 0 -- also high quality? maybe forces it?
+            // PartialUpdateDU4:   0xe5, 0 -- dithered, seems to corrupt often
+            // DynamicUpdate:      0,    0
+            // DynamicUpdateBW:    1,    2
+            // DynamicUpdateA2:    0xe6, 0  and 0xef, 1
+            // ExitUpdateA2:       0xe7, 0  -- cancels an update?
+            //
+            //
+            // tested for flag values:
+            //   0xe7 -- cancels
+            //   0x8000 -- dithered, flashes aswell
+            //   0xeb -- normal?
+            //   0xef -- dithered, no flash
+            //   0xe6 -- dithered, does a quick flash?
+            //   0xed -- normal?
+            //   0xe5 -- dithered, corrupt
+            //   0xe6 -> 0xf0
+            //   0xe8 -- normal?
+            //   0xea -- normal?
+            //   0xec -- normal?
+            //
+            //
+            self.iv.do_partial_update(x, y, w as i32, h as i32, 0, 2);
+            // self.iv.PartialUpdate(x, y, w as i32, h as i32);
         }
     }
 
     /// Fast but ugly
     pub fn dynamic_update(&mut self, x: i32, y: i32, w: u32, h: u32) {
         unsafe {
-            self.iv.DynamicUpdateBW(x, y, w as i32, h as i32);
+            self.iv.do_partial_update(x, y, w as i32, h as i32, 1, 2);
+            // self.iv.DynamicUpdateBW(x, y, w as i32, h as i32);
         }
     }
 
