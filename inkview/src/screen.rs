@@ -41,6 +41,12 @@ impl<'a> Screen<'a> {
         }
     }
 
+    pub fn full_update(&mut self) {
+        unsafe {
+            self.iv.FullUpdate();
+        }
+    }
+
     /// High res partial update
     pub fn partial_update(&mut self, x: i32, y: i32, w: u32, h: u32) {
         unsafe {
