@@ -43,7 +43,6 @@ impl<'a> Screen<'a> {
 
     /// High res partial update
     pub fn partial_update(&mut self, x: i32, y: i32, w: u32, h: u32) {
-        let y = (y)
         unsafe {
             // PartialUpdate:      0,    0 -- normal high quality non-flashing update
             // PartialUpdateBlack: 0xee, 0 -- seems to do a full flash
