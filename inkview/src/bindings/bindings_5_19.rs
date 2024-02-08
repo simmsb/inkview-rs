@@ -892,925 +892,125 @@ pub const PTHREAD_BARRIER_SERIAL_THREAD: i32 = -1;
 pub const __bool_true_false_are_defined: u32 = 1;
 pub const true_: u32 = 1;
 pub const false_: u32 = 0;
-pub const _STDINT_H: u32 = 1;
-pub const _BITS_WCHAR_H: u32 = 1;
-pub const INT8_MIN: i32 = -128;
-pub const INT16_MIN: i32 = -32768;
-pub const INT32_MIN: i32 = -2147483648;
-pub const INT8_MAX: u32 = 127;
-pub const INT16_MAX: u32 = 32767;
-pub const INT32_MAX: u32 = 2147483647;
-pub const UINT8_MAX: u32 = 255;
-pub const UINT16_MAX: u32 = 65535;
-pub const UINT32_MAX: u32 = 4294967295;
-pub const INT_LEAST8_MIN: i32 = -128;
-pub const INT_LEAST16_MIN: i32 = -32768;
-pub const INT_LEAST32_MIN: i32 = -2147483648;
-pub const INT_LEAST8_MAX: u32 = 127;
-pub const INT_LEAST16_MAX: u32 = 32767;
-pub const INT_LEAST32_MAX: u32 = 2147483647;
-pub const UINT_LEAST8_MAX: u32 = 255;
-pub const UINT_LEAST16_MAX: u32 = 65535;
-pub const UINT_LEAST32_MAX: u32 = 4294967295;
-pub const INT_FAST8_MIN: i32 = -128;
-pub const INT_FAST16_MIN: i32 = -2147483648;
-pub const INT_FAST32_MIN: i32 = -2147483648;
-pub const INT_FAST8_MAX: u32 = 127;
-pub const INT_FAST16_MAX: u32 = 2147483647;
-pub const INT_FAST32_MAX: u32 = 2147483647;
-pub const UINT_FAST8_MAX: u32 = 255;
-pub const UINT_FAST16_MAX: u32 = 4294967295;
-pub const UINT_FAST32_MAX: u32 = 4294967295;
-pub const INTPTR_MIN: i32 = -2147483648;
-pub const INTPTR_MAX: u32 = 2147483647;
-pub const UINTPTR_MAX: u32 = 4294967295;
-pub const PTRDIFF_MIN: i32 = -2147483648;
-pub const PTRDIFF_MAX: u32 = 2147483647;
-pub const SIG_ATOMIC_MIN: i32 = -2147483648;
-pub const SIG_ATOMIC_MAX: u32 = 2147483647;
-pub const SIZE_MAX: u32 = 4294967295;
-pub const WINT_MIN: u32 = 0;
-pub const WINT_MAX: u32 = 4294967295;
-pub const _SYS_IOCTL_H: u32 = 1;
-pub const FIOQSIZE: u32 = 21598;
-pub const _IOC_NRBITS: u32 = 8;
-pub const _IOC_TYPEBITS: u32 = 8;
-pub const _IOC_SIZEBITS: u32 = 14;
-pub const _IOC_DIRBITS: u32 = 2;
-pub const _IOC_NRMASK: u32 = 255;
-pub const _IOC_TYPEMASK: u32 = 255;
-pub const _IOC_SIZEMASK: u32 = 16383;
-pub const _IOC_DIRMASK: u32 = 3;
-pub const _IOC_NRSHIFT: u32 = 0;
-pub const _IOC_TYPESHIFT: u32 = 8;
-pub const _IOC_SIZESHIFT: u32 = 16;
-pub const _IOC_DIRSHIFT: u32 = 30;
-pub const _IOC_NONE: u32 = 0;
-pub const _IOC_WRITE: u32 = 1;
-pub const _IOC_READ: u32 = 2;
-pub const IOC_IN: u32 = 1073741824;
-pub const IOC_OUT: u32 = 2147483648;
-pub const IOC_INOUT: u32 = 3221225472;
-pub const IOCSIZE_MASK: u32 = 1073676288;
-pub const IOCSIZE_SHIFT: u32 = 16;
-pub const TCGETS: u32 = 21505;
-pub const TCSETS: u32 = 21506;
-pub const TCSETSW: u32 = 21507;
-pub const TCSETSF: u32 = 21508;
-pub const TCGETA: u32 = 21509;
-pub const TCSETA: u32 = 21510;
-pub const TCSETAW: u32 = 21511;
-pub const TCSETAF: u32 = 21512;
-pub const TCSBRK: u32 = 21513;
-pub const TCXONC: u32 = 21514;
-pub const TCFLSH: u32 = 21515;
-pub const TIOCEXCL: u32 = 21516;
-pub const TIOCNXCL: u32 = 21517;
-pub const TIOCSCTTY: u32 = 21518;
-pub const TIOCGPGRP: u32 = 21519;
-pub const TIOCSPGRP: u32 = 21520;
-pub const TIOCOUTQ: u32 = 21521;
-pub const TIOCSTI: u32 = 21522;
-pub const TIOCGWINSZ: u32 = 21523;
-pub const TIOCSWINSZ: u32 = 21524;
-pub const TIOCMGET: u32 = 21525;
-pub const TIOCMBIS: u32 = 21526;
-pub const TIOCMBIC: u32 = 21527;
-pub const TIOCMSET: u32 = 21528;
-pub const TIOCGSOFTCAR: u32 = 21529;
-pub const TIOCSSOFTCAR: u32 = 21530;
-pub const FIONREAD: u32 = 21531;
-pub const TIOCINQ: u32 = 21531;
-pub const TIOCLINUX: u32 = 21532;
-pub const TIOCCONS: u32 = 21533;
-pub const TIOCGSERIAL: u32 = 21534;
-pub const TIOCSSERIAL: u32 = 21535;
-pub const TIOCPKT: u32 = 21536;
-pub const FIONBIO: u32 = 21537;
-pub const TIOCNOTTY: u32 = 21538;
-pub const TIOCSETD: u32 = 21539;
-pub const TIOCGETD: u32 = 21540;
-pub const TCSBRKP: u32 = 21541;
-pub const TIOCSBRK: u32 = 21543;
-pub const TIOCCBRK: u32 = 21544;
-pub const TIOCGSID: u32 = 21545;
-pub const TIOCGRS485: u32 = 21550;
-pub const TIOCSRS485: u32 = 21551;
-pub const TCGETX: u32 = 21554;
-pub const TCSETX: u32 = 21555;
-pub const TCSETXF: u32 = 21556;
-pub const TCSETXW: u32 = 21557;
-pub const TIOCVHANGUP: u32 = 21559;
-pub const FIONCLEX: u32 = 21584;
-pub const FIOCLEX: u32 = 21585;
-pub const FIOASYNC: u32 = 21586;
-pub const TIOCSERCONFIG: u32 = 21587;
-pub const TIOCSERGWILD: u32 = 21588;
-pub const TIOCSERSWILD: u32 = 21589;
-pub const TIOCGLCKTRMIOS: u32 = 21590;
-pub const TIOCSLCKTRMIOS: u32 = 21591;
-pub const TIOCSERGSTRUCT: u32 = 21592;
-pub const TIOCSERGETLSR: u32 = 21593;
-pub const TIOCSERGETMULTI: u32 = 21594;
-pub const TIOCSERSETMULTI: u32 = 21595;
-pub const TIOCMIWAIT: u32 = 21596;
-pub const TIOCGICOUNT: u32 = 21597;
-pub const TIOCPKT_DATA: u32 = 0;
-pub const TIOCPKT_FLUSHREAD: u32 = 1;
-pub const TIOCPKT_FLUSHWRITE: u32 = 2;
-pub const TIOCPKT_STOP: u32 = 4;
-pub const TIOCPKT_START: u32 = 8;
-pub const TIOCPKT_NOSTOP: u32 = 16;
-pub const TIOCPKT_DOSTOP: u32 = 32;
-pub const TIOCPKT_IOCTL: u32 = 64;
-pub const TIOCSER_TEMT: u32 = 1;
-pub const SIOCADDRT: u32 = 35083;
-pub const SIOCDELRT: u32 = 35084;
-pub const SIOCRTMSG: u32 = 35085;
-pub const SIOCGIFNAME: u32 = 35088;
-pub const SIOCSIFLINK: u32 = 35089;
-pub const SIOCGIFCONF: u32 = 35090;
-pub const SIOCGIFFLAGS: u32 = 35091;
-pub const SIOCSIFFLAGS: u32 = 35092;
-pub const SIOCGIFADDR: u32 = 35093;
-pub const SIOCSIFADDR: u32 = 35094;
-pub const SIOCGIFDSTADDR: u32 = 35095;
-pub const SIOCSIFDSTADDR: u32 = 35096;
-pub const SIOCGIFBRDADDR: u32 = 35097;
-pub const SIOCSIFBRDADDR: u32 = 35098;
-pub const SIOCGIFNETMASK: u32 = 35099;
-pub const SIOCSIFNETMASK: u32 = 35100;
-pub const SIOCGIFMETRIC: u32 = 35101;
-pub const SIOCSIFMETRIC: u32 = 35102;
-pub const SIOCGIFMEM: u32 = 35103;
-pub const SIOCSIFMEM: u32 = 35104;
-pub const SIOCGIFMTU: u32 = 35105;
-pub const SIOCSIFMTU: u32 = 35106;
-pub const SIOCSIFNAME: u32 = 35107;
-pub const SIOCSIFHWADDR: u32 = 35108;
-pub const SIOCGIFENCAP: u32 = 35109;
-pub const SIOCSIFENCAP: u32 = 35110;
-pub const SIOCGIFHWADDR: u32 = 35111;
-pub const SIOCGIFSLAVE: u32 = 35113;
-pub const SIOCSIFSLAVE: u32 = 35120;
-pub const SIOCADDMULTI: u32 = 35121;
-pub const SIOCDELMULTI: u32 = 35122;
-pub const SIOCGIFINDEX: u32 = 35123;
-pub const SIOGIFINDEX: u32 = 35123;
-pub const SIOCSIFPFLAGS: u32 = 35124;
-pub const SIOCGIFPFLAGS: u32 = 35125;
-pub const SIOCDIFADDR: u32 = 35126;
-pub const SIOCSIFHWBROADCAST: u32 = 35127;
-pub const SIOCGIFCOUNT: u32 = 35128;
-pub const SIOCGIFBR: u32 = 35136;
-pub const SIOCSIFBR: u32 = 35137;
-pub const SIOCGIFTXQLEN: u32 = 35138;
-pub const SIOCSIFTXQLEN: u32 = 35139;
-pub const SIOCDARP: u32 = 35155;
-pub const SIOCGARP: u32 = 35156;
-pub const SIOCSARP: u32 = 35157;
-pub const SIOCDRARP: u32 = 35168;
-pub const SIOCGRARP: u32 = 35169;
-pub const SIOCSRARP: u32 = 35170;
-pub const SIOCGIFMAP: u32 = 35184;
-pub const SIOCSIFMAP: u32 = 35185;
-pub const SIOCADDDLCI: u32 = 35200;
-pub const SIOCDELDLCI: u32 = 35201;
-pub const SIOCDEVPRIVATE: u32 = 35312;
-pub const SIOCPROTOPRIVATE: u32 = 35296;
-pub const NCC: u32 = 8;
-pub const TIOCM_LE: u32 = 1;
-pub const TIOCM_DTR: u32 = 2;
-pub const TIOCM_RTS: u32 = 4;
-pub const TIOCM_ST: u32 = 8;
-pub const TIOCM_SR: u32 = 16;
-pub const TIOCM_CTS: u32 = 32;
-pub const TIOCM_CAR: u32 = 64;
-pub const TIOCM_RNG: u32 = 128;
-pub const TIOCM_DSR: u32 = 256;
-pub const TIOCM_CD: u32 = 64;
-pub const TIOCM_RI: u32 = 128;
-pub const N_TTY: u32 = 0;
-pub const N_SLIP: u32 = 1;
-pub const N_MOUSE: u32 = 2;
-pub const N_PPP: u32 = 3;
-pub const N_STRIP: u32 = 4;
-pub const N_AX25: u32 = 5;
-pub const N_X25: u32 = 6;
-pub const N_6PACK: u32 = 7;
-pub const N_MASC: u32 = 8;
-pub const N_R3964: u32 = 9;
-pub const N_PROFIBUS_FDL: u32 = 10;
-pub const N_IRDA: u32 = 11;
-pub const N_SMSBLOCK: u32 = 12;
-pub const N_HDLC: u32 = 13;
-pub const N_SYNC_PPP: u32 = 14;
-pub const N_HCI: u32 = 15;
-pub const CEOL: u8 = 0u8;
-pub const CERASE: u32 = 127;
-pub const CSTATUS: u8 = 0u8;
-pub const CMIN: u32 = 1;
-pub const CQUIT: u32 = 28;
-pub const CTIME: u32 = 0;
-pub const CBRK: u8 = 0u8;
-pub const EV_VERSION: u32 = 65537;
-pub const INPUT_KEYMAP_BY_INDEX: u32 = 1;
-pub const INPUT_PROP_POINTER: u32 = 0;
-pub const INPUT_PROP_DIRECT: u32 = 1;
-pub const INPUT_PROP_BUTTONPAD: u32 = 2;
-pub const INPUT_PROP_SEMI_MT: u32 = 3;
-pub const INPUT_PROP_MAX: u32 = 31;
-pub const INPUT_PROP_CNT: u32 = 32;
-pub const EV_SYN: u32 = 0;
-pub const EV_KEY: u32 = 1;
-pub const EV_REL: u32 = 2;
-pub const EV_ABS: u32 = 3;
-pub const EV_MSC: u32 = 4;
-pub const EV_SW: u32 = 5;
-pub const EV_LED: u32 = 17;
-pub const EV_SND: u32 = 18;
-pub const EV_REP: u32 = 20;
-pub const EV_FF: u32 = 21;
-pub const EV_PWR: u32 = 22;
-pub const EV_FF_STATUS: u32 = 23;
-pub const EV_MAX: u32 = 31;
-pub const EV_CNT: u32 = 32;
-pub const SYN_REPORT: u32 = 0;
-pub const SYN_CONFIG: u32 = 1;
-pub const SYN_MT_REPORT: u32 = 2;
-pub const SYN_DROPPED: u32 = 3;
-pub const KEY_RESERVED: u32 = 0;
-pub const KEY_ESC: u32 = 1;
-pub const KEY_1: u32 = 2;
-pub const KEY_2: u32 = 3;
-pub const KEY_3: u32 = 4;
-pub const KEY_4: u32 = 5;
-pub const KEY_5: u32 = 6;
-pub const KEY_6: u32 = 7;
-pub const KEY_7: u32 = 8;
-pub const KEY_8: u32 = 9;
-pub const KEY_9: u32 = 10;
-pub const KEY_0: u32 = 11;
-pub const KEY_MINUS: u32 = 12;
-pub const KEY_EQUAL: u32 = 13;
-pub const KEY_BACKSPACE: u32 = 14;
-pub const KEY_TAB: u32 = 15;
-pub const KEY_Q: u32 = 16;
-pub const KEY_W: u32 = 17;
-pub const KEY_E: u32 = 18;
-pub const KEY_R: u32 = 19;
-pub const KEY_T: u32 = 20;
-pub const KEY_Y: u32 = 21;
-pub const KEY_U: u32 = 22;
-pub const KEY_I: u32 = 23;
-pub const KEY_O: u32 = 24;
-pub const KEY_P: u32 = 25;
-pub const KEY_LEFTBRACE: u32 = 26;
-pub const KEY_RIGHTBRACE: u32 = 27;
-pub const KEY_ENTER: u32 = 28;
-pub const KEY_LEFTCTRL: u32 = 29;
-pub const KEY_A: u32 = 30;
-pub const KEY_S: u32 = 31;
-pub const KEY_D: u32 = 32;
-pub const KEY_F: u32 = 33;
-pub const KEY_G: u32 = 34;
-pub const KEY_H: u32 = 35;
-pub const KEY_J: u32 = 36;
-pub const KEY_K: u32 = 37;
-pub const KEY_L: u32 = 38;
-pub const KEY_SEMICOLON: u32 = 39;
-pub const KEY_APOSTROPHE: u32 = 40;
-pub const KEY_GRAVE: u32 = 41;
-pub const KEY_LEFTSHIFT: u32 = 42;
-pub const KEY_BACKSLASH: u32 = 43;
-pub const KEY_Z: u32 = 44;
-pub const KEY_X: u32 = 45;
-pub const KEY_C: u32 = 46;
-pub const KEY_V: u32 = 47;
-pub const KEY_B: u32 = 48;
-pub const KEY_N: u32 = 49;
-pub const KEY_M: u32 = 50;
-pub const KEY_COMMA: u32 = 51;
-pub const KEY_DOT: u32 = 52;
-pub const KEY_SLASH: u32 = 53;
-pub const KEY_RIGHTSHIFT: u32 = 54;
-pub const KEY_KPASTERISK: u32 = 55;
-pub const KEY_LEFTALT: u32 = 56;
-pub const KEY_SPACE: u32 = 57;
-pub const KEY_CAPSLOCK: u32 = 58;
-pub const KEY_F1: u32 = 59;
-pub const KEY_F2: u32 = 60;
-pub const KEY_F3: u32 = 61;
-pub const KEY_F4: u32 = 62;
-pub const KEY_F5: u32 = 63;
-pub const KEY_F6: u32 = 64;
-pub const KEY_F7: u32 = 65;
-pub const KEY_F8: u32 = 66;
-pub const KEY_F9: u32 = 67;
-pub const KEY_F10: u32 = 68;
-pub const KEY_NUMLOCK: u32 = 69;
-pub const KEY_SCROLLLOCK: u32 = 70;
-pub const KEY_KP7: u32 = 71;
-pub const KEY_KP8: u32 = 72;
-pub const KEY_KP9: u32 = 73;
-pub const KEY_KPMINUS: u32 = 74;
-pub const KEY_KP4: u32 = 75;
-pub const KEY_KP5: u32 = 76;
-pub const KEY_KP6: u32 = 77;
-pub const KEY_KPPLUS: u32 = 78;
-pub const KEY_KP1: u32 = 79;
-pub const KEY_KP2: u32 = 80;
-pub const KEY_KP3: u32 = 81;
-pub const KEY_KP0: u32 = 82;
-pub const KEY_KPDOT: u32 = 83;
-pub const KEY_ZENKAKUHANKAKU: u32 = 85;
-pub const KEY_102ND: u32 = 86;
-pub const KEY_F11: u32 = 87;
-pub const KEY_F12: u32 = 88;
-pub const KEY_RO: u32 = 89;
-pub const KEY_KATAKANA: u32 = 90;
-pub const KEY_HIRAGANA: u32 = 91;
-pub const KEY_HENKAN: u32 = 92;
-pub const KEY_KATAKANAHIRAGANA: u32 = 93;
-pub const KEY_MUHENKAN: u32 = 94;
-pub const KEY_KPJPCOMMA: u32 = 95;
-pub const KEY_KPENTER: u32 = 96;
-pub const KEY_RIGHTCTRL: u32 = 97;
-pub const KEY_KPSLASH: u32 = 98;
-pub const KEY_SYSRQ: u32 = 99;
-pub const KEY_RIGHTALT: u32 = 100;
-pub const KEY_LINEFEED: u32 = 101;
-pub const KEY_HOME: u32 = 102;
-pub const KEY_UP: u32 = 103;
-pub const KEY_PAGEUP: u32 = 104;
-pub const KEY_LEFT: u32 = 105;
-pub const KEY_RIGHT: u32 = 106;
-pub const KEY_END: u32 = 107;
-pub const KEY_DOWN: u32 = 108;
-pub const KEY_PAGEDOWN: u32 = 109;
-pub const KEY_INSERT: u32 = 110;
-pub const KEY_DELETE: u32 = 111;
-pub const KEY_MACRO: u32 = 112;
-pub const KEY_MUTE: u32 = 113;
-pub const KEY_VOLUMEDOWN: u32 = 114;
-pub const KEY_VOLUMEUP: u32 = 115;
-pub const KEY_POWER: u32 = 116;
-pub const KEY_KPEQUAL: u32 = 117;
-pub const KEY_KPPLUSMINUS: u32 = 118;
-pub const KEY_PAUSE: u32 = 119;
-pub const KEY_SCALE: u32 = 120;
-pub const KEY_KPCOMMA: u32 = 121;
-pub const KEY_HANGEUL: u32 = 122;
-pub const KEY_HANGUEL: u32 = 122;
-pub const KEY_HANJA: u32 = 123;
-pub const KEY_YEN: u32 = 124;
-pub const KEY_LEFTMETA: u32 = 125;
-pub const KEY_RIGHTMETA: u32 = 126;
-pub const KEY_COMPOSE: u32 = 127;
-pub const KEY_STOP: u32 = 128;
-pub const KEY_AGAIN: u32 = 129;
-pub const KEY_PROPS: u32 = 130;
-pub const KEY_UNDO: u32 = 131;
-pub const KEY_FRONT: u32 = 132;
-pub const KEY_COPY: u32 = 133;
-pub const KEY_OPEN: u32 = 134;
-pub const KEY_PASTE: u32 = 135;
-pub const KEY_FIND: u32 = 136;
-pub const KEY_CUT: u32 = 137;
-pub const KEY_HELP: u32 = 138;
-pub const KEY_MENU: u32 = 139;
-pub const KEY_CALC: u32 = 140;
-pub const KEY_SETUP: u32 = 141;
-pub const KEY_SLEEP: u32 = 142;
-pub const KEY_WAKEUP: u32 = 143;
-pub const KEY_FILE: u32 = 144;
-pub const KEY_SENDFILE: u32 = 145;
-pub const KEY_DELETEFILE: u32 = 146;
-pub const KEY_XFER: u32 = 147;
-pub const KEY_PROG1: u32 = 148;
-pub const KEY_PROG2: u32 = 149;
-pub const KEY_WWW: u32 = 150;
-pub const KEY_MSDOS: u32 = 151;
-pub const KEY_COFFEE: u32 = 152;
-pub const KEY_SCREENLOCK: u32 = 152;
-pub const KEY_DIRECTION: u32 = 153;
-pub const KEY_CYCLEWINDOWS: u32 = 154;
-pub const KEY_MAIL: u32 = 155;
-pub const KEY_BOOKMARKS: u32 = 156;
-pub const KEY_COMPUTER: u32 = 157;
-pub const KEY_BACK: u32 = 158;
-pub const KEY_FORWARD: u32 = 159;
-pub const KEY_CLOSECD: u32 = 160;
-pub const KEY_EJECTCD: u32 = 161;
-pub const KEY_EJECTCLOSECD: u32 = 162;
-pub const KEY_NEXTSONG: u32 = 163;
-pub const KEY_PLAYPAUSE: u32 = 164;
-pub const KEY_PREVIOUSSONG: u32 = 165;
-pub const KEY_STOPCD: u32 = 166;
-pub const KEY_RECORD: u32 = 167;
-pub const KEY_REWIND: u32 = 168;
-pub const KEY_PHONE: u32 = 169;
-pub const KEY_ISO: u32 = 170;
-pub const KEY_CONFIG: u32 = 171;
-pub const KEY_HOMEPAGE: u32 = 172;
-pub const KEY_REFRESH: u32 = 173;
-pub const KEY_EXIT: u32 = 174;
-pub const KEY_MOVE: u32 = 175;
-pub const KEY_EDIT: u32 = 176;
-pub const KEY_SCROLLUP: u32 = 177;
-pub const KEY_SCROLLDOWN: u32 = 178;
-pub const KEY_KPLEFTPAREN: u32 = 179;
-pub const KEY_KPRIGHTPAREN: u32 = 180;
-pub const KEY_NEW: u32 = 181;
-pub const KEY_REDO: u32 = 182;
-pub const KEY_F13: u32 = 183;
-pub const KEY_F14: u32 = 184;
-pub const KEY_F15: u32 = 185;
-pub const KEY_F16: u32 = 186;
-pub const KEY_F17: u32 = 187;
-pub const KEY_F18: u32 = 188;
-pub const KEY_F19: u32 = 189;
-pub const KEY_F20: u32 = 190;
-pub const KEY_F21: u32 = 191;
-pub const KEY_F22: u32 = 192;
-pub const KEY_F23: u32 = 193;
-pub const KEY_F24: u32 = 194;
-pub const KEY_PLAYCD: u32 = 200;
-pub const KEY_PAUSECD: u32 = 201;
-pub const KEY_PROG3: u32 = 202;
-pub const KEY_PROG4: u32 = 203;
-pub const KEY_DASHBOARD: u32 = 204;
-pub const KEY_SUSPEND: u32 = 205;
-pub const KEY_CLOSE: u32 = 206;
-pub const KEY_PLAY: u32 = 207;
-pub const KEY_FASTFORWARD: u32 = 208;
-pub const KEY_BASSBOOST: u32 = 209;
-pub const KEY_PRINT: u32 = 210;
-pub const KEY_HP: u32 = 211;
-pub const KEY_CAMERA: u32 = 212;
-pub const KEY_SOUND: u32 = 213;
-pub const KEY_QUESTION: u32 = 214;
-pub const KEY_EMAIL: u32 = 215;
-pub const KEY_CHAT: u32 = 216;
-pub const KEY_SEARCH: u32 = 217;
-pub const KEY_CONNECT: u32 = 218;
-pub const KEY_FINANCE: u32 = 219;
-pub const KEY_SPORT: u32 = 220;
-pub const KEY_SHOP: u32 = 221;
-pub const KEY_ALTERASE: u32 = 222;
-pub const KEY_CANCEL: u32 = 223;
-pub const KEY_BRIGHTNESSDOWN: u32 = 224;
-pub const KEY_BRIGHTNESSUP: u32 = 225;
-pub const KEY_MEDIA: u32 = 226;
-pub const KEY_SWITCHVIDEOMODE: u32 = 227;
-pub const KEY_KBDILLUMTOGGLE: u32 = 228;
-pub const KEY_KBDILLUMDOWN: u32 = 229;
-pub const KEY_KBDILLUMUP: u32 = 230;
-pub const KEY_SEND: u32 = 231;
-pub const KEY_REPLY: u32 = 232;
-pub const KEY_FORWARDMAIL: u32 = 233;
-pub const KEY_SAVE: u32 = 234;
-pub const KEY_DOCUMENTS: u32 = 235;
-pub const KEY_BATTERY: u32 = 236;
-pub const KEY_BLUETOOTH: u32 = 237;
-pub const KEY_WLAN: u32 = 238;
-pub const KEY_UWB: u32 = 239;
-pub const KEY_UNKNOWN: u32 = 240;
-pub const KEY_VIDEO_NEXT: u32 = 241;
-pub const KEY_VIDEO_PREV: u32 = 242;
-pub const KEY_BRIGHTNESS_CYCLE: u32 = 243;
-pub const KEY_BRIGHTNESS_ZERO: u32 = 244;
-pub const KEY_DISPLAY_OFF: u32 = 245;
-pub const KEY_WIMAX: u32 = 246;
-pub const KEY_RFKILL: u32 = 247;
-pub const KEY_MICMUTE: u32 = 248;
-pub const BTN_MISC: u32 = 256;
-pub const BTN_0: u32 = 256;
-pub const BTN_1: u32 = 257;
-pub const BTN_2: u32 = 258;
-pub const BTN_3: u32 = 259;
-pub const BTN_4: u32 = 260;
-pub const BTN_5: u32 = 261;
-pub const BTN_6: u32 = 262;
-pub const BTN_7: u32 = 263;
-pub const BTN_8: u32 = 264;
-pub const BTN_9: u32 = 265;
-pub const BTN_MOUSE: u32 = 272;
-pub const BTN_LEFT: u32 = 272;
-pub const BTN_RIGHT: u32 = 273;
-pub const BTN_MIDDLE: u32 = 274;
-pub const BTN_SIDE: u32 = 275;
-pub const BTN_EXTRA: u32 = 276;
-pub const BTN_FORWARD: u32 = 277;
-pub const BTN_BACK: u32 = 278;
-pub const BTN_TASK: u32 = 279;
-pub const BTN_JOYSTICK: u32 = 288;
-pub const BTN_TRIGGER: u32 = 288;
-pub const BTN_THUMB: u32 = 289;
-pub const BTN_THUMB2: u32 = 290;
-pub const BTN_TOP: u32 = 291;
-pub const BTN_TOP2: u32 = 292;
-pub const BTN_PINKIE: u32 = 293;
-pub const BTN_BASE: u32 = 294;
-pub const BTN_BASE2: u32 = 295;
-pub const BTN_BASE3: u32 = 296;
-pub const BTN_BASE4: u32 = 297;
-pub const BTN_BASE5: u32 = 298;
-pub const BTN_BASE6: u32 = 299;
-pub const BTN_DEAD: u32 = 303;
-pub const BTN_GAMEPAD: u32 = 304;
-pub const BTN_A: u32 = 304;
-pub const BTN_B: u32 = 305;
-pub const BTN_C: u32 = 306;
-pub const BTN_X: u32 = 307;
-pub const BTN_Y: u32 = 308;
-pub const BTN_Z: u32 = 309;
-pub const BTN_TL: u32 = 310;
-pub const BTN_TR: u32 = 311;
-pub const BTN_TL2: u32 = 312;
-pub const BTN_TR2: u32 = 313;
-pub const BTN_SELECT: u32 = 314;
-pub const BTN_START: u32 = 315;
-pub const BTN_MODE: u32 = 316;
-pub const BTN_THUMBL: u32 = 317;
-pub const BTN_THUMBR: u32 = 318;
-pub const BTN_DIGI: u32 = 320;
-pub const BTN_TOOL_PEN: u32 = 320;
-pub const BTN_TOOL_RUBBER: u32 = 321;
-pub const BTN_TOOL_BRUSH: u32 = 322;
-pub const BTN_TOOL_PENCIL: u32 = 323;
-pub const BTN_TOOL_AIRBRUSH: u32 = 324;
-pub const BTN_TOOL_FINGER: u32 = 325;
-pub const BTN_TOOL_MOUSE: u32 = 326;
-pub const BTN_TOOL_LENS: u32 = 327;
-pub const BTN_TOOL_QUINTTAP: u32 = 328;
-pub const BTN_TOUCH: u32 = 330;
-pub const BTN_STYLUS: u32 = 331;
-pub const BTN_STYLUS2: u32 = 332;
-pub const BTN_TOOL_DOUBLETAP: u32 = 333;
-pub const BTN_TOOL_TRIPLETAP: u32 = 334;
-pub const BTN_TOOL_QUADTAP: u32 = 335;
-pub const BTN_WHEEL: u32 = 336;
-pub const BTN_GEAR_DOWN: u32 = 336;
-pub const BTN_GEAR_UP: u32 = 337;
-pub const KEY_OK: u32 = 352;
-pub const KEY_SELECT: u32 = 353;
-pub const KEY_GOTO: u32 = 354;
-pub const KEY_CLEAR: u32 = 355;
-pub const KEY_POWER2: u32 = 356;
-pub const KEY_OPTION: u32 = 357;
-pub const KEY_INFO: u32 = 358;
-pub const KEY_TIME: u32 = 359;
-pub const KEY_VENDOR: u32 = 360;
-pub const KEY_ARCHIVE: u32 = 361;
-pub const KEY_PROGRAM: u32 = 362;
-pub const KEY_CHANNEL: u32 = 363;
-pub const KEY_FAVORITES: u32 = 364;
-pub const KEY_EPG: u32 = 365;
-pub const KEY_PVR: u32 = 366;
-pub const KEY_MHP: u32 = 367;
-pub const KEY_LANGUAGE: u32 = 368;
-pub const KEY_TITLE: u32 = 369;
-pub const KEY_SUBTITLE: u32 = 370;
-pub const KEY_ANGLE: u32 = 371;
-pub const KEY_ZOOM: u32 = 372;
-pub const KEY_MODE: u32 = 373;
-pub const KEY_KEYBOARD: u32 = 374;
-pub const KEY_SCREEN: u32 = 375;
-pub const KEY_PC: u32 = 376;
-pub const KEY_TV: u32 = 377;
-pub const KEY_TV2: u32 = 378;
-pub const KEY_VCR: u32 = 379;
-pub const KEY_VCR2: u32 = 380;
-pub const KEY_SAT: u32 = 381;
-pub const KEY_SAT2: u32 = 382;
-pub const KEY_CD: u32 = 383;
-pub const KEY_TAPE: u32 = 384;
-pub const KEY_RADIO: u32 = 385;
-pub const KEY_TUNER: u32 = 386;
-pub const KEY_PLAYER: u32 = 387;
-pub const KEY_TEXT: u32 = 388;
-pub const KEY_DVD: u32 = 389;
-pub const KEY_AUX: u32 = 390;
-pub const KEY_MP3: u32 = 391;
-pub const KEY_AUDIO: u32 = 392;
-pub const KEY_VIDEO: u32 = 393;
-pub const KEY_DIRECTORY: u32 = 394;
-pub const KEY_LIST: u32 = 395;
-pub const KEY_MEMO: u32 = 396;
-pub const KEY_CALENDAR: u32 = 397;
-pub const KEY_RED: u32 = 398;
-pub const KEY_GREEN: u32 = 399;
-pub const KEY_YELLOW: u32 = 400;
-pub const KEY_BLUE: u32 = 401;
-pub const KEY_CHANNELUP: u32 = 402;
-pub const KEY_CHANNELDOWN: u32 = 403;
-pub const KEY_FIRST: u32 = 404;
-pub const KEY_LAST: u32 = 405;
-pub const KEY_AB: u32 = 406;
-pub const KEY_NEXT: u32 = 407;
-pub const KEY_RESTART: u32 = 408;
-pub const KEY_SLOW: u32 = 409;
-pub const KEY_SHUFFLE: u32 = 410;
-pub const KEY_BREAK: u32 = 411;
-pub const KEY_PREVIOUS: u32 = 412;
-pub const KEY_DIGITS: u32 = 413;
-pub const KEY_TEEN: u32 = 414;
-pub const KEY_TWEN: u32 = 415;
-pub const KEY_VIDEOPHONE: u32 = 416;
-pub const KEY_GAMES: u32 = 417;
-pub const KEY_ZOOMIN: u32 = 418;
-pub const KEY_ZOOMOUT: u32 = 419;
-pub const KEY_ZOOMRESET: u32 = 420;
-pub const KEY_WORDPROCESSOR: u32 = 421;
-pub const KEY_EDITOR: u32 = 422;
-pub const KEY_SPREADSHEET: u32 = 423;
-pub const KEY_GRAPHICSEDITOR: u32 = 424;
-pub const KEY_PRESENTATION: u32 = 425;
-pub const KEY_DATABASE: u32 = 426;
-pub const KEY_NEWS: u32 = 427;
-pub const KEY_VOICEMAIL: u32 = 428;
-pub const KEY_ADDRESSBOOK: u32 = 429;
-pub const KEY_MESSENGER: u32 = 430;
-pub const KEY_DISPLAYTOGGLE: u32 = 431;
-pub const KEY_SPELLCHECK: u32 = 432;
-pub const KEY_LOGOFF: u32 = 433;
-pub const KEY_DOLLAR: u32 = 434;
-pub const KEY_EURO: u32 = 435;
-pub const KEY_FRAMEBACK: u32 = 436;
-pub const KEY_FRAMEFORWARD: u32 = 437;
-pub const KEY_CONTEXT_MENU: u32 = 438;
-pub const KEY_MEDIA_REPEAT: u32 = 439;
-pub const KEY_10CHANNELSUP: u32 = 440;
-pub const KEY_10CHANNELSDOWN: u32 = 441;
-pub const KEY_IMAGES: u32 = 442;
-pub const KEY_DEL_EOL: u32 = 448;
-pub const KEY_DEL_EOS: u32 = 449;
-pub const KEY_INS_LINE: u32 = 450;
-pub const KEY_DEL_LINE: u32 = 451;
-pub const KEY_FN: u32 = 464;
-pub const KEY_FN_ESC: u32 = 465;
-pub const KEY_FN_F1: u32 = 466;
-pub const KEY_FN_F2: u32 = 467;
-pub const KEY_FN_F3: u32 = 468;
-pub const KEY_FN_F4: u32 = 469;
-pub const KEY_FN_F5: u32 = 470;
-pub const KEY_FN_F6: u32 = 471;
-pub const KEY_FN_F7: u32 = 472;
-pub const KEY_FN_F8: u32 = 473;
-pub const KEY_FN_F9: u32 = 474;
-pub const KEY_FN_F10: u32 = 475;
-pub const KEY_FN_F11: u32 = 476;
-pub const KEY_FN_F12: u32 = 477;
-pub const KEY_FN_1: u32 = 478;
-pub const KEY_FN_2: u32 = 479;
-pub const KEY_FN_D: u32 = 480;
-pub const KEY_FN_E: u32 = 481;
-pub const KEY_FN_F: u32 = 482;
-pub const KEY_FN_S: u32 = 483;
-pub const KEY_FN_B: u32 = 484;
-pub const KEY_BRL_DOT1: u32 = 497;
-pub const KEY_BRL_DOT2: u32 = 498;
-pub const KEY_BRL_DOT3: u32 = 499;
-pub const KEY_BRL_DOT4: u32 = 500;
-pub const KEY_BRL_DOT5: u32 = 501;
-pub const KEY_BRL_DOT6: u32 = 502;
-pub const KEY_BRL_DOT7: u32 = 503;
-pub const KEY_BRL_DOT8: u32 = 504;
-pub const KEY_BRL_DOT9: u32 = 505;
-pub const KEY_BRL_DOT10: u32 = 506;
-pub const KEY_NUMERIC_0: u32 = 512;
-pub const KEY_NUMERIC_1: u32 = 513;
-pub const KEY_NUMERIC_2: u32 = 514;
-pub const KEY_NUMERIC_3: u32 = 515;
-pub const KEY_NUMERIC_4: u32 = 516;
-pub const KEY_NUMERIC_5: u32 = 517;
-pub const KEY_NUMERIC_6: u32 = 518;
-pub const KEY_NUMERIC_7: u32 = 519;
-pub const KEY_NUMERIC_8: u32 = 520;
-pub const KEY_NUMERIC_9: u32 = 521;
-pub const KEY_NUMERIC_STAR: u32 = 522;
-pub const KEY_NUMERIC_POUND: u32 = 523;
-pub const KEY_CAMERA_FOCUS: u32 = 528;
-pub const KEY_WPS_BUTTON: u32 = 529;
-pub const KEY_TOUCHPAD_TOGGLE: u32 = 530;
-pub const KEY_TOUCHPAD_ON: u32 = 531;
-pub const KEY_TOUCHPAD_OFF: u32 = 532;
-pub const KEY_CAMERA_ZOOMIN: u32 = 533;
-pub const KEY_CAMERA_ZOOMOUT: u32 = 534;
-pub const KEY_CAMERA_UP: u32 = 535;
-pub const KEY_CAMERA_DOWN: u32 = 536;
-pub const KEY_CAMERA_LEFT: u32 = 537;
-pub const KEY_CAMERA_RIGHT: u32 = 538;
-pub const KEY_ATTENDANT_ON: u32 = 539;
-pub const KEY_ATTENDANT_OFF: u32 = 540;
-pub const KEY_ATTENDANT_TOGGLE: u32 = 541;
-pub const KEY_LIGHTS_TOGGLE: u32 = 542;
-pub const BTN_TRIGGER_HAPPY: u32 = 704;
-pub const BTN_TRIGGER_HAPPY1: u32 = 704;
-pub const BTN_TRIGGER_HAPPY2: u32 = 705;
-pub const BTN_TRIGGER_HAPPY3: u32 = 706;
-pub const BTN_TRIGGER_HAPPY4: u32 = 707;
-pub const BTN_TRIGGER_HAPPY5: u32 = 708;
-pub const BTN_TRIGGER_HAPPY6: u32 = 709;
-pub const BTN_TRIGGER_HAPPY7: u32 = 710;
-pub const BTN_TRIGGER_HAPPY8: u32 = 711;
-pub const BTN_TRIGGER_HAPPY9: u32 = 712;
-pub const BTN_TRIGGER_HAPPY10: u32 = 713;
-pub const BTN_TRIGGER_HAPPY11: u32 = 714;
-pub const BTN_TRIGGER_HAPPY12: u32 = 715;
-pub const BTN_TRIGGER_HAPPY13: u32 = 716;
-pub const BTN_TRIGGER_HAPPY14: u32 = 717;
-pub const BTN_TRIGGER_HAPPY15: u32 = 718;
-pub const BTN_TRIGGER_HAPPY16: u32 = 719;
-pub const BTN_TRIGGER_HAPPY17: u32 = 720;
-pub const BTN_TRIGGER_HAPPY18: u32 = 721;
-pub const BTN_TRIGGER_HAPPY19: u32 = 722;
-pub const BTN_TRIGGER_HAPPY20: u32 = 723;
-pub const BTN_TRIGGER_HAPPY21: u32 = 724;
-pub const BTN_TRIGGER_HAPPY22: u32 = 725;
-pub const BTN_TRIGGER_HAPPY23: u32 = 726;
-pub const BTN_TRIGGER_HAPPY24: u32 = 727;
-pub const BTN_TRIGGER_HAPPY25: u32 = 728;
-pub const BTN_TRIGGER_HAPPY26: u32 = 729;
-pub const BTN_TRIGGER_HAPPY27: u32 = 730;
-pub const BTN_TRIGGER_HAPPY28: u32 = 731;
-pub const BTN_TRIGGER_HAPPY29: u32 = 732;
-pub const BTN_TRIGGER_HAPPY30: u32 = 733;
-pub const BTN_TRIGGER_HAPPY31: u32 = 734;
-pub const BTN_TRIGGER_HAPPY32: u32 = 735;
-pub const BTN_TRIGGER_HAPPY33: u32 = 736;
-pub const BTN_TRIGGER_HAPPY34: u32 = 737;
-pub const BTN_TRIGGER_HAPPY35: u32 = 738;
-pub const BTN_TRIGGER_HAPPY36: u32 = 739;
-pub const BTN_TRIGGER_HAPPY37: u32 = 740;
-pub const BTN_TRIGGER_HAPPY38: u32 = 741;
-pub const BTN_TRIGGER_HAPPY39: u32 = 742;
-pub const BTN_TRIGGER_HAPPY40: u32 = 743;
-pub const KEY_MIN_INTERESTING: u32 = 113;
-pub const KEY_MAX: u32 = 767;
-pub const KEY_CNT: u32 = 768;
-pub const REL_X: u32 = 0;
-pub const REL_Y: u32 = 1;
-pub const REL_Z: u32 = 2;
-pub const REL_RX: u32 = 3;
-pub const REL_RY: u32 = 4;
-pub const REL_RZ: u32 = 5;
-pub const REL_HWHEEL: u32 = 6;
-pub const REL_DIAL: u32 = 7;
-pub const REL_WHEEL: u32 = 8;
-pub const REL_MISC: u32 = 9;
-pub const REL_MAX: u32 = 15;
-pub const REL_CNT: u32 = 16;
-pub const ABS_X: u32 = 0;
-pub const ABS_Y: u32 = 1;
-pub const ABS_Z: u32 = 2;
-pub const ABS_RX: u32 = 3;
-pub const ABS_RY: u32 = 4;
-pub const ABS_RZ: u32 = 5;
-pub const ABS_THROTTLE: u32 = 6;
-pub const ABS_RUDDER: u32 = 7;
-pub const ABS_WHEEL: u32 = 8;
-pub const ABS_GAS: u32 = 9;
-pub const ABS_BRAKE: u32 = 10;
-pub const ABS_HAT0X: u32 = 16;
-pub const ABS_HAT0Y: u32 = 17;
-pub const ABS_HAT1X: u32 = 18;
-pub const ABS_HAT1Y: u32 = 19;
-pub const ABS_HAT2X: u32 = 20;
-pub const ABS_HAT2Y: u32 = 21;
-pub const ABS_HAT3X: u32 = 22;
-pub const ABS_HAT3Y: u32 = 23;
-pub const ABS_PRESSURE: u32 = 24;
-pub const ABS_DISTANCE: u32 = 25;
-pub const ABS_TILT_X: u32 = 26;
-pub const ABS_TILT_Y: u32 = 27;
-pub const ABS_TOOL_WIDTH: u32 = 28;
-pub const ABS_VOLUME: u32 = 32;
-pub const ABS_MISC: u32 = 40;
-pub const ABS_MT_SLOT: u32 = 47;
-pub const ABS_MT_TOUCH_MAJOR: u32 = 48;
-pub const ABS_MT_TOUCH_MINOR: u32 = 49;
-pub const ABS_MT_WIDTH_MAJOR: u32 = 50;
-pub const ABS_MT_WIDTH_MINOR: u32 = 51;
-pub const ABS_MT_ORIENTATION: u32 = 52;
-pub const ABS_MT_POSITION_X: u32 = 53;
-pub const ABS_MT_POSITION_Y: u32 = 54;
-pub const ABS_MT_TOOL_TYPE: u32 = 55;
-pub const ABS_MT_BLOB_ID: u32 = 56;
-pub const ABS_MT_TRACKING_ID: u32 = 57;
-pub const ABS_MT_PRESSURE: u32 = 58;
-pub const ABS_MT_DISTANCE: u32 = 59;
-pub const ABS_MT_TOOL_X: u32 = 60;
-pub const ABS_MT_TOOL_Y: u32 = 61;
-pub const ABS_MAX: u32 = 63;
-pub const ABS_CNT: u32 = 64;
-pub const SW_LID: u32 = 0;
-pub const SW_TABLET_MODE: u32 = 1;
-pub const SW_HEADPHONE_INSERT: u32 = 2;
-pub const SW_RFKILL_ALL: u32 = 3;
-pub const SW_RADIO: u32 = 3;
-pub const SW_MICROPHONE_INSERT: u32 = 4;
-pub const SW_DOCK: u32 = 5;
-pub const SW_LINEOUT_INSERT: u32 = 6;
-pub const SW_JACK_PHYSICAL_INSERT: u32 = 7;
-pub const SW_VIDEOOUT_INSERT: u32 = 8;
-pub const SW_CAMERA_LENS_COVER: u32 = 9;
-pub const SW_KEYPAD_SLIDE: u32 = 10;
-pub const SW_FRONT_PROXIMITY: u32 = 11;
-pub const SW_ROTATE_LOCK: u32 = 12;
-pub const SW_LINEIN_INSERT: u32 = 13;
-pub const SW_MAX: u32 = 15;
-pub const SW_CNT: u32 = 16;
-pub const MSC_SERIAL: u32 = 0;
-pub const MSC_PULSELED: u32 = 1;
-pub const MSC_GESTURE: u32 = 2;
-pub const MSC_RAW: u32 = 3;
-pub const MSC_SCAN: u32 = 4;
-pub const MSC_TIMESTAMP: u32 = 5;
-pub const MSC_MAX: u32 = 7;
-pub const MSC_CNT: u32 = 8;
-pub const LED_NUML: u32 = 0;
-pub const LED_CAPSL: u32 = 1;
-pub const LED_SCROLLL: u32 = 2;
-pub const LED_COMPOSE: u32 = 3;
-pub const LED_KANA: u32 = 4;
-pub const LED_SLEEP: u32 = 5;
-pub const LED_SUSPEND: u32 = 6;
-pub const LED_MUTE: u32 = 7;
-pub const LED_MISC: u32 = 8;
-pub const LED_MAIL: u32 = 9;
-pub const LED_CHARGING: u32 = 10;
-pub const LED_MAX: u32 = 15;
-pub const LED_CNT: u32 = 16;
-pub const REP_DELAY: u32 = 0;
-pub const REP_PERIOD: u32 = 1;
-pub const REP_MAX: u32 = 1;
-pub const REP_CNT: u32 = 2;
-pub const SND_CLICK: u32 = 0;
-pub const SND_BELL: u32 = 1;
-pub const SND_TONE: u32 = 2;
-pub const SND_MAX: u32 = 7;
-pub const SND_CNT: u32 = 8;
-pub const ID_BUS: u32 = 0;
-pub const ID_VENDOR: u32 = 1;
-pub const ID_PRODUCT: u32 = 2;
-pub const ID_VERSION: u32 = 3;
-pub const BUS_PCI: u32 = 1;
-pub const BUS_ISAPNP: u32 = 2;
-pub const BUS_USB: u32 = 3;
-pub const BUS_HIL: u32 = 4;
-pub const BUS_BLUETOOTH: u32 = 5;
-pub const BUS_VIRTUAL: u32 = 6;
-pub const BUS_ISA: u32 = 16;
-pub const BUS_I8042: u32 = 17;
-pub const BUS_XTKBD: u32 = 18;
-pub const BUS_RS232: u32 = 19;
-pub const BUS_GAMEPORT: u32 = 20;
-pub const BUS_PARPORT: u32 = 21;
-pub const BUS_AMIGA: u32 = 22;
-pub const BUS_ADB: u32 = 23;
-pub const BUS_I2C: u32 = 24;
-pub const BUS_HOST: u32 = 25;
-pub const BUS_GSC: u32 = 26;
-pub const BUS_ATARI: u32 = 27;
-pub const BUS_SPI: u32 = 28;
-pub const MT_TOOL_FINGER: u32 = 0;
-pub const MT_TOOL_PEN: u32 = 1;
-pub const MT_TOOL_MAX: u32 = 1;
-pub const FF_STATUS_STOPPED: u32 = 0;
-pub const FF_STATUS_PLAYING: u32 = 1;
-pub const FF_STATUS_MAX: u32 = 1;
-pub const FF_RUMBLE: u32 = 80;
-pub const FF_PERIODIC: u32 = 81;
-pub const FF_CONSTANT: u32 = 82;
-pub const FF_SPRING: u32 = 83;
-pub const FF_FRICTION: u32 = 84;
-pub const FF_DAMPER: u32 = 85;
-pub const FF_INERTIA: u32 = 86;
-pub const FF_RAMP: u32 = 87;
-pub const FF_EFFECT_MIN: u32 = 80;
-pub const FF_EFFECT_MAX: u32 = 87;
-pub const FF_SQUARE: u32 = 88;
-pub const FF_TRIANGLE: u32 = 89;
-pub const FF_SINE: u32 = 90;
-pub const FF_SAW_UP: u32 = 91;
-pub const FF_SAW_DOWN: u32 = 92;
-pub const FF_CUSTOM: u32 = 93;
-pub const FF_WAVEFORM_MIN: u32 = 88;
-pub const FF_WAVEFORM_MAX: u32 = 93;
-pub const FF_GAIN: u32 = 96;
-pub const FF_AUTOCENTER: u32 = 97;
-pub const FF_MAX: u32 = 127;
-pub const FF_CNT: u32 = 128;
-pub const HWCONFIG_PATH: &[u8; 14] = b"/etc/hwconfig\0";
-pub const UPDATE_MODE_PARTIAL: u32 = 0;
-pub const UPDATE_MODE_FULL: u32 = 1;
-pub const UPDATE_MODE_PARTIALHQ: u32 = 2;
-pub const UPDATE_MODE_FULLHQ: u32 = 3;
-pub const HWLIB_FRONTLIGHT_CHANNEL_MAX: u32 = 3;
-pub const INKVIEW_FL_BRIGHTNESS_MAX: u32 = 100;
-pub const INKVIEW_FL_COLOR_MAX: u32 = 100;
+pub const FT_RENDER_POOL_SIZE: u32 = 16384;
+pub const FT_MAX_MODULES: u32 = 32;
+pub const TT_CONFIG_OPTION_SUBPIXEL_HINTING: u32 = 2;
+pub const TT_CONFIG_OPTION_MAX_RUNNABLE_OPCODES: u32 = 1000000;
+pub const T1_MAX_DICT_DEPTH: u32 = 5;
+pub const T1_MAX_SUBRS_CALLS: u32 = 16;
+pub const T1_MAX_CHARSTRINGS_OPERANDS: u32 = 256;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_X1: u32 = 500;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_Y1: u32 = 400;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_X2: u32 = 1000;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_Y2: u32 = 275;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_X3: u32 = 1667;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_Y3: u32 = 275;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_X4: u32 = 2333;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_Y4: u32 = 0;
+pub const _SETJMP_H: u32 = 1;
+pub const HAVE_UNISTD_H: u32 = 1;
+pub const HAVE_FCNTL_H: u32 = 1;
+pub const HAVE_STDINT_H: u32 = 1;
+pub const FT_OUTLINE_NONE: u32 = 0;
+pub const FT_OUTLINE_OWNER: u32 = 1;
+pub const FT_OUTLINE_EVEN_ODD_FILL: u32 = 2;
+pub const FT_OUTLINE_REVERSE_FILL: u32 = 4;
+pub const FT_OUTLINE_IGNORE_DROPOUTS: u32 = 8;
+pub const FT_OUTLINE_SMART_DROPOUTS: u32 = 16;
+pub const FT_OUTLINE_INCLUDE_STUBS: u32 = 32;
+pub const FT_OUTLINE_HIGH_PRECISION: u32 = 256;
+pub const FT_OUTLINE_SINGLE_PASS: u32 = 512;
+pub const ft_outline_none: u32 = 0;
+pub const ft_outline_owner: u32 = 1;
+pub const ft_outline_even_odd_fill: u32 = 2;
+pub const ft_outline_reverse_fill: u32 = 4;
+pub const ft_outline_ignore_dropouts: u32 = 8;
+pub const ft_outline_high_precision: u32 = 256;
+pub const ft_outline_single_pass: u32 = 512;
+pub const FT_CURVE_TAG_ON: u32 = 1;
+pub const FT_CURVE_TAG_CONIC: u32 = 0;
+pub const FT_CURVE_TAG_CUBIC: u32 = 2;
+pub const FT_CURVE_TAG_HAS_SCANMODE: u32 = 4;
+pub const FT_CURVE_TAG_TOUCH_X: u32 = 8;
+pub const FT_CURVE_TAG_TOUCH_Y: u32 = 16;
+pub const FT_CURVE_TAG_TOUCH_BOTH: u32 = 24;
+pub const FT_Curve_Tag_On: u32 = 1;
+pub const FT_Curve_Tag_Conic: u32 = 0;
+pub const FT_Curve_Tag_Cubic: u32 = 2;
+pub const FT_Curve_Tag_Touch_X: u32 = 8;
+pub const FT_Curve_Tag_Touch_Y: u32 = 16;
+pub const FT_RASTER_FLAG_DEFAULT: u32 = 0;
+pub const FT_RASTER_FLAG_AA: u32 = 1;
+pub const FT_RASTER_FLAG_DIRECT: u32 = 2;
+pub const FT_RASTER_FLAG_CLIP: u32 = 4;
+pub const ft_raster_flag_default: u32 = 0;
+pub const ft_raster_flag_aa: u32 = 1;
+pub const ft_raster_flag_direct: u32 = 2;
+pub const ft_raster_flag_clip: u32 = 4;
+pub const FT_ERR_BASE: u32 = 0;
+pub const FT_FACE_FLAG_SCALABLE: u32 = 1;
+pub const FT_FACE_FLAG_FIXED_SIZES: u32 = 2;
+pub const FT_FACE_FLAG_FIXED_WIDTH: u32 = 4;
+pub const FT_FACE_FLAG_SFNT: u32 = 8;
+pub const FT_FACE_FLAG_HORIZONTAL: u32 = 16;
+pub const FT_FACE_FLAG_VERTICAL: u32 = 32;
+pub const FT_FACE_FLAG_KERNING: u32 = 64;
+pub const FT_FACE_FLAG_FAST_GLYPHS: u32 = 128;
+pub const FT_FACE_FLAG_MULTIPLE_MASTERS: u32 = 256;
+pub const FT_FACE_FLAG_GLYPH_NAMES: u32 = 512;
+pub const FT_FACE_FLAG_EXTERNAL_STREAM: u32 = 1024;
+pub const FT_FACE_FLAG_HINTER: u32 = 2048;
+pub const FT_FACE_FLAG_CID_KEYED: u32 = 4096;
+pub const FT_FACE_FLAG_TRICKY: u32 = 8192;
+pub const FT_FACE_FLAG_COLOR: u32 = 16384;
+pub const FT_STYLE_FLAG_ITALIC: u32 = 1;
+pub const FT_STYLE_FLAG_BOLD: u32 = 2;
+pub const FT_OPEN_MEMORY: u32 = 1;
+pub const FT_OPEN_STREAM: u32 = 2;
+pub const FT_OPEN_PATHNAME: u32 = 4;
+pub const FT_OPEN_DRIVER: u32 = 8;
+pub const FT_OPEN_PARAMS: u32 = 16;
+pub const ft_open_memory: u32 = 1;
+pub const ft_open_stream: u32 = 2;
+pub const ft_open_pathname: u32 = 4;
+pub const ft_open_driver: u32 = 8;
+pub const ft_open_params: u32 = 16;
+pub const FT_LOAD_DEFAULT: u32 = 0;
+pub const FT_LOAD_NO_SCALE: u32 = 1;
+pub const FT_LOAD_NO_HINTING: u32 = 2;
+pub const FT_LOAD_RENDER: u32 = 4;
+pub const FT_LOAD_NO_BITMAP: u32 = 8;
+pub const FT_LOAD_VERTICAL_LAYOUT: u32 = 16;
+pub const FT_LOAD_FORCE_AUTOHINT: u32 = 32;
+pub const FT_LOAD_CROP_BITMAP: u32 = 64;
+pub const FT_LOAD_PEDANTIC: u32 = 128;
+pub const FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH: u32 = 512;
+pub const FT_LOAD_NO_RECURSE: u32 = 1024;
+pub const FT_LOAD_IGNORE_TRANSFORM: u32 = 2048;
+pub const FT_LOAD_MONOCHROME: u32 = 4096;
+pub const FT_LOAD_LINEAR_DESIGN: u32 = 8192;
+pub const FT_LOAD_NO_AUTOHINT: u32 = 32768;
+pub const FT_LOAD_COLOR: u32 = 1048576;
+pub const FT_LOAD_COMPUTE_METRICS: u32 = 2097152;
+pub const FT_LOAD_BITMAP_METRICS_ONLY: u32 = 4194304;
+pub const FT_LOAD_ADVANCE_ONLY: u32 = 256;
+pub const FT_LOAD_SBITS_ONLY: u32 = 16384;
+pub const FT_SUBGLYPH_FLAG_ARGS_ARE_WORDS: u32 = 1;
+pub const FT_SUBGLYPH_FLAG_ARGS_ARE_XY_VALUES: u32 = 2;
+pub const FT_SUBGLYPH_FLAG_ROUND_XY_TO_GRID: u32 = 4;
+pub const FT_SUBGLYPH_FLAG_SCALE: u32 = 8;
+pub const FT_SUBGLYPH_FLAG_XY_SCALE: u32 = 64;
+pub const FT_SUBGLYPH_FLAG_2X2: u32 = 128;
+pub const FT_SUBGLYPH_FLAG_USE_MY_METRICS: u32 = 512;
+pub const FT_FSTYPE_INSTALLABLE_EMBEDDING: u32 = 0;
+pub const FT_FSTYPE_RESTRICTED_LICENSE_EMBEDDING: u32 = 2;
+pub const FT_FSTYPE_PREVIEW_AND_PRINT_EMBEDDING: u32 = 4;
+pub const FT_FSTYPE_EDITABLE_EMBEDDING: u32 = 8;
+pub const FT_FSTYPE_NO_SUBSETTING: u32 = 256;
+pub const FT_FSTYPE_BITMAP_EMBEDDING_ONLY: u32 = 512;
+pub const FREETYPE_MAJOR: u32 = 2;
+pub const FREETYPE_MINOR: u32 = 7;
+pub const FREETYPE_PATCH: u32 = 1;
 pub const APP_UID: u32 = 101;
 pub const APP_GID: u32 = 101;
 pub const SECAPP_UID: u32 = 102;
@@ -1934,38 +1134,15 @@ pub const CHECKUPDATE_INFO_PATH: &[u8; 16] = b"/tmp/newsw.info\0";
 pub const DEVICE_VARIABLE_CFG: &[u8; 23] = b"/mnt/secure/device.cfg\0";
 pub const CONFIGURED_DEVICE_CFG: &[u8; 20] = b"/var/run/device.cfg\0";
 pub const LOGO_APP_PATH: &[u8; 32] = b"/ebrmain/bin/power_off_logo.app\0";
-pub const RESTORE_DEFAULT_BOOT_LOGO_APP_PATH: &[u8; 43] =
-    b"/ebrmain/bin/restore_default_boot_logo.app\0";
 pub const BROWSER_FOR_AUTH: &[u8; 25] = b"/ebrmain/bin/browser.app\0";
 pub const READER_MANAGER_SOCKET_NAME: &[u8; 28] = b"\0reader_manager_socket_name\0";
 pub const READER_CACHE_SOCKET_NAME: &[u8; 26] = b"\0reader_cache_socket_name\0";
-pub const AUDIOBOOKS_DEFAULT_PATH: &[u8; 22] = b"/mnt/ext1/Audio Books\0";
-pub const AUDIOBOOKS_CONFIG_DIRECTORY: &[u8; 35] = b"/mnt/ext1/system/config/audiobooks\0";
-pub const AUDIOBOOKS_CONFIG_FILE: &[u8; 50] =
-    b"/mnt/ext1/system/config/audiobooks/audiobooks.cfg\0";
-pub const IMAGES_PARAM_PATH: &[u8; 46] = b"/mnt/ext1/system/config/images_parameters.cfg\0";
-pub const SYSTEM_IMAGES_PARAM_PATH: &[u8; 38] = b"/ebrmain/config/images_parameters.cfg\0";
-pub const USER_MENU_ICON_PATH: &[u8; 42] = b"/mnt/ext1/system/config/UserLoginIcon.png\0";
-pub const BOOKSTORE2_APP_PATH: &[u8; 29] = b"/ebrmain/bin/bookstore-2.app\0";
-pub const BOOKSTORE2_CONFIG: &[u8; 38] = b"/mnt/ext1/system/config/bookstore.cfg\0";
-pub const BOOKSTORE2_FEEDS_CACHE_NAME: &[u8; 22] = b"bookstore_feeds_cache\0";
-pub const BOOKSTORE2_FEEDS_CACHE_PATH: &[u8; 45] =
-    b"/mnt/ext1/system/cache/bookstore_feeds_cache\0";
-pub const BOOKSTORE2_COVERS_CACHE_NAME: &[u8; 23] = b"bookstore_covers_cache\0";
-pub const BOOKSTORE2_COVERS_CACHE_PATH: &[u8; 46] =
-    b"/mnt/ext1/system/cache/bookstore_covers_cache\0";
-pub const BOOKSTORE2_DESKTOP_DATA_CONFIG: &[u8; 41] = b"/mnt/ext1/system/config/desktop_data.cfg\0";
-pub const BOOKSTORE2_DESKTOP_DATA_CACHE_PATH: &[u8; 52] =
-    b"/mnt/ext1/system/cache/bookstore_desktop_data_cache\0";
-pub const OPTIMIZED_BOOKS_PATH: &[u8; 32] = b"/mnt/ext1/system/state/optimize\0";
-pub const USBSTOR_SN_FILE: &[u8; 24] = b"/var/run/usb_storage_sn\0";
 pub const PROFILE_LOCAL: u32 = 1;
 pub const PROFILE_SDCARD: u32 = 2;
 pub const SYSTEMDEPTH: u32 = 8;
 pub const MAXMSGSIZE: u32 = 65520;
 pub const MSG_REQUEST: u32 = 2147483647;
 pub const MSG_XREQUEST: u32 = 2080374784;
-pub const MSG_LAUNCH_APP: u32 = 2113929216;
 pub const MSG_OK: u32 = 1;
 pub const MSG_ERROR: u32 = 0;
 pub const MSG_FORMAT: u32 = 257;
@@ -2006,9 +1183,6 @@ pub const MSG_BACKUP: u32 = 292;
 pub const MSG_RESTORE: u32 = 293;
 pub const MSG_CALIBRATE_TP: u32 = 294;
 pub const MSG_DROP_CACHES: u32 = 295;
-pub const MSG_SHARE_DEVICE_CFG: u32 = 296;
-pub const MSG_WRITE_LOW_POWER_LOGO: u32 = 297;
-pub const MSG_DOSFSCK: u32 = 298;
 pub const MSG_FBINFO: u32 = 513;
 pub const MSG_ORIENTATION: u32 = 514;
 pub const MSG_UPDPARTIAL: u32 = 515;
@@ -2053,9 +1227,6 @@ pub const EVT_KEYPRESS: u32 = 25;
 pub const EVT_KEYUP: u32 = 26;
 pub const EVT_KEYRELEASE: u32 = 26;
 pub const EVT_KEYREPEAT: u32 = 28;
-pub const EVT_KEYPRESS_EXT: u32 = 40;
-pub const EVT_KEYRELEASE_EXT: u32 = 41;
-pub const EVT_KEYREPEAT_EXT: u32 = 42;
 pub const EVT_POINTERUP: u32 = 29;
 pub const EVT_POINTERDOWN: u32 = 30;
 pub const EVT_POINTERMOVE: u32 = 31;
@@ -2064,15 +1235,14 @@ pub const EVT_POINTERLONG: u32 = 34;
 pub const EVT_POINTERHOLD: u32 = 35;
 pub const EVT_POINTERDRAG: u32 = 44;
 pub const EVT_POINTERCANCEL: u32 = 45;
-pub const EVT_POINTERCHANGED: u32 = 46;
 pub const EVT_ORIENTATION: u32 = 32;
 pub const EVT_FOCUS: u32 = 36;
 pub const EVT_UNFOCUS: u32 = 37;
 pub const EVT_ACTIVATE: u32 = 38;
 pub const EVT_MTSYNC: u32 = 39;
-pub const EVT_TOUCHUP: u32 = 47;
-pub const EVT_TOUCHDOWN: u32 = 48;
-pub const EVT_TOUCHMOVE: u32 = 49;
+pub const EVT_TOUCHUP: u32 = 40;
+pub const EVT_TOUCHDOWN: u32 = 41;
+pub const EVT_TOUCHMOVE: u32 = 42;
 pub const EVT_REPAINT: u32 = 43;
 pub const EVT_QN_MOVE: u32 = 51;
 pub const EVT_QN_RELEASE: u32 = 52;
@@ -2113,8 +1283,6 @@ pub const EVT_SAVESTATE: u32 = 155;
 pub const EVT_OBREEY_CONFIG_CHANGED: u32 = 156;
 pub const EVT_SDIN: u32 = 161;
 pub const EVT_SDOUT: u32 = 162;
-pub const EVT_USBSTORE_IN: u32 = 163;
-pub const EVT_USBSTORE_OUT: u32 = 164;
 pub const EVT_BT_RXCOMPLETE: u32 = 171;
 pub const EVT_BT_TXCOMPLETE: u32 = 172;
 pub const EVT_SYNTH_ENDED: u32 = 200;
@@ -2141,8 +1309,6 @@ pub const EVT_ASYNC_TASK_FINISHED: u32 = 262;
 pub const EVT_STOP_PLAYING: u32 = 263;
 pub const EVT_AVRCP_COMMAND: u32 = 264;
 pub const EVT_AUDIO_CHANGED: u32 = 265;
-pub const EVT_PACKAGE_JOB_CHANGED: u32 = 266;
-pub const EVT_CUSTOM: u32 = 267;
 pub const IV_KEY_POWER: u32 = 1;
 pub const IV_KEY_DELETE: u32 = 8;
 pub const IV_KEY_OK: u32 = 10;
@@ -2165,7 +1331,6 @@ pub const IV_KEY_COVERCLOSE: u32 = 3;
 pub const IV_KEY_ZOOMOUT: u32 = 6;
 pub const IV_KEY_ZOOMIN: u32 = 7;
 pub const IV_KEY_MENU_POWER: u32 = 4;
-pub const IV_KEY_MAX: u32 = 32;
 pub const IV_KEY_SHIFT: u32 = 14;
 pub const IV_KEY_LANGUAGECHANGE: u32 = 15;
 pub const IV_KEY_KEYBOARDCLOSE: u32 = 16;
@@ -2179,6 +1344,9 @@ pub const IV_KEY_6: u32 = 54;
 pub const IV_KEY_7: u32 = 55;
 pub const IV_KEY_8: u32 = 56;
 pub const IV_KEY_9: u32 = 57;
+pub const KEYMAPPING_GLOBAL: u32 = 0;
+pub const KEYMAPPING_TXT: u32 = 1;
+pub const KEYMAPPING_PDF: u32 = 2;
 pub const BLACK: u32 = 0;
 pub const DGRAY: u32 = 5592405;
 pub const LGRAY: u32 = 11184810;
@@ -2233,7 +1401,6 @@ pub const DEF_BUTTON1: u32 = 0;
 pub const DEF_BUTTON2: u32 = 4096;
 pub const DEF_BUTTON3: u32 = 8192;
 pub const NO_DISMISS: u32 = 32768;
-pub const DLG_HW_BUTTON: u32 = 65536;
 pub const WITH_SIZE: u32 = 1;
 pub const LIST_BEGINPAINT: u32 = 1;
 pub const LIST_PAINT: u32 = 2;
@@ -2300,12 +1467,6 @@ pub const TASK_GROUP2: u32 = 512;
 pub const TASK_OOMPROOF: u32 = 16384;
 pub const TASK_AUTORESTART: u32 = 32768;
 pub const TASK_DONTSENDTASKMSG: u32 = 65536;
-pub const TASK_LOW_PRIORITY_FOR_OOM_KILL: u32 = 131072;
-pub const TASK_HIGH_PRIORITY_FOR_OOM_KILL: u32 = 262144;
-pub const TASK_FB_MASK: u32 = 3145728;
-pub const TASK_FB_GS8: u32 = 0;
-pub const TASK_FB_RGB24: u32 = 1048576;
-pub const TASK_SELFREGISTER: u32 = 1073741824;
 pub const TASK_DONTCHANGE: u32 = 4294967295;
 pub const TASK_BACKGROUND: u32 = 37;
 pub const TASK_NOHANDLER: u32 = 65573;
@@ -2345,9 +1506,6 @@ pub const REQ_KEYHARDLOCK: u32 = 93;
 pub const REQ_PB_CLOUD_NEW_POSITION: u32 = 94;
 pub const REQ_PREVTRACK: u32 = 95;
 pub const REQ_NEXTTRACK: u32 = 96;
-pub const REQ_PB_CLOUD_BOOKMARKS_SYNCED: u32 = 97;
-pub const REQ_TOUCHSCREEN: u32 = 98;
-pub const REQ_EXPLORER: u32 = 99;
 pub const ALIGN_LEFT: u32 = 1;
 pub const ALIGN_CENTER: u32 = 2;
 pub const ALIGN_RIGHT: u32 = 4;
@@ -2363,11 +1521,6 @@ pub const UNDERLINE: u32 = 2048;
 pub const STRETCH: u32 = 4096;
 pub const TILE: u32 = 8192;
 pub const TO_UPPER: u32 = 16384;
-pub const TEXT_OUTPUT_COMMAND: u32 = 8;
-pub const TEXT_OUTPUT_CMD_LINEBREAK_ON_SPACE_ONLY_ON: u32 = 1;
-pub const TEXT_OUTPUT_CMD_LINEBREAK_ON_SPACE_ONLY_OFF: u32 = 2;
-pub const TEXT_OUTPUT_CMD_STRIKETHROUGH_TEXT_ON: u32 = 3;
-pub const TEXT_OUTPUT_CMD_STRIKETHROUGH_TEXT_OFF: u32 = 4;
 pub const FR_CLOSE: u32 = 1;
 pub const FR_MOVEUP: u32 = 2;
 pub const FR_MOVEDOWN: u32 = 4;
@@ -2471,7 +1624,6 @@ pub const NET_EDISABLED: i32 = -35;
 pub const NET_EDHCP: i32 = -36;
 pub const NET_EWRONGKEY: i32 = -37;
 pub const NET_EAUTH: i32 = -38;
-pub const NET_EFLIGHTMODE: i32 = -39;
 pub const VN_NOPATH: u32 = 1;
 pub const VN_NOESCAPE: u32 = 2;
 pub const VN_ABSOLUTE: u32 = 4;
@@ -2480,9 +1632,6 @@ pub const A2DP_DISCONNECTED: u32 = 0;
 pub const A2DP_CONNECTED_TO_SNK: u32 = 1;
 pub const CF_CONFIG_RESUME: u32 = 1;
 pub const FONT_ACTIVATE_CODE: u32 = 2410017735;
-pub const MT_QUEUE_LEN: u32 = 10;
-pub const MT_SECTION_LEN: u32 = 2;
-pub const MT_CONTAINER_QUEUE_LEN: u32 = 10;
 pub const MAX_BT_SERVICE_USER: u32 = 16;
 pub const GSENSOR_OFF: u32 = 0;
 pub const GSENSOR_ON: u32 = 1;
@@ -2493,15 +1642,7 @@ pub const IV_OSY_STATUS_DOWNLOADING: u32 = 2;
 pub const IV_OSY_STATUS_PAUSED: u32 = 3;
 pub const IV_OSY_STATUS_IDLE: u32 = 4;
 pub const IV_OSY_STATUS_ERROR: u32 = 5;
-pub const HIGH_PRIORITY_JOB_OPEN_STORE: u32 = 0;
 pub const HIGH_PRIORITY_JOB_OPEN_BOOK: u32 = 1;
-pub const BTGATT_CLIENT_PATH: &[u8; 23] = b"/usr/bin/btgatt-client\0";
-pub const BTGATT_SERVICE_PATH: &[u8; 36] = b"/usr/libexec/bluetooth/gatt-service\0";
-pub const BTGATT_SERVICE_RX_NODE: &[u8; 68] =
-    b"/var/run/bt_gatt_services/0000ffff-0000-1000-8000-00805f9b34fb/0001\0";
-pub const BTGATT_SERVICE_TX_NODE: &[u8; 68] =
-    b"/var/run/bt_gatt_services/0000ffff-0000-1000-8000-00805f9b34fb/0002\0";
-pub const BTGATT_SERVICE_STATUS_NODE: &[u8; 33] = b"/var/run/bt_gatt_services/status\0";
 pub type __u_char = ::std::os::raw::c_uchar;
 pub type __u_short = ::std::os::raw::c_ushort;
 pub type __u_int = ::std::os::raw::c_uint;
@@ -9408,2199 +8549,3054 @@ fn bindgen_test_layout___pthread_cleanup_frame() {
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __jmp_buf_tag {
-    _unused: [u8; 0],
-}
-pub type int_least8_t = ::std::os::raw::c_schar;
-pub type int_least16_t = ::std::os::raw::c_short;
-pub type int_least32_t = ::std::os::raw::c_int;
-pub type int_least64_t = ::std::os::raw::c_longlong;
-pub type uint_least8_t = ::std::os::raw::c_uchar;
-pub type uint_least16_t = ::std::os::raw::c_ushort;
-pub type uint_least32_t = ::std::os::raw::c_uint;
-pub type uint_least64_t = ::std::os::raw::c_ulonglong;
-pub type int_fast8_t = ::std::os::raw::c_schar;
-pub type int_fast16_t = ::std::os::raw::c_int;
-pub type int_fast32_t = ::std::os::raw::c_int;
-pub type int_fast64_t = ::std::os::raw::c_longlong;
-pub type uint_fast8_t = ::std::os::raw::c_uchar;
-pub type uint_fast16_t = ::std::os::raw::c_uint;
-pub type uint_fast32_t = ::std::os::raw::c_uint;
-pub type uint_fast64_t = ::std::os::raw::c_ulonglong;
-pub type intmax_t = ::std::os::raw::c_longlong;
-pub type uintmax_t = ::std::os::raw::c_ulonglong;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct winsize {
-    pub ws_row: ::std::os::raw::c_ushort,
-    pub ws_col: ::std::os::raw::c_ushort,
-    pub ws_xpixel: ::std::os::raw::c_ushort,
-    pub ws_ypixel: ::std::os::raw::c_ushort,
+    pub __jmpbuf: __jmp_buf,
+    pub __mask_was_saved: ::std::os::raw::c_int,
+    pub __saved_mask: __sigset_t,
 }
 #[test]
-fn bindgen_test_layout_winsize() {
-    const UNINIT: ::std::mem::MaybeUninit<winsize> = ::std::mem::MaybeUninit::uninit();
+fn bindgen_test_layout___jmp_buf_tag() {
+    const UNINIT: ::std::mem::MaybeUninit<__jmp_buf_tag> = ::std::mem::MaybeUninit::uninit();
     let ptr = UNINIT.as_ptr();
     assert_eq!(
-        ::std::mem::size_of::<winsize>(),
+        ::std::mem::size_of::<__jmp_buf_tag>(),
+        392usize,
+        concat!("Size of: ", stringify!(__jmp_buf_tag))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__jmp_buf_tag>(),
         8usize,
-        concat!("Size of: ", stringify!(winsize))
+        concat!("Alignment of ", stringify!(__jmp_buf_tag))
     );
     assert_eq!(
-        ::std::mem::align_of::<winsize>(),
-        2usize,
-        concat!("Alignment of ", stringify!(winsize))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).ws_row) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).__jmpbuf) as usize - ptr as usize },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(winsize),
+            stringify!(__jmp_buf_tag),
             "::",
-            stringify!(ws_row)
+            stringify!(__jmpbuf)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).ws_col) as usize - ptr as usize },
-        2usize,
+        unsafe { ::std::ptr::addr_of!((*ptr).__mask_was_saved) as usize - ptr as usize },
+        256usize,
         concat!(
             "Offset of field: ",
-            stringify!(winsize),
+            stringify!(__jmp_buf_tag),
             "::",
-            stringify!(ws_col)
+            stringify!(__mask_was_saved)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).ws_xpixel) as usize - ptr as usize },
-        4usize,
+        unsafe { ::std::ptr::addr_of!((*ptr).__saved_mask) as usize - ptr as usize },
+        260usize,
         concat!(
             "Offset of field: ",
-            stringify!(winsize),
+            stringify!(__jmp_buf_tag),
             "::",
-            stringify!(ws_xpixel)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).ws_ypixel) as usize - ptr as usize },
-        6usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(winsize),
-            "::",
-            stringify!(ws_ypixel)
+            stringify!(__saved_mask)
         )
     );
 }
+pub type jmp_buf = [__jmp_buf_tag; 1usize];
+pub type sigjmp_buf = [__jmp_buf_tag; 1usize];
+pub type FT_Int16 = ::std::os::raw::c_short;
+pub type FT_UInt16 = ::std::os::raw::c_ushort;
+pub type FT_Int32 = ::std::os::raw::c_int;
+pub type FT_UInt32 = ::std::os::raw::c_uint;
+pub type FT_Fast = ::std::os::raw::c_int;
+pub type FT_UFast = ::std::os::raw::c_uint;
+pub type FT_Memory = *mut FT_MemoryRec_;
+pub type FT_Alloc_Func = ::std::option::Option<
+    unsafe extern "C" fn(
+        memory: FT_Memory,
+        size: ::std::os::raw::c_long,
+    ) -> *mut ::std::os::raw::c_void,
+>;
+pub type FT_Free_Func = ::std::option::Option<
+    unsafe extern "C" fn(memory: FT_Memory, block: *mut ::std::os::raw::c_void),
+>;
+pub type FT_Realloc_Func = ::std::option::Option<
+    unsafe extern "C" fn(
+        memory: FT_Memory,
+        cur_size: ::std::os::raw::c_long,
+        new_size: ::std::os::raw::c_long,
+        block: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_void,
+>;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct termio {
-    pub c_iflag: ::std::os::raw::c_ushort,
-    pub c_oflag: ::std::os::raw::c_ushort,
-    pub c_cflag: ::std::os::raw::c_ushort,
-    pub c_lflag: ::std::os::raw::c_ushort,
-    pub c_line: ::std::os::raw::c_uchar,
-    pub c_cc: [::std::os::raw::c_uchar; 8usize],
+pub struct FT_MemoryRec_ {
+    pub user: *mut ::std::os::raw::c_void,
+    pub alloc: FT_Alloc_Func,
+    pub free: FT_Free_Func,
+    pub realloc: FT_Realloc_Func,
 }
 #[test]
-fn bindgen_test_layout_termio() {
-    const UNINIT: ::std::mem::MaybeUninit<termio> = ::std::mem::MaybeUninit::uninit();
+fn bindgen_test_layout_FT_MemoryRec_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_MemoryRec_> = ::std::mem::MaybeUninit::uninit();
     let ptr = UNINIT.as_ptr();
     assert_eq!(
-        ::std::mem::size_of::<termio>(),
-        18usize,
-        concat!("Size of: ", stringify!(termio))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<termio>(),
-        2usize,
-        concat!("Alignment of ", stringify!(termio))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).c_iflag) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(termio),
-            "::",
-            stringify!(c_iflag)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).c_oflag) as usize - ptr as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(termio),
-            "::",
-            stringify!(c_oflag)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).c_cflag) as usize - ptr as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(termio),
-            "::",
-            stringify!(c_cflag)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).c_lflag) as usize - ptr as usize },
-        6usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(termio),
-            "::",
-            stringify!(c_lflag)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).c_line) as usize - ptr as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(termio),
-            "::",
-            stringify!(c_line)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).c_cc) as usize - ptr as usize },
-        9usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(termio),
-            "::",
-            stringify!(c_cc)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct input_event {
-    pub time: timeval,
-    pub type_: __u16,
-    pub code: __u16,
-    pub value: __s32,
-}
-#[test]
-fn bindgen_test_layout_input_event() {
-    const UNINIT: ::std::mem::MaybeUninit<input_event> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<input_event>(),
+        ::std::mem::size_of::<FT_MemoryRec_>(),
         16usize,
-        concat!("Size of: ", stringify!(input_event))
+        concat!("Size of: ", stringify!(FT_MemoryRec_))
     );
     assert_eq!(
-        ::std::mem::align_of::<input_event>(),
+        ::std::mem::align_of::<FT_MemoryRec_>(),
         4usize,
-        concat!("Alignment of ", stringify!(input_event))
+        concat!("Alignment of ", stringify!(FT_MemoryRec_))
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).time) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).user) as usize - ptr as usize },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(input_event),
+            stringify!(FT_MemoryRec_),
             "::",
-            stringify!(time)
+            stringify!(user)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).type_) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).alloc) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_MemoryRec_),
+            "::",
+            stringify!(alloc)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).free) as usize - ptr as usize },
         8usize,
         concat!(
             "Offset of field: ",
-            stringify!(input_event),
+            stringify!(FT_MemoryRec_),
             "::",
-            stringify!(type_)
+            stringify!(free)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).code) as usize - ptr as usize },
-        10usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(input_event),
-            "::",
-            stringify!(code)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).value) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).realloc) as usize - ptr as usize },
         12usize,
         concat!(
             "Offset of field: ",
-            stringify!(input_event),
+            stringify!(FT_MemoryRec_),
             "::",
-            stringify!(value)
+            stringify!(realloc)
         )
     );
 }
+pub type FT_Stream = *mut FT_StreamRec_;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct input_id {
-    pub bustype: __u16,
-    pub vendor: __u16,
-    pub product: __u16,
-    pub version: __u16,
+#[derive(Copy, Clone)]
+pub union FT_StreamDesc_ {
+    pub value: ::std::os::raw::c_long,
+    pub pointer: *mut ::std::os::raw::c_void,
 }
 #[test]
-fn bindgen_test_layout_input_id() {
-    const UNINIT: ::std::mem::MaybeUninit<input_id> = ::std::mem::MaybeUninit::uninit();
+fn bindgen_test_layout_FT_StreamDesc_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_StreamDesc_> = ::std::mem::MaybeUninit::uninit();
     let ptr = UNINIT.as_ptr();
     assert_eq!(
-        ::std::mem::size_of::<input_id>(),
-        8usize,
-        concat!("Size of: ", stringify!(input_id))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<input_id>(),
-        2usize,
-        concat!("Alignment of ", stringify!(input_id))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).bustype) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(input_id),
-            "::",
-            stringify!(bustype)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).vendor) as usize - ptr as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(input_id),
-            "::",
-            stringify!(vendor)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).product) as usize - ptr as usize },
+        ::std::mem::size_of::<FT_StreamDesc_>(),
         4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(input_id),
-            "::",
-            stringify!(product)
-        )
+        concat!("Size of: ", stringify!(FT_StreamDesc_))
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).version) as usize - ptr as usize },
-        6usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(input_id),
-            "::",
-            stringify!(version)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct input_absinfo {
-    pub value: __s32,
-    pub minimum: __s32,
-    pub maximum: __s32,
-    pub fuzz: __s32,
-    pub flat: __s32,
-    pub resolution: __s32,
-}
-#[test]
-fn bindgen_test_layout_input_absinfo() {
-    const UNINIT: ::std::mem::MaybeUninit<input_absinfo> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<input_absinfo>(),
-        24usize,
-        concat!("Size of: ", stringify!(input_absinfo))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<input_absinfo>(),
+        ::std::mem::align_of::<FT_StreamDesc_>(),
         4usize,
-        concat!("Alignment of ", stringify!(input_absinfo))
+        concat!("Alignment of ", stringify!(FT_StreamDesc_))
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).value) as usize - ptr as usize },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(input_absinfo),
+            stringify!(FT_StreamDesc_),
             "::",
             stringify!(value)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).minimum) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).pointer) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamDesc_),
+            "::",
+            stringify!(pointer)
+        )
+    );
+}
+pub type FT_StreamDesc = FT_StreamDesc_;
+pub type FT_Stream_IoFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        stream: FT_Stream,
+        offset: ::std::os::raw::c_ulong,
+        buffer: *mut ::std::os::raw::c_uchar,
+        count: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong,
+>;
+pub type FT_Stream_CloseFunc = ::std::option::Option<unsafe extern "C" fn(stream: FT_Stream)>;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct FT_StreamRec_ {
+    pub base: *mut ::std::os::raw::c_uchar,
+    pub size: ::std::os::raw::c_ulong,
+    pub pos: ::std::os::raw::c_ulong,
+    pub descriptor: FT_StreamDesc,
+    pub pathname: FT_StreamDesc,
+    pub read: FT_Stream_IoFunc,
+    pub close: FT_Stream_CloseFunc,
+    pub memory: FT_Memory,
+    pub cursor: *mut ::std::os::raw::c_uchar,
+    pub limit: *mut ::std::os::raw::c_uchar,
+}
+#[test]
+fn bindgen_test_layout_FT_StreamRec_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_StreamRec_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_StreamRec_>(),
+        40usize,
+        concat!("Size of: ", stringify!(FT_StreamRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_StreamRec_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_StreamRec_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).base) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(base)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).size) as usize - ptr as usize },
         4usize,
         concat!(
             "Offset of field: ",
-            stringify!(input_absinfo),
+            stringify!(FT_StreamRec_),
             "::",
-            stringify!(minimum)
+            stringify!(size)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).maximum) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).pos) as usize - ptr as usize },
         8usize,
         concat!(
             "Offset of field: ",
-            stringify!(input_absinfo),
+            stringify!(FT_StreamRec_),
             "::",
-            stringify!(maximum)
+            stringify!(pos)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).fuzz) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).descriptor) as usize - ptr as usize },
         12usize,
         concat!(
             "Offset of field: ",
-            stringify!(input_absinfo),
+            stringify!(FT_StreamRec_),
             "::",
-            stringify!(fuzz)
+            stringify!(descriptor)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).flat) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).pathname) as usize - ptr as usize },
         16usize,
         concat!(
             "Offset of field: ",
-            stringify!(input_absinfo),
+            stringify!(FT_StreamRec_),
             "::",
-            stringify!(flat)
+            stringify!(pathname)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).resolution) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).read) as usize - ptr as usize },
         20usize,
         concat!(
             "Offset of field: ",
-            stringify!(input_absinfo),
+            stringify!(FT_StreamRec_),
             "::",
-            stringify!(resolution)
+            stringify!(read)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).close) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(close)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).memory) as usize - ptr as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(memory)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).cursor) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(cursor)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).limit) as usize - ptr as usize },
+        36usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(limit)
         )
     );
 }
+pub type FT_StreamRec = FT_StreamRec_;
+pub type FT_Pos = ::std::os::raw::c_long;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct input_keymap_entry {
-    pub flags: __u8,
-    pub len: __u8,
-    pub index: __u16,
-    pub keycode: __u32,
-    pub scancode: [__u8; 32usize],
+pub struct FT_Vector_ {
+    pub x: FT_Pos,
+    pub y: FT_Pos,
 }
 #[test]
-fn bindgen_test_layout_input_keymap_entry() {
-    const UNINIT: ::std::mem::MaybeUninit<input_keymap_entry> = ::std::mem::MaybeUninit::uninit();
+fn bindgen_test_layout_FT_Vector_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Vector_> = ::std::mem::MaybeUninit::uninit();
     let ptr = UNINIT.as_ptr();
     assert_eq!(
-        ::std::mem::size_of::<input_keymap_entry>(),
-        40usize,
-        concat!("Size of: ", stringify!(input_keymap_entry))
+        ::std::mem::size_of::<FT_Vector_>(),
+        8usize,
+        concat!("Size of: ", stringify!(FT_Vector_))
     );
     assert_eq!(
-        ::std::mem::align_of::<input_keymap_entry>(),
+        ::std::mem::align_of::<FT_Vector_>(),
         4usize,
-        concat!("Alignment of ", stringify!(input_keymap_entry))
+        concat!("Alignment of ", stringify!(FT_Vector_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).x) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Vector_),
+            "::",
+            stringify!(x)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).y) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Vector_),
+            "::",
+            stringify!(y)
+        )
+    );
+}
+pub type FT_Vector = FT_Vector_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_BBox_ {
+    pub xMin: FT_Pos,
+    pub yMin: FT_Pos,
+    pub xMax: FT_Pos,
+    pub yMax: FT_Pos,
+}
+#[test]
+fn bindgen_test_layout_FT_BBox_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_BBox_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_BBox_>(),
+        16usize,
+        concat!("Size of: ", stringify!(FT_BBox_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_BBox_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_BBox_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).xMin) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_BBox_),
+            "::",
+            stringify!(xMin)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).yMin) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_BBox_),
+            "::",
+            stringify!(yMin)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).xMax) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_BBox_),
+            "::",
+            stringify!(xMax)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).yMax) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_BBox_),
+            "::",
+            stringify!(yMax)
+        )
+    );
+}
+pub type FT_BBox = FT_BBox_;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_NONE: FT_Pixel_Mode_ = 0;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_MONO: FT_Pixel_Mode_ = 1;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_GRAY: FT_Pixel_Mode_ = 2;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_GRAY2: FT_Pixel_Mode_ = 3;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_GRAY4: FT_Pixel_Mode_ = 4;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_LCD: FT_Pixel_Mode_ = 5;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_LCD_V: FT_Pixel_Mode_ = 6;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_BGRA: FT_Pixel_Mode_ = 7;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_MAX: FT_Pixel_Mode_ = 8;
+pub type FT_Pixel_Mode_ = ::std::os::raw::c_uint;
+pub use self::FT_Pixel_Mode_ as FT_Pixel_Mode;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Bitmap_ {
+    pub rows: ::std::os::raw::c_uint,
+    pub width: ::std::os::raw::c_uint,
+    pub pitch: ::std::os::raw::c_int,
+    pub buffer: *mut ::std::os::raw::c_uchar,
+    pub num_grays: ::std::os::raw::c_ushort,
+    pub pixel_mode: ::std::os::raw::c_uchar,
+    pub palette_mode: ::std::os::raw::c_uchar,
+    pub palette: *mut ::std::os::raw::c_void,
+}
+#[test]
+fn bindgen_test_layout_FT_Bitmap_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Bitmap_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Bitmap_>(),
+        24usize,
+        concat!("Size of: ", stringify!(FT_Bitmap_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Bitmap_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_Bitmap_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rows) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(rows)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).width) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(width)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).pitch) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(pitch)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).buffer) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(buffer)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).num_grays) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(num_grays)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).pixel_mode) as usize - ptr as usize },
+        18usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(pixel_mode)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).palette_mode) as usize - ptr as usize },
+        19usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(palette_mode)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).palette) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(palette)
+        )
+    );
+}
+pub type FT_Bitmap = FT_Bitmap_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Outline_ {
+    pub n_contours: ::std::os::raw::c_short,
+    pub n_points: ::std::os::raw::c_short,
+    pub points: *mut FT_Vector,
+    pub tags: *mut ::std::os::raw::c_char,
+    pub contours: *mut ::std::os::raw::c_short,
+    pub flags: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_FT_Outline_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Outline_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Outline_>(),
+        20usize,
+        concat!("Size of: ", stringify!(FT_Outline_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Outline_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_Outline_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).n_contours) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_),
+            "::",
+            stringify!(n_contours)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).n_points) as usize - ptr as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_),
+            "::",
+            stringify!(n_points)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).points) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_),
+            "::",
+            stringify!(points)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).tags) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_),
+            "::",
+            stringify!(tags)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).contours) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_),
+            "::",
+            stringify!(contours)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).flags) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_),
+            "::",
+            stringify!(flags)
+        )
+    );
+}
+pub type FT_Outline = FT_Outline_;
+pub type FT_Outline_MoveToFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        to: *const FT_Vector,
+        user: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+pub type FT_Outline_LineToFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        to: *const FT_Vector,
+        user: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+pub type FT_Outline_ConicToFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        control: *const FT_Vector,
+        to: *const FT_Vector,
+        user: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+pub type FT_Outline_CubicToFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        control1: *const FT_Vector,
+        control2: *const FT_Vector,
+        to: *const FT_Vector,
+        user: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Outline_Funcs_ {
+    pub move_to: FT_Outline_MoveToFunc,
+    pub line_to: FT_Outline_LineToFunc,
+    pub conic_to: FT_Outline_ConicToFunc,
+    pub cubic_to: FT_Outline_CubicToFunc,
+    pub shift: ::std::os::raw::c_int,
+    pub delta: FT_Pos,
+}
+#[test]
+fn bindgen_test_layout_FT_Outline_Funcs_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Outline_Funcs_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Outline_Funcs_>(),
+        24usize,
+        concat!("Size of: ", stringify!(FT_Outline_Funcs_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Outline_Funcs_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_Outline_Funcs_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).move_to) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_Funcs_),
+            "::",
+            stringify!(move_to)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).line_to) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_Funcs_),
+            "::",
+            stringify!(line_to)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).conic_to) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_Funcs_),
+            "::",
+            stringify!(conic_to)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).cubic_to) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_Funcs_),
+            "::",
+            stringify!(cubic_to)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).shift) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_Funcs_),
+            "::",
+            stringify!(shift)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).delta) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_Funcs_),
+            "::",
+            stringify!(delta)
+        )
+    );
+}
+pub type FT_Outline_Funcs = FT_Outline_Funcs_;
+pub const FT_Glyph_Format__FT_GLYPH_FORMAT_NONE: FT_Glyph_Format_ = 0;
+pub const FT_Glyph_Format__FT_GLYPH_FORMAT_COMPOSITE: FT_Glyph_Format_ = 1668246896;
+pub const FT_Glyph_Format__FT_GLYPH_FORMAT_BITMAP: FT_Glyph_Format_ = 1651078259;
+pub const FT_Glyph_Format__FT_GLYPH_FORMAT_OUTLINE: FT_Glyph_Format_ = 1869968492;
+pub const FT_Glyph_Format__FT_GLYPH_FORMAT_PLOTTER: FT_Glyph_Format_ = 1886154612;
+pub type FT_Glyph_Format_ = ::std::os::raw::c_uint;
+pub use self::FT_Glyph_Format_ as FT_Glyph_Format;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_RasterRec_ {
+    _unused: [u8; 0],
+}
+pub type FT_Raster = *mut FT_RasterRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Span_ {
+    pub x: ::std::os::raw::c_short,
+    pub len: ::std::os::raw::c_ushort,
+    pub coverage: ::std::os::raw::c_uchar,
+}
+#[test]
+fn bindgen_test_layout_FT_Span_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Span_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Span_>(),
+        6usize,
+        concat!("Size of: ", stringify!(FT_Span_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Span_>(),
+        2usize,
+        concat!("Alignment of ", stringify!(FT_Span_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).x) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Span_),
+            "::",
+            stringify!(x)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).len) as usize - ptr as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Span_),
+            "::",
+            stringify!(len)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).coverage) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Span_),
+            "::",
+            stringify!(coverage)
+        )
+    );
+}
+pub type FT_Span = FT_Span_;
+pub type FT_SpanFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        y: ::std::os::raw::c_int,
+        count: ::std::os::raw::c_int,
+        spans: *const FT_Span,
+        user: *mut ::std::os::raw::c_void,
+    ),
+>;
+pub type FT_Raster_BitTest_Func = ::std::option::Option<
+    unsafe extern "C" fn(
+        y: ::std::os::raw::c_int,
+        x: ::std::os::raw::c_int,
+        user: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+pub type FT_Raster_BitSet_Func = ::std::option::Option<
+    unsafe extern "C" fn(
+        y: ::std::os::raw::c_int,
+        x: ::std::os::raw::c_int,
+        user: *mut ::std::os::raw::c_void,
+    ),
+>;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Raster_Params_ {
+    pub target: *const FT_Bitmap,
+    pub source: *const ::std::os::raw::c_void,
+    pub flags: ::std::os::raw::c_int,
+    pub gray_spans: FT_SpanFunc,
+    pub black_spans: FT_SpanFunc,
+    pub bit_test: FT_Raster_BitTest_Func,
+    pub bit_set: FT_Raster_BitSet_Func,
+    pub user: *mut ::std::os::raw::c_void,
+    pub clip_box: FT_BBox,
+}
+#[test]
+fn bindgen_test_layout_FT_Raster_Params_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Raster_Params_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Raster_Params_>(),
+        48usize,
+        concat!("Size of: ", stringify!(FT_Raster_Params_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Raster_Params_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_Raster_Params_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).target) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(target)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).source) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(source)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).flags) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(flags)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).gray_spans) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(gray_spans)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).black_spans) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(black_spans)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).bit_test) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(bit_test)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).bit_set) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(bit_set)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).user) as usize - ptr as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(user)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).clip_box) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(clip_box)
+        )
+    );
+}
+pub type FT_Raster_Params = FT_Raster_Params_;
+pub type FT_Raster_NewFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        memory: *mut ::std::os::raw::c_void,
+        raster: *mut FT_Raster,
+    ) -> ::std::os::raw::c_int,
+>;
+pub type FT_Raster_DoneFunc = ::std::option::Option<unsafe extern "C" fn(raster: FT_Raster)>;
+pub type FT_Raster_ResetFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        raster: FT_Raster,
+        pool_base: *mut ::std::os::raw::c_uchar,
+        pool_size: ::std::os::raw::c_ulong,
+    ),
+>;
+pub type FT_Raster_SetModeFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        raster: FT_Raster,
+        mode: ::std::os::raw::c_ulong,
+        args: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+pub type FT_Raster_RenderFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        raster: FT_Raster,
+        params: *const FT_Raster_Params,
+    ) -> ::std::os::raw::c_int,
+>;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Raster_Funcs_ {
+    pub glyph_format: FT_Glyph_Format,
+    pub raster_new: FT_Raster_NewFunc,
+    pub raster_reset: FT_Raster_ResetFunc,
+    pub raster_set_mode: FT_Raster_SetModeFunc,
+    pub raster_render: FT_Raster_RenderFunc,
+    pub raster_done: FT_Raster_DoneFunc,
+}
+#[test]
+fn bindgen_test_layout_FT_Raster_Funcs_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Raster_Funcs_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Raster_Funcs_>(),
+        24usize,
+        concat!("Size of: ", stringify!(FT_Raster_Funcs_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Raster_Funcs_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_Raster_Funcs_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).glyph_format) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Funcs_),
+            "::",
+            stringify!(glyph_format)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).raster_new) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Funcs_),
+            "::",
+            stringify!(raster_new)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).raster_reset) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Funcs_),
+            "::",
+            stringify!(raster_reset)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).raster_set_mode) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Funcs_),
+            "::",
+            stringify!(raster_set_mode)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).raster_render) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Funcs_),
+            "::",
+            stringify!(raster_render)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).raster_done) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Funcs_),
+            "::",
+            stringify!(raster_done)
+        )
+    );
+}
+pub type FT_Raster_Funcs = FT_Raster_Funcs_;
+pub type FT_Bool = ::std::os::raw::c_uchar;
+pub type FT_FWord = ::std::os::raw::c_short;
+pub type FT_UFWord = ::std::os::raw::c_ushort;
+pub type FT_Char = ::std::os::raw::c_schar;
+pub type FT_Byte = ::std::os::raw::c_uchar;
+pub type FT_Bytes = *const FT_Byte;
+pub type FT_Tag = FT_UInt32;
+pub type FT_String = ::std::os::raw::c_char;
+pub type FT_Short = ::std::os::raw::c_short;
+pub type FT_UShort = ::std::os::raw::c_ushort;
+pub type FT_Int = ::std::os::raw::c_int;
+pub type FT_UInt = ::std::os::raw::c_uint;
+pub type FT_Long = ::std::os::raw::c_long;
+pub type FT_ULong = ::std::os::raw::c_ulong;
+pub type FT_F2Dot14 = ::std::os::raw::c_short;
+pub type FT_F26Dot6 = ::std::os::raw::c_long;
+pub type FT_Fixed = ::std::os::raw::c_long;
+pub type FT_Error = ::std::os::raw::c_int;
+pub type FT_Pointer = *mut ::std::os::raw::c_void;
+pub type FT_Offset = usize;
+pub type FT_PtrDist = isize;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_UnitVector_ {
+    pub x: FT_F2Dot14,
+    pub y: FT_F2Dot14,
+}
+#[test]
+fn bindgen_test_layout_FT_UnitVector_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_UnitVector_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_UnitVector_>(),
+        4usize,
+        concat!("Size of: ", stringify!(FT_UnitVector_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_UnitVector_>(),
+        2usize,
+        concat!("Alignment of ", stringify!(FT_UnitVector_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).x) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_UnitVector_),
+            "::",
+            stringify!(x)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).y) as usize - ptr as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_UnitVector_),
+            "::",
+            stringify!(y)
+        )
+    );
+}
+pub type FT_UnitVector = FT_UnitVector_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Matrix_ {
+    pub xx: FT_Fixed,
+    pub xy: FT_Fixed,
+    pub yx: FT_Fixed,
+    pub yy: FT_Fixed,
+}
+#[test]
+fn bindgen_test_layout_FT_Matrix_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Matrix_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Matrix_>(),
+        16usize,
+        concat!("Size of: ", stringify!(FT_Matrix_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Matrix_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_Matrix_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).xx) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Matrix_),
+            "::",
+            stringify!(xx)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).xy) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Matrix_),
+            "::",
+            stringify!(xy)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).yx) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Matrix_),
+            "::",
+            stringify!(yx)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).yy) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Matrix_),
+            "::",
+            stringify!(yy)
+        )
+    );
+}
+pub type FT_Matrix = FT_Matrix_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Data_ {
+    pub pointer: *const FT_Byte,
+    pub length: FT_Int,
+}
+#[test]
+fn bindgen_test_layout_FT_Data_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Data_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Data_>(),
+        8usize,
+        concat!("Size of: ", stringify!(FT_Data_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Data_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_Data_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).pointer) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Data_),
+            "::",
+            stringify!(pointer)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).length) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Data_),
+            "::",
+            stringify!(length)
+        )
+    );
+}
+pub type FT_Data = FT_Data_;
+pub type FT_Generic_Finalizer =
+    ::std::option::Option<unsafe extern "C" fn(object: *mut ::std::os::raw::c_void)>;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Generic_ {
+    pub data: *mut ::std::os::raw::c_void,
+    pub finalizer: FT_Generic_Finalizer,
+}
+#[test]
+fn bindgen_test_layout_FT_Generic_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Generic_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Generic_>(),
+        8usize,
+        concat!("Size of: ", stringify!(FT_Generic_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Generic_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_Generic_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).data) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Generic_),
+            "::",
+            stringify!(data)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).finalizer) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Generic_),
+            "::",
+            stringify!(finalizer)
+        )
+    );
+}
+pub type FT_Generic = FT_Generic_;
+pub type FT_ListNode = *mut FT_ListNodeRec_;
+pub type FT_List = *mut FT_ListRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_ListNodeRec_ {
+    pub prev: FT_ListNode,
+    pub next: FT_ListNode,
+    pub data: *mut ::std::os::raw::c_void,
+}
+#[test]
+fn bindgen_test_layout_FT_ListNodeRec_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_ListNodeRec_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_ListNodeRec_>(),
+        12usize,
+        concat!("Size of: ", stringify!(FT_ListNodeRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_ListNodeRec_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_ListNodeRec_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).prev) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_ListNodeRec_),
+            "::",
+            stringify!(prev)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).next) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_ListNodeRec_),
+            "::",
+            stringify!(next)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).data) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_ListNodeRec_),
+            "::",
+            stringify!(data)
+        )
+    );
+}
+pub type FT_ListNodeRec = FT_ListNodeRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_ListRec_ {
+    pub head: FT_ListNode,
+    pub tail: FT_ListNode,
+}
+#[test]
+fn bindgen_test_layout_FT_ListRec_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_ListRec_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_ListRec_>(),
+        8usize,
+        concat!("Size of: ", stringify!(FT_ListRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_ListRec_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_ListRec_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).head) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_ListRec_),
+            "::",
+            stringify!(head)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).tail) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_ListRec_),
+            "::",
+            stringify!(tail)
+        )
+    );
+}
+pub type FT_ListRec = FT_ListRec_;
+pub const FT_Mod_Err_Base: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_Autofit: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_BDF: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_Bzip2: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_Cache: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_CFF: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_CID: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_Gzip: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_LZW: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_OTvalid: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_PCF: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_PFR: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_PSaux: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_PShinter: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_PSnames: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_Raster: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_SFNT: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_Smooth: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_TrueType: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_Type1: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_Type42: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_Winfonts: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_GXvalid: _bindgen_ty_26 = 0;
+pub const FT_Mod_Err_Max: _bindgen_ty_26 = 1;
+pub type _bindgen_ty_26 = ::std::os::raw::c_uint;
+pub const FT_Err_Ok: _bindgen_ty_27 = 0;
+pub const FT_Err_Cannot_Open_Resource: _bindgen_ty_27 = 1;
+pub const FT_Err_Unknown_File_Format: _bindgen_ty_27 = 2;
+pub const FT_Err_Invalid_File_Format: _bindgen_ty_27 = 3;
+pub const FT_Err_Invalid_Version: _bindgen_ty_27 = 4;
+pub const FT_Err_Lower_Module_Version: _bindgen_ty_27 = 5;
+pub const FT_Err_Invalid_Argument: _bindgen_ty_27 = 6;
+pub const FT_Err_Unimplemented_Feature: _bindgen_ty_27 = 7;
+pub const FT_Err_Invalid_Table: _bindgen_ty_27 = 8;
+pub const FT_Err_Invalid_Offset: _bindgen_ty_27 = 9;
+pub const FT_Err_Array_Too_Large: _bindgen_ty_27 = 10;
+pub const FT_Err_Missing_Module: _bindgen_ty_27 = 11;
+pub const FT_Err_Missing_Property: _bindgen_ty_27 = 12;
+pub const FT_Err_Invalid_Glyph_Index: _bindgen_ty_27 = 16;
+pub const FT_Err_Invalid_Character_Code: _bindgen_ty_27 = 17;
+pub const FT_Err_Invalid_Glyph_Format: _bindgen_ty_27 = 18;
+pub const FT_Err_Cannot_Render_Glyph: _bindgen_ty_27 = 19;
+pub const FT_Err_Invalid_Outline: _bindgen_ty_27 = 20;
+pub const FT_Err_Invalid_Composite: _bindgen_ty_27 = 21;
+pub const FT_Err_Too_Many_Hints: _bindgen_ty_27 = 22;
+pub const FT_Err_Invalid_Pixel_Size: _bindgen_ty_27 = 23;
+pub const FT_Err_Invalid_Handle: _bindgen_ty_27 = 32;
+pub const FT_Err_Invalid_Library_Handle: _bindgen_ty_27 = 33;
+pub const FT_Err_Invalid_Driver_Handle: _bindgen_ty_27 = 34;
+pub const FT_Err_Invalid_Face_Handle: _bindgen_ty_27 = 35;
+pub const FT_Err_Invalid_Size_Handle: _bindgen_ty_27 = 36;
+pub const FT_Err_Invalid_Slot_Handle: _bindgen_ty_27 = 37;
+pub const FT_Err_Invalid_CharMap_Handle: _bindgen_ty_27 = 38;
+pub const FT_Err_Invalid_Cache_Handle: _bindgen_ty_27 = 39;
+pub const FT_Err_Invalid_Stream_Handle: _bindgen_ty_27 = 40;
+pub const FT_Err_Too_Many_Drivers: _bindgen_ty_27 = 48;
+pub const FT_Err_Too_Many_Extensions: _bindgen_ty_27 = 49;
+pub const FT_Err_Out_Of_Memory: _bindgen_ty_27 = 64;
+pub const FT_Err_Unlisted_Object: _bindgen_ty_27 = 65;
+pub const FT_Err_Cannot_Open_Stream: _bindgen_ty_27 = 81;
+pub const FT_Err_Invalid_Stream_Seek: _bindgen_ty_27 = 82;
+pub const FT_Err_Invalid_Stream_Skip: _bindgen_ty_27 = 83;
+pub const FT_Err_Invalid_Stream_Read: _bindgen_ty_27 = 84;
+pub const FT_Err_Invalid_Stream_Operation: _bindgen_ty_27 = 85;
+pub const FT_Err_Invalid_Frame_Operation: _bindgen_ty_27 = 86;
+pub const FT_Err_Nested_Frame_Access: _bindgen_ty_27 = 87;
+pub const FT_Err_Invalid_Frame_Read: _bindgen_ty_27 = 88;
+pub const FT_Err_Raster_Uninitialized: _bindgen_ty_27 = 96;
+pub const FT_Err_Raster_Corrupted: _bindgen_ty_27 = 97;
+pub const FT_Err_Raster_Overflow: _bindgen_ty_27 = 98;
+pub const FT_Err_Raster_Negative_Height: _bindgen_ty_27 = 99;
+pub const FT_Err_Too_Many_Caches: _bindgen_ty_27 = 112;
+pub const FT_Err_Invalid_Opcode: _bindgen_ty_27 = 128;
+pub const FT_Err_Too_Few_Arguments: _bindgen_ty_27 = 129;
+pub const FT_Err_Stack_Overflow: _bindgen_ty_27 = 130;
+pub const FT_Err_Code_Overflow: _bindgen_ty_27 = 131;
+pub const FT_Err_Bad_Argument: _bindgen_ty_27 = 132;
+pub const FT_Err_Divide_By_Zero: _bindgen_ty_27 = 133;
+pub const FT_Err_Invalid_Reference: _bindgen_ty_27 = 134;
+pub const FT_Err_Debug_OpCode: _bindgen_ty_27 = 135;
+pub const FT_Err_ENDF_In_Exec_Stream: _bindgen_ty_27 = 136;
+pub const FT_Err_Nested_DEFS: _bindgen_ty_27 = 137;
+pub const FT_Err_Invalid_CodeRange: _bindgen_ty_27 = 138;
+pub const FT_Err_Execution_Too_Long: _bindgen_ty_27 = 139;
+pub const FT_Err_Too_Many_Function_Defs: _bindgen_ty_27 = 140;
+pub const FT_Err_Too_Many_Instruction_Defs: _bindgen_ty_27 = 141;
+pub const FT_Err_Table_Missing: _bindgen_ty_27 = 142;
+pub const FT_Err_Horiz_Header_Missing: _bindgen_ty_27 = 143;
+pub const FT_Err_Locations_Missing: _bindgen_ty_27 = 144;
+pub const FT_Err_Name_Table_Missing: _bindgen_ty_27 = 145;
+pub const FT_Err_CMap_Table_Missing: _bindgen_ty_27 = 146;
+pub const FT_Err_Hmtx_Table_Missing: _bindgen_ty_27 = 147;
+pub const FT_Err_Post_Table_Missing: _bindgen_ty_27 = 148;
+pub const FT_Err_Invalid_Horiz_Metrics: _bindgen_ty_27 = 149;
+pub const FT_Err_Invalid_CharMap_Format: _bindgen_ty_27 = 150;
+pub const FT_Err_Invalid_PPem: _bindgen_ty_27 = 151;
+pub const FT_Err_Invalid_Vert_Metrics: _bindgen_ty_27 = 152;
+pub const FT_Err_Could_Not_Find_Context: _bindgen_ty_27 = 153;
+pub const FT_Err_Invalid_Post_Table_Format: _bindgen_ty_27 = 154;
+pub const FT_Err_Invalid_Post_Table: _bindgen_ty_27 = 155;
+pub const FT_Err_Syntax_Error: _bindgen_ty_27 = 160;
+pub const FT_Err_Stack_Underflow: _bindgen_ty_27 = 161;
+pub const FT_Err_Ignore: _bindgen_ty_27 = 162;
+pub const FT_Err_No_Unicode_Glyph_Name: _bindgen_ty_27 = 163;
+pub const FT_Err_Glyph_Too_Big: _bindgen_ty_27 = 164;
+pub const FT_Err_Missing_Startfont_Field: _bindgen_ty_27 = 176;
+pub const FT_Err_Missing_Font_Field: _bindgen_ty_27 = 177;
+pub const FT_Err_Missing_Size_Field: _bindgen_ty_27 = 178;
+pub const FT_Err_Missing_Fontboundingbox_Field: _bindgen_ty_27 = 179;
+pub const FT_Err_Missing_Chars_Field: _bindgen_ty_27 = 180;
+pub const FT_Err_Missing_Startchar_Field: _bindgen_ty_27 = 181;
+pub const FT_Err_Missing_Encoding_Field: _bindgen_ty_27 = 182;
+pub const FT_Err_Missing_Bbx_Field: _bindgen_ty_27 = 183;
+pub const FT_Err_Bbx_Too_Big: _bindgen_ty_27 = 184;
+pub const FT_Err_Corrupted_Font_Header: _bindgen_ty_27 = 185;
+pub const FT_Err_Corrupted_Font_Glyphs: _bindgen_ty_27 = 186;
+pub const FT_Err_Max: _bindgen_ty_27 = 187;
+pub type _bindgen_ty_27 = ::std::os::raw::c_uint;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Glyph_Metrics_ {
+    pub width: FT_Pos,
+    pub height: FT_Pos,
+    pub horiBearingX: FT_Pos,
+    pub horiBearingY: FT_Pos,
+    pub horiAdvance: FT_Pos,
+    pub vertBearingX: FT_Pos,
+    pub vertBearingY: FT_Pos,
+    pub vertAdvance: FT_Pos,
+}
+#[test]
+fn bindgen_test_layout_FT_Glyph_Metrics_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Glyph_Metrics_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Glyph_Metrics_>(),
+        32usize,
+        concat!("Size of: ", stringify!(FT_Glyph_Metrics_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Glyph_Metrics_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_Glyph_Metrics_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).width) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(width)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).height) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(height)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).horiBearingX) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(horiBearingX)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).horiBearingY) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(horiBearingY)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).horiAdvance) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(horiAdvance)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).vertBearingX) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(vertBearingX)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).vertBearingY) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(vertBearingY)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).vertAdvance) as usize - ptr as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(vertAdvance)
+        )
+    );
+}
+pub type FT_Glyph_Metrics = FT_Glyph_Metrics_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Bitmap_Size_ {
+    pub height: FT_Short,
+    pub width: FT_Short,
+    pub size: FT_Pos,
+    pub x_ppem: FT_Pos,
+    pub y_ppem: FT_Pos,
+}
+#[test]
+fn bindgen_test_layout_FT_Bitmap_Size_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Bitmap_Size_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Bitmap_Size_>(),
+        16usize,
+        concat!("Size of: ", stringify!(FT_Bitmap_Size_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Bitmap_Size_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_Bitmap_Size_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).height) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_Size_),
+            "::",
+            stringify!(height)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).width) as usize - ptr as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_Size_),
+            "::",
+            stringify!(width)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).size) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_Size_),
+            "::",
+            stringify!(size)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).x_ppem) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_Size_),
+            "::",
+            stringify!(x_ppem)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).y_ppem) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_Size_),
+            "::",
+            stringify!(y_ppem)
+        )
+    );
+}
+pub type FT_Bitmap_Size = FT_Bitmap_Size_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_LibraryRec_ {
+    _unused: [u8; 0],
+}
+pub type FT_Library = *mut FT_LibraryRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_ModuleRec_ {
+    _unused: [u8; 0],
+}
+pub type FT_Module = *mut FT_ModuleRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_DriverRec_ {
+    _unused: [u8; 0],
+}
+pub type FT_Driver = *mut FT_DriverRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_RendererRec_ {
+    _unused: [u8; 0],
+}
+pub type FT_Renderer = *mut FT_RendererRec_;
+pub type FT_Face = *mut FT_FaceRec_;
+pub type FT_Size = *mut FT_SizeRec_;
+pub type FT_GlyphSlot = *mut FT_GlyphSlotRec_;
+pub type FT_CharMap = *mut FT_CharMapRec_;
+pub const FT_Encoding__FT_ENCODING_NONE: FT_Encoding_ = 0;
+pub const FT_Encoding__FT_ENCODING_MS_SYMBOL: FT_Encoding_ = 1937337698;
+pub const FT_Encoding__FT_ENCODING_UNICODE: FT_Encoding_ = 1970170211;
+pub const FT_Encoding__FT_ENCODING_SJIS: FT_Encoding_ = 1936353651;
+pub const FT_Encoding__FT_ENCODING_GB2312: FT_Encoding_ = 1734484000;
+pub const FT_Encoding__FT_ENCODING_BIG5: FT_Encoding_ = 1651074869;
+pub const FT_Encoding__FT_ENCODING_WANSUNG: FT_Encoding_ = 2002873971;
+pub const FT_Encoding__FT_ENCODING_JOHAB: FT_Encoding_ = 1785686113;
+pub const FT_Encoding__FT_ENCODING_MS_SJIS: FT_Encoding_ = 1936353651;
+pub const FT_Encoding__FT_ENCODING_MS_GB2312: FT_Encoding_ = 1734484000;
+pub const FT_Encoding__FT_ENCODING_MS_BIG5: FT_Encoding_ = 1651074869;
+pub const FT_Encoding__FT_ENCODING_MS_WANSUNG: FT_Encoding_ = 2002873971;
+pub const FT_Encoding__FT_ENCODING_MS_JOHAB: FT_Encoding_ = 1785686113;
+pub const FT_Encoding__FT_ENCODING_ADOBE_STANDARD: FT_Encoding_ = 1094995778;
+pub const FT_Encoding__FT_ENCODING_ADOBE_EXPERT: FT_Encoding_ = 1094992453;
+pub const FT_Encoding__FT_ENCODING_ADOBE_CUSTOM: FT_Encoding_ = 1094992451;
+pub const FT_Encoding__FT_ENCODING_ADOBE_LATIN_1: FT_Encoding_ = 1818326065;
+pub const FT_Encoding__FT_ENCODING_OLD_LATIN_2: FT_Encoding_ = 1818326066;
+pub const FT_Encoding__FT_ENCODING_APPLE_ROMAN: FT_Encoding_ = 1634889070;
+pub type FT_Encoding_ = ::std::os::raw::c_uint;
+pub use self::FT_Encoding_ as FT_Encoding;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_CharMapRec_ {
+    pub face: FT_Face,
+    pub encoding: FT_Encoding,
+    pub platform_id: FT_UShort,
+    pub encoding_id: FT_UShort,
+}
+#[test]
+fn bindgen_test_layout_FT_CharMapRec_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_CharMapRec_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_CharMapRec_>(),
+        12usize,
+        concat!("Size of: ", stringify!(FT_CharMapRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_CharMapRec_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_CharMapRec_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).face) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_CharMapRec_),
+            "::",
+            stringify!(face)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).encoding) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_CharMapRec_),
+            "::",
+            stringify!(encoding)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).platform_id) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_CharMapRec_),
+            "::",
+            stringify!(platform_id)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).encoding_id) as usize - ptr as usize },
+        10usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_CharMapRec_),
+            "::",
+            stringify!(encoding_id)
+        )
+    );
+}
+pub type FT_CharMapRec = FT_CharMapRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Face_InternalRec_ {
+    _unused: [u8; 0],
+}
+pub type FT_Face_Internal = *mut FT_Face_InternalRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_FaceRec_ {
+    pub num_faces: FT_Long,
+    pub face_index: FT_Long,
+    pub face_flags: FT_Long,
+    pub style_flags: FT_Long,
+    pub num_glyphs: FT_Long,
+    pub family_name: *mut FT_String,
+    pub style_name: *mut FT_String,
+    pub num_fixed_sizes: FT_Int,
+    pub available_sizes: *mut FT_Bitmap_Size,
+    pub num_charmaps: FT_Int,
+    pub charmaps: *mut FT_CharMap,
+    pub generic: FT_Generic,
+    pub bbox: FT_BBox,
+    pub units_per_EM: FT_UShort,
+    pub ascender: FT_Short,
+    pub descender: FT_Short,
+    pub height: FT_Short,
+    pub max_advance_width: FT_Short,
+    pub max_advance_height: FT_Short,
+    pub underline_position: FT_Short,
+    pub underline_thickness: FT_Short,
+    pub glyph: FT_GlyphSlot,
+    pub size: FT_Size,
+    pub charmap: FT_CharMap,
+    pub driver: FT_Driver,
+    pub memory: FT_Memory,
+    pub stream: FT_Stream,
+    pub sizes_list: FT_ListRec,
+    pub autohint: FT_Generic,
+    pub extensions: *mut ::std::os::raw::c_void,
+    pub internal: FT_Face_Internal,
+}
+#[test]
+fn bindgen_test_layout_FT_FaceRec_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_FaceRec_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_FaceRec_>(),
+        132usize,
+        concat!("Size of: ", stringify!(FT_FaceRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_FaceRec_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_FaceRec_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).num_faces) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(num_faces)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).face_index) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(face_index)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).face_flags) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(face_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).style_flags) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(style_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).num_glyphs) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(num_glyphs)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).family_name) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(family_name)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).style_name) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(style_name)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).num_fixed_sizes) as usize - ptr as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(num_fixed_sizes)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).available_sizes) as usize - ptr as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(available_sizes)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).num_charmaps) as usize - ptr as usize },
+        36usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(num_charmaps)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).charmaps) as usize - ptr as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(charmaps)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).generic) as usize - ptr as usize },
+        44usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(generic)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).bbox) as usize - ptr as usize },
+        52usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(bbox)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).units_per_EM) as usize - ptr as usize },
+        68usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(units_per_EM)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ascender) as usize - ptr as usize },
+        70usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(ascender)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).descender) as usize - ptr as usize },
+        72usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(descender)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).height) as usize - ptr as usize },
+        74usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(height)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).max_advance_width) as usize - ptr as usize },
+        76usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(max_advance_width)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).max_advance_height) as usize - ptr as usize },
+        78usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(max_advance_height)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).underline_position) as usize - ptr as usize },
+        80usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(underline_position)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).underline_thickness) as usize - ptr as usize },
+        82usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(underline_thickness)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).glyph) as usize - ptr as usize },
+        84usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(glyph)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).size) as usize - ptr as usize },
+        88usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(size)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).charmap) as usize - ptr as usize },
+        92usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(charmap)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).driver) as usize - ptr as usize },
+        96usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(driver)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).memory) as usize - ptr as usize },
+        100usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(memory)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).stream) as usize - ptr as usize },
+        104usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(stream)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).sizes_list) as usize - ptr as usize },
+        108usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(sizes_list)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).autohint) as usize - ptr as usize },
+        116usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(autohint)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).extensions) as usize - ptr as usize },
+        124usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(extensions)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).internal) as usize - ptr as usize },
+        128usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(internal)
+        )
+    );
+}
+pub type FT_FaceRec = FT_FaceRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Size_InternalRec_ {
+    _unused: [u8; 0],
+}
+pub type FT_Size_Internal = *mut FT_Size_InternalRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Size_Metrics_ {
+    pub x_ppem: FT_UShort,
+    pub y_ppem: FT_UShort,
+    pub x_scale: FT_Fixed,
+    pub y_scale: FT_Fixed,
+    pub ascender: FT_Pos,
+    pub descender: FT_Pos,
+    pub height: FT_Pos,
+    pub max_advance: FT_Pos,
+}
+#[test]
+fn bindgen_test_layout_FT_Size_Metrics_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Size_Metrics_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Size_Metrics_>(),
+        28usize,
+        concat!("Size of: ", stringify!(FT_Size_Metrics_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Size_Metrics_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_Size_Metrics_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).x_ppem) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(x_ppem)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).y_ppem) as usize - ptr as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(y_ppem)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).x_scale) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(x_scale)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).y_scale) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(y_scale)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).ascender) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(ascender)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).descender) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(descender)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).height) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(height)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).max_advance) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(max_advance)
+        )
+    );
+}
+pub type FT_Size_Metrics = FT_Size_Metrics_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_SizeRec_ {
+    pub face: FT_Face,
+    pub generic: FT_Generic,
+    pub metrics: FT_Size_Metrics,
+    pub internal: FT_Size_Internal,
+}
+#[test]
+fn bindgen_test_layout_FT_SizeRec_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_SizeRec_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_SizeRec_>(),
+        44usize,
+        concat!("Size of: ", stringify!(FT_SizeRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_SizeRec_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_SizeRec_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).face) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_SizeRec_),
+            "::",
+            stringify!(face)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).generic) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_SizeRec_),
+            "::",
+            stringify!(generic)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).metrics) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_SizeRec_),
+            "::",
+            stringify!(metrics)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).internal) as usize - ptr as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_SizeRec_),
+            "::",
+            stringify!(internal)
+        )
+    );
+}
+pub type FT_SizeRec = FT_SizeRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_SubGlyphRec_ {
+    _unused: [u8; 0],
+}
+pub type FT_SubGlyph = *mut FT_SubGlyphRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Slot_InternalRec_ {
+    _unused: [u8; 0],
+}
+pub type FT_Slot_Internal = *mut FT_Slot_InternalRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_GlyphSlotRec_ {
+    pub library: FT_Library,
+    pub face: FT_Face,
+    pub next: FT_GlyphSlot,
+    pub reserved: FT_UInt,
+    pub generic: FT_Generic,
+    pub metrics: FT_Glyph_Metrics,
+    pub linearHoriAdvance: FT_Fixed,
+    pub linearVertAdvance: FT_Fixed,
+    pub advance: FT_Vector,
+    pub format: FT_Glyph_Format,
+    pub bitmap: FT_Bitmap,
+    pub bitmap_left: FT_Int,
+    pub bitmap_top: FT_Int,
+    pub outline: FT_Outline,
+    pub num_subglyphs: FT_UInt,
+    pub subglyphs: FT_SubGlyph,
+    pub control_data: *mut ::std::os::raw::c_void,
+    pub control_len: ::std::os::raw::c_long,
+    pub lsb_delta: FT_Pos,
+    pub rsb_delta: FT_Pos,
+    pub other: *mut ::std::os::raw::c_void,
+    pub internal: FT_Slot_Internal,
+}
+#[test]
+fn bindgen_test_layout_FT_GlyphSlotRec_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_GlyphSlotRec_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_GlyphSlotRec_>(),
+        160usize,
+        concat!("Size of: ", stringify!(FT_GlyphSlotRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_GlyphSlotRec_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_GlyphSlotRec_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).library) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(library)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).face) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(face)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).next) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(next)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).reserved) as usize - ptr as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(reserved)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).generic) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(generic)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).metrics) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(metrics)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).linearHoriAdvance) as usize - ptr as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(linearHoriAdvance)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).linearVertAdvance) as usize - ptr as usize },
+        60usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(linearVertAdvance)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).advance) as usize - ptr as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(advance)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).format) as usize - ptr as usize },
+        72usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(format)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).bitmap) as usize - ptr as usize },
+        76usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(bitmap)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).bitmap_left) as usize - ptr as usize },
+        100usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(bitmap_left)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).bitmap_top) as usize - ptr as usize },
+        104usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(bitmap_top)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).outline) as usize - ptr as usize },
+        108usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(outline)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).num_subglyphs) as usize - ptr as usize },
+        128usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(num_subglyphs)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).subglyphs) as usize - ptr as usize },
+        132usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(subglyphs)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).control_data) as usize - ptr as usize },
+        136usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(control_data)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).control_len) as usize - ptr as usize },
+        140usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(control_len)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).lsb_delta) as usize - ptr as usize },
+        144usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(lsb_delta)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rsb_delta) as usize - ptr as usize },
+        148usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(rsb_delta)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).other) as usize - ptr as usize },
+        152usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(other)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).internal) as usize - ptr as usize },
+        156usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(internal)
+        )
+    );
+}
+pub type FT_GlyphSlotRec = FT_GlyphSlotRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Parameter_ {
+    pub tag: FT_ULong,
+    pub data: FT_Pointer,
+}
+#[test]
+fn bindgen_test_layout_FT_Parameter_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Parameter_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Parameter_>(),
+        8usize,
+        concat!("Size of: ", stringify!(FT_Parameter_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Parameter_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_Parameter_))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).tag) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Parameter_),
+            "::",
+            stringify!(tag)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).data) as usize - ptr as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Parameter_),
+            "::",
+            stringify!(data)
+        )
+    );
+}
+pub type FT_Parameter = FT_Parameter_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Open_Args_ {
+    pub flags: FT_UInt,
+    pub memory_base: *const FT_Byte,
+    pub memory_size: FT_Long,
+    pub pathname: *mut FT_String,
+    pub stream: FT_Stream,
+    pub driver: FT_Module,
+    pub num_params: FT_Int,
+    pub params: *mut FT_Parameter,
+}
+#[test]
+fn bindgen_test_layout_FT_Open_Args_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Open_Args_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<FT_Open_Args_>(),
+        32usize,
+        concat!("Size of: ", stringify!(FT_Open_Args_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Open_Args_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_Open_Args_))
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).flags) as usize - ptr as usize },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(input_keymap_entry),
+            stringify!(FT_Open_Args_),
             "::",
             stringify!(flags)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).len) as usize - ptr as usize },
-        1usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(input_keymap_entry),
-            "::",
-            stringify!(len)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).index) as usize - ptr as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(input_keymap_entry),
-            "::",
-            stringify!(index)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).keycode) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).memory_base) as usize - ptr as usize },
         4usize,
         concat!(
             "Offset of field: ",
-            stringify!(input_keymap_entry),
+            stringify!(FT_Open_Args_),
             "::",
-            stringify!(keycode)
+            stringify!(memory_base)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).scancode) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).memory_size) as usize - ptr as usize },
         8usize,
         concat!(
             "Offset of field: ",
-            stringify!(input_keymap_entry),
+            stringify!(FT_Open_Args_),
             "::",
-            stringify!(scancode)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct ff_replay {
-    pub length: __u16,
-    pub delay: __u16,
-}
-#[test]
-fn bindgen_test_layout_ff_replay() {
-    const UNINIT: ::std::mem::MaybeUninit<ff_replay> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<ff_replay>(),
-        4usize,
-        concat!("Size of: ", stringify!(ff_replay))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<ff_replay>(),
-        2usize,
-        concat!("Alignment of ", stringify!(ff_replay))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).length) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_replay),
-            "::",
-            stringify!(length)
+            stringify!(memory_size)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).delay) as usize - ptr as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_replay),
-            "::",
-            stringify!(delay)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct ff_trigger {
-    pub button: __u16,
-    pub interval: __u16,
-}
-#[test]
-fn bindgen_test_layout_ff_trigger() {
-    const UNINIT: ::std::mem::MaybeUninit<ff_trigger> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<ff_trigger>(),
-        4usize,
-        concat!("Size of: ", stringify!(ff_trigger))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<ff_trigger>(),
-        2usize,
-        concat!("Alignment of ", stringify!(ff_trigger))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).button) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_trigger),
-            "::",
-            stringify!(button)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).interval) as usize - ptr as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_trigger),
-            "::",
-            stringify!(interval)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct ff_envelope {
-    pub attack_length: __u16,
-    pub attack_level: __u16,
-    pub fade_length: __u16,
-    pub fade_level: __u16,
-}
-#[test]
-fn bindgen_test_layout_ff_envelope() {
-    const UNINIT: ::std::mem::MaybeUninit<ff_envelope> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<ff_envelope>(),
-        8usize,
-        concat!("Size of: ", stringify!(ff_envelope))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<ff_envelope>(),
-        2usize,
-        concat!("Alignment of ", stringify!(ff_envelope))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).attack_length) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_envelope),
-            "::",
-            stringify!(attack_length)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).attack_level) as usize - ptr as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_envelope),
-            "::",
-            stringify!(attack_level)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).fade_length) as usize - ptr as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_envelope),
-            "::",
-            stringify!(fade_length)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).fade_level) as usize - ptr as usize },
-        6usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_envelope),
-            "::",
-            stringify!(fade_level)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct ff_constant_effect {
-    pub level: __s16,
-    pub envelope: ff_envelope,
-}
-#[test]
-fn bindgen_test_layout_ff_constant_effect() {
-    const UNINIT: ::std::mem::MaybeUninit<ff_constant_effect> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<ff_constant_effect>(),
-        10usize,
-        concat!("Size of: ", stringify!(ff_constant_effect))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<ff_constant_effect>(),
-        2usize,
-        concat!("Alignment of ", stringify!(ff_constant_effect))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).level) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_constant_effect),
-            "::",
-            stringify!(level)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).envelope) as usize - ptr as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_constant_effect),
-            "::",
-            stringify!(envelope)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct ff_ramp_effect {
-    pub start_level: __s16,
-    pub end_level: __s16,
-    pub envelope: ff_envelope,
-}
-#[test]
-fn bindgen_test_layout_ff_ramp_effect() {
-    const UNINIT: ::std::mem::MaybeUninit<ff_ramp_effect> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<ff_ramp_effect>(),
+        unsafe { ::std::ptr::addr_of!((*ptr).pathname) as usize - ptr as usize },
         12usize,
-        concat!("Size of: ", stringify!(ff_ramp_effect))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<ff_ramp_effect>(),
-        2usize,
-        concat!("Alignment of ", stringify!(ff_ramp_effect))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).start_level) as usize - ptr as usize },
-        0usize,
         concat!(
             "Offset of field: ",
-            stringify!(ff_ramp_effect),
+            stringify!(FT_Open_Args_),
             "::",
-            stringify!(start_level)
+            stringify!(pathname)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).end_level) as usize - ptr as usize },
-        2usize,
+        unsafe { ::std::ptr::addr_of!((*ptr).stream) as usize - ptr as usize },
+        16usize,
         concat!(
             "Offset of field: ",
-            stringify!(ff_ramp_effect),
+            stringify!(FT_Open_Args_),
             "::",
-            stringify!(end_level)
+            stringify!(stream)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).envelope) as usize - ptr as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_ramp_effect),
-            "::",
-            stringify!(envelope)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct ff_condition_effect {
-    pub right_saturation: __u16,
-    pub left_saturation: __u16,
-    pub right_coeff: __s16,
-    pub left_coeff: __s16,
-    pub deadband: __u16,
-    pub center: __s16,
-}
-#[test]
-fn bindgen_test_layout_ff_condition_effect() {
-    const UNINIT: ::std::mem::MaybeUninit<ff_condition_effect> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<ff_condition_effect>(),
-        12usize,
-        concat!("Size of: ", stringify!(ff_condition_effect))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<ff_condition_effect>(),
-        2usize,
-        concat!("Alignment of ", stringify!(ff_condition_effect))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).right_saturation) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_condition_effect),
-            "::",
-            stringify!(right_saturation)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).left_saturation) as usize - ptr as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_condition_effect),
-            "::",
-            stringify!(left_saturation)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).right_coeff) as usize - ptr as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_condition_effect),
-            "::",
-            stringify!(right_coeff)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).left_coeff) as usize - ptr as usize },
-        6usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_condition_effect),
-            "::",
-            stringify!(left_coeff)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).deadband) as usize - ptr as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_condition_effect),
-            "::",
-            stringify!(deadband)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).center) as usize - ptr as usize },
-        10usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_condition_effect),
-            "::",
-            stringify!(center)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct ff_periodic_effect {
-    pub waveform: __u16,
-    pub period: __u16,
-    pub magnitude: __s16,
-    pub offset: __s16,
-    pub phase: __u16,
-    pub envelope: ff_envelope,
-    pub custom_len: __u32,
-    pub custom_data: *mut __s16,
-}
-#[test]
-fn bindgen_test_layout_ff_periodic_effect() {
-    const UNINIT: ::std::mem::MaybeUninit<ff_periodic_effect> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<ff_periodic_effect>(),
-        28usize,
-        concat!("Size of: ", stringify!(ff_periodic_effect))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<ff_periodic_effect>(),
-        4usize,
-        concat!("Alignment of ", stringify!(ff_periodic_effect))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).waveform) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_periodic_effect),
-            "::",
-            stringify!(waveform)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).period) as usize - ptr as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_periodic_effect),
-            "::",
-            stringify!(period)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).magnitude) as usize - ptr as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_periodic_effect),
-            "::",
-            stringify!(magnitude)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).offset) as usize - ptr as usize },
-        6usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_periodic_effect),
-            "::",
-            stringify!(offset)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).phase) as usize - ptr as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_periodic_effect),
-            "::",
-            stringify!(phase)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).envelope) as usize - ptr as usize },
-        10usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_periodic_effect),
-            "::",
-            stringify!(envelope)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).custom_len) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).driver) as usize - ptr as usize },
         20usize,
         concat!(
             "Offset of field: ",
-            stringify!(ff_periodic_effect),
+            stringify!(FT_Open_Args_),
             "::",
-            stringify!(custom_len)
+            stringify!(driver)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).custom_data) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).num_params) as usize - ptr as usize },
         24usize,
         concat!(
             "Offset of field: ",
-            stringify!(ff_periodic_effect),
+            stringify!(FT_Open_Args_),
             "::",
-            stringify!(custom_data)
+            stringify!(num_params)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).params) as usize - ptr as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Open_Args_),
+            "::",
+            stringify!(params)
         )
     );
 }
+pub type FT_Open_Args = FT_Open_Args_;
+pub const FT_Size_Request_Type__FT_SIZE_REQUEST_TYPE_NOMINAL: FT_Size_Request_Type_ = 0;
+pub const FT_Size_Request_Type__FT_SIZE_REQUEST_TYPE_REAL_DIM: FT_Size_Request_Type_ = 1;
+pub const FT_Size_Request_Type__FT_SIZE_REQUEST_TYPE_BBOX: FT_Size_Request_Type_ = 2;
+pub const FT_Size_Request_Type__FT_SIZE_REQUEST_TYPE_CELL: FT_Size_Request_Type_ = 3;
+pub const FT_Size_Request_Type__FT_SIZE_REQUEST_TYPE_SCALES: FT_Size_Request_Type_ = 4;
+pub const FT_Size_Request_Type__FT_SIZE_REQUEST_TYPE_MAX: FT_Size_Request_Type_ = 5;
+pub type FT_Size_Request_Type_ = ::std::os::raw::c_uint;
+pub use self::FT_Size_Request_Type_ as FT_Size_Request_Type;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct ff_rumble_effect {
-    pub strong_magnitude: __u16,
-    pub weak_magnitude: __u16,
+pub struct FT_Size_RequestRec_ {
+    pub type_: FT_Size_Request_Type,
+    pub width: FT_Long,
+    pub height: FT_Long,
+    pub horiResolution: FT_UInt,
+    pub vertResolution: FT_UInt,
 }
 #[test]
-fn bindgen_test_layout_ff_rumble_effect() {
-    const UNINIT: ::std::mem::MaybeUninit<ff_rumble_effect> = ::std::mem::MaybeUninit::uninit();
+fn bindgen_test_layout_FT_Size_RequestRec_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_Size_RequestRec_> = ::std::mem::MaybeUninit::uninit();
     let ptr = UNINIT.as_ptr();
     assert_eq!(
-        ::std::mem::size_of::<ff_rumble_effect>(),
+        ::std::mem::size_of::<FT_Size_RequestRec_>(),
+        20usize,
+        concat!("Size of: ", stringify!(FT_Size_RequestRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Size_RequestRec_>(),
         4usize,
-        concat!("Size of: ", stringify!(ff_rumble_effect))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<ff_rumble_effect>(),
-        2usize,
-        concat!("Alignment of ", stringify!(ff_rumble_effect))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).strong_magnitude) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_rumble_effect),
-            "::",
-            stringify!(strong_magnitude)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).weak_magnitude) as usize - ptr as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_rumble_effect),
-            "::",
-            stringify!(weak_magnitude)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct ff_effect {
-    pub type_: __u16,
-    pub id: __s16,
-    pub direction: __u16,
-    pub trigger: ff_trigger,
-    pub replay: ff_replay,
-    pub u: ff_effect__bindgen_ty_1,
-}
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub union ff_effect__bindgen_ty_1 {
-    pub constant: ff_constant_effect,
-    pub ramp: ff_ramp_effect,
-    pub periodic: ff_periodic_effect,
-    pub condition: [ff_condition_effect; 2usize],
-    pub rumble: ff_rumble_effect,
-}
-#[test]
-fn bindgen_test_layout_ff_effect__bindgen_ty_1() {
-    const UNINIT: ::std::mem::MaybeUninit<ff_effect__bindgen_ty_1> =
-        ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<ff_effect__bindgen_ty_1>(),
-        28usize,
-        concat!("Size of: ", stringify!(ff_effect__bindgen_ty_1))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<ff_effect__bindgen_ty_1>(),
-        4usize,
-        concat!("Alignment of ", stringify!(ff_effect__bindgen_ty_1))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).constant) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_effect__bindgen_ty_1),
-            "::",
-            stringify!(constant)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).ramp) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_effect__bindgen_ty_1),
-            "::",
-            stringify!(ramp)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).periodic) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_effect__bindgen_ty_1),
-            "::",
-            stringify!(periodic)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).condition) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_effect__bindgen_ty_1),
-            "::",
-            stringify!(condition)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).rumble) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_effect__bindgen_ty_1),
-            "::",
-            stringify!(rumble)
-        )
-    );
-}
-#[test]
-fn bindgen_test_layout_ff_effect() {
-    const UNINIT: ::std::mem::MaybeUninit<ff_effect> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<ff_effect>(),
-        44usize,
-        concat!("Size of: ", stringify!(ff_effect))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<ff_effect>(),
-        4usize,
-        concat!("Alignment of ", stringify!(ff_effect))
+        concat!("Alignment of ", stringify!(FT_Size_RequestRec_))
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).type_) as usize - ptr as usize },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(ff_effect),
+            stringify!(FT_Size_RequestRec_),
             "::",
             stringify!(type_)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).id) as usize - ptr as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_effect),
-            "::",
-            stringify!(id)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).direction) as usize - ptr as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_effect),
-            "::",
-            stringify!(direction)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).trigger) as usize - ptr as usize },
-        6usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_effect),
-            "::",
-            stringify!(trigger)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).replay) as usize - ptr as usize },
-        10usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_effect),
-            "::",
-            stringify!(replay)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).u) as usize - ptr as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ff_effect),
-            "::",
-            stringify!(u)
-        )
-    );
-}
-pub const platform_id_t_PLATFORM_WRONG: platform_id_t = 0;
-pub const platform_id_t_PLATFORM_MX6SL: platform_id_t = 5;
-pub const platform_id_t_PLATFORM_A13: platform_id_t = 14;
-pub const platform_id_t_PLATFORM_B288: platform_id_t = 16;
-pub type platform_id_t = ::std::os::raw::c_uint;
-pub const device_id_t_DEVICE_WRONG: device_id_t = 0;
-pub const device_id_t_DEVICE_631: device_id_t = 5;
-pub const device_id_t_DEVICE_641: device_id_t = 17;
-pub const device_id_t_DEVICE_627: device_id_t = 18;
-pub const device_id_t_DEVICE_614: device_id_t = 19;
-pub const device_id_t_DEVICE_615: device_id_t = 20;
-pub const device_id_t_DEVICE_740: device_id_t = 21;
-pub const device_id_t_DEVICE_616: device_id_t = 22;
-pub const device_id_t_DEVICE_632: device_id_t = 23;
-pub const device_id_t_DEVICE_626: device_id_t = 24;
-pub const device_id_t_DEVICE_840: device_id_t = 25;
-pub const device_id_t_DEVICE_840_2: device_id_t = 26;
-pub const device_id_t_DEVICE_740_2: device_id_t = 27;
-pub const device_id_t_DEVICE_1040: device_id_t = 28;
-pub const device_id_t_DEVICE_606: device_id_t = 29;
-pub const device_id_t_DEVICE_633: device_id_t = 30;
-pub const device_id_t_DEVICE_628: device_id_t = 31;
-pub const device_id_t_DEVICE_741: device_id_t = 32;
-pub const device_id_t_DEVICE_617: device_id_t = 33;
-pub const device_id_t_DEVICE_970: device_id_t = 34;
-pub const device_id_t_DEVICE_700: device_id_t = 35;
-pub type device_id_t = ::std::os::raw::c_uint;
-pub const display_id_t_DISPLAY_6INCH: display_id_t = 0;
-pub const display_id_t_DISPLAY_5INCH: display_id_t = 1;
-pub const display_id_t_DISPLAY_8INCH: display_id_t = 2;
-pub const display_id_t_DISPLAY_9INCH: display_id_t = 3;
-pub const display_id_t_DISPLAY_6INCH_758: display_id_t = 4;
-pub const display_id_t_DISPLAY_8TRITON: display_id_t = 5;
-pub const display_id_t_DISPLAY_8INCH_1200: display_id_t = 6;
-pub const display_id_t_DISPLAY_4INCH_480_800: display_id_t = 8;
-pub const display_id_t_DISPLAY_6INCH_1072_1448: display_id_t = 9;
-pub const display_id_t_DISPLAY_7INCH_1872_1404: display_id_t = 10;
-pub const display_id_t_DISPLAY_10INCH_1872_1404: display_id_t = 11;
-pub const display_id_t_DISPLAY_9INCH_1200_825: display_id_t = 12;
-pub const display_id_t_DISPLAY_7INCH_1264_1680: display_id_t = 13;
-pub type display_id_t = ::std::os::raw::c_uint;
-pub const epdc_id_t_EPDC_NONE: epdc_id_t = 0;
-pub const epdc_id_t_EPDC_IMX: epdc_id_t = 3;
-pub const epdc_id_t_EPDC_ALLWINNER_A13: epdc_id_t = 5;
-pub const epdc_id_t_EPDC_ALLWINNER_B288: epdc_id_t = 6;
-pub type epdc_id_t = ::std::os::raw::c_uint;
-pub const colormask_t_COLORMASK_NONE: colormask_t = 0;
-pub const colormask_t_COLORMASK_CFA: colormask_t = 1;
-pub const colormask_t_COLORMASK_CFA2: colormask_t = 2;
-pub type colormask_t = ::std::os::raw::c_uint;
-pub const keyboard_id_t_KEYBOARD_NTX600: keyboard_id_t = 0;
-pub const keyboard_id_t_KEYBOARD_POCKET360: keyboard_id_t = 1;
-pub const keyboard_id_t_KEYBOARD_COOKIE: keyboard_id_t = 2;
-pub const keyboard_id_t_KEYBOARD_DIGITEKA: keyboard_id_t = 3;
-pub const keyboard_id_t_KEYBOARD_EP1234: keyboard_id_t = 4;
-pub const keyboard_id_t_KEYBOARD_EP7: keyboard_id_t = 5;
-pub const keyboard_id_t_KEYBOARD_POCKET650: keyboard_id_t = 6;
-pub const keyboard_id_t_KEYBOARD_POCKET840: keyboard_id_t = 7;
-pub const keyboard_id_t_KEYBOARD_POCKET630: keyboard_id_t = 8;
-pub const keyboard_id_t_KEYBOARD_POCKET420: keyboard_id_t = 9;
-pub const keyboard_id_t_KEYBOARD_POCKET620: keyboard_id_t = 10;
-pub const keyboard_id_t_KEYBOARD_POCKET641: keyboard_id_t = 11;
-pub const keyboard_id_t_KEYBOARD_POCKET627: keyboard_id_t = 12;
-pub const keyboard_id_t_KEYBOARD_POCKET611: keyboard_id_t = 14;
-pub const keyboard_id_t_KEYBOARD_POCKET613: keyboard_id_t = 15;
-pub const keyboard_id_t_KEYBOARD_POCKET515: keyboard_id_t = 16;
-pub const keyboard_id_t_KEYBOARD_POCKET624: keyboard_id_t = 17;
-pub const keyboard_id_t_KEYBOARD_POCKET631: keyboard_id_t = 18;
-pub const keyboard_id_t_KEYBOARD_POCKET740: keyboard_id_t = 19;
-pub const keyboard_id_t_KEYBOARD_POCKET616: keyboard_id_t = 20;
-pub const keyboard_id_t_KEYBOARD_POCKET632: keyboard_id_t = 21;
-pub const keyboard_id_t_KEYBOARD_POCKET1040: keyboard_id_t = 22;
-pub const keyboard_id_t_KEYBOARD_POCKET970: keyboard_id_t = 23;
-pub const keyboard_id_t_KEYBOARD_POCKET617: keyboard_id_t = 24;
-pub const keyboard_id_t_KEYBOARD_POCKET700: keyboard_id_t = 25;
-pub type keyboard_id_t = ::std::os::raw::c_uint;
-pub const touchpanel_id_t_TOUCHPANEL_NONE: touchpanel_id_t = 0;
-pub const touchpanel_id_t_TOUCHPANEL_IR_zFORCE: touchpanel_id_t = 4;
-pub const touchpanel_id_t_TOUCHPANEL_ELAN_eKTF2227: touchpanel_id_t = 8;
-pub const touchpanel_id_t_TOUCHPANEL_FT5X_840: touchpanel_id_t = 9;
-pub const touchpanel_id_t_TOUCHPANEL_ELAN_eKTF2232: touchpanel_id_t = 16;
-pub const touchpanel_id_t_TOUCHPANEL_TT21XXX: touchpanel_id_t = 17;
-pub const touchpanel_id_t_TOUCHPANEL_FT5X: touchpanel_id_t = 18;
-pub const touchpanel_id_t_TOUCHPANEL_CYTTSP4: touchpanel_id_t = 19;
-pub const touchpanel_id_t_TOUCHPANEL_TMA448: touchpanel_id_t = 20;
-pub const touchpanel_id_t_TOUCHPANEL_TT41701: touchpanel_id_t = 21;
-pub const touchpanel_id_t_TOUCHPANEL_ELAN_eKTF2232ALW: touchpanel_id_t = 22;
-pub const touchpanel_id_t_TOUCHPANEL_FT6336U: touchpanel_id_t = 23;
-pub const touchpanel_id_t_TOUCHPANEL_FT5726: touchpanel_id_t = 24;
-pub const touchpanel_id_t_TOUCHPANEL_FT5426: touchpanel_id_t = 25;
-pub const touchpanel_id_t_TOUCHPANEL_eKTH3908F: touchpanel_id_t = 26;
-pub const touchpanel_id_t_TOUCHPANEL_FT5436: touchpanel_id_t = 27;
-pub type touchpanel_id_t = ::std::os::raw::c_uint;
-pub const slider_id_t_SLIDER_NONE: slider_id_t = 0;
-pub const slider_id_t_SLIDER_HWEVT: slider_id_t = 1;
-pub type slider_id_t = ::std::os::raw::c_uint;
-pub const gyroscop_id_t_GYROSCOPE_NONE: gyroscop_id_t = 0;
-pub const gyroscop_id_t_GYROSCOPE_HWEVT: gyroscop_id_t = 10;
-pub type gyroscop_id_t = ::std::os::raw::c_uint;
-pub const audio_e_AUDIO_NONE: audio_e = 0;
-pub const audio_e_AUDIO_OSS: audio_e = 1;
-pub const audio_e_AUDIO_ALSA_NO_HP_DETECTION: audio_e = 3;
-pub const audio_e_AUDIO_ALSA: audio_e = 4;
-pub const audio_e_AUDIO_ALOOP: audio_e = 5;
-pub const audio_e_AUDIO_ALOOP_WITH_SPEAKER: audio_e = 6;
-pub type audio_e = ::std::os::raw::c_uint;
-pub use self::audio_e as audio_id_t;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct hp_detect_cfg_s {
-    pub path: *const ::std::os::raw::c_char,
-    pub attach_phrase: *const ::std::os::raw::c_char,
-    pub inverted: bool,
-}
-#[test]
-fn bindgen_test_layout_hp_detect_cfg_s() {
-    const UNINIT: ::std::mem::MaybeUninit<hp_detect_cfg_s> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<hp_detect_cfg_s>(),
-        12usize,
-        concat!("Size of: ", stringify!(hp_detect_cfg_s))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<hp_detect_cfg_s>(),
-        4usize,
-        concat!("Alignment of ", stringify!(hp_detect_cfg_s))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).path) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(hp_detect_cfg_s),
-            "::",
-            stringify!(path)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).attach_phrase) as usize - ptr as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(hp_detect_cfg_s),
-            "::",
-            stringify!(attach_phrase)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).inverted) as usize - ptr as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(hp_detect_cfg_s),
-            "::",
-            stringify!(inverted)
-        )
-    );
-}
-pub type hp_detect_cfg_t = hp_detect_cfg_s;
-pub const usb_id_t_USB_NONE: usb_id_t = 0;
-pub const usb_id_t_USB_INTERNAL: usb_id_t = 3;
-pub type usb_id_t = ::std::os::raw::c_uint;
-pub const frontlight_id_t_FRONTLIGHT_NONE: frontlight_id_t = 0;
-pub const frontlight_id_t_FRONTLIGHT_PWM: frontlight_id_t = 1;
-pub const frontlight_id_t_FRONTLIGHT_DUAL: frontlight_id_t = 2;
-pub const frontlight_id_t_FRONTLIGHT_SINGLE: frontlight_id_t = 3;
-pub const frontlight_id_t_FRONTLIGHT_DUAL_HW_DIMMING: frontlight_id_t = 4;
-pub const frontlight_id_t_FRONTLIGHT_SINGLE_HW_DIMMING: frontlight_id_t = 5;
-pub type frontlight_id_t = ::std::os::raw::c_uint;
-pub const lightsensor_id_t_LIGHTSENSOR_NONE: lightsensor_id_t = 0;
-pub type lightsensor_id_t = ::std::os::raw::c_uint;
-pub const bluetooth_id_t_BLUETOOTH_NONE: bluetooth_id_t = 0;
-pub const bluetooth_id_t_BLUETOOTH_RTL8761: bluetooth_id_t = 6;
-pub type bluetooth_id_t = ::std::os::raw::c_uint;
-pub const wifi_id_t_WIFI_NONE: wifi_id_t = 0;
-pub const wifi_id_t_WIFI_RTL8188EU: wifi_id_t = 8;
-pub const wifi_id_t_WIFI_RTL8189FS: wifi_id_t = 11;
-pub const wifi_id_t_WIFI_XRADIO: wifi_id_t = 12;
-pub type wifi_id_t = ::std::os::raw::c_uint;
-pub const gsm_id_t_GSM_NONE: gsm_id_t = 0;
-pub type gsm_id_t = ::std::os::raw::c_uint;
-pub const waveform_type_t_WAVEFORM_INIT: waveform_type_t = 0;
-pub const waveform_type_t_WAVEFORM_DU: waveform_type_t = 1;
-pub const waveform_type_t_WAVEFORM_GC16: waveform_type_t = 2;
-pub const waveform_type_t_WAVEFORM_GC4: waveform_type_t = 3;
-pub const waveform_type_t_WAVEFORM_A2: waveform_type_t = 4;
-pub const waveform_type_t_WAVEFORM_GL16: waveform_type_t = 5;
-pub const waveform_type_t_WAVEFORM_A2IN: waveform_type_t = 6;
-pub const waveform_type_t_WAVEFORM_A2OUT: waveform_type_t = 7;
-pub const waveform_type_t_WAVEFORM_DU4: waveform_type_t = 8;
-pub type waveform_type_t = ::std::os::raw::c_uint;
-pub const conv_flags_t_CONVERT_SATURATE: conv_flags_t = 1;
-pub const conv_flags_t_CONVERT_DITHER: conv_flags_t = 256;
-pub const conv_flags_t_CONVERT_PURE: conv_flags_t = 512;
-pub type conv_flags_t = ::std::os::raw::c_uint;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct epdc_img_t {
-    pub width: ::std::os::raw::c_int,
-    pub height: ::std::os::raw::c_int,
-    pub scanline: ::std::os::raw::c_int,
-    pub depth: ::std::os::raw::c_int,
-    pub orientation: ::std::os::raw::c_int,
-    pub data: *mut ::std::os::raw::c_void,
-}
-#[test]
-fn bindgen_test_layout_epdc_img_t() {
-    const UNINIT: ::std::mem::MaybeUninit<epdc_img_t> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<epdc_img_t>(),
-        24usize,
-        concat!("Size of: ", stringify!(epdc_img_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<epdc_img_t>(),
-        4usize,
-        concat!("Alignment of ", stringify!(epdc_img_t))
-    );
-    assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).width) as usize - ptr as usize },
-        0usize,
+        4usize,
         concat!(
             "Offset of field: ",
-            stringify!(epdc_img_t),
+            stringify!(FT_Size_RequestRec_),
             "::",
             stringify!(width)
         )
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).height) as usize - ptr as usize },
-        4usize,
+        8usize,
         concat!(
             "Offset of field: ",
-            stringify!(epdc_img_t),
+            stringify!(FT_Size_RequestRec_),
             "::",
             stringify!(height)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).scanline) as usize - ptr as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_img_t),
-            "::",
-            stringify!(scanline)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).depth) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).horiResolution) as usize - ptr as usize },
         12usize,
         concat!(
             "Offset of field: ",
-            stringify!(epdc_img_t),
+            stringify!(FT_Size_RequestRec_),
             "::",
-            stringify!(depth)
+            stringify!(horiResolution)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).orientation) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).vertResolution) as usize - ptr as usize },
         16usize,
         concat!(
             "Offset of field: ",
-            stringify!(epdc_img_t),
+            stringify!(FT_Size_RequestRec_),
             "::",
-            stringify!(orientation)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).data) as usize - ptr as usize },
-        20usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_img_t),
-            "::",
-            stringify!(data)
+            stringify!(vertResolution)
         )
     );
 }
+pub type FT_Size_RequestRec = FT_Size_RequestRec_;
+pub type FT_Size_Request = *mut FT_Size_RequestRec_;
+pub const FT_Render_Mode__FT_RENDER_MODE_NORMAL: FT_Render_Mode_ = 0;
+pub const FT_Render_Mode__FT_RENDER_MODE_LIGHT: FT_Render_Mode_ = 1;
+pub const FT_Render_Mode__FT_RENDER_MODE_MONO: FT_Render_Mode_ = 2;
+pub const FT_Render_Mode__FT_RENDER_MODE_LCD: FT_Render_Mode_ = 3;
+pub const FT_Render_Mode__FT_RENDER_MODE_LCD_V: FT_Render_Mode_ = 4;
+pub const FT_Render_Mode__FT_RENDER_MODE_MAX: FT_Render_Mode_ = 5;
+pub type FT_Render_Mode_ = ::std::os::raw::c_uint;
+pub use self::FT_Render_Mode_ as FT_Render_Mode;
+pub const FT_Kerning_Mode__FT_KERNING_DEFAULT: FT_Kerning_Mode_ = 0;
+pub const FT_Kerning_Mode__FT_KERNING_UNFITTED: FT_Kerning_Mode_ = 1;
+pub const FT_Kerning_Mode__FT_KERNING_UNSCALED: FT_Kerning_Mode_ = 2;
+pub type FT_Kerning_Mode_ = ::std::os::raw::c_uint;
+pub use self::FT_Kerning_Mode_ as FT_Kerning_Mode;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct epdc_instance_t {
-    pub version: ::std::os::raw::c_int,
-    pub type_: ::std::os::raw::c_int,
-    pub alignment: ::std::os::raw::c_int,
-    pub fd: ::std::os::raw::c_int,
-    pub framebuffer: *mut u8,
-    pub width: ::std::os::raw::c_int,
-    pub height: ::std::os::raw::c_int,
-    pub scanline: ::std::os::raw::c_int,
-    pub orientation: ::std::os::raw::c_int,
-    pub memsize: u32,
-    pub rotate: ::std::option::Option<unsafe extern "C" fn(value: ::std::os::raw::c_int)>,
-    pub update: ::std::option::Option<
-        unsafe extern "C" fn(
-            x: ::std::os::raw::c_int,
-            y: ::std::os::raw::c_int,
-            w: ::std::os::raw::c_int,
-            h: ::std::os::raw::c_int,
-            wf: ::std::os::raw::c_int,
-            mode: ::std::os::raw::c_int,
-        ) -> ::std::os::raw::c_int,
-    >,
-    pub busy: ::std::option::Option<unsafe extern "C" fn() -> ::std::os::raw::c_int>,
-    pub getwftimes: ::std::option::Option<unsafe extern "C" fn(result: *mut u16)>,
-    pub sync: ::std::option::Option<unsafe extern "C" fn()>,
-    pub lock: ::std::option::Option<unsafe extern "C" fn()>,
-    pub unlock: ::std::option::Option<unsafe extern "C" fn()>,
-    pub copy: ::std::option::Option<
-        unsafe extern "C" fn(
-            img: *mut epdc_img_t,
-            x: ::std::os::raw::c_int,
-            y: ::std::os::raw::c_int,
-            w: ::std::os::raw::c_int,
-            h: ::std::os::raw::c_int,
-        ),
-    >,
-    pub convert: ::std::option::Option<
-        unsafe extern "C" fn(
-            src: *mut epdc_img_t,
-            srcx: ::std::os::raw::c_int,
-            srcy: ::std::os::raw::c_int,
-            w: ::std::os::raw::c_int,
-            h: ::std::os::raw::c_int,
-            dest: *mut epdc_img_t,
-            dstx: ::std::os::raw::c_int,
-            dsty: ::std::os::raw::c_int,
-            flags: u32,
-        ),
-    >,
+pub struct FT_Glyph_Class_ {
+    _unused: [u8; 0],
+}
+pub type FT_Glyph_Class = FT_Glyph_Class_;
+pub type FT_Glyph = *mut FT_GlyphRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_GlyphRec_ {
+    pub library: FT_Library,
+    pub clazz: *const FT_Glyph_Class,
+    pub format: FT_Glyph_Format,
+    pub advance: FT_Vector,
 }
 #[test]
-fn bindgen_test_layout_epdc_instance_t() {
-    const UNINIT: ::std::mem::MaybeUninit<epdc_instance_t> = ::std::mem::MaybeUninit::uninit();
+fn bindgen_test_layout_FT_GlyphRec_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_GlyphRec_> = ::std::mem::MaybeUninit::uninit();
     let ptr = UNINIT.as_ptr();
     assert_eq!(
-        ::std::mem::size_of::<epdc_instance_t>(),
-        76usize,
-        concat!("Size of: ", stringify!(epdc_instance_t))
+        ::std::mem::size_of::<FT_GlyphRec_>(),
+        20usize,
+        concat!("Size of: ", stringify!(FT_GlyphRec_))
     );
     assert_eq!(
-        ::std::mem::align_of::<epdc_instance_t>(),
+        ::std::mem::align_of::<FT_GlyphRec_>(),
         4usize,
-        concat!("Alignment of ", stringify!(epdc_instance_t))
+        concat!("Alignment of ", stringify!(FT_GlyphRec_))
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).version) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).library) as usize - ptr as usize },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(epdc_instance_t),
+            stringify!(FT_GlyphRec_),
             "::",
-            stringify!(version)
+            stringify!(library)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).type_) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).clazz) as usize - ptr as usize },
         4usize,
         concat!(
             "Offset of field: ",
-            stringify!(epdc_instance_t),
+            stringify!(FT_GlyphRec_),
             "::",
-            stringify!(type_)
+            stringify!(clazz)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).alignment) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).format) as usize - ptr as usize },
         8usize,
         concat!(
             "Offset of field: ",
-            stringify!(epdc_instance_t),
+            stringify!(FT_GlyphRec_),
             "::",
-            stringify!(alignment)
+            stringify!(format)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).fd) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).advance) as usize - ptr as usize },
         12usize,
         concat!(
             "Offset of field: ",
-            stringify!(epdc_instance_t),
+            stringify!(FT_GlyphRec_),
             "::",
-            stringify!(fd)
+            stringify!(advance)
         )
     );
+}
+pub type FT_GlyphRec = FT_GlyphRec_;
+pub type FT_BitmapGlyph = *mut FT_BitmapGlyphRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_BitmapGlyphRec_ {
+    pub root: FT_GlyphRec,
+    pub left: FT_Int,
+    pub top: FT_Int,
+    pub bitmap: FT_Bitmap,
+}
+#[test]
+fn bindgen_test_layout_FT_BitmapGlyphRec_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_BitmapGlyphRec_> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).framebuffer) as usize - ptr as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(framebuffer)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).width) as usize - ptr as usize },
-        20usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(width)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).height) as usize - ptr as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(height)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).scanline) as usize - ptr as usize },
-        28usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(scanline)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).orientation) as usize - ptr as usize },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(orientation)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).memsize) as usize - ptr as usize },
-        36usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(memsize)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).rotate) as usize - ptr as usize },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(rotate)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).update) as usize - ptr as usize },
-        44usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(update)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).busy) as usize - ptr as usize },
-        48usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(busy)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).getwftimes) as usize - ptr as usize },
+        ::std::mem::size_of::<FT_BitmapGlyphRec_>(),
         52usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(getwftimes)
-        )
+        concat!("Size of: ", stringify!(FT_BitmapGlyphRec_))
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).sync) as usize - ptr as usize },
-        56usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(sync)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).lock) as usize - ptr as usize },
-        60usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(lock)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).unlock) as usize - ptr as usize },
-        64usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(unlock)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).copy) as usize - ptr as usize },
-        68usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(copy)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).convert) as usize - ptr as usize },
-        72usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(epdc_instance_t),
-            "::",
-            stringify!(convert)
-        )
-    );
-}
-pub const hwkey_t_HWKEY_BACK: hwkey_t = 1;
-pub const hwkey_t_HWKEY_DELETE: hwkey_t = 2;
-pub const hwkey_t_HWKEY_LEFT: hwkey_t = 4;
-pub const hwkey_t_HWKEY_MENU: hwkey_t = 8;
-pub const hwkey_t_HWKEY_MUSIC: hwkey_t = 16;
-pub const hwkey_t_HWKEY_OK: hwkey_t = 32;
-pub const hwkey_t_HWKEY_RIGHT: hwkey_t = 64;
-pub const hwkey_t_HWKEY_PLUS: hwkey_t = 128;
-pub const hwkey_t_HWKEY_MINUS: hwkey_t = 256;
-pub const hwkey_t_HWKEY_DOWN: hwkey_t = 512;
-pub const hwkey_t_HWKEY_UP: hwkey_t = 1024;
-pub const hwkey_t_HWKEY_PREV: hwkey_t = 2048;
-pub const hwkey_t_HWKEY_NEXT: hwkey_t = 4096;
-pub const hwkey_t_HWKEY_NEXT2: hwkey_t = 8192;
-pub const hwkey_t_HWKEY_POWER: hwkey_t = 16384;
-pub const hwkey_t_HWKEY_PREV2: hwkey_t = 32768;
-pub const hwkey_t_HWKEY_HOME: hwkey_t = 65536;
-pub const hwkey_t_HWKEY_RESERVED1: hwkey_t = 131072;
-pub const hwkey_t_HWKEY_RESERVED2: hwkey_t = 262144;
-pub const hwkey_t_HWKEY_RESERVED3: hwkey_t = 524288;
-pub const hwkey_t_HWKEY_RESERVED4: hwkey_t = 1048576;
-pub const hwkey_t_HWKEY_ZOOMIN: hwkey_t = 2097152;
-pub const hwkey_t_HWKEY_ZOOMOUT: hwkey_t = 4194304;
-pub const hwkey_t_HWKEY_POWEROFF: hwkey_t = 8388608;
-pub const hwkey_t_HWKEY_COVEROPEN: hwkey_t = 16777216;
-pub const hwkey_t_HWKEY_COVERCLOSE: hwkey_t = 33554432;
-pub type hwkey_t = ::std::os::raw::c_uint;
-pub const input_dev_e_DEV_UNKNOWN: input_dev_e = 0;
-pub const input_dev_e_TP_CAPACITIVE: input_dev_e = 1;
-pub const input_dev_e_TP_DIGITIZER: input_dev_e = 2;
-pub const input_dev_e_MAX_INPUT_TOUCH_DEV: input_dev_e = 3;
-pub const input_dev_e_INPUT_DEV_KEYBOARD_HW: input_dev_e = 4;
-pub const input_dev_e_INPUT_DEV_KEYBOARD_BT: input_dev_e = 5;
-pub const input_dev_e_INPUT_DEV_KEYBOARD_USB: input_dev_e = 6;
-pub type input_dev_e = ::std::os::raw::c_uint;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct slider_cfg_s {
-    pub resolution: ::std::os::raw::c_int,
-    pub reverse_axis: bool,
-    pub relative: bool,
-}
-#[test]
-fn bindgen_test_layout_slider_cfg_s() {
-    const UNINIT: ::std::mem::MaybeUninit<slider_cfg_s> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<slider_cfg_s>(),
-        8usize,
-        concat!("Size of: ", stringify!(slider_cfg_s))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<slider_cfg_s>(),
+        ::std::mem::align_of::<FT_BitmapGlyphRec_>(),
         4usize,
-        concat!("Alignment of ", stringify!(slider_cfg_s))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).resolution) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(slider_cfg_s),
-            "::",
-            stringify!(resolution)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).reverse_axis) as usize - ptr as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(slider_cfg_s),
-            "::",
-            stringify!(reverse_axis)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).relative) as usize - ptr as usize },
-        5usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(slider_cfg_s),
-            "::",
-            stringify!(relative)
-        )
-    );
-}
-pub type slider_cfg_t = slider_cfg_s;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct frontlight_ctrl_s {
-    pub vesion: ::std::os::raw::c_int,
-    pub set_brightness: ::std::option::Option<
-        unsafe extern "C" fn(value: ::std::os::raw::c_int) -> ::std::os::raw::c_int,
-    >,
-    pub get_brightness: ::std::option::Option<unsafe extern "C" fn() -> ::std::os::raw::c_int>,
-    pub get_max_brightness: ::std::option::Option<unsafe extern "C" fn() -> ::std::os::raw::c_int>,
-    pub set_color: ::std::option::Option<
-        unsafe extern "C" fn(value: ::std::os::raw::c_int) -> ::std::os::raw::c_int,
-    >,
-    pub get_color: ::std::option::Option<unsafe extern "C" fn() -> ::std::os::raw::c_int>,
-    pub get_max_color: ::std::option::Option<unsafe extern "C" fn() -> ::std::os::raw::c_int>,
-    pub data: *mut ::std::os::raw::c_void,
-}
-#[test]
-fn bindgen_test_layout_frontlight_ctrl_s() {
-    const UNINIT: ::std::mem::MaybeUninit<frontlight_ctrl_s> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<frontlight_ctrl_s>(),
-        32usize,
-        concat!("Size of: ", stringify!(frontlight_ctrl_s))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<frontlight_ctrl_s>(),
-        4usize,
-        concat!("Alignment of ", stringify!(frontlight_ctrl_s))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).vesion) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(frontlight_ctrl_s),
-            "::",
-            stringify!(vesion)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).set_brightness) as usize - ptr as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(frontlight_ctrl_s),
-            "::",
-            stringify!(set_brightness)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).get_brightness) as usize - ptr as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(frontlight_ctrl_s),
-            "::",
-            stringify!(get_brightness)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).get_max_brightness) as usize - ptr as usize },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(frontlight_ctrl_s),
-            "::",
-            stringify!(get_max_brightness)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).set_color) as usize - ptr as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(frontlight_ctrl_s),
-            "::",
-            stringify!(set_color)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).get_color) as usize - ptr as usize },
-        20usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(frontlight_ctrl_s),
-            "::",
-            stringify!(get_color)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).get_max_color) as usize - ptr as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(frontlight_ctrl_s),
-            "::",
-            stringify!(get_max_color)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).data) as usize - ptr as usize },
-        28usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(frontlight_ctrl_s),
-            "::",
-            stringify!(data)
-        )
-    );
-}
-pub type frontlight_ctrl = frontlight_ctrl_s;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct power_led_cfg_t {
-    pub switch_path: *const ::std::os::raw::c_char,
-    pub trigger_path: *const ::std::os::raw::c_char,
-    pub charging_trigger: *const ::std::os::raw::c_char,
-}
-#[test]
-fn bindgen_test_layout_power_led_cfg_t() {
-    const UNINIT: ::std::mem::MaybeUninit<power_led_cfg_t> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<power_led_cfg_t>(),
-        12usize,
-        concat!("Size of: ", stringify!(power_led_cfg_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<power_led_cfg_t>(),
-        4usize,
-        concat!("Alignment of ", stringify!(power_led_cfg_t))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).switch_path) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(power_led_cfg_t),
-            "::",
-            stringify!(switch_path)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).trigger_path) as usize - ptr as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(power_led_cfg_t),
-            "::",
-            stringify!(trigger_path)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).charging_trigger) as usize - ptr as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(power_led_cfg_t),
-            "::",
-            stringify!(charging_trigger)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct storage_device {
-    pub path: *const ::std::os::raw::c_char,
-    pub type_: *const ::std::os::raw::c_char,
-    pub bus: *const ::std::os::raw::c_char,
-    pub size: u64,
-    pub wearout: ::std::os::raw::c_int,
-}
-#[test]
-fn bindgen_test_layout_storage_device() {
-    const UNINIT: ::std::mem::MaybeUninit<storage_device> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<storage_device>(),
-        32usize,
-        concat!("Size of: ", stringify!(storage_device))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<storage_device>(),
-        8usize,
-        concat!("Alignment of ", stringify!(storage_device))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).path) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_device),
-            "::",
-            stringify!(path)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).type_) as usize - ptr as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_device),
-            "::",
-            stringify!(type_)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).bus) as usize - ptr as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_device),
-            "::",
-            stringify!(bus)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).size) as usize - ptr as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_device),
-            "::",
-            stringify!(size)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).wearout) as usize - ptr as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_device),
-            "::",
-            stringify!(wearout)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct storage_partition {
-    pub path: *const ::std::os::raw::c_char,
-    pub offset: u64,
-    pub size: u64,
-}
-#[test]
-fn bindgen_test_layout_storage_partition() {
-    const UNINIT: ::std::mem::MaybeUninit<storage_partition> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<storage_partition>(),
-        24usize,
-        concat!("Size of: ", stringify!(storage_partition))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<storage_partition>(),
-        8usize,
-        concat!("Alignment of ", stringify!(storage_partition))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).path) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_partition),
-            "::",
-            stringify!(path)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).offset) as usize - ptr as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_partition),
-            "::",
-            stringify!(offset)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).size) as usize - ptr as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_partition),
-            "::",
-            stringify!(size)
-        )
-    );
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct storage_cfg_t {
-    pub internal: storage_device,
-    pub external: storage_device,
-    pub usb: storage_device,
-    pub partition: storage_cfg_t__bindgen_ty_1,
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct storage_cfg_t__bindgen_ty_1 {
-    pub uboot: storage_partition,
-    pub uboot_backup: storage_partition,
-    pub logo: storage_partition,
-    pub logo_backup: storage_partition,
-    pub kernel: storage_partition,
-    pub root: storage_partition,
-    pub cramfs: storage_partition,
-    pub ebrmain: storage_partition,
-    pub secure: storage_partition,
-    pub user: storage_partition,
-}
-#[test]
-fn bindgen_test_layout_storage_cfg_t__bindgen_ty_1() {
-    const UNINIT: ::std::mem::MaybeUninit<storage_cfg_t__bindgen_ty_1> =
-        ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<storage_cfg_t__bindgen_ty_1>(),
-        240usize,
-        concat!("Size of: ", stringify!(storage_cfg_t__bindgen_ty_1))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<storage_cfg_t__bindgen_ty_1>(),
-        8usize,
-        concat!("Alignment of ", stringify!(storage_cfg_t__bindgen_ty_1))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).uboot) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_cfg_t__bindgen_ty_1),
-            "::",
-            stringify!(uboot)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).uboot_backup) as usize - ptr as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_cfg_t__bindgen_ty_1),
-            "::",
-            stringify!(uboot_backup)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).logo) as usize - ptr as usize },
-        48usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_cfg_t__bindgen_ty_1),
-            "::",
-            stringify!(logo)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).logo_backup) as usize - ptr as usize },
-        72usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_cfg_t__bindgen_ty_1),
-            "::",
-            stringify!(logo_backup)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).kernel) as usize - ptr as usize },
-        96usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_cfg_t__bindgen_ty_1),
-            "::",
-            stringify!(kernel)
-        )
+        concat!("Alignment of ", stringify!(FT_BitmapGlyphRec_))
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).root) as usize - ptr as usize },
-        120usize,
+        0usize,
         concat!(
             "Offset of field: ",
-            stringify!(storage_cfg_t__bindgen_ty_1),
+            stringify!(FT_BitmapGlyphRec_),
             "::",
             stringify!(root)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).cramfs) as usize - ptr as usize },
-        144usize,
+        unsafe { ::std::ptr::addr_of!((*ptr).left) as usize - ptr as usize },
+        20usize,
         concat!(
             "Offset of field: ",
-            stringify!(storage_cfg_t__bindgen_ty_1),
+            stringify!(FT_BitmapGlyphRec_),
             "::",
-            stringify!(cramfs)
+            stringify!(left)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).ebrmain) as usize - ptr as usize },
-        168usize,
+        unsafe { ::std::ptr::addr_of!((*ptr).top) as usize - ptr as usize },
+        24usize,
         concat!(
             "Offset of field: ",
-            stringify!(storage_cfg_t__bindgen_ty_1),
+            stringify!(FT_BitmapGlyphRec_),
             "::",
-            stringify!(ebrmain)
+            stringify!(top)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).secure) as usize - ptr as usize },
-        192usize,
+        unsafe { ::std::ptr::addr_of!((*ptr).bitmap) as usize - ptr as usize },
+        28usize,
         concat!(
             "Offset of field: ",
-            stringify!(storage_cfg_t__bindgen_ty_1),
+            stringify!(FT_BitmapGlyphRec_),
             "::",
-            stringify!(secure)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).user) as usize - ptr as usize },
-        216usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_cfg_t__bindgen_ty_1),
-            "::",
-            stringify!(user)
+            stringify!(bitmap)
         )
     );
 }
+pub type FT_BitmapGlyphRec = FT_BitmapGlyphRec_;
+pub type FT_OutlineGlyph = *mut FT_OutlineGlyphRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_OutlineGlyphRec_ {
+    pub root: FT_GlyphRec,
+    pub outline: FT_Outline,
+}
 #[test]
-fn bindgen_test_layout_storage_cfg_t() {
-    const UNINIT: ::std::mem::MaybeUninit<storage_cfg_t> = ::std::mem::MaybeUninit::uninit();
+fn bindgen_test_layout_FT_OutlineGlyphRec_() {
+    const UNINIT: ::std::mem::MaybeUninit<FT_OutlineGlyphRec_> = ::std::mem::MaybeUninit::uninit();
     let ptr = UNINIT.as_ptr();
     assert_eq!(
-        ::std::mem::size_of::<storage_cfg_t>(),
-        336usize,
-        concat!("Size of: ", stringify!(storage_cfg_t))
+        ::std::mem::size_of::<FT_OutlineGlyphRec_>(),
+        40usize,
+        concat!("Size of: ", stringify!(FT_OutlineGlyphRec_))
     );
     assert_eq!(
-        ::std::mem::align_of::<storage_cfg_t>(),
-        8usize,
-        concat!("Alignment of ", stringify!(storage_cfg_t))
+        ::std::mem::align_of::<FT_OutlineGlyphRec_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(FT_OutlineGlyphRec_))
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).internal) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).root) as usize - ptr as usize },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(storage_cfg_t),
+            stringify!(FT_OutlineGlyphRec_),
             "::",
-            stringify!(internal)
+            stringify!(root)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).external) as usize - ptr as usize },
-        32usize,
+        unsafe { ::std::ptr::addr_of!((*ptr).outline) as usize - ptr as usize },
+        20usize,
         concat!(
             "Offset of field: ",
-            stringify!(storage_cfg_t),
+            stringify!(FT_OutlineGlyphRec_),
             "::",
-            stringify!(external)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).usb) as usize - ptr as usize },
-        64usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_cfg_t),
-            "::",
-            stringify!(usb)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).partition) as usize - ptr as usize },
-        96usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(storage_cfg_t),
-            "::",
-            stringify!(partition)
+            stringify!(outline)
         )
     );
 }
+pub type FT_OutlineGlyphRec = FT_OutlineGlyphRec_;
+pub const FT_Glyph_BBox_Mode__FT_GLYPH_BBOX_UNSCALED: FT_Glyph_BBox_Mode_ = 0;
+pub const FT_Glyph_BBox_Mode__FT_GLYPH_BBOX_SUBPIXELS: FT_Glyph_BBox_Mode_ = 0;
+pub const FT_Glyph_BBox_Mode__FT_GLYPH_BBOX_GRIDFIT: FT_Glyph_BBox_Mode_ = 1;
+pub const FT_Glyph_BBox_Mode__FT_GLYPH_BBOX_TRUNCATE: FT_Glyph_BBox_Mode_ = 2;
+pub const FT_Glyph_BBox_Mode__FT_GLYPH_BBOX_PIXELS: FT_Glyph_BBox_Mode_ = 3;
+pub type FT_Glyph_BBox_Mode_ = ::std::os::raw::c_uint;
+pub use self::FT_Glyph_BBox_Mode_ as FT_Glyph_BBox_Mode;
+pub const FT_Orientation__FT_ORIENTATION_TRUETYPE: FT_Orientation_ = 0;
+pub const FT_Orientation__FT_ORIENTATION_POSTSCRIPT: FT_Orientation_ = 1;
+pub const FT_Orientation__FT_ORIENTATION_FILL_RIGHT: FT_Orientation_ = 0;
+pub const FT_Orientation__FT_ORIENTATION_FILL_LEFT: FT_Orientation_ = 1;
+pub const FT_Orientation__FT_ORIENTATION_NONE: FT_Orientation_ = 2;
+pub type FT_Orientation_ = ::std::os::raw::c_uint;
+pub use self::FT_Orientation_ as FT_Orientation;
 extern "C" {
     pub static mut OBREEY_BSCONFIG_PARAMETR: *const ::std::os::raw::c_char;
 }
@@ -11610,10 +11606,6 @@ extern "C" {
 extern "C" {
     pub static mut OBREEY_SOCIAL_COOKIES_PATH: *const ::std::os::raw::c_char;
 }
-pub const globalaction_on_event_e_GLOBALACTION_ON_KEYPRESS: globalaction_on_event_e = 0;
-pub const globalaction_on_event_e_GLOBALACTION_ON_KEYHOLD: globalaction_on_event_e = 1;
-pub const globalaction_on_event_e_GLOBALACTION_ON_DOUBLECLICK: globalaction_on_event_e = 2;
-pub type globalaction_on_event_e = ::std::os::raw::c_uint;
 pub const AvrcpCommands_AVRCP_NEXT: AvrcpCommands = 0;
 pub const AvrcpCommands_AVRCP_PREVIOUS: AvrcpCommands = 1;
 pub const AvrcpCommands_AVRCP_PAUSE: AvrcpCommands = 2;
@@ -11622,23 +11614,6 @@ pub const AvrcpCommands_AVRCP_STOP: AvrcpCommands = 4;
 pub const AvrcpCommands_AVRCP_PLAY: AvrcpCommands = 5;
 pub const AvrcpCommands_AVRCP_SET_VOLUME: AvrcpCommands = 6;
 pub type AvrcpCommands = ::std::os::raw::c_uint;
-pub const PackageType_PT_UNKNOWN: PackageType = 0;
-pub const PackageType_PT_TTS: PackageType = 1;
-pub type PackageType = ::std::os::raw::c_uint;
-pub const PackageJobActions_PJA_JOBS_STARTED: PackageJobActions = 0;
-pub const PackageJobActions_PJA_PACKAGE_DOWNLOAD_STARTED: PackageJobActions = 1;
-pub const PackageJobActions_PJA_PACKAGE_DOWNLOAD_FINISHED: PackageJobActions = 2;
-pub const PackageJobActions_PJA_PACKAGE_INSTALL_STARTED: PackageJobActions = 3;
-pub const PackageJobActions_PJA_PACKAGE_INSTALL_FINISHED: PackageJobActions = 4;
-pub const PackageJobActions_PJA_PACKAGE_UNINSTALL_STARTED: PackageJobActions = 5;
-pub const PackageJobActions_PJA_PACKAGE_UNINSTALL_FINISHED: PackageJobActions = 6;
-pub const PackageJobActions_PJA_JOBS_FINISHED: PackageJobActions = 7;
-pub type PackageJobActions = ::std::os::raw::c_uint;
-pub const keymap_e_KEYMAP_GLOBAL: keymap_e = 0;
-pub const keymap_e_KEYMAP_TXT: keymap_e = 1;
-pub const keymap_e_KEYMAP_PDF: keymap_e = 2;
-pub type keymap_e = ::std::os::raw::c_uint;
-pub use self::keymap_e as keymap_t;
 pub const PB_STATE_e_MP_STOPPED: PB_STATE_e = 0;
 pub const PB_STATE_e_MP_REQUEST_FOR_PLAY: PB_STATE_e = 1;
 pub const PB_STATE_e_MP_PLAYING: PB_STATE_e = 2;
@@ -11695,7 +11670,6 @@ pub const PANEL_FLAGS_PANEL_ENABLED: PANEL_FLAGS = 2;
 #[doc = "< PANEL is on and could be drawn but it does not handle pointer events,\n it is good to use in pair with SetManualPanelUpdates(int enable, iv_panelupdateshandler handler)\n @see SetManualPanelUpdates(int enable, iv_panelupdateshandler handler)"]
 pub const PANEL_FLAGS_PANEL_EVENT_NO_HANDLING: PANEL_FLAGS = 4;
 pub const PANEL_FLAGS_PANEL_NO_FB_OFFSET: PANEL_FLAGS = 8;
-pub const PANEL_FLAGS_PANEL_NO_SELF_UPDATE: PANEL_FLAGS = 16;
 #[doc = " Enum wich can be used for SetPanelType function\n @see SetPanelType(int)"]
 pub type PANEL_FLAGS = ::std::os::raw::c_uint;
 #[repr(C)]
@@ -12828,7 +12802,6 @@ pub struct icontext_menu_properties_s {
     pub marker_style: ::std::os::raw::c_int,
     pub marker_color: ::std::os::raw::c_int,
     pub border_size: ::std::os::raw::c_int,
-    pub border_color: ::std::os::raw::c_int,
     pub border_radius: ::std::os::raw::c_int,
     pub title_height: ::std::os::raw::c_int,
     pub enable_pointer: ::std::os::raw::c_int,
@@ -12848,7 +12821,7 @@ fn bindgen_test_layout_icontext_menu_properties_s() {
     let ptr = UNINIT.as_ptr();
     assert_eq!(
         ::std::mem::size_of::<icontext_menu_properties_s>(),
-        120usize,
+        116usize,
         concat!("Size of: ", stringify!(icontext_menu_properties_s))
     );
     assert_eq!(
@@ -13049,18 +13022,8 @@ fn bindgen_test_layout_icontext_menu_properties_s() {
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).border_color) as usize - ptr as usize },
-        76usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(icontext_menu_properties_s),
-            "::",
-            stringify!(border_color)
-        )
-    );
-    assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).border_radius) as usize - ptr as usize },
-        80usize,
+        76usize,
         concat!(
             "Offset of field: ",
             stringify!(icontext_menu_properties_s),
@@ -13070,7 +13033,7 @@ fn bindgen_test_layout_icontext_menu_properties_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).title_height) as usize - ptr as usize },
-        84usize,
+        80usize,
         concat!(
             "Offset of field: ",
             stringify!(icontext_menu_properties_s),
@@ -13080,7 +13043,7 @@ fn bindgen_test_layout_icontext_menu_properties_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).enable_pointer) as usize - ptr as usize },
-        88usize,
+        84usize,
         concat!(
             "Offset of field: ",
             stringify!(icontext_menu_properties_s),
@@ -13090,7 +13053,7 @@ fn bindgen_test_layout_icontext_menu_properties_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).font_normal_color) as usize - ptr as usize },
-        92usize,
+        88usize,
         concat!(
             "Offset of field: ",
             stringify!(icontext_menu_properties_s),
@@ -13100,7 +13063,7 @@ fn bindgen_test_layout_icontext_menu_properties_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).font_selected_color) as usize - ptr as usize },
-        96usize,
+        92usize,
         concat!(
             "Offset of field: ",
             stringify!(icontext_menu_properties_s),
@@ -13110,7 +13073,7 @@ fn bindgen_test_layout_icontext_menu_properties_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).font_disabled_color) as usize - ptr as usize },
-        100usize,
+        96usize,
         concat!(
             "Offset of field: ",
             stringify!(icontext_menu_properties_s),
@@ -13120,7 +13083,7 @@ fn bindgen_test_layout_icontext_menu_properties_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).bullet_show) as usize - ptr as usize },
-        104usize,
+        100usize,
         concat!(
             "Offset of field: ",
             stringify!(icontext_menu_properties_s),
@@ -13130,7 +13093,7 @@ fn bindgen_test_layout_icontext_menu_properties_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).bullet_style) as usize - ptr as usize },
-        108usize,
+        104usize,
         concat!(
             "Offset of field: ",
             stringify!(icontext_menu_properties_s),
@@ -13140,7 +13103,7 @@ fn bindgen_test_layout_icontext_menu_properties_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).item_border_indent_vertical) as usize - ptr as usize },
-        112usize,
+        108usize,
         concat!(
             "Offset of field: ",
             stringify!(icontext_menu_properties_s),
@@ -13150,7 +13113,7 @@ fn bindgen_test_layout_icontext_menu_properties_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).background_style) as usize - ptr as usize },
-        116usize,
+        112usize,
         concat!(
             "Offset of field: ",
             stringify!(icontext_menu_properties_s),
@@ -13779,7 +13742,6 @@ pub struct ipager_s {
     pub page_width: ::std::os::raw::c_int,
     pub rigth_width: ::std::os::raw::c_int,
     pub separator_size: ::std::os::raw::c_int,
-    pub separator_color: ::std::os::raw::c_int,
     pub icon_left: *const ibitmap,
     pub icon_right: *const ibitmap,
     pub current_page: ::std::os::raw::c_int,
@@ -13793,7 +13755,7 @@ fn bindgen_test_layout_ipager_s() {
     let ptr = UNINIT.as_ptr();
     assert_eq!(
         ::std::mem::size_of::<ipager_s>(),
-        72usize,
+        68usize,
         concat!("Size of: ", stringify!(ipager_s))
     );
     assert_eq!(
@@ -13872,18 +13834,8 @@ fn bindgen_test_layout_ipager_s() {
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).separator_color) as usize - ptr as usize },
-        28usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(ipager_s),
-            "::",
-            stringify!(separator_color)
-        )
-    );
-    assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).icon_left) as usize - ptr as usize },
-        32usize,
+        28usize,
         concat!(
             "Offset of field: ",
             stringify!(ipager_s),
@@ -13893,7 +13845,7 @@ fn bindgen_test_layout_ipager_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).icon_right) as usize - ptr as usize },
-        36usize,
+        32usize,
         concat!(
             "Offset of field: ",
             stringify!(ipager_s),
@@ -13903,7 +13855,7 @@ fn bindgen_test_layout_ipager_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).current_page) as usize - ptr as usize },
-        40usize,
+        36usize,
         concat!(
             "Offset of field: ",
             stringify!(ipager_s),
@@ -13913,7 +13865,7 @@ fn bindgen_test_layout_ipager_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).total_pages) as usize - ptr as usize },
-        44usize,
+        40usize,
         concat!(
             "Offset of field: ",
             stringify!(ipager_s),
@@ -13923,7 +13875,7 @@ fn bindgen_test_layout_ipager_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).position) as usize - ptr as usize },
-        48usize,
+        44usize,
         concat!(
             "Offset of field: ",
             stringify!(ipager_s),
@@ -13933,7 +13885,7 @@ fn bindgen_test_layout_ipager_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).orientation) as usize - ptr as usize },
-        68usize,
+        64usize,
         concat!(
             "Offset of field: ",
             stringify!(ipager_s),
@@ -14183,7 +14135,6 @@ pub struct iconfig_s {
     pub modified_hash: *mut ihash,
     pub deleted_keys: *mut *mut ::std::os::raw::c_char,
     pub changed: ::std::os::raw::c_int,
-    pub deleted_keys_size: ::std::os::raw::c_int,
 }
 #[test]
 fn bindgen_test_layout_iconfig_s() {
@@ -14191,7 +14142,7 @@ fn bindgen_test_layout_iconfig_s() {
     let ptr = UNINIT.as_ptr();
     assert_eq!(
         ::std::mem::size_of::<iconfig_s>(),
-        28usize,
+        24usize,
         concat!("Size of: ", stringify!(iconfig_s))
     );
     assert_eq!(
@@ -14257,16 +14208,6 @@ fn bindgen_test_layout_iconfig_s() {
             stringify!(iconfig_s),
             "::",
             stringify!(changed)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).deleted_keys_size) as usize - ptr as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(iconfig_s),
-            "::",
-            stringify!(deleted_keys_size)
         )
     );
 }
@@ -14615,71 +14556,6 @@ fn bindgen_test_layout_itimer_s() {
     );
 }
 pub type itimer = itimer_s;
-pub const iepub3data_type_s_kEPUB3DataTypeNone: iepub3data_type_s = 0;
-pub const iepub3data_type_s_kEPUB3TitleTypeMain: iepub3data_type_s = 1;
-pub const iepub3data_type_s_kEPUB3TitleTypeSubtitle: iepub3data_type_s = 2;
-pub const iepub3data_type_s_kEPUB3TitleTypeShort: iepub3data_type_s = 3;
-pub const iepub3data_type_s_kEPUB3TitleTypeCollection: iepub3data_type_s = 4;
-pub const iepub3data_type_s_kEPUB3TitleTypeEdition: iepub3data_type_s = 5;
-pub const iepub3data_type_s_kEPUB3TitleTypeExpanded: iepub3data_type_s = 6;
-pub const iepub3data_type_s_kEPUB3TitleTypeUnknown: iepub3data_type_s = 7;
-pub const iepub3data_type_s_kEPUB3TitleTypeMAX: iepub3data_type_s = 8;
-pub const iepub3data_type_s_kEPUB3AuthorType: iepub3data_type_s = 101;
-pub const iepub3data_type_s_kEPUB3SeriesType: iepub3data_type_s = 201;
-pub type iepub3data_type_s = ::std::os::raw::c_uint;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct iepub3title_s {
-    pub title: *mut ::std::os::raw::c_char,
-    pub display_seq: ::std::os::raw::c_short,
-    pub type_: ::std::os::raw::c_short,
-}
-#[test]
-fn bindgen_test_layout_iepub3title_s() {
-    const UNINIT: ::std::mem::MaybeUninit<iepub3title_s> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<iepub3title_s>(),
-        8usize,
-        concat!("Size of: ", stringify!(iepub3title_s))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<iepub3title_s>(),
-        4usize,
-        concat!("Alignment of ", stringify!(iepub3title_s))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).title) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(iepub3title_s),
-            "::",
-            stringify!(title)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).display_seq) as usize - ptr as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(iepub3title_s),
-            "::",
-            stringify!(display_seq)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).type_) as usize - ptr as usize },
-        6usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(iepub3title_s),
-            "::",
-            stringify!(type_)
-        )
-    );
-}
-pub type iepub3title = iepub3title_s;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct bookinfo_s {
@@ -14704,11 +14580,6 @@ pub struct bookinfo_s {
     pub lang: *mut ::std::os::raw::c_char,
     pub publisher: *mut ::std::os::raw::c_char,
     pub identifiers: *mut ::std::os::raw::c_char,
-    pub contains_notes_export: ::std::os::raw::c_int,
-    pub epub3titles: *mut *mut iepub3title,
-    pub title_sort: *mut ::std::os::raw::c_char,
-    pub author_sort: *mut ::std::os::raw::c_char,
-    pub version: *mut ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_bookinfo_s() {
@@ -14716,7 +14587,7 @@ fn bindgen_test_layout_bookinfo_s() {
     let ptr = UNINIT.as_ptr();
     assert_eq!(
         ::std::mem::size_of::<bookinfo_s>(),
-        140usize,
+        120usize,
         concat!("Size of: ", stringify!(bookinfo_s))
     );
     assert_eq!(
@@ -14932,56 +14803,6 @@ fn bindgen_test_layout_bookinfo_s() {
             stringify!(bookinfo_s),
             "::",
             stringify!(identifiers)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).contains_notes_export) as usize - ptr as usize },
-        120usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(bookinfo_s),
-            "::",
-            stringify!(contains_notes_export)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).epub3titles) as usize - ptr as usize },
-        124usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(bookinfo_s),
-            "::",
-            stringify!(epub3titles)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).title_sort) as usize - ptr as usize },
-        128usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(bookinfo_s),
-            "::",
-            stringify!(title_sort)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).author_sort) as usize - ptr as usize },
-        132usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(bookinfo_s),
-            "::",
-            stringify!(author_sort)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).version) as usize - ptr as usize },
-        136usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(bookinfo_s),
-            "::",
-            stringify!(version)
         )
     );
 }
@@ -15571,9 +15392,10 @@ pub struct iv_fbinfo_s {
     pub width: ::std::os::raw::c_int,
     pub height: ::std::os::raw::c_int,
     pub vdepth: ::std::os::raw::c_int,
+    pub ndepth: ::std::os::raw::c_int,
     pub orientation: ::std::os::raw::c_int,
-    pub scanline_portrait: ::std::os::raw::c_int,
-    pub scanline_landscape: ::std::os::raw::c_int,
+    pub _deprecated_cwidth: ::std::os::raw::c_int,
+    pub _deprecated_cheight: ::std::os::raw::c_int,
     pub scanline: ::std::os::raw::c_int,
     pub fb_offset: ::std::os::raw::c_int,
     pub fb_size: ::std::os::raw::c_int,
@@ -15592,7 +15414,7 @@ fn bindgen_test_layout_iv_fbinfo_s() {
     let ptr = UNINIT.as_ptr();
     assert_eq!(
         ::std::mem::size_of::<iv_fbinfo_s>(),
-        144usize,
+        148usize,
         concat!("Size of: ", stringify!(iv_fbinfo_s))
     );
     assert_eq!(
@@ -15691,8 +15513,18 @@ fn bindgen_test_layout_iv_fbinfo_s() {
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).orientation) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).ndepth) as usize - ptr as usize },
         36usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(iv_fbinfo_s),
+            "::",
+            stringify!(ndepth)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).orientation) as usize - ptr as usize },
+        40usize,
         concat!(
             "Offset of field: ",
             stringify!(iv_fbinfo_s),
@@ -15701,28 +15533,28 @@ fn bindgen_test_layout_iv_fbinfo_s() {
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).scanline_portrait) as usize - ptr as usize },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(iv_fbinfo_s),
-            "::",
-            stringify!(scanline_portrait)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).scanline_landscape) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr)._deprecated_cwidth) as usize - ptr as usize },
         44usize,
         concat!(
             "Offset of field: ",
             stringify!(iv_fbinfo_s),
             "::",
-            stringify!(scanline_landscape)
+            stringify!(_deprecated_cwidth)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr)._deprecated_cheight) as usize - ptr as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(iv_fbinfo_s),
+            "::",
+            stringify!(_deprecated_cheight)
         )
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).scanline) as usize - ptr as usize },
-        48usize,
+        52usize,
         concat!(
             "Offset of field: ",
             stringify!(iv_fbinfo_s),
@@ -15732,7 +15564,7 @@ fn bindgen_test_layout_iv_fbinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).fb_offset) as usize - ptr as usize },
-        52usize,
+        56usize,
         concat!(
             "Offset of field: ",
             stringify!(iv_fbinfo_s),
@@ -15742,7 +15574,7 @@ fn bindgen_test_layout_iv_fbinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).fb_size) as usize - ptr as usize },
-        56usize,
+        60usize,
         concat!(
             "Offset of field: ",
             stringify!(iv_fbinfo_s),
@@ -15752,7 +15584,7 @@ fn bindgen_test_layout_iv_fbinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).ev_offset) as usize - ptr as usize },
-        60usize,
+        64usize,
         concat!(
             "Offset of field: ",
             stringify!(iv_fbinfo_s),
@@ -15762,7 +15594,7 @@ fn bindgen_test_layout_iv_fbinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).ev_size) as usize - ptr as usize },
-        64usize,
+        68usize,
         concat!(
             "Offset of field: ",
             stringify!(iv_fbinfo_s),
@@ -15772,7 +15604,7 @@ fn bindgen_test_layout_iv_fbinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).evhead) as usize - ptr as usize },
-        68usize,
+        72usize,
         concat!(
             "Offset of field: ",
             stringify!(iv_fbinfo_s),
@@ -15782,7 +15614,7 @@ fn bindgen_test_layout_iv_fbinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).evtail) as usize - ptr as usize },
-        72usize,
+        76usize,
         concat!(
             "Offset of field: ",
             stringify!(iv_fbinfo_s),
@@ -15792,7 +15624,7 @@ fn bindgen_test_layout_iv_fbinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).einkversion) as usize - ptr as usize },
-        76usize,
+        80usize,
         concat!(
             "Offset of field: ",
             stringify!(iv_fbinfo_s),
@@ -15802,7 +15634,7 @@ fn bindgen_test_layout_iv_fbinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).reserved) as usize - ptr as usize },
-        80usize,
+        84usize,
         concat!(
             "Offset of field: ",
             stringify!(iv_fbinfo_s),
@@ -15812,7 +15644,7 @@ fn bindgen_test_layout_iv_fbinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).data) as usize - ptr as usize },
-        140usize,
+        144usize,
         concat!(
             "Offset of field: ",
             stringify!(iv_fbinfo_s),
@@ -15822,7 +15654,7 @@ fn bindgen_test_layout_iv_fbinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).fb_y_offset) as usize - ptr as usize },
-        140usize,
+        144usize,
         concat!(
             "Offset of field: ",
             stringify!(iv_fbinfo_s),
@@ -15930,7 +15762,7 @@ pub struct taskinfo_s {
     pub appname: *mut ::std::os::raw::c_char,
     pub icon: *mut ibitmap,
     pub subtasks: *mut subtaskinfo,
-    pub fbtempkey: ::std::os::raw::c_int,
+    pub rsv_1: ::std::os::raw::c_int,
     pub rsv_2: ::std::os::raw::c_int,
     pub rsv_3: ::std::os::raw::c_int,
     pub rsv_4: ::std::os::raw::c_int,
@@ -16040,13 +15872,13 @@ fn bindgen_test_layout_taskinfo_s() {
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).fbtempkey) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).rsv_1) as usize - ptr as usize },
         36usize,
         concat!(
             "Offset of field: ",
             stringify!(taskinfo_s),
             "::",
-            stringify!(fbtempkey)
+            stringify!(rsv_1)
         )
     );
     assert_eq!(
@@ -16081,14 +15913,20 @@ fn bindgen_test_layout_taskinfo_s() {
     );
 }
 pub type taskinfo = taskinfo_s;
+pub const input_dev_e_UNKNOWN: input_dev_e = 0;
+pub const input_dev_e_CAPTOUCH: input_dev_e = 1;
+pub const input_dev_e_DIGITIZER: input_dev_e = 2;
+pub const input_dev_e_MAX_INPUT_DEV: input_dev_e = 3;
+pub type input_dev_e = ::std::os::raw::c_uint;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct iv_mtinfo_s {
-    pub active: bool,
+    pub active: ::std::os::raw::c_int,
     pub x: ::std::os::raw::c_int,
     pub y: ::std::os::raw::c_int,
     pub pressure: ::std::os::raw::c_int,
     pub devtype: input_dev_e,
+    pub rsv_2: ::std::os::raw::c_int,
     pub timems: ::std::os::raw::c_longlong,
 }
 #[test]
@@ -16156,6 +15994,16 @@ fn bindgen_test_layout_iv_mtinfo_s() {
         )
     );
     assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).rsv_2) as usize - ptr as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(iv_mtinfo_s),
+            "::",
+            stringify!(rsv_2)
+        )
+    );
+    assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).timems) as usize - ptr as usize },
         24usize,
         concat!(
@@ -16167,11 +16015,10 @@ fn bindgen_test_layout_iv_mtinfo_s() {
     );
 }
 pub type iv_mtinfo = iv_mtinfo_s;
-pub type iv_mtinfo_section = [iv_mtinfo; 2usize];
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct apinfo_s {
-    pub ssid: [::std::os::raw::c_char; 64usize],
+    pub ssid: [::std::os::raw::c_char; 36usize],
     pub mode: ::std::os::raw::c_int,
     pub channel: ::std::os::raw::c_int,
     pub security: WIFI_SECURITY,
@@ -16187,7 +16034,7 @@ fn bindgen_test_layout_apinfo_s() {
     let ptr = UNINIT.as_ptr();
     assert_eq!(
         ::std::mem::size_of::<apinfo_s>(),
-        100usize,
+        72usize,
         concat!("Size of: ", stringify!(apinfo_s))
     );
     assert_eq!(
@@ -16207,7 +16054,7 @@ fn bindgen_test_layout_apinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).mode) as usize - ptr as usize },
-        64usize,
+        36usize,
         concat!(
             "Offset of field: ",
             stringify!(apinfo_s),
@@ -16217,7 +16064,7 @@ fn bindgen_test_layout_apinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).channel) as usize - ptr as usize },
-        68usize,
+        40usize,
         concat!(
             "Offset of field: ",
             stringify!(apinfo_s),
@@ -16227,7 +16074,7 @@ fn bindgen_test_layout_apinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).security) as usize - ptr as usize },
-        72usize,
+        44usize,
         concat!(
             "Offset of field: ",
             stringify!(apinfo_s),
@@ -16237,7 +16084,7 @@ fn bindgen_test_layout_apinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).quality) as usize - ptr as usize },
-        76usize,
+        48usize,
         concat!(
             "Offset of field: ",
             stringify!(apinfo_s),
@@ -16247,7 +16094,7 @@ fn bindgen_test_layout_apinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).level) as usize - ptr as usize },
-        80usize,
+        52usize,
         concat!(
             "Offset of field: ",
             stringify!(apinfo_s),
@@ -16257,7 +16104,7 @@ fn bindgen_test_layout_apinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).noise) as usize - ptr as usize },
-        84usize,
+        56usize,
         concat!(
             "Offset of field: ",
             stringify!(apinfo_s),
@@ -16267,7 +16114,7 @@ fn bindgen_test_layout_apinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).mac) as usize - ptr as usize },
-        88usize,
+        60usize,
         concat!(
             "Offset of field: ",
             stringify!(apinfo_s),
@@ -16277,7 +16124,7 @@ fn bindgen_test_layout_apinfo_s() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).timestamp) as usize - ptr as usize },
-        96usize,
+        68usize,
         concat!(
             "Offset of field: ",
             stringify!(apinfo_s),
@@ -16858,166 +16705,16 @@ pub const APPLICATION_ATTRIBUTE_APPLICATION_READER: APPLICATION_ATTRIBUTE = 0;
 pub const APPLICATION_ATTRIBUTE_APPLICATION_ATTRIBUTE_MAX: APPLICATION_ATTRIBUTE = 31;
 #[doc = " Enum APPLICATION_ATTRIBUTE wich can be used for setting current application attributes\n @see SetCurrentApplicationAttribute, TestCurrentApplicationAttribute"]
 pub type APPLICATION_ATTRIBUTE = ::std::os::raw::c_uint;
-pub const eside_SIDE_NONE: eside = 0;
-pub const eside_SIDE_LEFT: eside = 1;
-pub const eside_SIDE_RIGHT: eside = 2;
-pub const eside_SIDE_TOP: eside = 4;
-pub const eside_SIDE_BOTTOM: eside = 8;
-pub const eside_SIDE_ALL: eside = 15;
-pub type eside = ::std::os::raw::c_uint;
-pub const edef_thickness_THICKNESS_DEF_NONE: edef_thickness = 0;
-pub const edef_thickness_THICKNESS_DEF_SINGLE: edef_thickness = -1;
-pub const edef_thickness_THICKNESS_DEF_FOCUSED_FRAME: edef_thickness = -2;
-pub const edef_thickness_THICKNESS_DEF_DIALOG_FRAME: edef_thickness = -3;
-pub const edef_thickness_THICKNESS_DEF_MAX: edef_thickness = -8;
-pub const edef_thickness_RADIUS_DEPEND_ON_THICKNESS: edef_thickness = -100;
-pub type edef_thickness = ::std::os::raw::c_int;
-pub const estyle_ROUND_NONE: estyle = 0;
-pub const estyle_ROUND_TOP_LEFT: estyle = 1;
-pub const estyle_ROUND_TOP_RIGHT: estyle = 2;
-pub const estyle_ROUND_BOTTOM_LEFT: estyle = 4;
-pub const estyle_ROUND_BOTTOM_RIGHT: estyle = 8;
-pub const estyle_ROUND_TOP: estyle = 3;
-pub const estyle_ROUND_DOWN: estyle = 12;
-pub const estyle_ROUND_LEFT: estyle = 5;
-pub const estyle_ROUND_RIGHT: estyle = 10;
-pub const estyle_ROUND_ALL: estyle = 15;
-pub const estyle_ROUND_FILL_INSIDE: estyle = 16;
-pub const estyle_ROUND_FILL_OUTSIDE_BG: estyle = 32;
-pub const estyle_ROUND_BLEND_SRC_INSIDE: estyle = 64;
-pub const estyle_ROUND_BLEND_SRC_OUTSIDE: estyle = 128;
-pub const estyle_ROUND_DRAW_CIRCLE_BLACK_WHITE: estyle = 256;
-pub const estyle_ROUND_DEFAULT: estyle = 15;
+pub const estyle_ROUND_ALL: estyle = 1;
+pub const estyle_ROUND_TOP: estyle = 2;
+pub const estyle_ROUND_DOWN: estyle = 3;
+pub const estyle_ROUND_LEFT: estyle = 4;
+pub const estyle_ROUND_RIGHT: estyle = 5;
+pub const estyle_ROUND_TOP_LEFT: estyle = 6;
+pub const estyle_ROUND_TOP_RIGHT: estyle = 7;
+pub const estyle_ROUND_BOTTOM_LEFT: estyle = 8;
+pub const estyle_ROUND_BOTTOM_RIGHT: estyle = 9;
 pub type estyle = ::std::os::raw::c_uint;
-pub const egradient_GRADIENT_NONE: egradient = 0;
-pub const egradient_GRADIENT_UP_DOWN: egradient = 1;
-pub const egradient_GRADIENT_DOWN_UP: egradient = 2;
-pub const egradient_GRADIENT_LEFT_RIGHT: egradient = 4;
-pub const egradient_GRADIENT_RIGHT_LEFT: egradient = 8;
-pub type egradient = ::std::os::raw::c_uint;
-pub const HorizontalSeparatorType_HORIZONTAL_SEPARATOR_SOLID: HorizontalSeparatorType = 0;
-pub const HorizontalSeparatorType_HORIZONTAL_SEPARATOR_DOTTED: HorizontalSeparatorType = 1;
-pub type HorizontalSeparatorType = ::std::os::raw::c_uint;
-pub const PixelFormat_e_kFmtGrayscale8: PixelFormat_e = 0;
-pub const PixelFormat_e_kFmtRGB24: PixelFormat_e = 1;
-pub type PixelFormat_e = ::std::os::raw::c_uint;
-pub use self::PixelFormat_e as PixelFormat;
-pub const ImageSignatureType_e_kImgTypeUnknown: ImageSignatureType_e = 0;
-pub const ImageSignatureType_e_kImgTypeBMP: ImageSignatureType_e = 1;
-pub const ImageSignatureType_e_kImgTypeGIF: ImageSignatureType_e = 2;
-pub const ImageSignatureType_e_kImgTypeJPG: ImageSignatureType_e = 3;
-pub const ImageSignatureType_e_kImgTypePNG: ImageSignatureType_e = 4;
-pub const ImageSignatureType_e_kImgTypeTIFF: ImageSignatureType_e = 5;
-pub type ImageSignatureType_e = ::std::os::raw::c_uint;
-pub use self::ImageSignatureType_e as ImageSignatureType;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct AdjustmentParams_s {
-    pub lab_saturation_koef: f64,
-    pub vibrance: f64,
-    pub saturation_table: [::std::os::raw::c_int; 256usize],
-    pub value_table: [::std::os::raw::c_int; 256usize],
-    pub brightness: f64,
-    pub contrast: f64,
-    pub gamma: f64,
-    pub saturation: f64,
-}
-#[test]
-fn bindgen_test_layout_AdjustmentParams_s() {
-    const UNINIT: ::std::mem::MaybeUninit<AdjustmentParams_s> = ::std::mem::MaybeUninit::uninit();
-    let ptr = UNINIT.as_ptr();
-    assert_eq!(
-        ::std::mem::size_of::<AdjustmentParams_s>(),
-        2096usize,
-        concat!("Size of: ", stringify!(AdjustmentParams_s))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<AdjustmentParams_s>(),
-        8usize,
-        concat!("Alignment of ", stringify!(AdjustmentParams_s))
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).lab_saturation_koef) as usize - ptr as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AdjustmentParams_s),
-            "::",
-            stringify!(lab_saturation_koef)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).vibrance) as usize - ptr as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AdjustmentParams_s),
-            "::",
-            stringify!(vibrance)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).saturation_table) as usize - ptr as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AdjustmentParams_s),
-            "::",
-            stringify!(saturation_table)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).value_table) as usize - ptr as usize },
-        1040usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AdjustmentParams_s),
-            "::",
-            stringify!(value_table)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).brightness) as usize - ptr as usize },
-        2064usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AdjustmentParams_s),
-            "::",
-            stringify!(brightness)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).contrast) as usize - ptr as usize },
-        2072usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AdjustmentParams_s),
-            "::",
-            stringify!(contrast)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).gamma) as usize - ptr as usize },
-        2080usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AdjustmentParams_s),
-            "::",
-            stringify!(gamma)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).saturation) as usize - ptr as usize },
-        2088usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(AdjustmentParams_s),
-            "::",
-            stringify!(saturation)
-        )
-    );
-}
-pub type AdjustmentParams = AdjustmentParams_s;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct FontForSort_s {
@@ -17071,14 +16768,6 @@ fn bindgen_test_layout_FontForSort_s() {
     );
 }
 pub type FontForSort = FontForSort_s;
-pub type keyboard_text_change_callback = ::std::option::Option<
-    unsafe extern "C" fn(
-        context: *mut ::std::os::raw::c_void,
-        commit_string: *const ::std::os::raw::c_char,
-        replace_from: ::std::os::raw::c_int,
-        replace_length: ::std::os::raw::c_int,
-    ),
->;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct iprofile_s {
@@ -17225,7 +16914,6 @@ pub type BookSyncStatus = BookSyncStatus_s;
 pub const AudioPlayerType_e_kAudioPlayer: AudioPlayerType_e = 1;
 pub const AudioPlayerType_e_kAudioBooks: AudioPlayerType_e = 2;
 pub const AudioPlayerType_e_kBrowser: AudioPlayerType_e = 4;
-pub const AudioPlayerType_e_kReaderPlayer: AudioPlayerType_e = 8;
 pub type AudioPlayerType_e = ::std::os::raw::c_uint;
 pub use self::AudioPlayerType_e as AudioPlayerType;
 #[repr(C)]
@@ -17640,35 +17328,6 @@ pub type COVERCACHE_STORAGES_e = ::std::os::raw::c_uint;
 pub use self::COVERCACHE_STORAGES_e as COVERCACHE_STORAGES;
 pub type usleep_func_t =
     ::std::option::Option<unsafe extern "C" fn(__useconds: __useconds_t) -> ::std::os::raw::c_int>;
-pub const eTaskOomPriority_kTaskOomPriorityLow: eTaskOomPriority = 0;
-pub const eTaskOomPriority_kTaskOomPriorityNormal: eTaskOomPriority = 1;
-pub const eTaskOomPriority_kTaskOomPriorityHigh: eTaskOomPriority = 2;
-pub type eTaskOomPriority = ::std::os::raw::c_uint;
-pub use self::eTaskOomPriority as TaskOomPriority;
-pub const CustomGattSessionStatus_e_GattSessionStatus_uncknown: CustomGattSessionStatus_e = 0;
-pub const CustomGattSessionStatus_e_GattSessionStatus_disconnected: CustomGattSessionStatus_e = 1;
-pub const CustomGattSessionStatus_e_GattSessionStatus_errorCommon: CustomGattSessionStatus_e = 2;
-pub const CustomGattSessionStatus_e_GattSessionStatus_errorConnection: CustomGattSessionStatus_e =
-    3;
-pub const CustomGattSessionStatus_e_GattSessionStatus_errorService: CustomGattSessionStatus_e = 4;
-pub const CustomGattSessionStatus_e_GattSessionStatus_connecting: CustomGattSessionStatus_e = 5;
-pub const CustomGattSessionStatus_e_GattSessionStatus_discoveringServices:
-    CustomGattSessionStatus_e = 6;
-pub const CustomGattSessionStatus_e_GattSessionStatus_connected: CustomGattSessionStatus_e = 7;
-pub type CustomGattSessionStatus_e = ::std::os::raw::c_uint;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct CustomGattSession_s {
-    _unused: [u8; 0],
-}
-pub type CustomGattSession = CustomGattSession_s;
-pub const software_localization_type_e_SLT_UNKNOWN: software_localization_type_e = 0;
-pub const software_localization_type_e_SLT_WW: software_localization_type_e = 1;
-pub const software_localization_type_e_SLT_RU: software_localization_type_e = 2;
-pub const software_localization_type_e_SLT_CIS: software_localization_type_e = 3;
-pub const software_localization_type_e_SLT_CN: software_localization_type_e = 4;
-pub type software_localization_type_e = ::std::os::raw::c_uint;
-pub use self::software_localization_type_e as software_localization_type;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __locale_data {
@@ -21802,163 +21461,364 @@ pub struct inkview {
         ) -> ::std::os::raw::c_int,
         ::libloading::Error,
     >,
-    pub ioctl: Result<
+    pub setjmp: Result<
+        unsafe extern "C" fn(__env: *mut __jmp_buf_tag) -> ::std::os::raw::c_int,
+        ::libloading::Error,
+    >,
+    pub _setjmp: Result<
+        unsafe extern "C" fn(__env: *mut __jmp_buf_tag) -> ::std::os::raw::c_int,
+        ::libloading::Error,
+    >,
+    pub longjmp: Result<
+        unsafe extern "C" fn(__env: *mut __jmp_buf_tag, __val: ::std::os::raw::c_int) -> !,
+        ::libloading::Error,
+    >,
+    pub _longjmp: Result<
+        unsafe extern "C" fn(__env: *mut __jmp_buf_tag, __val: ::std::os::raw::c_int) -> !,
+        ::libloading::Error,
+    >,
+    pub siglongjmp: Result<
+        unsafe extern "C" fn(__env: *mut __jmp_buf_tag, __val: ::std::os::raw::c_int) -> !,
+        ::libloading::Error,
+    >,
+    pub FT_Init_FreeType:
+        Result<unsafe extern "C" fn(alibrary: *mut FT_Library) -> FT_Error, ::libloading::Error>,
+    pub FT_Done_FreeType:
+        Result<unsafe extern "C" fn(library: FT_Library) -> FT_Error, ::libloading::Error>,
+    pub FT_New_Face: Result<
         unsafe extern "C" fn(
-            __fd: ::std::os::raw::c_int,
-            __request: ::std::os::raw::c_ulong,
-            ...
-        ) -> ::std::os::raw::c_int,
+            library: FT_Library,
+            filepathname: *const ::std::os::raw::c_char,
+            face_index: FT_Long,
+            aface: *mut FT_Face,
+        ) -> FT_Error,
         ::libloading::Error,
     >,
-    pub device_audio: Result<unsafe extern "C" fn() -> audio_id_t, ::libloading::Error>,
-    pub device_has_audio: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_hp_detect_cfg:
-        Result<unsafe extern "C" fn() -> *const hp_detect_cfg_t, ::libloading::Error>,
-    pub init_hwconfig: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_ID: Result<unsafe extern "C" fn() -> device_id_t, ::libloading::Error>,
-    pub device_platform: Result<unsafe extern "C" fn() -> platform_id_t, ::libloading::Error>,
-    pub device_number:
-        Result<unsafe extern "C" fn() -> ::std::os::raw::c_uint, ::libloading::Error>,
-    pub device_display: Result<unsafe extern "C" fn() -> display_id_t, ::libloading::Error>,
-    pub device_display_colormask:
-        Result<unsafe extern "C" fn() -> colormask_t, ::libloading::Error>,
-    pub device_display_height:
-        Result<unsafe extern "C" fn() -> ::std::os::raw::c_uint, ::libloading::Error>,
-    pub device_display_width:
-        Result<unsafe extern "C" fn() -> ::std::os::raw::c_uint, ::libloading::Error>,
-    pub device_display_scanline:
-        Result<unsafe extern "C" fn() -> ::std::os::raw::c_uint, ::libloading::Error>,
-    pub device_display_dpi:
-        Result<unsafe extern "C" fn() -> ::std::os::raw::c_uint, ::libloading::Error>,
-    pub device_display_position: Result<unsafe extern "C" fn() -> u8, ::libloading::Error>,
-    pub device_epdc: Result<unsafe extern "C" fn() -> epdc_id_t, ::libloading::Error>,
-    pub device_epdc_init:
-        Result<unsafe extern "C" fn() -> *mut epdc_instance_t, ::libloading::Error>,
-    pub device_keyboard: Result<unsafe extern "C" fn() -> keyboard_id_t, ::libloading::Error>,
-    pub device_touchpanel: Result<unsafe extern "C" fn() -> touchpanel_id_t, ::libloading::Error>,
-    pub device_has_touchpanel: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_input_init:
-        Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
-    pub device_input_read: Result<
+    pub FT_New_Memory_Face: Result<
         unsafe extern "C" fn(
-            ie: *mut input_event,
-            devtype: *mut input_dev_e,
-            maxcount: ::std::os::raw::c_int,
-            timeout_ms: ::std::os::raw::c_int,
-        ) -> ::std::os::raw::c_int,
+            library: FT_Library,
+            file_base: *const FT_Byte,
+            file_size: FT_Long,
+            face_index: FT_Long,
+            aface: *mut FT_Face,
+        ) -> FT_Error,
         ::libloading::Error,
     >,
-    pub device_keyboard_translate: Result<
+    pub FT_Open_Face: Result<
         unsafe extern "C" fn(
-            ev: *mut input_event,
-            keymask: *mut ::std::os::raw::c_ulong,
-        ) -> ::std::os::raw::c_int,
+            library: FT_Library,
+            args: *const FT_Open_Args,
+            face_index: FT_Long,
+            aface: *mut FT_Face,
+        ) -> FT_Error,
         ::libloading::Error,
     >,
-    pub device_keyboard_buttons:
-        Result<unsafe extern "C" fn() -> ::std::os::raw::c_ulong, ::libloading::Error>,
-    pub device_keyboard_state:
-        Result<unsafe extern "C" fn() -> ::std::os::raw::c_ulong, ::libloading::Error>,
-    pub device_touchpanel_getmatrix:
-        Result<unsafe extern "C" fn() -> *const ::std::os::raw::c_int, ::libloading::Error>,
-    pub add_input_device: Result<
+    pub FT_Attach_File: Result<
         unsafe extern "C" fn(
-            devpath: *const ::std::os::raw::c_char,
-            devtype: input_dev_e,
-        ) -> ::std::os::raw::c_int,
+            face: FT_Face,
+            filepathname: *const ::std::os::raw::c_char,
+        ) -> FT_Error,
         ::libloading::Error,
     >,
-    pub remove_input_device: Result<
-        unsafe extern "C" fn(devpath: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int,
+    pub FT_Attach_Stream: Result<
+        unsafe extern "C" fn(face: FT_Face, parameters: *mut FT_Open_Args) -> FT_Error,
         ::libloading::Error,
     >,
-    pub device_slider: Result<unsafe extern "C" fn() -> slider_id_t, ::libloading::Error>,
-    pub device_has_slider: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_slider_cfg:
-        Result<unsafe extern "C" fn() -> *const slider_cfg_t, ::libloading::Error>,
-    pub device_gyroscope: Result<unsafe extern "C" fn() -> gyroscop_id_t, ::libloading::Error>,
-    pub device_gyroscope_placement: Result<unsafe extern "C" fn() -> u8, ::libloading::Error>,
-    pub device_has_gyroscope: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_has_extcard: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_usb: Result<unsafe extern "C" fn() -> usb_id_t, ::libloading::Error>,
-    pub device_has_usb: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_has_usbhost: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_frontlight: Result<unsafe extern "C" fn() -> frontlight_id_t, ::libloading::Error>,
-    pub device_has_frontlight: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_model:
-        Result<unsafe extern "C" fn() -> *const ::std::os::raw::c_char, ::libloading::Error>,
-    pub device_serial_number:
-        Result<unsafe extern "C" fn() -> *const ::std::os::raw::c_char, ::libloading::Error>,
-    pub device_init_led: Result<unsafe extern "C" fn(cfg_led_state: bool), ::libloading::Error>,
-    pub device_set_led:
-        Result<unsafe extern "C" fn(value: ::std::os::raw::c_int), ::libloading::Error>,
-    pub device_get_led:
-        Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
-    pub device_battery_percent:
-        Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
-    pub device_is_powered: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_set_bootcramfs_flag:
-        Result<unsafe extern "C" fn(flag: bool) -> bool, ::libloading::Error>,
-    pub device_reboot: Result<unsafe extern "C" fn(), ::libloading::Error>,
-    pub device_poweroff: Result<unsafe extern "C" fn(), ::libloading::Error>,
-    pub device_frontlight_init:
-        Result<unsafe extern "C" fn() -> *mut frontlight_ctrl, ::libloading::Error>,
-    pub device_lightsensor: Result<unsafe extern "C" fn() -> lightsensor_id_t, ::libloading::Error>,
-    pub device_has_lightsensor: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_bluetooth: Result<unsafe extern "C" fn() -> bluetooth_id_t, ::libloading::Error>,
-    pub device_has_bluetooth: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_wifi: Result<unsafe extern "C" fn() -> wifi_id_t, ::libloading::Error>,
-    pub device_has_wifi: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_gsm: Result<unsafe extern "C" fn() -> gsm_id_t, ::libloading::Error>,
-    pub device_has_gsm: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub device_suspend: Result<unsafe extern "C" fn(deep: bool) -> bool, ::libloading::Error>,
-    pub device_set_wakealarm:
-        Result<unsafe extern "C" fn(seconds: ::std::os::raw::c_int) -> bool, ::libloading::Error>,
-    pub device_write_file: Result<
+    pub FT_Reference_Face:
+        Result<unsafe extern "C" fn(face: FT_Face) -> FT_Error, ::libloading::Error>,
+    pub FT_Done_Face: Result<unsafe extern "C" fn(face: FT_Face) -> FT_Error, ::libloading::Error>,
+    pub FT_Select_Size: Result<
+        unsafe extern "C" fn(face: FT_Face, strike_index: FT_Int) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Request_Size: Result<
+        unsafe extern "C" fn(face: FT_Face, req: FT_Size_Request) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Set_Char_Size: Result<
         unsafe extern "C" fn(
-            name: *const ::std::os::raw::c_char,
-            buf: *const ::std::os::raw::c_char,
-            size: ::std::os::raw::c_int,
-        ) -> bool,
+            face: FT_Face,
+            char_width: FT_F26Dot6,
+            char_height: FT_F26Dot6,
+            horz_resolution: FT_UInt,
+            vert_resolution: FT_UInt,
+        ) -> FT_Error,
         ::libloading::Error,
     >,
-    pub device_write_file_int: Result<
-        unsafe extern "C" fn(name: *const ::std::os::raw::c_char, v: ::std::os::raw::c_int) -> bool,
-        ::libloading::Error,
-    >,
-    pub device_read_bin_file: Result<
+    pub FT_Set_Pixel_Sizes: Result<
         unsafe extern "C" fn(
-            name: *const ::std::os::raw::c_char,
-            buf: *mut ::std::os::raw::c_char,
-            size: ::std::os::raw::c_int,
-        ) -> ::std::os::raw::c_int,
+            face: FT_Face,
+            pixel_width: FT_UInt,
+            pixel_height: FT_UInt,
+        ) -> FT_Error,
         ::libloading::Error,
     >,
-    pub device_read_file: Result<
+    pub FT_Load_Glyph: Result<
+        unsafe extern "C" fn(face: FT_Face, glyph_index: FT_UInt, load_flags: FT_Int32) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Load_Char: Result<
+        unsafe extern "C" fn(face: FT_Face, char_code: FT_ULong, load_flags: FT_Int32) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Set_Transform: Result<
+        unsafe extern "C" fn(face: FT_Face, matrix: *mut FT_Matrix, delta: *mut FT_Vector),
+        ::libloading::Error,
+    >,
+    pub FT_Render_Glyph: Result<
+        unsafe extern "C" fn(slot: FT_GlyphSlot, render_mode: FT_Render_Mode) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Get_Kerning: Result<
         unsafe extern "C" fn(
-            name: *const ::std::os::raw::c_char,
-            buf: *mut ::std::os::raw::c_char,
-            size: ::std::os::raw::c_int,
-        ) -> bool,
+            face: FT_Face,
+            left_glyph: FT_UInt,
+            right_glyph: FT_UInt,
+            kern_mode: FT_UInt,
+            akerning: *mut FT_Vector,
+        ) -> FT_Error,
         ::libloading::Error,
     >,
-    pub device_read_file_int: Result<
+    pub FT_Get_Track_Kerning: Result<
         unsafe extern "C" fn(
-            name: *const ::std::os::raw::c_char,
-            deflt: ::std::os::raw::c_int,
-        ) -> ::std::os::raw::c_int,
+            face: FT_Face,
+            point_size: FT_Fixed,
+            degree: FT_Int,
+            akerning: *mut FT_Fixed,
+        ) -> FT_Error,
         ::libloading::Error,
     >,
-    pub device_power_led_cfg:
-        Result<unsafe extern "C" fn() -> *const power_led_cfg_t, ::libloading::Error>,
-    pub device_storage_cfg:
-        Result<unsafe extern "C" fn() -> *mut storage_cfg_t, ::libloading::Error>,
+    pub FT_Get_Glyph_Name: Result<
+        unsafe extern "C" fn(
+            face: FT_Face,
+            glyph_index: FT_UInt,
+            buffer: FT_Pointer,
+            buffer_max: FT_UInt,
+        ) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Get_Postscript_Name: Result<
+        unsafe extern "C" fn(face: FT_Face) -> *const ::std::os::raw::c_char,
+        ::libloading::Error,
+    >,
+    pub FT_Select_Charmap: Result<
+        unsafe extern "C" fn(face: FT_Face, encoding: FT_Encoding) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Set_Charmap: Result<
+        unsafe extern "C" fn(face: FT_Face, charmap: FT_CharMap) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Get_Charmap_Index:
+        Result<unsafe extern "C" fn(charmap: FT_CharMap) -> FT_Int, ::libloading::Error>,
+    pub FT_Get_Char_Index: Result<
+        unsafe extern "C" fn(face: FT_Face, charcode: FT_ULong) -> FT_UInt,
+        ::libloading::Error,
+    >,
+    pub FT_Get_First_Char: Result<
+        unsafe extern "C" fn(face: FT_Face, agindex: *mut FT_UInt) -> FT_ULong,
+        ::libloading::Error,
+    >,
+    pub FT_Get_Next_Char: Result<
+        unsafe extern "C" fn(face: FT_Face, char_code: FT_ULong, agindex: *mut FT_UInt) -> FT_ULong,
+        ::libloading::Error,
+    >,
+    pub FT_Get_Name_Index: Result<
+        unsafe extern "C" fn(face: FT_Face, glyph_name: *mut FT_String) -> FT_UInt,
+        ::libloading::Error,
+    >,
+    pub FT_Get_SubGlyph_Info: Result<
+        unsafe extern "C" fn(
+            glyph: FT_GlyphSlot,
+            sub_index: FT_UInt,
+            p_index: *mut FT_Int,
+            p_flags: *mut FT_UInt,
+            p_arg1: *mut FT_Int,
+            p_arg2: *mut FT_Int,
+            p_transform: *mut FT_Matrix,
+        ) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Get_FSType_Flags:
+        Result<unsafe extern "C" fn(face: FT_Face) -> FT_UShort, ::libloading::Error>,
+    pub FT_Face_GetCharVariantIndex: Result<
+        unsafe extern "C" fn(
+            face: FT_Face,
+            charcode: FT_ULong,
+            variantSelector: FT_ULong,
+        ) -> FT_UInt,
+        ::libloading::Error,
+    >,
+    pub FT_Face_GetCharVariantIsDefault: Result<
+        unsafe extern "C" fn(
+            face: FT_Face,
+            charcode: FT_ULong,
+            variantSelector: FT_ULong,
+        ) -> FT_Int,
+        ::libloading::Error,
+    >,
+    pub FT_Face_GetVariantSelectors:
+        Result<unsafe extern "C" fn(face: FT_Face) -> *mut FT_UInt32, ::libloading::Error>,
+    pub FT_Face_GetVariantsOfChar: Result<
+        unsafe extern "C" fn(face: FT_Face, charcode: FT_ULong) -> *mut FT_UInt32,
+        ::libloading::Error,
+    >,
+    pub FT_Face_GetCharsOfVariant: Result<
+        unsafe extern "C" fn(face: FT_Face, variantSelector: FT_ULong) -> *mut FT_UInt32,
+        ::libloading::Error,
+    >,
+    pub FT_MulDiv: Result<
+        unsafe extern "C" fn(a: FT_Long, b: FT_Long, c: FT_Long) -> FT_Long,
+        ::libloading::Error,
+    >,
+    pub FT_MulFix:
+        Result<unsafe extern "C" fn(a: FT_Long, b: FT_Long) -> FT_Long, ::libloading::Error>,
+    pub FT_DivFix:
+        Result<unsafe extern "C" fn(a: FT_Long, b: FT_Long) -> FT_Long, ::libloading::Error>,
+    pub FT_RoundFix: Result<unsafe extern "C" fn(a: FT_Fixed) -> FT_Fixed, ::libloading::Error>,
+    pub FT_CeilFix: Result<unsafe extern "C" fn(a: FT_Fixed) -> FT_Fixed, ::libloading::Error>,
+    pub FT_FloorFix: Result<unsafe extern "C" fn(a: FT_Fixed) -> FT_Fixed, ::libloading::Error>,
+    pub FT_Vector_Transform: Result<
+        unsafe extern "C" fn(vec: *mut FT_Vector, matrix: *const FT_Matrix),
+        ::libloading::Error,
+    >,
+    pub FT_Library_Version: Result<
+        unsafe extern "C" fn(
+            library: FT_Library,
+            amajor: *mut FT_Int,
+            aminor: *mut FT_Int,
+            apatch: *mut FT_Int,
+        ),
+        ::libloading::Error,
+    >,
+    pub FT_Face_CheckTrueTypePatents:
+        Result<unsafe extern "C" fn(face: FT_Face) -> FT_Bool, ::libloading::Error>,
+    pub FT_Face_SetUnpatentedHinting:
+        Result<unsafe extern "C" fn(face: FT_Face, value: FT_Bool) -> FT_Bool, ::libloading::Error>,
+    pub FT_Get_Glyph: Result<
+        unsafe extern "C" fn(slot: FT_GlyphSlot, aglyph: *mut FT_Glyph) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Glyph_Copy: Result<
+        unsafe extern "C" fn(source: FT_Glyph, target: *mut FT_Glyph) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Glyph_Transform: Result<
+        unsafe extern "C" fn(
+            glyph: FT_Glyph,
+            matrix: *mut FT_Matrix,
+            delta: *mut FT_Vector,
+        ) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Glyph_Get_CBox: Result<
+        unsafe extern "C" fn(glyph: FT_Glyph, bbox_mode: FT_UInt, acbox: *mut FT_BBox),
+        ::libloading::Error,
+    >,
+    pub FT_Glyph_To_Bitmap: Result<
+        unsafe extern "C" fn(
+            the_glyph: *mut FT_Glyph,
+            render_mode: FT_Render_Mode,
+            origin: *mut FT_Vector,
+            destroy: FT_Bool,
+        ) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Done_Glyph: Result<unsafe extern "C" fn(glyph: FT_Glyph), ::libloading::Error>,
+    pub FT_Matrix_Multiply:
+        Result<unsafe extern "C" fn(a: *const FT_Matrix, b: *mut FT_Matrix), ::libloading::Error>,
+    pub FT_Matrix_Invert:
+        Result<unsafe extern "C" fn(matrix: *mut FT_Matrix) -> FT_Error, ::libloading::Error>,
+    pub FT_Outline_Decompose: Result<
+        unsafe extern "C" fn(
+            outline: *mut FT_Outline,
+            func_interface: *const FT_Outline_Funcs,
+            user: *mut ::std::os::raw::c_void,
+        ) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Outline_New: Result<
+        unsafe extern "C" fn(
+            library: FT_Library,
+            numPoints: FT_UInt,
+            numContours: FT_Int,
+            anoutline: *mut FT_Outline,
+        ) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Outline_New_Internal: Result<
+        unsafe extern "C" fn(
+            memory: FT_Memory,
+            numPoints: FT_UInt,
+            numContours: FT_Int,
+            anoutline: *mut FT_Outline,
+        ) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Outline_Done: Result<
+        unsafe extern "C" fn(library: FT_Library, outline: *mut FT_Outline) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Outline_Done_Internal: Result<
+        unsafe extern "C" fn(memory: FT_Memory, outline: *mut FT_Outline) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Outline_Check:
+        Result<unsafe extern "C" fn(outline: *mut FT_Outline) -> FT_Error, ::libloading::Error>,
+    pub FT_Outline_Get_CBox: Result<
+        unsafe extern "C" fn(outline: *const FT_Outline, acbox: *mut FT_BBox),
+        ::libloading::Error,
+    >,
+    pub FT_Outline_Translate: Result<
+        unsafe extern "C" fn(outline: *const FT_Outline, xOffset: FT_Pos, yOffset: FT_Pos),
+        ::libloading::Error,
+    >,
+    pub FT_Outline_Copy: Result<
+        unsafe extern "C" fn(source: *const FT_Outline, target: *mut FT_Outline) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Outline_Transform: Result<
+        unsafe extern "C" fn(outline: *const FT_Outline, matrix: *const FT_Matrix),
+        ::libloading::Error,
+    >,
+    pub FT_Outline_Embolden: Result<
+        unsafe extern "C" fn(outline: *mut FT_Outline, strength: FT_Pos) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Outline_EmboldenXY: Result<
+        unsafe extern "C" fn(
+            outline: *mut FT_Outline,
+            xstrength: FT_Pos,
+            ystrength: FT_Pos,
+        ) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Outline_Reverse:
+        Result<unsafe extern "C" fn(outline: *mut FT_Outline), ::libloading::Error>,
+    pub FT_Outline_Get_Bitmap: Result<
+        unsafe extern "C" fn(
+            library: FT_Library,
+            outline: *mut FT_Outline,
+            abitmap: *const FT_Bitmap,
+        ) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Outline_Render: Result<
+        unsafe extern "C" fn(
+            library: FT_Library,
+            outline: *mut FT_Outline,
+            params: *mut FT_Raster_Params,
+        ) -> FT_Error,
+        ::libloading::Error,
+    >,
+    pub FT_Outline_Get_Orientation: Result<
+        unsafe extern "C" fn(outline: *mut FT_Outline) -> FT_Orientation,
+        ::libloading::Error,
+    >,
     pub iv_get_default_font: Result<
         unsafe extern "C" fn(fonttype: FONT_TYPE) -> *mut ::std::os::raw::c_char,
         ::libloading::Error,
     >,
-    pub GetHardwareDepth:
-        Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
     pub OpenScreen: Result<unsafe extern "C" fn(), ::libloading::Error>,
     pub OpenScreenExt: Result<unsafe extern "C" fn(), ::libloading::Error>,
     pub InkViewMain: Result<unsafe extern "C" fn(h: iv_handler), ::libloading::Error>,
@@ -22162,104 +22022,6 @@ pub struct inkview {
         ),
         ::libloading::Error,
     >,
-    pub DrawHorizontalSeparator: Result<
-        unsafe extern "C" fn(
-            x0: ::std::os::raw::c_int,
-            y: ::std::os::raw::c_int,
-            w: ::std::os::raw::c_int,
-            type_: ::std::os::raw::c_int,
-        ),
-        ::libloading::Error,
-    >,
-    pub DrawCircleQuarter: Result<
-        unsafe extern "C" fn(
-            x0: ::std::os::raw::c_int,
-            y0: ::std::os::raw::c_int,
-            radius: ::std::os::raw::c_int,
-            direction: ::std::os::raw::c_int,
-            thickness: ::std::os::raw::c_int,
-            color: ::std::os::raw::c_int,
-            bg_color: ::std::os::raw::c_int,
-        ),
-        ::libloading::Error,
-    >,
-    pub GetDefaultFrameCertifiedThickness: Result<
-        unsafe extern "C" fn(thickness: ::std::os::raw::c_int) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub GetDefaultFrameCertifiedRadius: Result<
-        unsafe extern "C" fn(thickness: ::std::os::raw::c_int) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub DrawFrameCertified: Result<
-        unsafe extern "C" fn(
-            x: ::std::os::raw::c_int,
-            y: ::std::os::raw::c_int,
-            w: ::std::os::raw::c_int,
-            h: ::std::os::raw::c_int,
-            thickness: ::std::os::raw::c_int,
-        ),
-        ::libloading::Error,
-    >,
-    pub DrawFrameRectCertified: Result<
-        unsafe extern "C" fn(rect: irect, thickness: ::std::os::raw::c_int),
-        ::libloading::Error,
-    >,
-    pub DrawFrameCertifiedEx: Result<
-        unsafe extern "C" fn(
-            x: ::std::os::raw::c_int,
-            y: ::std::os::raw::c_int,
-            w: ::std::os::raw::c_int,
-            h: ::std::os::raw::c_int,
-            thickness: ::std::os::raw::c_int,
-            sides: ::std::os::raw::c_int,
-            direction: ::std::os::raw::c_int,
-            radius: ::std::os::raw::c_int,
-            color: ::std::os::raw::c_int,
-            bg_color: ::std::os::raw::c_int,
-        ),
-        ::libloading::Error,
-    >,
-    pub DrawFrameRectCertifiedEx: Result<
-        unsafe extern "C" fn(
-            rect: irect,
-            thickness: ::std::os::raw::c_int,
-            sides: ::std::os::raw::c_int,
-            direction: ::std::os::raw::c_int,
-            radius: ::std::os::raw::c_int,
-            color: ::std::os::raw::c_int,
-            bg_color: ::std::os::raw::c_int,
-        ),
-        ::libloading::Error,
-    >,
-    pub processCircle: Result<
-        unsafe extern "C" fn(
-            center_x: ::std::os::raw::c_int,
-            center_y: ::std::os::raw::c_int,
-            radius: ::std::os::raw::c_int,
-            context: *mut ::std::os::raw::c_void,
-            cb: ::std::option::Option<
-                unsafe extern "C" fn(
-                    arg1: *mut ::std::os::raw::c_void,
-                    arg2: ::std::os::raw::c_int,
-                    arg3: ::std::os::raw::c_int,
-                    arg4: ::std::os::raw::c_int,
-                    arg5: ::std::os::raw::c_int,
-                    arg6: ::std::os::raw::c_int,
-                ),
-            >,
-        ),
-        ::libloading::Error,
-    >,
-    pub invertCircle: Result<
-        unsafe extern "C" fn(
-            center_x: ::std::os::raw::c_int,
-            center_y: ::std::os::raw::c_int,
-            radius: ::std::os::raw::c_int,
-            canvas: *mut icanvas,
-        ),
-        ::libloading::Error,
-    >,
     pub DrawPickOut: Result<
         unsafe extern "C" fn(
             x: ::std::os::raw::c_int,
@@ -22378,19 +22140,6 @@ pub struct inkview {
         ),
         ::libloading::Error,
     >,
-    pub DrawFrameDialog: Result<
-        unsafe extern "C" fn(
-            x: ::std::os::raw::c_int,
-            y: ::std::os::raw::c_int,
-            w: ::std::os::raw::c_int,
-            h: ::std::os::raw::c_int,
-            icon: *mut ibitmap,
-            title: *mut ::std::os::raw::c_char,
-            flags: ::std::os::raw::c_int,
-            clientarea: *mut irect,
-        ),
-        ::libloading::Error,
-    >,
     pub CheckFramePointer: Result<
         unsafe extern "C" fn(
             x: ::std::os::raw::c_int,
@@ -22480,33 +22229,6 @@ pub struct inkview {
         unsafe extern "C" fn(rect: irect, percent: ::std::os::raw::c_int),
         ::libloading::Error,
     >,
-    pub TransparentGradientData: Result<
-        unsafe extern "C" fn(
-            data: *mut ::std::os::raw::c_uchar,
-            depth: ::std::os::raw::c_int,
-            scanline: ::std::os::raw::c_int,
-            x: ::std::os::raw::c_int,
-            y: ::std::os::raw::c_int,
-            w: ::std::os::raw::c_int,
-            h: ::std::os::raw::c_int,
-            direction: ::std::os::raw::c_int,
-        ),
-        ::libloading::Error,
-    >,
-    pub TransparentGradient: Result<
-        unsafe extern "C" fn(
-            x: ::std::os::raw::c_int,
-            y: ::std::os::raw::c_int,
-            w: ::std::os::raw::c_int,
-            h: ::std::os::raw::c_int,
-            direction: ::std::os::raw::c_int,
-        ),
-        ::libloading::Error,
-    >,
-    pub TransparentGradientRect: Result<
-        unsafe extern "C" fn(rect: irect, direction: ::std::os::raw::c_int),
-        ::libloading::Error,
-    >,
     pub LoadBitmap: Result<
         unsafe extern "C" fn(filename: *const ::std::os::raw::c_char) -> *mut ibitmap,
         ::libloading::Error,
@@ -22523,17 +22245,6 @@ pub struct inkview {
             filename: *const ::std::os::raw::c_char,
             bm: *const ibitmap,
         ) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub BitmapFromCanvas: Result<
-        unsafe extern "C" fn(
-            x: ::std::os::raw::c_int,
-            y: ::std::os::raw::c_int,
-            w: ::std::os::raw::c_int,
-            h: ::std::os::raw::c_int,
-            rotate: ::std::os::raw::c_int,
-            canvas: *mut icanvas,
-        ) -> *mut ibitmap,
         ::libloading::Error,
     >,
     pub BitmapFromScreen: Result<
@@ -22608,75 +22319,6 @@ pub struct inkview {
         ) -> *mut ibitmap,
         ::libloading::Error,
     >,
-    pub GetImageType: Result<
-        unsafe extern "C" fn(path: *const ::std::os::raw::c_char) -> ImageSignatureType,
-        ::libloading::Error,
-    >,
-    pub LoadImageToFormat: Result<
-        unsafe extern "C" fn(
-            path: *const ::std::os::raw::c_char,
-            format: PixelFormat,
-        ) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
-    pub LoadGIFToFormat: Result<
-        unsafe extern "C" fn(
-            path: *const ::std::os::raw::c_char,
-            format: PixelFormat,
-        ) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
-    pub LoadPNGToFormat: Result<
-        unsafe extern "C" fn(
-            path: *const ::std::os::raw::c_char,
-            format: PixelFormat,
-        ) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
-    pub LoadJPEGToFormat: Result<
-        unsafe extern "C" fn(
-            path: *const ::std::os::raw::c_char,
-            format: PixelFormat,
-        ) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
-    pub LoadTiffToFormat: Result<
-        unsafe extern "C" fn(
-            path: *const ::std::os::raw::c_char,
-            format: PixelFormat,
-        ) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
-    pub NewBitmapWithFormat: Result<
-        unsafe extern "C" fn(
-            width: ::std::os::raw::c_int,
-            height: ::std::os::raw::c_int,
-            format: PixelFormat,
-        ) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
-    pub LoadPNG8: Result<
-        unsafe extern "C" fn(path: *const ::std::os::raw::c_char) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
-    pub LoadJPEG8: Result<
-        unsafe extern "C" fn(path: *const ::std::os::raw::c_char) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
-    pub NewBitmap8: Result<
-        unsafe extern "C" fn(
-            width: ::std::os::raw::c_int,
-            height: ::std::os::raw::c_int,
-        ) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
-    pub NewBitmap24: Result<
-        unsafe extern "C" fn(
-            width: ::std::os::raw::c_int,
-            height: ::std::os::raw::c_int,
-        ) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
     pub SavePNG: Result<
         unsafe extern "C" fn(
             path: *const ::std::os::raw::c_char,
@@ -22700,18 +22342,6 @@ pub struct inkview {
         unsafe extern "C" fn(bm: *mut ibitmap, offset: ::std::os::raw::c_int),
         ::libloading::Error,
     >,
-    pub FindAverageBitmapColor: Result<
-        unsafe extern "C" fn(
-            bmp: *const ibitmap,
-            side: ::std::os::raw::c_int,
-            percent: ::std::os::raw::c_int,
-        ) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub ApplyContrastToBitmap8: Result<
-        unsafe extern "C" fn(bmp: *mut ibitmap, contrast: ::std::os::raw::c_int),
-        ::libloading::Error,
-    >,
     pub BitmapStretchCopy: Result<
         unsafe extern "C" fn(
             bmp: *const ibitmap,
@@ -22722,120 +22352,6 @@ pub struct inkview {
             width: ::std::os::raw::c_int,
             height: ::std::os::raw::c_int,
         ) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
-    pub BitmapStretchProportionally: Result<
-        unsafe extern "C" fn(
-            bmp: *const ibitmap,
-            width: ::std::os::raw::c_int,
-            height: ::std::os::raw::c_int,
-        ) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
-    pub BitmapStretchFill: Result<
-        unsafe extern "C" fn(
-            bmp: *const ibitmap,
-            width: ::std::os::raw::c_int,
-            height: ::std::os::raw::c_int,
-        ) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
-    pub adjustBitmapDefault: Result<unsafe extern "C" fn(bmp: *mut ibitmap), ::libloading::Error>,
-    pub adjustBitmapWithSaturationBrightnessAndDithering: Result<
-        unsafe extern "C" fn(
-            bmp: *mut ibitmap,
-            saturation_table: *mut ::std::os::raw::c_int,
-            value_table: *mut ::std::os::raw::c_int,
-            dithering: bool,
-        ),
-        ::libloading::Error,
-    >,
-    pub adjustAreaWithSaturationBrightnessAndDithering: Result<
-        unsafe extern "C" fn(
-            data: *mut ::std::os::raw::c_uchar,
-            scanline: ::std::os::raw::c_int,
-            width: ::std::os::raw::c_int,
-            height: ::std::os::raw::c_int,
-            saturation_table: *mut ::std::os::raw::c_int,
-            value_table: *mut ::std::os::raw::c_int,
-            dithering: bool,
-        ),
-        ::libloading::Error,
-    >,
-    pub adjustAreaWithLabColorsSaturation: Result<
-        unsafe extern "C" fn(
-            data: *mut ::std::os::raw::c_uchar,
-            scanline: ::std::os::raw::c_int,
-            width: ::std::os::raw::c_int,
-            height: ::std::os::raw::c_int,
-            koef: f64,
-        ),
-        ::libloading::Error,
-    >,
-    pub adjustAreaWithVibrance: Result<
-        unsafe extern "C" fn(
-            data: *mut ::std::os::raw::c_uchar,
-            scanline: ::std::os::raw::c_int,
-            width: ::std::os::raw::c_int,
-            height: ::std::os::raw::c_int,
-            vibrance: f32,
-        ),
-        ::libloading::Error,
-    >,
-    pub adjustAreaDefault: Result<
-        unsafe extern "C" fn(
-            data: *mut ::std::os::raw::c_uchar,
-            scanline: ::std::os::raw::c_int,
-            width: ::std::os::raw::c_int,
-            height: ::std::os::raw::c_int,
-        ),
-        ::libloading::Error,
-    >,
-    pub ditherAndAdjustArea: Result<
-        unsafe extern "C" fn(
-            data: *mut ::std::os::raw::c_uchar,
-            scanline: ::std::os::raw::c_int,
-            width: ::std::os::raw::c_int,
-            height: ::std::os::raw::c_int,
-            params: *mut AdjustmentParams,
-        ),
-        ::libloading::Error,
-    >,
-    pub adjustAreaWithBrightnessContrastGamma: Result<
-        unsafe extern "C" fn(
-            data: *mut ::std::os::raw::c_uchar,
-            scanline: ::std::os::raw::c_int,
-            width: ::std::os::raw::c_int,
-            height: ::std::os::raw::c_int,
-            brightness: f64,
-            contrast: f64,
-            gamma: f64,
-        ),
-        ::libloading::Error,
-    >,
-    pub getBrightnessContrastGammaAdjustParams: Result<
-        unsafe extern "C" fn(
-            brightness: *mut ::std::os::raw::c_int,
-            contrast: *mut ::std::os::raw::c_int,
-            gamma: *mut ::std::os::raw::c_int,
-        ),
-        ::libloading::Error,
-    >,
-    pub bm_stretch8: Result<
-        unsafe extern "C" fn(
-            in_: *mut ::std::os::raw::c_uchar,
-            ix: ::std::os::raw::c_int,
-            iy: ::std::os::raw::c_int,
-            iw: ::std::os::raw::c_int,
-            ih: ::std::os::raw::c_int,
-            ilw: ::std::os::raw::c_int,
-            out: *mut ::std::os::raw::c_uchar,
-            ox: ::std::os::raw::c_int,
-            oy: ::std::os::raw::c_int,
-            ow: ::std::os::raw::c_int,
-            oh: ::std::os::raw::c_int,
-            olw: ::std::os::raw::c_int,
-        ),
         ::libloading::Error,
     >,
     pub DrawBitmap: Result<
@@ -22917,15 +22433,6 @@ pub struct inkview {
         unsafe extern "C" fn(
             name: *const ::std::os::raw::c_char,
             size: ::std::os::raw::c_int,
-            aa: ::std::os::raw::c_int,
-        ) -> *mut ifont,
-        ::libloading::Error,
-    >,
-    pub OpenFontEx: Result<
-        unsafe extern "C" fn(
-            name: *const ::std::os::raw::c_char,
-            size: ::std::os::raw::c_int,
-            line_height: ::std::os::raw::c_int,
             aa: ::std::os::raw::c_int,
         ) -> *mut ifont,
         ::libloading::Error,
@@ -23138,8 +22645,6 @@ pub struct inkview {
         ::libloading::Error,
     >,
     pub WaitForUpdateComplete: Result<unsafe extern "C" fn(), ::libloading::Error>,
-    pub GetWaveformTimes:
-        Result<unsafe extern "C" fn(result: *mut ::std::os::raw::c_ushort), ::libloading::Error>,
     pub SetEventHandler:
         Result<unsafe extern "C" fn(hproc: iv_handler) -> iv_handler, ::libloading::Error>,
     pub SetEventHandlerEx:
@@ -23322,27 +22827,6 @@ pub struct inkview {
         ),
         ::libloading::Error,
     >,
-    pub KeyboardProcessTextChanges: Result<
-        unsafe extern "C" fn(
-            text_before: *const ::std::os::raw::c_char,
-            text_after: *const ::std::os::raw::c_char,
-        ),
-        ::libloading::Error,
-    >,
-    pub KeyboardNotifyTextChanges: Result<
-        unsafe extern "C" fn(
-            text_before: *const ::std::os::raw::c_char,
-            text_after: *const ::std::os::raw::c_char,
-        ),
-        ::libloading::Error,
-    >,
-    pub setKeyboardTextChangeCallback: Result<
-        unsafe extern "C" fn(
-            cb: keyboard_text_change_callback,
-            context: *mut ::std::os::raw::c_void,
-        ),
-        ::libloading::Error,
-    >,
     pub DrawKeyboard: Result<unsafe extern "C" fn(), ::libloading::Error>,
     pub OpenCustomKeyboard: Result<
         unsafe extern "C" fn(
@@ -23367,10 +22851,6 @@ pub struct inkview {
     >,
     pub IsKeyboardOpened:
         Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
-    pub setDrawTopLine: Result<
-        unsafe extern "C" fn(kbd_draw_top_line_: ::std::os::raw::c_int),
-        ::libloading::Error,
-    >,
     pub OpenPageSelector:
         Result<unsafe extern "C" fn(hproc: iv_pageselecthandler), ::libloading::Error>,
     pub OpenTimeEdit: Result<
@@ -23430,6 +22910,15 @@ pub struct inkview {
             bmkcount: *mut ::std::os::raw::c_int,
             maxbmks: ::std::os::raw::c_int,
             hproc: iv_bmkhandler,
+        ),
+        ::libloading::Error,
+    >,
+    pub OpenContents: Result<
+        unsafe extern "C" fn(
+            toc: *mut tocentry,
+            count: ::std::os::raw::c_int,
+            position: ::std::os::raw::c_longlong,
+            hproc: iv_tochandler,
         ),
         ::libloading::Error,
     >,
@@ -23539,17 +23028,11 @@ pub struct inkview {
     pub InitPanel: Result<unsafe extern "C" fn(), ::libloading::Error>,
     pub SetPanelKeyForFullScreenEnabled:
         Result<unsafe extern "C" fn(key: *const ::std::os::raw::c_char), ::libloading::Error>,
-    pub SetPanelTransparent:
-        Result<unsafe extern "C" fn(value: ::std::os::raw::c_int), ::libloading::Error>,
     pub StartPanelProgress: Result<
         unsafe extern "C" fn(progress: ::std::os::raw::c_int, timeoutMs: ::std::os::raw::c_int),
         ::libloading::Error,
     >,
     pub StopPanelProgress: Result<unsafe extern "C" fn(), ::libloading::Error>,
-    pub ShowPanelPackageProgress: Result<
-        unsafe extern "C" fn(progress: ::std::os::raw::c_int, timeout: ::std::os::raw::c_int),
-        ::libloading::Error,
-    >,
     pub DrawPanel: Result<
         unsafe extern "C" fn(
             icon: *const ibitmap,
@@ -23598,11 +23081,17 @@ pub struct inkview {
         ) -> ::std::os::raw::c_int,
         ::libloading::Error,
     >,
+    pub DrawTabs: Result<
+        unsafe extern "C" fn(
+            icon: *const ibitmap,
+            current: ::std::os::raw::c_int,
+            total: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int,
+        ::libloading::Error,
+    >,
     pub OpenControlPanel:
         Result<unsafe extern "C" fn(ctx: *mut control_panel), ::libloading::Error>,
     pub PanelHeight: Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
-    pub PanelHeightFBOffset:
-        Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
     pub SetKeyboardRate: Result<
         unsafe extern "C" fn(t1: ::std::os::raw::c_int, t2: ::std::os::raw::c_int),
         ::libloading::Error,
@@ -23685,14 +23174,6 @@ pub struct inkview {
         ) -> ::std::os::raw::c_int,
         ::libloading::Error,
     >,
-    pub ReadLongLong: Result<
-        unsafe extern "C" fn(
-            cfg: *mut iconfig,
-            name: *const ::std::os::raw::c_char,
-            deflt: ::std::os::raw::c_longlong,
-        ) -> ::std::os::raw::c_longlong,
-        ::libloading::Error,
-    >,
     pub ReadString: Result<
         unsafe extern "C" fn(
             cfg: *mut iconfig,
@@ -23714,14 +23195,6 @@ pub struct inkview {
             cfg: *mut iconfig,
             name: *const ::std::os::raw::c_char,
             value: ::std::os::raw::c_int,
-        ),
-        ::libloading::Error,
-    >,
-    pub WriteLongLong: Result<
-        unsafe extern "C" fn(
-            cfg: *mut iconfig,
-            name: *const ::std::os::raw::c_char,
-            value: ::std::os::raw::c_longlong,
         ),
         ::libloading::Error,
     >,
@@ -23797,20 +23270,6 @@ pub struct inkview {
     pub CloseConfigLevel: Result<unsafe extern "C" fn(), ::libloading::Error>,
     pub NotifyConfigChanged: Result<unsafe extern "C" fn(), ::libloading::Error>,
     pub ClearConfig: Result<unsafe extern "C" fn(cfg: *mut iconfig), ::libloading::Error>,
-    pub EnumerateConfig: Result<
-        unsafe extern "C" fn(
-            cfg: *mut iconfig,
-            func: ::std::option::Option<
-                unsafe extern "C" fn(
-                    name: *mut ::std::os::raw::c_char,
-                    value: *mut ::std::os::raw::c_void,
-                    userdata: *mut ::std::os::raw::c_void,
-                ) -> ::std::os::raw::c_int,
-            >,
-            user_data: *mut ::std::os::raw::c_void,
-        ),
-        ::libloading::Error,
-    >,
     pub GetKeyMapping: Result<
         unsafe extern "C" fn(
             act0: *mut *const ::std::os::raw::c_char,
@@ -23823,16 +23282,6 @@ pub struct inkview {
             what: ::std::os::raw::c_int,
             act0: *mut *const ::std::os::raw::c_char,
             act1: *mut *const ::std::os::raw::c_char,
-            count: ::std::os::raw::c_int,
-        ),
-        ::libloading::Error,
-    >,
-    pub GetKeyMappingExtended: Result<
-        unsafe extern "C" fn(
-            type_: keymap_t,
-            act0: *mut *const ::std::os::raw::c_char,
-            act1: *mut *const ::std::os::raw::c_char,
-            act2: *mut *const ::std::os::raw::c_char,
             count: ::std::os::raw::c_int,
         ),
         ::libloading::Error,
@@ -23850,7 +23299,7 @@ pub struct inkview {
     pub NewTask: Result<
         unsafe extern "C" fn(
             path: *const ::std::os::raw::c_char,
-            args: *const *const ::std::os::raw::c_char,
+            args: *const *mut ::std::os::raw::c_char,
             appname: *const ::std::os::raw::c_char,
             name: *const ::std::os::raw::c_char,
             icon: *const ibitmap,
@@ -23867,15 +23316,6 @@ pub struct inkview {
             icon: *const ibitmap,
             flags: ::std::os::raw::c_uint,
             run_as_reader_if_needed: ::std::os::raw::c_int,
-        ) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub OpenTask: Result<
-        unsafe extern "C" fn(
-            path: *const ::std::os::raw::c_char,
-            argc: ::std::os::raw::c_int,
-            argv: *const *const ::std::os::raw::c_char,
-            flags: ::std::os::raw::c_int,
         ) -> ::std::os::raw::c_int,
         ::libloading::Error,
     >,
@@ -24321,8 +23761,6 @@ pub struct inkview {
         ) -> ::std::os::raw::c_long,
         ::libloading::Error,
     >,
-    pub currentLang:
-        Result<unsafe extern "C" fn() -> *const ::std::os::raw::c_char, ::libloading::Error>,
     pub EnumLanguages:
         Result<unsafe extern "C" fn() -> *mut *mut ::std::os::raw::c_char, ::libloading::Error>,
     pub LoadLanguage:
@@ -24354,24 +23792,6 @@ pub struct inkview {
             s: *const ::std::os::raw::c_char,
             amount: ::std::os::raw::c_int,
         ) -> *const ::std::os::raw::c_char,
-        ::libloading::Error,
-    >,
-    pub iv_lang_format: Result<
-        unsafe extern "C" fn(
-            dst: *mut ::std::os::raw::c_char,
-            max_size: usize,
-            format_key: *const ::std::os::raw::c_char,
-            ...
-        ) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub GetLangTime: Result<
-        unsafe extern "C" fn(
-            buf: *mut ::std::os::raw::c_char,
-            size: ::std::os::raw::c_int,
-            key: *const ::std::os::raw::c_char,
-            t: *mut tm,
-        ) -> ::std::os::raw::c_int,
         ::libloading::Error,
     >,
     pub SetRTLBook: Result<unsafe extern "C" fn(rtl: ::std::os::raw::c_int), ::libloading::Error>,
@@ -24493,10 +23913,6 @@ pub struct inkview {
         ) -> *const ::std::os::raw::c_char,
         ::libloading::Error,
     >,
-    pub GetLayoutFromTheme: Result<
-        unsafe extern "C" fn(name: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char,
-        ::libloading::Error,
-    >,
     pub GetThemeFont: Result<
         unsafe extern "C" fn(
             name: *const ::std::os::raw::c_char,
@@ -24551,15 +23967,6 @@ pub struct inkview {
             name: *const ::std::os::raw::c_char,
             width: ::std::os::raw::c_int,
             height: ::std::os::raw::c_int,
-        ) -> *mut ibitmap,
-        ::libloading::Error,
-    >,
-    pub GetBookCoverEx: Result<
-        unsafe extern "C" fn(
-            name: *const ::std::os::raw::c_char,
-            width: ::std::os::raw::c_int,
-            height: ::std::os::raw::c_int,
-            pixel_format: PixelFormat,
         ) -> *mut ibitmap,
         ::libloading::Error,
     >,
@@ -24703,14 +24110,48 @@ pub struct inkview {
         Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
     pub GetHighVolumeMaxInterval:
         Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
+    pub EnumNotepads:
+        Result<unsafe extern "C" fn() -> *mut *mut ::std::os::raw::c_char, ::libloading::Error>,
+    pub OpenNotepad:
+        Result<unsafe extern "C" fn(name: *const ::std::os::raw::c_char), ::libloading::Error>,
+    pub CreateNote: Result<
+        unsafe extern "C" fn(
+            filename: *const ::std::os::raw::c_char,
+            title: *const ::std::os::raw::c_char,
+            position: ::std::os::raw::c_longlong,
+        ),
+        ::libloading::Error,
+    >,
+    pub CreateNoteFromImages: Result<
+        unsafe extern "C" fn(
+            filename: *const ::std::os::raw::c_char,
+            title: *const ::std::os::raw::c_char,
+            position: ::std::os::raw::c_longlong,
+            img1: *mut ibitmap,
+            img2: *mut ibitmap,
+        ),
+        ::libloading::Error,
+    >,
+    pub CreateNoteFromPage: Result<
+        unsafe extern "C" fn(
+            filename: *const ::std::os::raw::c_char,
+            title: *const ::std::os::raw::c_char,
+            position: ::std::os::raw::c_longlong,
+        ),
+        ::libloading::Error,
+    >,
+    pub CreateEmptyNote:
+        Result<unsafe extern "C" fn(text: *const ::std::os::raw::c_char), ::libloading::Error>,
+    pub OpenNotesMenu: Result<
+        unsafe extern "C" fn(
+            filename: *const ::std::os::raw::c_char,
+            title: *const ::std::os::raw::c_char,
+            position: ::std::os::raw::c_longlong,
+        ),
+        ::libloading::Error,
+    >,
     pub EnumDictionaries:
         Result<unsafe extern "C" fn() -> *mut *mut ::std::os::raw::c_char, ::libloading::Error>,
-    pub EnumDictionariesFiles:
-        Result<unsafe extern "C" fn() -> *mut *mut ::std::os::raw::c_char, ::libloading::Error>,
-    pub EnumDictionariesFilesCallAfterEnumDictionaries:
-        Result<unsafe extern "C" fn() -> *mut *mut ::std::os::raw::c_char, ::libloading::Error>,
-    pub GetKeyboardLayoutForOpenedDictionary:
-        Result<unsafe extern "C" fn() -> *const ::std::os::raw::c_char, ::libloading::Error>,
     pub OpenDictionary: Result<
         unsafe extern "C" fn(name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int,
         ::libloading::Error,
@@ -24888,11 +24329,6 @@ pub struct inkview {
         Result<unsafe extern "C" fn() -> *mut ::std::os::raw::c_char, ::libloading::Error>,
     pub GetSoftwareVersion:
         Result<unsafe extern "C" fn() -> *mut ::std::os::raw::c_char, ::libloading::Error>,
-    pub isUsbStorAttached: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub isUsbStorMounted: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
-    pub usbStorEject: Result<unsafe extern "C" fn(), ::libloading::Error>,
-    pub usbStorSerialNumber:
-        Result<unsafe extern "C" fn() -> *mut ::std::os::raw::c_char, ::libloading::Error>,
     pub GetSerialSoftwareInfo: Result<
         unsafe extern "C" fn(
             device_model: *mut *mut ::std::os::raw::c_char,
@@ -24902,6 +24338,8 @@ pub struct inkview {
         ) -> ::std::os::raw::c_int,
         ::libloading::Error,
     >,
+    pub GetHardwareDepth:
+        Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
     pub GetSerialNumber:
         Result<unsafe extern "C" fn() -> *mut ::std::os::raw::c_char, ::libloading::Error>,
     pub GetExternalCardSerialNumber:
@@ -24924,19 +24362,13 @@ pub struct inkview {
         ::libloading::Error,
     >,
     pub BanSleep: Result<unsafe extern "C" fn(sec: ::std::os::raw::c_int), ::libloading::Error>,
-    pub SetAutoPowerOff: Result<unsafe extern "C" fn(en: bool), ::libloading::Error>,
-    pub SetAutoKeylock: Result<unsafe extern "C" fn(en: bool), ::libloading::Error>,
+    pub SetAutoPowerOff:
+        Result<unsafe extern "C" fn(en: ::std::os::raw::c_int), ::libloading::Error>,
     pub PowerOff: Result<unsafe extern "C" fn(), ::libloading::Error>,
     pub SafeMode: Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
     pub OpenMainMenu: Result<unsafe extern "C" fn(), ::libloading::Error>,
     pub CloseAllTasks: Result<unsafe extern "C" fn(), ::libloading::Error>,
     pub WriteStartupLogo: Result<
-        unsafe extern "C" fn(bm: *const ibitmap) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub WritePartnerPowerOffLogo:
-        Result<unsafe extern "C" fn(bm: *const ibitmap), ::libloading::Error>,
-    pub WriteLowPoweRLogo: Result<
         unsafe extern "C" fn(bm: *const ibitmap) -> ::std::os::raw::c_int,
         ::libloading::Error,
     >,
@@ -24948,9 +24380,6 @@ pub struct inkview {
     pub CalibrateTouchpanel: Result<unsafe extern "C" fn(), ::libloading::Error>,
     pub CalibrateTouchDevice:
         Result<unsafe extern "C" fn(TouchDevice: input_dev_e), ::libloading::Error>,
-    pub TouchScreenEnable:
-        Result<unsafe extern "C" fn(onOff: bool) -> ::std::os::raw::c_int, ::libloading::Error>,
-    pub IsTouchScreenEnabled: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
     pub OpenCalendar: Result<unsafe extern "C" fn(), ::libloading::Error>,
     pub StartSoftwareUpdate:
         Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
@@ -25020,9 +24449,6 @@ pub struct inkview {
         ) -> ::std::os::raw::c_int,
         ::libloading::Error,
     >,
-    pub SetFlightMode:
-        Result<unsafe extern "C" fn(fm: bool) -> ::std::os::raw::c_int, ::libloading::Error>,
-    pub IsFlightModeEnabled: Result<unsafe extern "C" fn() -> bool, ::libloading::Error>,
     pub EnumWirelessNetworks:
         Result<unsafe extern "C" fn() -> *mut *mut ::std::os::raw::c_char, ::libloading::Error>,
     pub EnumConnections:
@@ -25195,30 +24621,9 @@ pub struct inkview {
         Result<unsafe extern "C" fn(e: ::std::os::raw::c_int), ::libloading::Error>,
     pub GetA2dpStatus: Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
     pub SetPort: Result<unsafe extern "C" fn(port: ::std::os::raw::c_int), ::libloading::Error>,
+    pub GetTouchInfo: Result<unsafe extern "C" fn() -> *mut iv_mtinfo, ::libloading::Error>,
     pub GetTouchInfoI: Result<
         unsafe extern "C" fn(index: ::std::os::raw::c_uint) -> *mut iv_mtinfo,
-        ::libloading::Error,
-    >,
-    pub GetTouchContainerLength: Result<
-        unsafe extern "C" fn(index: ::std::os::raw::c_uint) -> ::std::os::raw::c_uint,
-        ::libloading::Error,
-    >,
-    pub GetTouchSection: Result<
-        unsafe extern "C" fn(
-            index: ::std::os::raw::c_uint,
-            section: ::std::os::raw::c_uint,
-        ) -> *mut iv_mtinfo_section,
-        ::libloading::Error,
-    >,
-    pub GetLastTouchSection: Result<
-        unsafe extern "C" fn(index: ::std::os::raw::c_uint) -> *mut iv_mtinfo_section,
-        ::libloading::Error,
-    >,
-    pub PopTouchSection: Result<
-        unsafe extern "C" fn(
-            index: ::std::os::raw::c_uint,
-            count: *mut ::std::os::raw::c_uint,
-        ) -> *mut iv_mtinfo_section,
         ::libloading::Error,
     >,
     pub QueryHeadphone:
@@ -25298,15 +24703,6 @@ pub struct inkview {
     pub utf2ucs: Result<
         unsafe extern "C" fn(
             s: *const ::std::os::raw::c_char,
-            us: *mut ::std::os::raw::c_ushort,
-            maxlen: ::std::os::raw::c_int,
-        ) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub utf2ucsEx: Result<
-        unsafe extern "C" fn(
-            s: *const ::std::os::raw::c_char,
-            len: ::std::os::raw::c_int,
             us: *mut ::std::os::raw::c_ushort,
             maxlen: ::std::os::raw::c_int,
         ) -> ::std::os::raw::c_int,
@@ -25625,79 +25021,6 @@ pub struct inkview {
         Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
     pub getAvrcpFocusPid:
         Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
-    pub setTaskOomPriority: Result<
-        unsafe extern "C" fn(value: TaskOomPriority) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub getDDRMemoryInfo: Result<
-        unsafe extern "C" fn(
-            total: *mut ::std::os::raw::c_int,
-            free: *mut ::std::os::raw::c_int,
-            total_swap: *mut ::std::os::raw::c_int,
-            free_swap: *mut ::std::os::raw::c_int,
-        ),
-        ::libloading::Error,
-    >,
-    pub needCanvasLock: Result<unsafe extern "C" fn(), ::libloading::Error>,
-    pub lockCanvasDrawing: Result<unsafe extern "C" fn(), ::libloading::Error>,
-    pub unlockCanvasDrawing: Result<unsafe extern "C" fn(), ::libloading::Error>,
-    pub StartCustomGattService: Result<
-        unsafe extern "C" fn(name: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub StopCustomGattService:
-        Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
-    pub GetCustomGattSessionStatus: Result<
-        unsafe extern "C" fn(obj: *mut CustomGattSession) -> CustomGattSessionStatus_e,
-        ::libloading::Error,
-    >,
-    pub Connect2CustomGattService: Result<
-        unsafe extern "C" fn(dest_mac_addr: *mut ::std::os::raw::c_char) -> *mut CustomGattSession,
-        ::libloading::Error,
-    >,
-    pub CloseCustomGattConnection: Result<
-        unsafe extern "C" fn(s: *mut CustomGattSession) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub ReadCustomGattService: Result<
-        unsafe extern "C" fn(
-            obj: *mut CustomGattSession,
-            data: *mut ::std::os::raw::c_char,
-        ) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub WriteCustomGattService: Result<
-        unsafe extern "C" fn(
-            obj: *mut CustomGattSession,
-            data: *const ::std::os::raw::c_char,
-            data_len: usize,
-        ) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub StartScanBTLE: Result<
-        unsafe extern "C" fn(
-            cb: ::std::option::Option<
-                unsafe extern "C" fn(
-                    cb_data: *mut ::std::os::raw::c_void,
-                    mac: *const ::std::os::raw::c_char,
-                    name: *const ::std::os::raw::c_char,
-                ),
-            >,
-            cb_data: *mut ::std::os::raw::c_void,
-        ) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub StopScanBTLE: Result<unsafe extern "C" fn() -> ::std::os::raw::c_int, ::libloading::Error>,
-    pub design_to_pixel: Result<
-        unsafe extern "C" fn(v: ::std::os::raw::c_int) -> ::std::os::raw::c_int,
-        ::libloading::Error,
-    >,
-    pub GetSoftwareLocalizationType:
-        Result<unsafe extern "C" fn() -> software_localization_type, ::libloading::Error>,
-    pub ltrim_non_alphanum: Result<
-        unsafe extern "C" fn(value: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char,
-        ::libloading::Error,
-    >,
 }
 impl inkview {
     pub unsafe fn new<P>(path: P) -> Result<Self, ::libloading::Error>
@@ -26539,84 +25862,97 @@ impl inkview {
         let pthread_setspecific = __library.get(b"pthread_setspecific\0").map(|sym| *sym);
         let pthread_getcpuclockid = __library.get(b"pthread_getcpuclockid\0").map(|sym| *sym);
         let pthread_atfork = __library.get(b"pthread_atfork\0").map(|sym| *sym);
-        let ioctl = __library.get(b"ioctl\0").map(|sym| *sym);
-        let device_audio = __library.get(b"device_audio\0").map(|sym| *sym);
-        let device_has_audio = __library.get(b"device_has_audio\0").map(|sym| *sym);
-        let device_hp_detect_cfg = __library.get(b"device_hp_detect_cfg\0").map(|sym| *sym);
-        let init_hwconfig = __library.get(b"init_hwconfig\0").map(|sym| *sym);
-        let device_ID = __library.get(b"device_ID\0").map(|sym| *sym);
-        let device_platform = __library.get(b"device_platform\0").map(|sym| *sym);
-        let device_number = __library.get(b"device_number\0").map(|sym| *sym);
-        let device_display = __library.get(b"device_display\0").map(|sym| *sym);
-        let device_display_colormask = __library.get(b"device_display_colormask\0").map(|sym| *sym);
-        let device_display_height = __library.get(b"device_display_height\0").map(|sym| *sym);
-        let device_display_width = __library.get(b"device_display_width\0").map(|sym| *sym);
-        let device_display_scanline = __library.get(b"device_display_scanline\0").map(|sym| *sym);
-        let device_display_dpi = __library.get(b"device_display_dpi\0").map(|sym| *sym);
-        let device_display_position = __library.get(b"device_display_position\0").map(|sym| *sym);
-        let device_epdc = __library.get(b"device_epdc\0").map(|sym| *sym);
-        let device_epdc_init = __library.get(b"device_epdc_init\0").map(|sym| *sym);
-        let device_keyboard = __library.get(b"device_keyboard\0").map(|sym| *sym);
-        let device_touchpanel = __library.get(b"device_touchpanel\0").map(|sym| *sym);
-        let device_has_touchpanel = __library.get(b"device_has_touchpanel\0").map(|sym| *sym);
-        let device_input_init = __library.get(b"device_input_init\0").map(|sym| *sym);
-        let device_input_read = __library.get(b"device_input_read\0").map(|sym| *sym);
-        let device_keyboard_translate = __library
-            .get(b"device_keyboard_translate\0")
+        let setjmp = __library.get(b"setjmp\0").map(|sym| *sym);
+        let _setjmp = __library.get(b"_setjmp\0").map(|sym| *sym);
+        let longjmp = __library.get(b"longjmp\0").map(|sym| *sym);
+        let _longjmp = __library.get(b"_longjmp\0").map(|sym| *sym);
+        let siglongjmp = __library.get(b"siglongjmp\0").map(|sym| *sym);
+        let FT_Init_FreeType = __library.get(b"FT_Init_FreeType\0").map(|sym| *sym);
+        let FT_Done_FreeType = __library.get(b"FT_Done_FreeType\0").map(|sym| *sym);
+        let FT_New_Face = __library.get(b"FT_New_Face\0").map(|sym| *sym);
+        let FT_New_Memory_Face = __library.get(b"FT_New_Memory_Face\0").map(|sym| *sym);
+        let FT_Open_Face = __library.get(b"FT_Open_Face\0").map(|sym| *sym);
+        let FT_Attach_File = __library.get(b"FT_Attach_File\0").map(|sym| *sym);
+        let FT_Attach_Stream = __library.get(b"FT_Attach_Stream\0").map(|sym| *sym);
+        let FT_Reference_Face = __library.get(b"FT_Reference_Face\0").map(|sym| *sym);
+        let FT_Done_Face = __library.get(b"FT_Done_Face\0").map(|sym| *sym);
+        let FT_Select_Size = __library.get(b"FT_Select_Size\0").map(|sym| *sym);
+        let FT_Request_Size = __library.get(b"FT_Request_Size\0").map(|sym| *sym);
+        let FT_Set_Char_Size = __library.get(b"FT_Set_Char_Size\0").map(|sym| *sym);
+        let FT_Set_Pixel_Sizes = __library.get(b"FT_Set_Pixel_Sizes\0").map(|sym| *sym);
+        let FT_Load_Glyph = __library.get(b"FT_Load_Glyph\0").map(|sym| *sym);
+        let FT_Load_Char = __library.get(b"FT_Load_Char\0").map(|sym| *sym);
+        let FT_Set_Transform = __library.get(b"FT_Set_Transform\0").map(|sym| *sym);
+        let FT_Render_Glyph = __library.get(b"FT_Render_Glyph\0").map(|sym| *sym);
+        let FT_Get_Kerning = __library.get(b"FT_Get_Kerning\0").map(|sym| *sym);
+        let FT_Get_Track_Kerning = __library.get(b"FT_Get_Track_Kerning\0").map(|sym| *sym);
+        let FT_Get_Glyph_Name = __library.get(b"FT_Get_Glyph_Name\0").map(|sym| *sym);
+        let FT_Get_Postscript_Name = __library.get(b"FT_Get_Postscript_Name\0").map(|sym| *sym);
+        let FT_Select_Charmap = __library.get(b"FT_Select_Charmap\0").map(|sym| *sym);
+        let FT_Set_Charmap = __library.get(b"FT_Set_Charmap\0").map(|sym| *sym);
+        let FT_Get_Charmap_Index = __library.get(b"FT_Get_Charmap_Index\0").map(|sym| *sym);
+        let FT_Get_Char_Index = __library.get(b"FT_Get_Char_Index\0").map(|sym| *sym);
+        let FT_Get_First_Char = __library.get(b"FT_Get_First_Char\0").map(|sym| *sym);
+        let FT_Get_Next_Char = __library.get(b"FT_Get_Next_Char\0").map(|sym| *sym);
+        let FT_Get_Name_Index = __library.get(b"FT_Get_Name_Index\0").map(|sym| *sym);
+        let FT_Get_SubGlyph_Info = __library.get(b"FT_Get_SubGlyph_Info\0").map(|sym| *sym);
+        let FT_Get_FSType_Flags = __library.get(b"FT_Get_FSType_Flags\0").map(|sym| *sym);
+        let FT_Face_GetCharVariantIndex = __library
+            .get(b"FT_Face_GetCharVariantIndex\0")
             .map(|sym| *sym);
-        let device_keyboard_buttons = __library.get(b"device_keyboard_buttons\0").map(|sym| *sym);
-        let device_keyboard_state = __library.get(b"device_keyboard_state\0").map(|sym| *sym);
-        let device_touchpanel_getmatrix = __library
-            .get(b"device_touchpanel_getmatrix\0")
+        let FT_Face_GetCharVariantIsDefault = __library
+            .get(b"FT_Face_GetCharVariantIsDefault\0")
             .map(|sym| *sym);
-        let add_input_device = __library.get(b"add_input_device\0").map(|sym| *sym);
-        let remove_input_device = __library.get(b"remove_input_device\0").map(|sym| *sym);
-        let device_slider = __library.get(b"device_slider\0").map(|sym| *sym);
-        let device_has_slider = __library.get(b"device_has_slider\0").map(|sym| *sym);
-        let device_slider_cfg = __library.get(b"device_slider_cfg\0").map(|sym| *sym);
-        let device_gyroscope = __library.get(b"device_gyroscope\0").map(|sym| *sym);
-        let device_gyroscope_placement = __library
-            .get(b"device_gyroscope_placement\0")
+        let FT_Face_GetVariantSelectors = __library
+            .get(b"FT_Face_GetVariantSelectors\0")
             .map(|sym| *sym);
-        let device_has_gyroscope = __library.get(b"device_has_gyroscope\0").map(|sym| *sym);
-        let device_has_extcard = __library.get(b"device_has_extcard\0").map(|sym| *sym);
-        let device_usb = __library.get(b"device_usb\0").map(|sym| *sym);
-        let device_has_usb = __library.get(b"device_has_usb\0").map(|sym| *sym);
-        let device_has_usbhost = __library.get(b"device_has_usbhost\0").map(|sym| *sym);
-        let device_frontlight = __library.get(b"device_frontlight\0").map(|sym| *sym);
-        let device_has_frontlight = __library.get(b"device_has_frontlight\0").map(|sym| *sym);
-        let device_model = __library.get(b"device_model\0").map(|sym| *sym);
-        let device_serial_number = __library.get(b"device_serial_number\0").map(|sym| *sym);
-        let device_init_led = __library.get(b"device_init_led\0").map(|sym| *sym);
-        let device_set_led = __library.get(b"device_set_led\0").map(|sym| *sym);
-        let device_get_led = __library.get(b"device_get_led\0").map(|sym| *sym);
-        let device_battery_percent = __library.get(b"device_battery_percent\0").map(|sym| *sym);
-        let device_is_powered = __library.get(b"device_is_powered\0").map(|sym| *sym);
-        let device_set_bootcramfs_flag = __library
-            .get(b"device_set_bootcramfs_flag\0")
+        let FT_Face_GetVariantsOfChar = __library
+            .get(b"FT_Face_GetVariantsOfChar\0")
             .map(|sym| *sym);
-        let device_reboot = __library.get(b"device_reboot\0").map(|sym| *sym);
-        let device_poweroff = __library.get(b"device_poweroff\0").map(|sym| *sym);
-        let device_frontlight_init = __library.get(b"device_frontlight_init\0").map(|sym| *sym);
-        let device_lightsensor = __library.get(b"device_lightsensor\0").map(|sym| *sym);
-        let device_has_lightsensor = __library.get(b"device_has_lightsensor\0").map(|sym| *sym);
-        let device_bluetooth = __library.get(b"device_bluetooth\0").map(|sym| *sym);
-        let device_has_bluetooth = __library.get(b"device_has_bluetooth\0").map(|sym| *sym);
-        let device_wifi = __library.get(b"device_wifi\0").map(|sym| *sym);
-        let device_has_wifi = __library.get(b"device_has_wifi\0").map(|sym| *sym);
-        let device_gsm = __library.get(b"device_gsm\0").map(|sym| *sym);
-        let device_has_gsm = __library.get(b"device_has_gsm\0").map(|sym| *sym);
-        let device_suspend = __library.get(b"device_suspend\0").map(|sym| *sym);
-        let device_set_wakealarm = __library.get(b"device_set_wakealarm\0").map(|sym| *sym);
-        let device_write_file = __library.get(b"device_write_file\0").map(|sym| *sym);
-        let device_write_file_int = __library.get(b"device_write_file_int\0").map(|sym| *sym);
-        let device_read_bin_file = __library.get(b"device_read_bin_file\0").map(|sym| *sym);
-        let device_read_file = __library.get(b"device_read_file\0").map(|sym| *sym);
-        let device_read_file_int = __library.get(b"device_read_file_int\0").map(|sym| *sym);
-        let device_power_led_cfg = __library.get(b"device_power_led_cfg\0").map(|sym| *sym);
-        let device_storage_cfg = __library.get(b"device_storage_cfg\0").map(|sym| *sym);
+        let FT_Face_GetCharsOfVariant = __library
+            .get(b"FT_Face_GetCharsOfVariant\0")
+            .map(|sym| *sym);
+        let FT_MulDiv = __library.get(b"FT_MulDiv\0").map(|sym| *sym);
+        let FT_MulFix = __library.get(b"FT_MulFix\0").map(|sym| *sym);
+        let FT_DivFix = __library.get(b"FT_DivFix\0").map(|sym| *sym);
+        let FT_RoundFix = __library.get(b"FT_RoundFix\0").map(|sym| *sym);
+        let FT_CeilFix = __library.get(b"FT_CeilFix\0").map(|sym| *sym);
+        let FT_FloorFix = __library.get(b"FT_FloorFix\0").map(|sym| *sym);
+        let FT_Vector_Transform = __library.get(b"FT_Vector_Transform\0").map(|sym| *sym);
+        let FT_Library_Version = __library.get(b"FT_Library_Version\0").map(|sym| *sym);
+        let FT_Face_CheckTrueTypePatents = __library
+            .get(b"FT_Face_CheckTrueTypePatents\0")
+            .map(|sym| *sym);
+        let FT_Face_SetUnpatentedHinting = __library
+            .get(b"FT_Face_SetUnpatentedHinting\0")
+            .map(|sym| *sym);
+        let FT_Get_Glyph = __library.get(b"FT_Get_Glyph\0").map(|sym| *sym);
+        let FT_Glyph_Copy = __library.get(b"FT_Glyph_Copy\0").map(|sym| *sym);
+        let FT_Glyph_Transform = __library.get(b"FT_Glyph_Transform\0").map(|sym| *sym);
+        let FT_Glyph_Get_CBox = __library.get(b"FT_Glyph_Get_CBox\0").map(|sym| *sym);
+        let FT_Glyph_To_Bitmap = __library.get(b"FT_Glyph_To_Bitmap\0").map(|sym| *sym);
+        let FT_Done_Glyph = __library.get(b"FT_Done_Glyph\0").map(|sym| *sym);
+        let FT_Matrix_Multiply = __library.get(b"FT_Matrix_Multiply\0").map(|sym| *sym);
+        let FT_Matrix_Invert = __library.get(b"FT_Matrix_Invert\0").map(|sym| *sym);
+        let FT_Outline_Decompose = __library.get(b"FT_Outline_Decompose\0").map(|sym| *sym);
+        let FT_Outline_New = __library.get(b"FT_Outline_New\0").map(|sym| *sym);
+        let FT_Outline_New_Internal = __library.get(b"FT_Outline_New_Internal\0").map(|sym| *sym);
+        let FT_Outline_Done = __library.get(b"FT_Outline_Done\0").map(|sym| *sym);
+        let FT_Outline_Done_Internal = __library.get(b"FT_Outline_Done_Internal\0").map(|sym| *sym);
+        let FT_Outline_Check = __library.get(b"FT_Outline_Check\0").map(|sym| *sym);
+        let FT_Outline_Get_CBox = __library.get(b"FT_Outline_Get_CBox\0").map(|sym| *sym);
+        let FT_Outline_Translate = __library.get(b"FT_Outline_Translate\0").map(|sym| *sym);
+        let FT_Outline_Copy = __library.get(b"FT_Outline_Copy\0").map(|sym| *sym);
+        let FT_Outline_Transform = __library.get(b"FT_Outline_Transform\0").map(|sym| *sym);
+        let FT_Outline_Embolden = __library.get(b"FT_Outline_Embolden\0").map(|sym| *sym);
+        let FT_Outline_EmboldenXY = __library.get(b"FT_Outline_EmboldenXY\0").map(|sym| *sym);
+        let FT_Outline_Reverse = __library.get(b"FT_Outline_Reverse\0").map(|sym| *sym);
+        let FT_Outline_Get_Bitmap = __library.get(b"FT_Outline_Get_Bitmap\0").map(|sym| *sym);
+        let FT_Outline_Render = __library.get(b"FT_Outline_Render\0").map(|sym| *sym);
+        let FT_Outline_Get_Orientation = __library
+            .get(b"FT_Outline_Get_Orientation\0")
+            .map(|sym| *sym);
         let iv_get_default_font = __library.get(b"iv_get_default_font\0").map(|sym| *sym);
-        let GetHardwareDepth = __library.get(b"GetHardwareDepth\0").map(|sym| *sym);
         let OpenScreen = __library.get(b"OpenScreen\0").map(|sym| *sym);
         let OpenScreenExt = __library.get(b"OpenScreenExt\0").map(|sym| *sym);
         let InkViewMain = __library.get(b"InkViewMain\0").map(|sym| *sym);
@@ -26658,20 +25994,6 @@ impl inkview {
         let DimArea = __library.get(b"DimArea\0").map(|sym| *sym);
         let DrawSelection = __library.get(b"DrawSelection\0").map(|sym| *sym);
         let DrawCircle = __library.get(b"DrawCircle\0").map(|sym| *sym);
-        let DrawHorizontalSeparator = __library.get(b"DrawHorizontalSeparator\0").map(|sym| *sym);
-        let DrawCircleQuarter = __library.get(b"DrawCircleQuarter\0").map(|sym| *sym);
-        let GetDefaultFrameCertifiedThickness = __library
-            .get(b"GetDefaultFrameCertifiedThickness\0")
-            .map(|sym| *sym);
-        let GetDefaultFrameCertifiedRadius = __library
-            .get(b"GetDefaultFrameCertifiedRadius\0")
-            .map(|sym| *sym);
-        let DrawFrameCertified = __library.get(b"DrawFrameCertified\0").map(|sym| *sym);
-        let DrawFrameRectCertified = __library.get(b"DrawFrameRectCertified\0").map(|sym| *sym);
-        let DrawFrameCertifiedEx = __library.get(b"DrawFrameCertifiedEx\0").map(|sym| *sym);
-        let DrawFrameRectCertifiedEx = __library.get(b"DrawFrameRectCertifiedEx\0").map(|sym| *sym);
-        let processCircle = __library.get(b"processCircle\0").map(|sym| *sym);
-        let invertCircle = __library.get(b"invertCircle\0").map(|sym| *sym);
         let DrawPickOut = __library.get(b"DrawPickOut\0").map(|sym| *sym);
         let DrawPickOutEx = __library.get(b"DrawPickOutEx\0").map(|sym| *sym);
         let DitherArea = __library.get(b"DitherArea\0").map(|sym| *sym);
@@ -26685,7 +26007,6 @@ impl inkview {
         let GetCanvas = __library.get(b"GetCanvas\0").map(|sym| *sym);
         let Repaint = __library.get(b"Repaint\0").map(|sym| *sym);
         let DrawFrame = __library.get(b"DrawFrame\0").map(|sym| *sym);
-        let DrawFrameDialog = __library.get(b"DrawFrameDialog\0").map(|sym| *sym);
         let CheckFramePointer = __library.get(b"CheckFramePointer\0").map(|sym| *sym);
         let DrawBorder = __library.get(b"DrawBorder\0").map(|sym| *sym);
         let DrawPager = __library.get(b"DrawPager\0").map(|sym| *sym);
@@ -26697,13 +26018,9 @@ impl inkview {
         let DrawDiagonalHatchLimits = __library.get(b"DrawDiagonalHatchLimits\0").map(|sym| *sym);
         let Transparent = __library.get(b"Transparent\0").map(|sym| *sym);
         let TransparentRect = __library.get(b"TransparentRect\0").map(|sym| *sym);
-        let TransparentGradientData = __library.get(b"TransparentGradientData\0").map(|sym| *sym);
-        let TransparentGradient = __library.get(b"TransparentGradient\0").map(|sym| *sym);
-        let TransparentGradientRect = __library.get(b"TransparentGradientRect\0").map(|sym| *sym);
         let LoadBitmap = __library.get(b"LoadBitmap\0").map(|sym| *sym);
         let zLoadBitmap = __library.get(b"zLoadBitmap\0").map(|sym| *sym);
         let SaveBitmap = __library.get(b"SaveBitmap\0").map(|sym| *sym);
-        let BitmapFromCanvas = __library.get(b"BitmapFromCanvas\0").map(|sym| *sym);
         let BitmapFromScreen = __library.get(b"BitmapFromScreen\0").map(|sym| *sym);
         let BitmapFromScreenR = __library.get(b"BitmapFromScreenR\0").map(|sym| *sym);
         let NewBitmap = __library.get(b"NewBitmap\0").map(|sym| *sym);
@@ -26713,50 +26030,13 @@ impl inkview {
         let SaveJPEG = __library.get(b"SaveJPEG\0").map(|sym| *sym);
         let LoadPNG = __library.get(b"LoadPNG\0").map(|sym| *sym);
         let LoadPNGStretch = __library.get(b"LoadPNGStretch\0").map(|sym| *sym);
-        let GetImageType = __library.get(b"GetImageType\0").map(|sym| *sym);
-        let LoadImageToFormat = __library.get(b"LoadImageToFormat\0").map(|sym| *sym);
-        let LoadGIFToFormat = __library.get(b"LoadGIFToFormat\0").map(|sym| *sym);
-        let LoadPNGToFormat = __library.get(b"LoadPNGToFormat\0").map(|sym| *sym);
-        let LoadJPEGToFormat = __library.get(b"LoadJPEGToFormat\0").map(|sym| *sym);
-        let LoadTiffToFormat = __library.get(b"LoadTiffToFormat\0").map(|sym| *sym);
-        let NewBitmapWithFormat = __library.get(b"NewBitmapWithFormat\0").map(|sym| *sym);
-        let LoadPNG8 = __library.get(b"LoadPNG8\0").map(|sym| *sym);
-        let LoadJPEG8 = __library.get(b"LoadJPEG8\0").map(|sym| *sym);
-        let NewBitmap8 = __library.get(b"NewBitmap8\0").map(|sym| *sym);
-        let NewBitmap24 = __library.get(b"NewBitmap24\0").map(|sym| *sym);
         let SavePNG = __library.get(b"SavePNG\0").map(|sym| *sym);
         let SetTransparentColor = __library.get(b"SetTransparentColor\0").map(|sym| *sym);
         let CopyBitmapDepth4To8 = __library.get(b"CopyBitmapDepth4To8\0").map(|sym| *sym);
         let CopyBitmapDepth8To4 = __library.get(b"CopyBitmapDepth8To4\0").map(|sym| *sym);
         let MoveBitmap = __library.get(b"MoveBitmap\0").map(|sym| *sym);
         let MoveBitmapRight = __library.get(b"MoveBitmapRight\0").map(|sym| *sym);
-        let FindAverageBitmapColor = __library.get(b"FindAverageBitmapColor\0").map(|sym| *sym);
-        let ApplyContrastToBitmap8 = __library.get(b"ApplyContrastToBitmap8\0").map(|sym| *sym);
         let BitmapStretchCopy = __library.get(b"BitmapStretchCopy\0").map(|sym| *sym);
-        let BitmapStretchProportionally = __library
-            .get(b"BitmapStretchProportionally\0")
-            .map(|sym| *sym);
-        let BitmapStretchFill = __library.get(b"BitmapStretchFill\0").map(|sym| *sym);
-        let adjustBitmapDefault = __library.get(b"adjustBitmapDefault\0").map(|sym| *sym);
-        let adjustBitmapWithSaturationBrightnessAndDithering = __library
-            .get(b"adjustBitmapWithSaturationBrightnessAndDithering\0")
-            .map(|sym| *sym);
-        let adjustAreaWithSaturationBrightnessAndDithering = __library
-            .get(b"adjustAreaWithSaturationBrightnessAndDithering\0")
-            .map(|sym| *sym);
-        let adjustAreaWithLabColorsSaturation = __library
-            .get(b"adjustAreaWithLabColorsSaturation\0")
-            .map(|sym| *sym);
-        let adjustAreaWithVibrance = __library.get(b"adjustAreaWithVibrance\0").map(|sym| *sym);
-        let adjustAreaDefault = __library.get(b"adjustAreaDefault\0").map(|sym| *sym);
-        let ditherAndAdjustArea = __library.get(b"ditherAndAdjustArea\0").map(|sym| *sym);
-        let adjustAreaWithBrightnessContrastGamma = __library
-            .get(b"adjustAreaWithBrightnessContrastGamma\0")
-            .map(|sym| *sym);
-        let getBrightnessContrastGammaAdjustParams = __library
-            .get(b"getBrightnessContrastGammaAdjustParams\0")
-            .map(|sym| *sym);
-        let bm_stretch8 = __library.get(b"bm_stretch8\0").map(|sym| *sym);
         let DrawBitmap = __library.get(b"DrawBitmap\0").map(|sym| *sym);
         let DrawBitmapArea = __library.get(b"DrawBitmapArea\0").map(|sym| *sym);
         let DrawBitmapRect = __library.get(b"DrawBitmapRect\0").map(|sym| *sym);
@@ -26771,7 +26051,6 @@ impl inkview {
         let EnumFontsFromDirectoryEx = __library.get(b"EnumFontsFromDirectoryEx\0").map(|sym| *sym);
         let FreeFontsForSort = __library.get(b"FreeFontsForSort\0").map(|sym| *sym);
         let OpenFont = __library.get(b"OpenFont\0").map(|sym| *sym);
-        let OpenFontEx = __library.get(b"OpenFontEx\0").map(|sym| *sym);
         let CloseFont = __library.get(b"CloseFont\0").map(|sym| *sym);
         let SetFont = __library.get(b"SetFont\0").map(|sym| *sym);
         let GetFont = __library.get(b"GetFont\0").map(|sym| *sym);
@@ -26809,7 +26088,6 @@ impl inkview {
         let HQUpdateSupported = __library.get(b"HQUpdateSupported\0").map(|sym| *sym);
         let ScheduleUpdate = __library.get(b"ScheduleUpdate\0").map(|sym| *sym);
         let WaitForUpdateComplete = __library.get(b"WaitForUpdateComplete\0").map(|sym| *sym);
-        let GetWaveformTimes = __library.get(b"GetWaveformTimes\0").map(|sym| *sym);
         let SetEventHandler = __library.get(b"SetEventHandler\0").map(|sym| *sym);
         let SetEventHandlerEx = __library.get(b"SetEventHandlerEx\0").map(|sym| *sym);
         let GetEventHandler = __library.get(b"GetEventHandler\0").map(|sym| *sym);
@@ -26851,15 +26129,6 @@ impl inkview {
         let GetKeyboardFlags = __library.get(b"GetKeyboardFlags\0").map(|sym| *sym);
         let OpenKeyboard = __library.get(b"OpenKeyboard\0").map(|sym| *sym);
         let OpenKeyboardEx = __library.get(b"OpenKeyboardEx\0").map(|sym| *sym);
-        let KeyboardProcessTextChanges = __library
-            .get(b"KeyboardProcessTextChanges\0")
-            .map(|sym| *sym);
-        let KeyboardNotifyTextChanges = __library
-            .get(b"KeyboardNotifyTextChanges\0")
-            .map(|sym| *sym);
-        let setKeyboardTextChangeCallback = __library
-            .get(b"setKeyboardTextChangeCallback\0")
-            .map(|sym| *sym);
         let DrawKeyboard = __library.get(b"DrawKeyboard\0").map(|sym| *sym);
         let OpenCustomKeyboard = __library.get(b"OpenCustomKeyboard\0").map(|sym| *sym);
         let CloseKeyboard = __library.get(b"CloseKeyboard\0").map(|sym| *sym);
@@ -26868,7 +26137,6 @@ impl inkview {
             .get(b"GetKeyboardRectWithParams\0")
             .map(|sym| *sym);
         let IsKeyboardOpened = __library.get(b"IsKeyboardOpened\0").map(|sym| *sym);
-        let setDrawTopLine = __library.get(b"setDrawTopLine\0").map(|sym| *sym);
         let OpenPageSelector = __library.get(b"OpenPageSelector\0").map(|sym| *sym);
         let OpenTimeEdit = __library.get(b"OpenTimeEdit\0").map(|sym| *sym);
         let OpenDirectorySelector = __library.get(b"OpenDirectorySelector\0").map(|sym| *sym);
@@ -26880,6 +26148,7 @@ impl inkview {
         let SetFontMenuStruct = __library.get(b"SetFontMenuStruct\0").map(|sym| *sym);
         let OpenBookmarks = __library.get(b"OpenBookmarks\0").map(|sym| *sym);
         let SwitchBookmark = __library.get(b"SwitchBookmark\0").map(|sym| *sym);
+        let OpenContents = __library.get(b"OpenContents\0").map(|sym| *sym);
         let OpenRotateBox = __library.get(b"OpenRotateBox\0").map(|sym| *sym);
         let Message = __library.get(b"Message\0").map(|sym| *sym);
         let Dialog = __library.get(b"Dialog\0").map(|sym| *sym);
@@ -26910,18 +26179,16 @@ impl inkview {
         let SetPanelKeyForFullScreenEnabled = __library
             .get(b"SetPanelKeyForFullScreenEnabled\0")
             .map(|sym| *sym);
-        let SetPanelTransparent = __library.get(b"SetPanelTransparent\0").map(|sym| *sym);
         let StartPanelProgress = __library.get(b"StartPanelProgress\0").map(|sym| *sym);
         let StopPanelProgress = __library.get(b"StopPanelProgress\0").map(|sym| *sym);
-        let ShowPanelPackageProgress = __library.get(b"ShowPanelPackageProgress\0").map(|sym| *sym);
         let DrawPanel = __library.get(b"DrawPanel\0").map(|sym| *sym);
         let DrawPanel2 = __library.get(b"DrawPanel2\0").map(|sym| *sym);
         let DrawPanel3 = __library.get(b"DrawPanel3\0").map(|sym| *sym);
         let DrawPanel4 = __library.get(b"DrawPanel4\0").map(|sym| *sym);
         let DrawPanel5 = __library.get(b"DrawPanel5\0").map(|sym| *sym);
+        let DrawTabs = __library.get(b"DrawTabs\0").map(|sym| *sym);
         let OpenControlPanel = __library.get(b"OpenControlPanel\0").map(|sym| *sym);
         let PanelHeight = __library.get(b"PanelHeight\0").map(|sym| *sym);
-        let PanelHeightFBOffset = __library.get(b"PanelHeightFBOffset\0").map(|sym| *sym);
         let SetKeyboardRate = __library.get(b"SetKeyboardRate\0").map(|sym| *sym);
         let QuickNavigatorSupported = __library.get(b"QuickNavigatorSupported\0").map(|sym| *sym);
         let QuickNavigator = __library.get(b"QuickNavigator\0").map(|sym| *sym);
@@ -26956,11 +26223,9 @@ impl inkview {
         let CloseConfig = __library.get(b"CloseConfig\0").map(|sym| *sym);
         let CloseConfigNoSave = __library.get(b"CloseConfigNoSave\0").map(|sym| *sym);
         let ReadInt = __library.get(b"ReadInt\0").map(|sym| *sym);
-        let ReadLongLong = __library.get(b"ReadLongLong\0").map(|sym| *sym);
         let ReadString = __library.get(b"ReadString\0").map(|sym| *sym);
         let ReadSecret = __library.get(b"ReadSecret\0").map(|sym| *sym);
         let WriteInt = __library.get(b"WriteInt\0").map(|sym| *sym);
-        let WriteLongLong = __library.get(b"WriteLongLong\0").map(|sym| *sym);
         let WriteString = __library.get(b"WriteString\0").map(|sym| *sym);
         let WriteSecret = __library.get(b"WriteSecret\0").map(|sym| *sym);
         let WriteIntVolatile = __library.get(b"WriteIntVolatile\0").map(|sym| *sym);
@@ -26978,17 +26243,14 @@ impl inkview {
         let CloseConfigLevel = __library.get(b"CloseConfigLevel\0").map(|sym| *sym);
         let NotifyConfigChanged = __library.get(b"NotifyConfigChanged\0").map(|sym| *sym);
         let ClearConfig = __library.get(b"ClearConfig\0").map(|sym| *sym);
-        let EnumerateConfig = __library.get(b"EnumerateConfig\0").map(|sym| *sym);
         let GetKeyMapping = __library.get(b"GetKeyMapping\0").map(|sym| *sym);
         let GetKeyMappingEx = __library.get(b"GetKeyMappingEx\0").map(|sym| *sym);
-        let GetKeyMappingExtended = __library.get(b"GetKeyMappingExtended\0").map(|sym| *sym);
         let AdjustDirectionKeys = __library.get(b"AdjustDirectionKeys\0").map(|sym| *sym);
         let QueryDeviceButtons = __library.get(b"QueryDeviceButtons\0").map(|sym| *sym);
         let IsJoystickButtonsPresent = __library.get(b"IsJoystickButtonsPresent\0").map(|sym| *sym);
         let MultitaskingSupported = __library.get(b"MultitaskingSupported\0").map(|sym| *sym);
         let NewTask = __library.get(b"NewTask\0").map(|sym| *sym);
         let NewTaskEx = __library.get(b"NewTaskEx\0").map(|sym| *sym);
-        let OpenTask = __library.get(b"OpenTask\0").map(|sym| *sym);
         let NewSubtask = __library.get(b"NewSubtask\0").map(|sym| *sym);
         let SwitchSubtask = __library.get(b"SwitchSubtask\0").map(|sym| *sym);
         let SubtaskFinished = __library.get(b"SubtaskFinished\0").map(|sym| *sym);
@@ -27080,7 +26342,6 @@ impl inkview {
         let iv_ipc_request_with_timeout = __library
             .get(b"iv_ipc_request_with_timeout\0")
             .map(|sym| *sym);
-        let currentLang = __library.get(b"currentLang\0").map(|sym| *sym);
         let EnumLanguages = __library.get(b"EnumLanguages\0").map(|sym| *sym);
         let LoadLanguage = __library.get(b"LoadLanguage\0").map(|sym| *sym);
         let AddTranslation = __library.get(b"AddTranslation\0").map(|sym| *sym);
@@ -27088,8 +26349,6 @@ impl inkview {
         let GetLangText = __library.get(b"GetLangText\0").map(|sym| *sym);
         let GetLangTextF = __library.get(b"GetLangTextF\0").map(|sym| *sym);
         let GetLangTextPlural = __library.get(b"GetLangTextPlural\0").map(|sym| *sym);
-        let iv_lang_format = __library.get(b"iv_lang_format\0").map(|sym| *sym);
-        let GetLangTime = __library.get(b"GetLangTime\0").map(|sym| *sym);
         let SetRTLBook = __library.get(b"SetRTLBook\0").map(|sym| *sym);
         let IsRTL = __library.get(b"IsRTL\0").map(|sym| *sym);
         let IsBookRTL = __library.get(b"IsBookRTL\0").map(|sym| *sym);
@@ -27126,7 +26385,6 @@ impl inkview {
         let GetResource = __library.get(b"GetResource\0").map(|sym| *sym);
         let GetThemeInt = __library.get(b"GetThemeInt\0").map(|sym| *sym);
         let GetThemeString = __library.get(b"GetThemeString\0").map(|sym| *sym);
-        let GetLayoutFromTheme = __library.get(b"GetLayoutFromTheme\0").map(|sym| *sym);
         let GetThemeFont = __library.get(b"GetThemeFont\0").map(|sym| *sym);
         let GetThemeRect = __library.get(b"GetThemeRect\0").map(|sym| *sym);
         let GetKeyResource = __library.get(b"GetKeyResource\0").map(|sym| *sym);
@@ -27139,7 +26397,6 @@ impl inkview {
         let GetBookInfoExt = __library.get(b"GetBookInfoExt\0").map(|sym| *sym);
         let GetBookISBN = __library.get(b"GetBookISBN\0").map(|sym| *sym);
         let GetBookCover = __library.get(b"GetBookCover\0").map(|sym| *sym);
-        let GetBookCoverEx = __library.get(b"GetBookCoverEx\0").map(|sym| *sym);
         let GetBookSyncStatus = __library.get(b"GetBookSyncStatus\0").map(|sym| *sym);
         let GetAssociatedFile = __library.get(b"GetAssociatedFile\0").map(|sym| *sym);
         let CheckAssociatedFile = __library.get(b"CheckAssociatedFile\0").map(|sym| *sym);
@@ -27190,14 +26447,14 @@ impl inkview {
         let SaveHighVolumeTimeout = __library.get(b"SaveHighVolumeTimeout\0").map(|sym| *sym);
         let GetSafeVolumeLimit = __library.get(b"GetSafeVolumeLimit\0").map(|sym| *sym);
         let GetHighVolumeMaxInterval = __library.get(b"GetHighVolumeMaxInterval\0").map(|sym| *sym);
+        let EnumNotepads = __library.get(b"EnumNotepads\0").map(|sym| *sym);
+        let OpenNotepad = __library.get(b"OpenNotepad\0").map(|sym| *sym);
+        let CreateNote = __library.get(b"CreateNote\0").map(|sym| *sym);
+        let CreateNoteFromImages = __library.get(b"CreateNoteFromImages\0").map(|sym| *sym);
+        let CreateNoteFromPage = __library.get(b"CreateNoteFromPage\0").map(|sym| *sym);
+        let CreateEmptyNote = __library.get(b"CreateEmptyNote\0").map(|sym| *sym);
+        let OpenNotesMenu = __library.get(b"OpenNotesMenu\0").map(|sym| *sym);
         let EnumDictionaries = __library.get(b"EnumDictionaries\0").map(|sym| *sym);
-        let EnumDictionariesFiles = __library.get(b"EnumDictionariesFiles\0").map(|sym| *sym);
-        let EnumDictionariesFilesCallAfterEnumDictionaries = __library
-            .get(b"EnumDictionariesFilesCallAfterEnumDictionaries\0")
-            .map(|sym| *sym);
-        let GetKeyboardLayoutForOpenedDictionary = __library
-            .get(b"GetKeyboardLayoutForOpenedDictionary\0")
-            .map(|sym| *sym);
         let OpenDictionary = __library.get(b"OpenDictionary\0").map(|sym| *sym);
         let CloseDictionary = __library.get(b"CloseDictionary\0").map(|sym| *sym);
         let LookupWord = __library.get(b"LookupWord\0").map(|sym| *sym);
@@ -27249,11 +26506,8 @@ impl inkview {
         let GetDeviceModel = __library.get(b"GetDeviceModel\0").map(|sym| *sym);
         let GetHardwareType = __library.get(b"GetHardwareType\0").map(|sym| *sym);
         let GetSoftwareVersion = __library.get(b"GetSoftwareVersion\0").map(|sym| *sym);
-        let isUsbStorAttached = __library.get(b"isUsbStorAttached\0").map(|sym| *sym);
-        let isUsbStorMounted = __library.get(b"isUsbStorMounted\0").map(|sym| *sym);
-        let usbStorEject = __library.get(b"usbStorEject\0").map(|sym| *sym);
-        let usbStorSerialNumber = __library.get(b"usbStorSerialNumber\0").map(|sym| *sym);
         let GetSerialSoftwareInfo = __library.get(b"GetSerialSoftwareInfo\0").map(|sym| *sym);
+        let GetHardwareDepth = __library.get(b"GetHardwareDepth\0").map(|sym| *sym);
         let GetSerialNumber = __library.get(b"GetSerialNumber\0").map(|sym| *sym);
         let GetExternalCardSerialNumber = __library
             .get(b"GetExternalCardSerialNumber\0")
@@ -27266,21 +26520,16 @@ impl inkview {
         let GoSleep = __library.get(b"GoSleep\0").map(|sym| *sym);
         let BanSleep = __library.get(b"BanSleep\0").map(|sym| *sym);
         let SetAutoPowerOff = __library.get(b"SetAutoPowerOff\0").map(|sym| *sym);
-        let SetAutoKeylock = __library.get(b"SetAutoKeylock\0").map(|sym| *sym);
         let PowerOff = __library.get(b"PowerOff\0").map(|sym| *sym);
         let SafeMode = __library.get(b"SafeMode\0").map(|sym| *sym);
         let OpenMainMenu = __library.get(b"OpenMainMenu\0").map(|sym| *sym);
         let CloseAllTasks = __library.get(b"CloseAllTasks\0").map(|sym| *sym);
         let WriteStartupLogo = __library.get(b"WriteStartupLogo\0").map(|sym| *sym);
-        let WritePartnerPowerOffLogo = __library.get(b"WritePartnerPowerOffLogo\0").map(|sym| *sym);
-        let WriteLowPoweRLogo = __library.get(b"WriteLowPoweRLogo\0").map(|sym| *sym);
         let PageSnapshot = __library.get(b"PageSnapshot\0").map(|sym| *sym);
         let RestoreStartupLogo = __library.get(b"RestoreStartupLogo\0").map(|sym| *sym);
         let QueryTouchpanel = __library.get(b"QueryTouchpanel\0").map(|sym| *sym);
         let CalibrateTouchpanel = __library.get(b"CalibrateTouchpanel\0").map(|sym| *sym);
         let CalibrateTouchDevice = __library.get(b"CalibrateTouchDevice\0").map(|sym| *sym);
-        let TouchScreenEnable = __library.get(b"TouchScreenEnable\0").map(|sym| *sym);
-        let IsTouchScreenEnabled = __library.get(b"IsTouchScreenEnabled\0").map(|sym| *sym);
         let OpenCalendar = __library.get(b"OpenCalendar\0").map(|sym| *sym);
         let StartSoftwareUpdate = __library.get(b"StartSoftwareUpdate\0").map(|sym| *sym);
         let HavePowerForSoftwareUpdate = __library
@@ -27313,8 +26562,6 @@ impl inkview {
         let EnumBTdevices = __library.get(b"EnumBTdevices\0").map(|sym| *sym);
         let OpenBTdevicesMenu = __library.get(b"OpenBTdevicesMenu\0").map(|sym| *sym);
         let BtSendFiles = __library.get(b"BtSendFiles\0").map(|sym| *sym);
-        let SetFlightMode = __library.get(b"SetFlightMode\0").map(|sym| *sym);
-        let IsFlightModeEnabled = __library.get(b"IsFlightModeEnabled\0").map(|sym| *sym);
         let EnumWirelessNetworks = __library.get(b"EnumWirelessNetworks\0").map(|sym| *sym);
         let EnumConnections = __library.get(b"EnumConnections\0").map(|sym| *sym);
         let GetBTservice = __library.get(b"GetBTservice\0").map(|sym| *sym);
@@ -27351,11 +26598,8 @@ impl inkview {
         let NetErrorMessage = __library.get(b"NetErrorMessage\0").map(|sym| *sym);
         let GetA2dpStatus = __library.get(b"GetA2dpStatus\0").map(|sym| *sym);
         let SetPort = __library.get(b"SetPort\0").map(|sym| *sym);
+        let GetTouchInfo = __library.get(b"GetTouchInfo\0").map(|sym| *sym);
         let GetTouchInfoI = __library.get(b"GetTouchInfoI\0").map(|sym| *sym);
-        let GetTouchContainerLength = __library.get(b"GetTouchContainerLength\0").map(|sym| *sym);
-        let GetTouchSection = __library.get(b"GetTouchSection\0").map(|sym| *sym);
-        let GetLastTouchSection = __library.get(b"GetLastTouchSection\0").map(|sym| *sym);
-        let PopTouchSection = __library.get(b"PopTouchSection\0").map(|sym| *sym);
         let QueryHeadphone = __library.get(b"QueryHeadphone\0").map(|sym| *sym);
         let wpa_passphrase = __library.get(b"wpa_passphrase\0").map(|sym| *sym);
         let iv_strcmp = __library.get(b"iv_strcmp\0").map(|sym| *sym);
@@ -27369,7 +26613,6 @@ impl inkview {
         let get_encoding_table = __library.get(b"get_encoding_table\0").map(|sym| *sym);
         let convert_to_utf = __library.get(b"convert_to_utf\0").map(|sym| *sym);
         let utf2ucs = __library.get(b"utf2ucs\0").map(|sym| *sym);
-        let utf2ucsEx = __library.get(b"utf2ucsEx\0").map(|sym| *sym);
         let utf2ucs4 = __library.get(b"utf2ucs4\0").map(|sym| *sym);
         let ucs2utf = __library.get(b"ucs2utf\0").map(|sym| *sym);
         let utf_toupper_ext = __library.get(b"utf_toupper_ext\0").map(|sym| *sym);
@@ -27458,31 +26701,6 @@ impl inkview {
         let setNeedAvrcpFocus = __library.get(b"setNeedAvrcpFocus\0").map(|sym| *sym);
         let haveAvrcpFocus = __library.get(b"haveAvrcpFocus\0").map(|sym| *sym);
         let getAvrcpFocusPid = __library.get(b"getAvrcpFocusPid\0").map(|sym| *sym);
-        let setTaskOomPriority = __library.get(b"setTaskOomPriority\0").map(|sym| *sym);
-        let getDDRMemoryInfo = __library.get(b"getDDRMemoryInfo\0").map(|sym| *sym);
-        let needCanvasLock = __library.get(b"needCanvasLock\0").map(|sym| *sym);
-        let lockCanvasDrawing = __library.get(b"lockCanvasDrawing\0").map(|sym| *sym);
-        let unlockCanvasDrawing = __library.get(b"unlockCanvasDrawing\0").map(|sym| *sym);
-        let StartCustomGattService = __library.get(b"StartCustomGattService\0").map(|sym| *sym);
-        let StopCustomGattService = __library.get(b"StopCustomGattService\0").map(|sym| *sym);
-        let GetCustomGattSessionStatus = __library
-            .get(b"GetCustomGattSessionStatus\0")
-            .map(|sym| *sym);
-        let Connect2CustomGattService = __library
-            .get(b"Connect2CustomGattService\0")
-            .map(|sym| *sym);
-        let CloseCustomGattConnection = __library
-            .get(b"CloseCustomGattConnection\0")
-            .map(|sym| *sym);
-        let ReadCustomGattService = __library.get(b"ReadCustomGattService\0").map(|sym| *sym);
-        let WriteCustomGattService = __library.get(b"WriteCustomGattService\0").map(|sym| *sym);
-        let StartScanBTLE = __library.get(b"StartScanBTLE\0").map(|sym| *sym);
-        let StopScanBTLE = __library.get(b"StopScanBTLE\0").map(|sym| *sym);
-        let design_to_pixel = __library.get(b"design_to_pixel\0").map(|sym| *sym);
-        let GetSoftwareLocalizationType = __library
-            .get(b"GetSoftwareLocalizationType\0")
-            .map(|sym| *sym);
-        let ltrim_non_alphanum = __library.get(b"ltrim_non_alphanum\0").map(|sym| *sym);
         Ok(inkview {
             __library,
             __underflow,
@@ -28226,76 +27444,81 @@ impl inkview {
             pthread_setspecific,
             pthread_getcpuclockid,
             pthread_atfork,
-            ioctl,
-            device_audio,
-            device_has_audio,
-            device_hp_detect_cfg,
-            init_hwconfig,
-            device_ID,
-            device_platform,
-            device_number,
-            device_display,
-            device_display_colormask,
-            device_display_height,
-            device_display_width,
-            device_display_scanline,
-            device_display_dpi,
-            device_display_position,
-            device_epdc,
-            device_epdc_init,
-            device_keyboard,
-            device_touchpanel,
-            device_has_touchpanel,
-            device_input_init,
-            device_input_read,
-            device_keyboard_translate,
-            device_keyboard_buttons,
-            device_keyboard_state,
-            device_touchpanel_getmatrix,
-            add_input_device,
-            remove_input_device,
-            device_slider,
-            device_has_slider,
-            device_slider_cfg,
-            device_gyroscope,
-            device_gyroscope_placement,
-            device_has_gyroscope,
-            device_has_extcard,
-            device_usb,
-            device_has_usb,
-            device_has_usbhost,
-            device_frontlight,
-            device_has_frontlight,
-            device_model,
-            device_serial_number,
-            device_init_led,
-            device_set_led,
-            device_get_led,
-            device_battery_percent,
-            device_is_powered,
-            device_set_bootcramfs_flag,
-            device_reboot,
-            device_poweroff,
-            device_frontlight_init,
-            device_lightsensor,
-            device_has_lightsensor,
-            device_bluetooth,
-            device_has_bluetooth,
-            device_wifi,
-            device_has_wifi,
-            device_gsm,
-            device_has_gsm,
-            device_suspend,
-            device_set_wakealarm,
-            device_write_file,
-            device_write_file_int,
-            device_read_bin_file,
-            device_read_file,
-            device_read_file_int,
-            device_power_led_cfg,
-            device_storage_cfg,
+            setjmp,
+            _setjmp,
+            longjmp,
+            _longjmp,
+            siglongjmp,
+            FT_Init_FreeType,
+            FT_Done_FreeType,
+            FT_New_Face,
+            FT_New_Memory_Face,
+            FT_Open_Face,
+            FT_Attach_File,
+            FT_Attach_Stream,
+            FT_Reference_Face,
+            FT_Done_Face,
+            FT_Select_Size,
+            FT_Request_Size,
+            FT_Set_Char_Size,
+            FT_Set_Pixel_Sizes,
+            FT_Load_Glyph,
+            FT_Load_Char,
+            FT_Set_Transform,
+            FT_Render_Glyph,
+            FT_Get_Kerning,
+            FT_Get_Track_Kerning,
+            FT_Get_Glyph_Name,
+            FT_Get_Postscript_Name,
+            FT_Select_Charmap,
+            FT_Set_Charmap,
+            FT_Get_Charmap_Index,
+            FT_Get_Char_Index,
+            FT_Get_First_Char,
+            FT_Get_Next_Char,
+            FT_Get_Name_Index,
+            FT_Get_SubGlyph_Info,
+            FT_Get_FSType_Flags,
+            FT_Face_GetCharVariantIndex,
+            FT_Face_GetCharVariantIsDefault,
+            FT_Face_GetVariantSelectors,
+            FT_Face_GetVariantsOfChar,
+            FT_Face_GetCharsOfVariant,
+            FT_MulDiv,
+            FT_MulFix,
+            FT_DivFix,
+            FT_RoundFix,
+            FT_CeilFix,
+            FT_FloorFix,
+            FT_Vector_Transform,
+            FT_Library_Version,
+            FT_Face_CheckTrueTypePatents,
+            FT_Face_SetUnpatentedHinting,
+            FT_Get_Glyph,
+            FT_Glyph_Copy,
+            FT_Glyph_Transform,
+            FT_Glyph_Get_CBox,
+            FT_Glyph_To_Bitmap,
+            FT_Done_Glyph,
+            FT_Matrix_Multiply,
+            FT_Matrix_Invert,
+            FT_Outline_Decompose,
+            FT_Outline_New,
+            FT_Outline_New_Internal,
+            FT_Outline_Done,
+            FT_Outline_Done_Internal,
+            FT_Outline_Check,
+            FT_Outline_Get_CBox,
+            FT_Outline_Translate,
+            FT_Outline_Copy,
+            FT_Outline_Transform,
+            FT_Outline_Embolden,
+            FT_Outline_EmboldenXY,
+            FT_Outline_Reverse,
+            FT_Outline_Get_Bitmap,
+            FT_Outline_Render,
+            FT_Outline_Get_Orientation,
             iv_get_default_font,
-            GetHardwareDepth,
             OpenScreen,
             OpenScreenExt,
             InkViewMain,
@@ -28337,16 +27560,6 @@ impl inkview {
             DimArea,
             DrawSelection,
             DrawCircle,
-            DrawHorizontalSeparator,
-            DrawCircleQuarter,
-            GetDefaultFrameCertifiedThickness,
-            GetDefaultFrameCertifiedRadius,
-            DrawFrameCertified,
-            DrawFrameRectCertified,
-            DrawFrameCertifiedEx,
-            DrawFrameRectCertifiedEx,
-            processCircle,
-            invertCircle,
             DrawPickOut,
             DrawPickOutEx,
             DitherArea,
@@ -28360,7 +27573,6 @@ impl inkview {
             GetCanvas,
             Repaint,
             DrawFrame,
-            DrawFrameDialog,
             CheckFramePointer,
             DrawBorder,
             DrawPager,
@@ -28372,13 +27584,9 @@ impl inkview {
             DrawDiagonalHatchLimits,
             Transparent,
             TransparentRect,
-            TransparentGradientData,
-            TransparentGradient,
-            TransparentGradientRect,
             LoadBitmap,
             zLoadBitmap,
             SaveBitmap,
-            BitmapFromCanvas,
             BitmapFromScreen,
             BitmapFromScreenR,
             NewBitmap,
@@ -28388,38 +27596,13 @@ impl inkview {
             SaveJPEG,
             LoadPNG,
             LoadPNGStretch,
-            GetImageType,
-            LoadImageToFormat,
-            LoadGIFToFormat,
-            LoadPNGToFormat,
-            LoadJPEGToFormat,
-            LoadTiffToFormat,
-            NewBitmapWithFormat,
-            LoadPNG8,
-            LoadJPEG8,
-            NewBitmap8,
-            NewBitmap24,
             SavePNG,
             SetTransparentColor,
             CopyBitmapDepth4To8,
             CopyBitmapDepth8To4,
             MoveBitmap,
             MoveBitmapRight,
-            FindAverageBitmapColor,
-            ApplyContrastToBitmap8,
             BitmapStretchCopy,
-            BitmapStretchProportionally,
-            BitmapStretchFill,
-            adjustBitmapDefault,
-            adjustBitmapWithSaturationBrightnessAndDithering,
-            adjustAreaWithSaturationBrightnessAndDithering,
-            adjustAreaWithLabColorsSaturation,
-            adjustAreaWithVibrance,
-            adjustAreaDefault,
-            ditherAndAdjustArea,
-            adjustAreaWithBrightnessContrastGamma,
-            getBrightnessContrastGammaAdjustParams,
-            bm_stretch8,
             DrawBitmap,
             DrawBitmapArea,
             DrawBitmapRect,
@@ -28434,7 +27617,6 @@ impl inkview {
             EnumFontsFromDirectoryEx,
             FreeFontsForSort,
             OpenFont,
-            OpenFontEx,
             CloseFont,
             SetFont,
             GetFont,
@@ -28472,7 +27654,6 @@ impl inkview {
             HQUpdateSupported,
             ScheduleUpdate,
             WaitForUpdateComplete,
-            GetWaveformTimes,
             SetEventHandler,
             SetEventHandlerEx,
             GetEventHandler,
@@ -28514,16 +27695,12 @@ impl inkview {
             GetKeyboardFlags,
             OpenKeyboard,
             OpenKeyboardEx,
-            KeyboardProcessTextChanges,
-            KeyboardNotifyTextChanges,
-            setKeyboardTextChangeCallback,
             DrawKeyboard,
             OpenCustomKeyboard,
             CloseKeyboard,
             GetKeyboardRect,
             GetKeyboardRectWithParams,
             IsKeyboardOpened,
-            setDrawTopLine,
             OpenPageSelector,
             OpenTimeEdit,
             OpenDirectorySelector,
@@ -28535,6 +27712,7 @@ impl inkview {
             SetFontMenuStruct,
             OpenBookmarks,
             SwitchBookmark,
+            OpenContents,
             OpenRotateBox,
             Message,
             Dialog,
@@ -28563,18 +27741,16 @@ impl inkview {
             IsPanelSeparatorEnabled,
             InitPanel,
             SetPanelKeyForFullScreenEnabled,
-            SetPanelTransparent,
             StartPanelProgress,
             StopPanelProgress,
-            ShowPanelPackageProgress,
             DrawPanel,
             DrawPanel2,
             DrawPanel3,
             DrawPanel4,
             DrawPanel5,
+            DrawTabs,
             OpenControlPanel,
             PanelHeight,
-            PanelHeightFBOffset,
             SetKeyboardRate,
             QuickNavigatorSupported,
             QuickNavigator,
@@ -28599,11 +27775,9 @@ impl inkview {
             CloseConfig,
             CloseConfigNoSave,
             ReadInt,
-            ReadLongLong,
             ReadString,
             ReadSecret,
             WriteInt,
-            WriteLongLong,
             WriteString,
             WriteSecret,
             WriteIntVolatile,
@@ -28619,17 +27793,14 @@ impl inkview {
             CloseConfigLevel,
             NotifyConfigChanged,
             ClearConfig,
-            EnumerateConfig,
             GetKeyMapping,
             GetKeyMappingEx,
-            GetKeyMappingExtended,
             AdjustDirectionKeys,
             QueryDeviceButtons,
             IsJoystickButtonsPresent,
             MultitaskingSupported,
             NewTask,
             NewTaskEx,
-            OpenTask,
             NewSubtask,
             SwitchSubtask,
             SubtaskFinished,
@@ -28719,7 +27890,6 @@ impl inkview {
             iv_ipc_request_secure,
             iv_ipc_cmd,
             iv_ipc_request_with_timeout,
-            currentLang,
             EnumLanguages,
             LoadLanguage,
             AddTranslation,
@@ -28727,8 +27897,6 @@ impl inkview {
             GetLangText,
             GetLangTextF,
             GetLangTextPlural,
-            iv_lang_format,
-            GetLangTime,
             SetRTLBook,
             IsRTL,
             IsBookRTL,
@@ -28763,7 +27931,6 @@ impl inkview {
             GetResource,
             GetThemeInt,
             GetThemeString,
-            GetLayoutFromTheme,
             GetThemeFont,
             GetThemeRect,
             GetKeyResource,
@@ -28774,7 +27941,6 @@ impl inkview {
             GetBookInfoExt,
             GetBookISBN,
             GetBookCover,
-            GetBookCoverEx,
             GetBookSyncStatus,
             GetAssociatedFile,
             CheckAssociatedFile,
@@ -28823,10 +27989,14 @@ impl inkview {
             SaveHighVolumeTimeout,
             GetSafeVolumeLimit,
             GetHighVolumeMaxInterval,
+            EnumNotepads,
+            OpenNotepad,
+            CreateNote,
+            CreateNoteFromImages,
+            CreateNoteFromPage,
+            CreateEmptyNote,
+            OpenNotesMenu,
             EnumDictionaries,
-            EnumDictionariesFiles,
-            EnumDictionariesFilesCallAfterEnumDictionaries,
-            GetKeyboardLayoutForOpenedDictionary,
             OpenDictionary,
             CloseDictionary,
             LookupWord,
@@ -28872,11 +28042,8 @@ impl inkview {
             GetDeviceModel,
             GetHardwareType,
             GetSoftwareVersion,
-            isUsbStorAttached,
-            isUsbStorMounted,
-            usbStorEject,
-            usbStorSerialNumber,
             GetSerialSoftwareInfo,
+            GetHardwareDepth,
             GetSerialNumber,
             GetExternalCardSerialNumber,
             GetWaveformFilename,
@@ -28887,21 +28054,16 @@ impl inkview {
             GoSleep,
             BanSleep,
             SetAutoPowerOff,
-            SetAutoKeylock,
             PowerOff,
             SafeMode,
             OpenMainMenu,
             CloseAllTasks,
             WriteStartupLogo,
-            WritePartnerPowerOffLogo,
-            WriteLowPoweRLogo,
             PageSnapshot,
             RestoreStartupLogo,
             QueryTouchpanel,
             CalibrateTouchpanel,
             CalibrateTouchDevice,
-            TouchScreenEnable,
-            IsTouchScreenEnabled,
             OpenCalendar,
             StartSoftwareUpdate,
             HavePowerForSoftwareUpdate,
@@ -28928,8 +28090,6 @@ impl inkview {
             EnumBTdevices,
             OpenBTdevicesMenu,
             BtSendFiles,
-            SetFlightMode,
-            IsFlightModeEnabled,
             EnumWirelessNetworks,
             EnumConnections,
             GetBTservice,
@@ -28966,11 +28126,8 @@ impl inkview {
             NetErrorMessage,
             GetA2dpStatus,
             SetPort,
+            GetTouchInfo,
             GetTouchInfoI,
-            GetTouchContainerLength,
-            GetTouchSection,
-            GetLastTouchSection,
-            PopTouchSection,
             QueryHeadphone,
             wpa_passphrase,
             iv_strcmp,
@@ -28984,7 +28141,6 @@ impl inkview {
             get_encoding_table,
             convert_to_utf,
             utf2ucs,
-            utf2ucsEx,
             utf2ucs4,
             ucs2utf,
             utf_toupper_ext,
@@ -29061,23 +28217,6 @@ impl inkview {
             setNeedAvrcpFocus,
             haveAvrcpFocus,
             getAvrcpFocusPid,
-            setTaskOomPriority,
-            getDDRMemoryInfo,
-            needCanvasLock,
-            lockCanvasDrawing,
-            unlockCanvasDrawing,
-            StartCustomGattService,
-            StopCustomGattService,
-            GetCustomGattSessionStatus,
-            Connect2CustomGattService,
-            CloseCustomGattConnection,
-            ReadCustomGattService,
-            WriteCustomGattService,
-            StartScanBTLE,
-            StopScanBTLE,
-            design_to_pixel,
-            GetSoftwareLocalizationType,
-            ltrim_non_alphanum,
         })
     }
     pub unsafe fn __underflow(&self, arg1: *mut _IO_FILE) -> ::std::os::raw::c_int {
@@ -34920,459 +34059,670 @@ impl inkview {
             .as_ref()
             .expect("Expected function, got error."))(__prepare, __parent, __child)
     }
-    pub unsafe fn device_audio(&self) -> audio_id_t {
-        (self
-            .device_audio
-            .as_ref()
-            .expect("Expected function, got error."))()
+    pub unsafe fn setjmp(&self, __env: *mut __jmp_buf_tag) -> ::std::os::raw::c_int {
+        (self.setjmp.as_ref().expect("Expected function, got error."))(__env)
     }
-    pub unsafe fn device_has_audio(&self) -> bool {
+    pub unsafe fn _setjmp(&self, __env: *mut __jmp_buf_tag) -> ::std::os::raw::c_int {
         (self
-            .device_has_audio
+            ._setjmp
             .as_ref()
-            .expect("Expected function, got error."))()
+            .expect("Expected function, got error."))(__env)
     }
-    pub unsafe fn device_hp_detect_cfg(&self) -> *const hp_detect_cfg_t {
+    pub unsafe fn longjmp(&self, __env: *mut __jmp_buf_tag, __val: ::std::os::raw::c_int) -> ! {
         (self
-            .device_hp_detect_cfg
+            .longjmp
             .as_ref()
-            .expect("Expected function, got error."))()
+            .expect("Expected function, got error."))(__env, __val)
     }
-    pub unsafe fn init_hwconfig(&self) -> bool {
+    pub unsafe fn _longjmp(&self, __env: *mut __jmp_buf_tag, __val: ::std::os::raw::c_int) -> ! {
         (self
-            .init_hwconfig
+            ._longjmp
             .as_ref()
-            .expect("Expected function, got error."))()
+            .expect("Expected function, got error."))(__env, __val)
     }
-    pub unsafe fn device_ID(&self) -> device_id_t {
+    pub unsafe fn siglongjmp(&self, __env: *mut __jmp_buf_tag, __val: ::std::os::raw::c_int) -> ! {
         (self
-            .device_ID
+            .siglongjmp
             .as_ref()
-            .expect("Expected function, got error."))()
+            .expect("Expected function, got error."))(__env, __val)
     }
-    pub unsafe fn device_platform(&self) -> platform_id_t {
+    pub unsafe fn FT_Init_FreeType(&self, alibrary: *mut FT_Library) -> FT_Error {
         (self
-            .device_platform
+            .FT_Init_FreeType
             .as_ref()
-            .expect("Expected function, got error."))()
+            .expect("Expected function, got error."))(alibrary)
     }
-    pub unsafe fn device_number(&self) -> ::std::os::raw::c_uint {
+    pub unsafe fn FT_Done_FreeType(&self, library: FT_Library) -> FT_Error {
         (self
-            .device_number
+            .FT_Done_FreeType
             .as_ref()
-            .expect("Expected function, got error."))()
+            .expect("Expected function, got error."))(library)
     }
-    pub unsafe fn device_display(&self) -> display_id_t {
-        (self
-            .device_display
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_display_colormask(&self) -> colormask_t {
-        (self
-            .device_display_colormask
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_display_height(&self) -> ::std::os::raw::c_uint {
-        (self
-            .device_display_height
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_display_width(&self) -> ::std::os::raw::c_uint {
-        (self
-            .device_display_width
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_display_scanline(&self) -> ::std::os::raw::c_uint {
-        (self
-            .device_display_scanline
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_display_dpi(&self) -> ::std::os::raw::c_uint {
-        (self
-            .device_display_dpi
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_display_position(&self) -> u8 {
-        (self
-            .device_display_position
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_epdc(&self) -> epdc_id_t {
-        (self
-            .device_epdc
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_epdc_init(&self) -> *mut epdc_instance_t {
-        (self
-            .device_epdc_init
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_keyboard(&self) -> keyboard_id_t {
-        (self
-            .device_keyboard
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_touchpanel(&self) -> touchpanel_id_t {
-        (self
-            .device_touchpanel
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_has_touchpanel(&self) -> bool {
-        (self
-            .device_has_touchpanel
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_input_init(&self) -> ::std::os::raw::c_int {
-        (self
-            .device_input_init
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_input_read(
+    pub unsafe fn FT_New_Face(
         &self,
-        ie: *mut input_event,
-        devtype: *mut input_dev_e,
-        maxcount: ::std::os::raw::c_int,
-        timeout_ms: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int {
+        library: FT_Library,
+        filepathname: *const ::std::os::raw::c_char,
+        face_index: FT_Long,
+        aface: *mut FT_Face,
+    ) -> FT_Error {
         (self
-            .device_input_read
+            .FT_New_Face
             .as_ref()
-            .expect("Expected function, got error."))(ie, devtype, maxcount, timeout_ms)
+            .expect("Expected function, got error."))(
+            library, filepathname, face_index, aface
+        )
     }
-    pub unsafe fn device_keyboard_translate(
+    pub unsafe fn FT_New_Memory_Face(
         &self,
-        ev: *mut input_event,
-        keymask: *mut ::std::os::raw::c_ulong,
-    ) -> ::std::os::raw::c_int {
+        library: FT_Library,
+        file_base: *const FT_Byte,
+        file_size: FT_Long,
+        face_index: FT_Long,
+        aface: *mut FT_Face,
+    ) -> FT_Error {
         (self
-            .device_keyboard_translate
+            .FT_New_Memory_Face
             .as_ref()
-            .expect("Expected function, got error."))(ev, keymask)
+            .expect("Expected function, got error."))(
+            library, file_base, file_size, face_index, aface,
+        )
     }
-    pub unsafe fn device_keyboard_buttons(&self) -> ::std::os::raw::c_ulong {
-        (self
-            .device_keyboard_buttons
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_keyboard_state(&self) -> ::std::os::raw::c_ulong {
-        (self
-            .device_keyboard_state
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_touchpanel_getmatrix(&self) -> *const ::std::os::raw::c_int {
-        (self
-            .device_touchpanel_getmatrix
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn add_input_device(
+    pub unsafe fn FT_Open_Face(
         &self,
-        devpath: *const ::std::os::raw::c_char,
-        devtype: input_dev_e,
-    ) -> ::std::os::raw::c_int {
+        library: FT_Library,
+        args: *const FT_Open_Args,
+        face_index: FT_Long,
+        aface: *mut FT_Face,
+    ) -> FT_Error {
         (self
-            .add_input_device
+            .FT_Open_Face
             .as_ref()
-            .expect("Expected function, got error."))(devpath, devtype)
+            .expect("Expected function, got error."))(library, args, face_index, aface)
     }
-    pub unsafe fn remove_input_device(
+    pub unsafe fn FT_Attach_File(
         &self,
-        devpath: *const ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int {
+        face: FT_Face,
+        filepathname: *const ::std::os::raw::c_char,
+    ) -> FT_Error {
         (self
-            .remove_input_device
+            .FT_Attach_File
             .as_ref()
-            .expect("Expected function, got error."))(devpath)
+            .expect("Expected function, got error."))(face, filepathname)
     }
-    pub unsafe fn device_slider(&self) -> slider_id_t {
-        (self
-            .device_slider
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_has_slider(&self) -> bool {
-        (self
-            .device_has_slider
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_slider_cfg(&self) -> *const slider_cfg_t {
-        (self
-            .device_slider_cfg
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_gyroscope(&self) -> gyroscop_id_t {
-        (self
-            .device_gyroscope
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_gyroscope_placement(&self) -> u8 {
-        (self
-            .device_gyroscope_placement
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_has_gyroscope(&self) -> bool {
-        (self
-            .device_has_gyroscope
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_has_extcard(&self) -> bool {
-        (self
-            .device_has_extcard
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_usb(&self) -> usb_id_t {
-        (self
-            .device_usb
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_has_usb(&self) -> bool {
-        (self
-            .device_has_usb
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_has_usbhost(&self) -> bool {
-        (self
-            .device_has_usbhost
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_frontlight(&self) -> frontlight_id_t {
-        (self
-            .device_frontlight
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_has_frontlight(&self) -> bool {
-        (self
-            .device_has_frontlight
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_model(&self) -> *const ::std::os::raw::c_char {
-        (self
-            .device_model
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_serial_number(&self) -> *const ::std::os::raw::c_char {
-        (self
-            .device_serial_number
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_init_led(&self, cfg_led_state: bool) {
-        (self
-            .device_init_led
-            .as_ref()
-            .expect("Expected function, got error."))(cfg_led_state)
-    }
-    pub unsafe fn device_set_led(&self, value: ::std::os::raw::c_int) {
-        (self
-            .device_set_led
-            .as_ref()
-            .expect("Expected function, got error."))(value)
-    }
-    pub unsafe fn device_get_led(&self) -> ::std::os::raw::c_int {
-        (self
-            .device_get_led
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_battery_percent(&self) -> ::std::os::raw::c_int {
-        (self
-            .device_battery_percent
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_is_powered(&self) -> bool {
-        (self
-            .device_is_powered
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_set_bootcramfs_flag(&self, flag: bool) -> bool {
-        (self
-            .device_set_bootcramfs_flag
-            .as_ref()
-            .expect("Expected function, got error."))(flag)
-    }
-    pub unsafe fn device_reboot(&self) {
-        (self
-            .device_reboot
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_poweroff(&self) {
-        (self
-            .device_poweroff
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_frontlight_init(&self) -> *mut frontlight_ctrl {
-        (self
-            .device_frontlight_init
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_lightsensor(&self) -> lightsensor_id_t {
-        (self
-            .device_lightsensor
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_has_lightsensor(&self) -> bool {
-        (self
-            .device_has_lightsensor
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_bluetooth(&self) -> bluetooth_id_t {
-        (self
-            .device_bluetooth
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_has_bluetooth(&self) -> bool {
-        (self
-            .device_has_bluetooth
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_wifi(&self) -> wifi_id_t {
-        (self
-            .device_wifi
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_has_wifi(&self) -> bool {
-        (self
-            .device_has_wifi
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_gsm(&self) -> gsm_id_t {
-        (self
-            .device_gsm
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_has_gsm(&self) -> bool {
-        (self
-            .device_has_gsm
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn device_suspend(&self, deep: bool) -> bool {
-        (self
-            .device_suspend
-            .as_ref()
-            .expect("Expected function, got error."))(deep)
-    }
-    pub unsafe fn device_set_wakealarm(&self, seconds: ::std::os::raw::c_int) -> bool {
-        (self
-            .device_set_wakealarm
-            .as_ref()
-            .expect("Expected function, got error."))(seconds)
-    }
-    pub unsafe fn device_write_file(
+    pub unsafe fn FT_Attach_Stream(
         &self,
-        name: *const ::std::os::raw::c_char,
-        buf: *const ::std::os::raw::c_char,
-        size: ::std::os::raw::c_int,
-    ) -> bool {
+        face: FT_Face,
+        parameters: *mut FT_Open_Args,
+    ) -> FT_Error {
         (self
-            .device_write_file
+            .FT_Attach_Stream
             .as_ref()
-            .expect("Expected function, got error."))(name, buf, size)
+            .expect("Expected function, got error."))(face, parameters)
     }
-    pub unsafe fn device_write_file_int(
+    pub unsafe fn FT_Reference_Face(&self, face: FT_Face) -> FT_Error {
+        (self
+            .FT_Reference_Face
+            .as_ref()
+            .expect("Expected function, got error."))(face)
+    }
+    pub unsafe fn FT_Done_Face(&self, face: FT_Face) -> FT_Error {
+        (self
+            .FT_Done_Face
+            .as_ref()
+            .expect("Expected function, got error."))(face)
+    }
+    pub unsafe fn FT_Select_Size(&self, face: FT_Face, strike_index: FT_Int) -> FT_Error {
+        (self
+            .FT_Select_Size
+            .as_ref()
+            .expect("Expected function, got error."))(face, strike_index)
+    }
+    pub unsafe fn FT_Request_Size(&self, face: FT_Face, req: FT_Size_Request) -> FT_Error {
+        (self
+            .FT_Request_Size
+            .as_ref()
+            .expect("Expected function, got error."))(face, req)
+    }
+    pub unsafe fn FT_Set_Char_Size(
         &self,
-        name: *const ::std::os::raw::c_char,
-        v: ::std::os::raw::c_int,
-    ) -> bool {
+        face: FT_Face,
+        char_width: FT_F26Dot6,
+        char_height: FT_F26Dot6,
+        horz_resolution: FT_UInt,
+        vert_resolution: FT_UInt,
+    ) -> FT_Error {
         (self
-            .device_write_file_int
+            .FT_Set_Char_Size
             .as_ref()
-            .expect("Expected function, got error."))(name, v)
+            .expect("Expected function, got error."))(
+            face,
+            char_width,
+            char_height,
+            horz_resolution,
+            vert_resolution,
+        )
     }
-    pub unsafe fn device_read_bin_file(
+    pub unsafe fn FT_Set_Pixel_Sizes(
         &self,
-        name: *const ::std::os::raw::c_char,
-        buf: *mut ::std::os::raw::c_char,
-        size: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int {
+        face: FT_Face,
+        pixel_width: FT_UInt,
+        pixel_height: FT_UInt,
+    ) -> FT_Error {
         (self
-            .device_read_bin_file
+            .FT_Set_Pixel_Sizes
             .as_ref()
-            .expect("Expected function, got error."))(name, buf, size)
+            .expect("Expected function, got error."))(face, pixel_width, pixel_height)
     }
-    pub unsafe fn device_read_file(
+    pub unsafe fn FT_Load_Glyph(
         &self,
-        name: *const ::std::os::raw::c_char,
-        buf: *mut ::std::os::raw::c_char,
-        size: ::std::os::raw::c_int,
-    ) -> bool {
+        face: FT_Face,
+        glyph_index: FT_UInt,
+        load_flags: FT_Int32,
+    ) -> FT_Error {
         (self
-            .device_read_file
+            .FT_Load_Glyph
             .as_ref()
-            .expect("Expected function, got error."))(name, buf, size)
+            .expect("Expected function, got error."))(face, glyph_index, load_flags)
     }
-    pub unsafe fn device_read_file_int(
+    pub unsafe fn FT_Load_Char(
         &self,
-        name: *const ::std::os::raw::c_char,
-        deflt: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int {
+        face: FT_Face,
+        char_code: FT_ULong,
+        load_flags: FT_Int32,
+    ) -> FT_Error {
         (self
-            .device_read_file_int
+            .FT_Load_Char
             .as_ref()
-            .expect("Expected function, got error."))(name, deflt)
+            .expect("Expected function, got error."))(face, char_code, load_flags)
     }
-    pub unsafe fn device_power_led_cfg(&self) -> *const power_led_cfg_t {
+    pub unsafe fn FT_Set_Transform(
+        &self,
+        face: FT_Face,
+        matrix: *mut FT_Matrix,
+        delta: *mut FT_Vector,
+    ) {
         (self
-            .device_power_led_cfg
+            .FT_Set_Transform
             .as_ref()
-            .expect("Expected function, got error."))()
+            .expect("Expected function, got error."))(face, matrix, delta)
     }
-    pub unsafe fn device_storage_cfg(&self) -> *mut storage_cfg_t {
+    pub unsafe fn FT_Render_Glyph(
+        &self,
+        slot: FT_GlyphSlot,
+        render_mode: FT_Render_Mode,
+    ) -> FT_Error {
         (self
-            .device_storage_cfg
+            .FT_Render_Glyph
             .as_ref()
-            .expect("Expected function, got error."))()
+            .expect("Expected function, got error."))(slot, render_mode)
+    }
+    pub unsafe fn FT_Get_Kerning(
+        &self,
+        face: FT_Face,
+        left_glyph: FT_UInt,
+        right_glyph: FT_UInt,
+        kern_mode: FT_UInt,
+        akerning: *mut FT_Vector,
+    ) -> FT_Error {
+        (self
+            .FT_Get_Kerning
+            .as_ref()
+            .expect("Expected function, got error."))(
+            face,
+            left_glyph,
+            right_glyph,
+            kern_mode,
+            akerning,
+        )
+    }
+    pub unsafe fn FT_Get_Track_Kerning(
+        &self,
+        face: FT_Face,
+        point_size: FT_Fixed,
+        degree: FT_Int,
+        akerning: *mut FT_Fixed,
+    ) -> FT_Error {
+        (self
+            .FT_Get_Track_Kerning
+            .as_ref()
+            .expect("Expected function, got error."))(face, point_size, degree, akerning)
+    }
+    pub unsafe fn FT_Get_Glyph_Name(
+        &self,
+        face: FT_Face,
+        glyph_index: FT_UInt,
+        buffer: FT_Pointer,
+        buffer_max: FT_UInt,
+    ) -> FT_Error {
+        (self
+            .FT_Get_Glyph_Name
+            .as_ref()
+            .expect("Expected function, got error."))(face, glyph_index, buffer, buffer_max)
+    }
+    pub unsafe fn FT_Get_Postscript_Name(&self, face: FT_Face) -> *const ::std::os::raw::c_char {
+        (self
+            .FT_Get_Postscript_Name
+            .as_ref()
+            .expect("Expected function, got error."))(face)
+    }
+    pub unsafe fn FT_Select_Charmap(&self, face: FT_Face, encoding: FT_Encoding) -> FT_Error {
+        (self
+            .FT_Select_Charmap
+            .as_ref()
+            .expect("Expected function, got error."))(face, encoding)
+    }
+    pub unsafe fn FT_Set_Charmap(&self, face: FT_Face, charmap: FT_CharMap) -> FT_Error {
+        (self
+            .FT_Set_Charmap
+            .as_ref()
+            .expect("Expected function, got error."))(face, charmap)
+    }
+    pub unsafe fn FT_Get_Charmap_Index(&self, charmap: FT_CharMap) -> FT_Int {
+        (self
+            .FT_Get_Charmap_Index
+            .as_ref()
+            .expect("Expected function, got error."))(charmap)
+    }
+    pub unsafe fn FT_Get_Char_Index(&self, face: FT_Face, charcode: FT_ULong) -> FT_UInt {
+        (self
+            .FT_Get_Char_Index
+            .as_ref()
+            .expect("Expected function, got error."))(face, charcode)
+    }
+    pub unsafe fn FT_Get_First_Char(&self, face: FT_Face, agindex: *mut FT_UInt) -> FT_ULong {
+        (self
+            .FT_Get_First_Char
+            .as_ref()
+            .expect("Expected function, got error."))(face, agindex)
+    }
+    pub unsafe fn FT_Get_Next_Char(
+        &self,
+        face: FT_Face,
+        char_code: FT_ULong,
+        agindex: *mut FT_UInt,
+    ) -> FT_ULong {
+        (self
+            .FT_Get_Next_Char
+            .as_ref()
+            .expect("Expected function, got error."))(face, char_code, agindex)
+    }
+    pub unsafe fn FT_Get_Name_Index(&self, face: FT_Face, glyph_name: *mut FT_String) -> FT_UInt {
+        (self
+            .FT_Get_Name_Index
+            .as_ref()
+            .expect("Expected function, got error."))(face, glyph_name)
+    }
+    pub unsafe fn FT_Get_SubGlyph_Info(
+        &self,
+        glyph: FT_GlyphSlot,
+        sub_index: FT_UInt,
+        p_index: *mut FT_Int,
+        p_flags: *mut FT_UInt,
+        p_arg1: *mut FT_Int,
+        p_arg2: *mut FT_Int,
+        p_transform: *mut FT_Matrix,
+    ) -> FT_Error {
+        (self
+            .FT_Get_SubGlyph_Info
+            .as_ref()
+            .expect("Expected function, got error."))(
+            glyph,
+            sub_index,
+            p_index,
+            p_flags,
+            p_arg1,
+            p_arg2,
+            p_transform,
+        )
+    }
+    pub unsafe fn FT_Get_FSType_Flags(&self, face: FT_Face) -> FT_UShort {
+        (self
+            .FT_Get_FSType_Flags
+            .as_ref()
+            .expect("Expected function, got error."))(face)
+    }
+    pub unsafe fn FT_Face_GetCharVariantIndex(
+        &self,
+        face: FT_Face,
+        charcode: FT_ULong,
+        variantSelector: FT_ULong,
+    ) -> FT_UInt {
+        (self
+            .FT_Face_GetCharVariantIndex
+            .as_ref()
+            .expect("Expected function, got error."))(face, charcode, variantSelector)
+    }
+    pub unsafe fn FT_Face_GetCharVariantIsDefault(
+        &self,
+        face: FT_Face,
+        charcode: FT_ULong,
+        variantSelector: FT_ULong,
+    ) -> FT_Int {
+        (self
+            .FT_Face_GetCharVariantIsDefault
+            .as_ref()
+            .expect("Expected function, got error."))(face, charcode, variantSelector)
+    }
+    pub unsafe fn FT_Face_GetVariantSelectors(&self, face: FT_Face) -> *mut FT_UInt32 {
+        (self
+            .FT_Face_GetVariantSelectors
+            .as_ref()
+            .expect("Expected function, got error."))(face)
+    }
+    pub unsafe fn FT_Face_GetVariantsOfChar(
+        &self,
+        face: FT_Face,
+        charcode: FT_ULong,
+    ) -> *mut FT_UInt32 {
+        (self
+            .FT_Face_GetVariantsOfChar
+            .as_ref()
+            .expect("Expected function, got error."))(face, charcode)
+    }
+    pub unsafe fn FT_Face_GetCharsOfVariant(
+        &self,
+        face: FT_Face,
+        variantSelector: FT_ULong,
+    ) -> *mut FT_UInt32 {
+        (self
+            .FT_Face_GetCharsOfVariant
+            .as_ref()
+            .expect("Expected function, got error."))(face, variantSelector)
+    }
+    pub unsafe fn FT_MulDiv(&self, a: FT_Long, b: FT_Long, c: FT_Long) -> FT_Long {
+        (self
+            .FT_MulDiv
+            .as_ref()
+            .expect("Expected function, got error."))(a, b, c)
+    }
+    pub unsafe fn FT_MulFix(&self, a: FT_Long, b: FT_Long) -> FT_Long {
+        (self
+            .FT_MulFix
+            .as_ref()
+            .expect("Expected function, got error."))(a, b)
+    }
+    pub unsafe fn FT_DivFix(&self, a: FT_Long, b: FT_Long) -> FT_Long {
+        (self
+            .FT_DivFix
+            .as_ref()
+            .expect("Expected function, got error."))(a, b)
+    }
+    pub unsafe fn FT_RoundFix(&self, a: FT_Fixed) -> FT_Fixed {
+        (self
+            .FT_RoundFix
+            .as_ref()
+            .expect("Expected function, got error."))(a)
+    }
+    pub unsafe fn FT_CeilFix(&self, a: FT_Fixed) -> FT_Fixed {
+        (self
+            .FT_CeilFix
+            .as_ref()
+            .expect("Expected function, got error."))(a)
+    }
+    pub unsafe fn FT_FloorFix(&self, a: FT_Fixed) -> FT_Fixed {
+        (self
+            .FT_FloorFix
+            .as_ref()
+            .expect("Expected function, got error."))(a)
+    }
+    pub unsafe fn FT_Vector_Transform(&self, vec: *mut FT_Vector, matrix: *const FT_Matrix) {
+        (self
+            .FT_Vector_Transform
+            .as_ref()
+            .expect("Expected function, got error."))(vec, matrix)
+    }
+    pub unsafe fn FT_Library_Version(
+        &self,
+        library: FT_Library,
+        amajor: *mut FT_Int,
+        aminor: *mut FT_Int,
+        apatch: *mut FT_Int,
+    ) {
+        (self
+            .FT_Library_Version
+            .as_ref()
+            .expect("Expected function, got error."))(library, amajor, aminor, apatch)
+    }
+    pub unsafe fn FT_Face_CheckTrueTypePatents(&self, face: FT_Face) -> FT_Bool {
+        (self
+            .FT_Face_CheckTrueTypePatents
+            .as_ref()
+            .expect("Expected function, got error."))(face)
+    }
+    pub unsafe fn FT_Face_SetUnpatentedHinting(&self, face: FT_Face, value: FT_Bool) -> FT_Bool {
+        (self
+            .FT_Face_SetUnpatentedHinting
+            .as_ref()
+            .expect("Expected function, got error."))(face, value)
+    }
+    pub unsafe fn FT_Get_Glyph(&self, slot: FT_GlyphSlot, aglyph: *mut FT_Glyph) -> FT_Error {
+        (self
+            .FT_Get_Glyph
+            .as_ref()
+            .expect("Expected function, got error."))(slot, aglyph)
+    }
+    pub unsafe fn FT_Glyph_Copy(&self, source: FT_Glyph, target: *mut FT_Glyph) -> FT_Error {
+        (self
+            .FT_Glyph_Copy
+            .as_ref()
+            .expect("Expected function, got error."))(source, target)
+    }
+    pub unsafe fn FT_Glyph_Transform(
+        &self,
+        glyph: FT_Glyph,
+        matrix: *mut FT_Matrix,
+        delta: *mut FT_Vector,
+    ) -> FT_Error {
+        (self
+            .FT_Glyph_Transform
+            .as_ref()
+            .expect("Expected function, got error."))(glyph, matrix, delta)
+    }
+    pub unsafe fn FT_Glyph_Get_CBox(
+        &self,
+        glyph: FT_Glyph,
+        bbox_mode: FT_UInt,
+        acbox: *mut FT_BBox,
+    ) {
+        (self
+            .FT_Glyph_Get_CBox
+            .as_ref()
+            .expect("Expected function, got error."))(glyph, bbox_mode, acbox)
+    }
+    pub unsafe fn FT_Glyph_To_Bitmap(
+        &self,
+        the_glyph: *mut FT_Glyph,
+        render_mode: FT_Render_Mode,
+        origin: *mut FT_Vector,
+        destroy: FT_Bool,
+    ) -> FT_Error {
+        (self
+            .FT_Glyph_To_Bitmap
+            .as_ref()
+            .expect("Expected function, got error."))(
+            the_glyph, render_mode, origin, destroy
+        )
+    }
+    pub unsafe fn FT_Done_Glyph(&self, glyph: FT_Glyph) {
+        (self
+            .FT_Done_Glyph
+            .as_ref()
+            .expect("Expected function, got error."))(glyph)
+    }
+    pub unsafe fn FT_Matrix_Multiply(&self, a: *const FT_Matrix, b: *mut FT_Matrix) {
+        (self
+            .FT_Matrix_Multiply
+            .as_ref()
+            .expect("Expected function, got error."))(a, b)
+    }
+    pub unsafe fn FT_Matrix_Invert(&self, matrix: *mut FT_Matrix) -> FT_Error {
+        (self
+            .FT_Matrix_Invert
+            .as_ref()
+            .expect("Expected function, got error."))(matrix)
+    }
+    pub unsafe fn FT_Outline_Decompose(
+        &self,
+        outline: *mut FT_Outline,
+        func_interface: *const FT_Outline_Funcs,
+        user: *mut ::std::os::raw::c_void,
+    ) -> FT_Error {
+        (self
+            .FT_Outline_Decompose
+            .as_ref()
+            .expect("Expected function, got error."))(outline, func_interface, user)
+    }
+    pub unsafe fn FT_Outline_New(
+        &self,
+        library: FT_Library,
+        numPoints: FT_UInt,
+        numContours: FT_Int,
+        anoutline: *mut FT_Outline,
+    ) -> FT_Error {
+        (self
+            .FT_Outline_New
+            .as_ref()
+            .expect("Expected function, got error."))(
+            library, numPoints, numContours, anoutline
+        )
+    }
+    pub unsafe fn FT_Outline_New_Internal(
+        &self,
+        memory: FT_Memory,
+        numPoints: FT_UInt,
+        numContours: FT_Int,
+        anoutline: *mut FT_Outline,
+    ) -> FT_Error {
+        (self
+            .FT_Outline_New_Internal
+            .as_ref()
+            .expect("Expected function, got error."))(
+            memory, numPoints, numContours, anoutline
+        )
+    }
+    pub unsafe fn FT_Outline_Done(
+        &self,
+        library: FT_Library,
+        outline: *mut FT_Outline,
+    ) -> FT_Error {
+        (self
+            .FT_Outline_Done
+            .as_ref()
+            .expect("Expected function, got error."))(library, outline)
+    }
+    pub unsafe fn FT_Outline_Done_Internal(
+        &self,
+        memory: FT_Memory,
+        outline: *mut FT_Outline,
+    ) -> FT_Error {
+        (self
+            .FT_Outline_Done_Internal
+            .as_ref()
+            .expect("Expected function, got error."))(memory, outline)
+    }
+    pub unsafe fn FT_Outline_Check(&self, outline: *mut FT_Outline) -> FT_Error {
+        (self
+            .FT_Outline_Check
+            .as_ref()
+            .expect("Expected function, got error."))(outline)
+    }
+    pub unsafe fn FT_Outline_Get_CBox(&self, outline: *const FT_Outline, acbox: *mut FT_BBox) {
+        (self
+            .FT_Outline_Get_CBox
+            .as_ref()
+            .expect("Expected function, got error."))(outline, acbox)
+    }
+    pub unsafe fn FT_Outline_Translate(
+        &self,
+        outline: *const FT_Outline,
+        xOffset: FT_Pos,
+        yOffset: FT_Pos,
+    ) {
+        (self
+            .FT_Outline_Translate
+            .as_ref()
+            .expect("Expected function, got error."))(outline, xOffset, yOffset)
+    }
+    pub unsafe fn FT_Outline_Copy(
+        &self,
+        source: *const FT_Outline,
+        target: *mut FT_Outline,
+    ) -> FT_Error {
+        (self
+            .FT_Outline_Copy
+            .as_ref()
+            .expect("Expected function, got error."))(source, target)
+    }
+    pub unsafe fn FT_Outline_Transform(
+        &self,
+        outline: *const FT_Outline,
+        matrix: *const FT_Matrix,
+    ) {
+        (self
+            .FT_Outline_Transform
+            .as_ref()
+            .expect("Expected function, got error."))(outline, matrix)
+    }
+    pub unsafe fn FT_Outline_Embolden(
+        &self,
+        outline: *mut FT_Outline,
+        strength: FT_Pos,
+    ) -> FT_Error {
+        (self
+            .FT_Outline_Embolden
+            .as_ref()
+            .expect("Expected function, got error."))(outline, strength)
+    }
+    pub unsafe fn FT_Outline_EmboldenXY(
+        &self,
+        outline: *mut FT_Outline,
+        xstrength: FT_Pos,
+        ystrength: FT_Pos,
+    ) -> FT_Error {
+        (self
+            .FT_Outline_EmboldenXY
+            .as_ref()
+            .expect("Expected function, got error."))(outline, xstrength, ystrength)
+    }
+    pub unsafe fn FT_Outline_Reverse(&self, outline: *mut FT_Outline) {
+        (self
+            .FT_Outline_Reverse
+            .as_ref()
+            .expect("Expected function, got error."))(outline)
+    }
+    pub unsafe fn FT_Outline_Get_Bitmap(
+        &self,
+        library: FT_Library,
+        outline: *mut FT_Outline,
+        abitmap: *const FT_Bitmap,
+    ) -> FT_Error {
+        (self
+            .FT_Outline_Get_Bitmap
+            .as_ref()
+            .expect("Expected function, got error."))(library, outline, abitmap)
+    }
+    pub unsafe fn FT_Outline_Render(
+        &self,
+        library: FT_Library,
+        outline: *mut FT_Outline,
+        params: *mut FT_Raster_Params,
+    ) -> FT_Error {
+        (self
+            .FT_Outline_Render
+            .as_ref()
+            .expect("Expected function, got error."))(library, outline, params)
+    }
+    pub unsafe fn FT_Outline_Get_Orientation(&self, outline: *mut FT_Outline) -> FT_Orientation {
+        (self
+            .FT_Outline_Get_Orientation
+            .as_ref()
+            .expect("Expected function, got error."))(outline)
     }
     pub unsafe fn iv_get_default_font(&self, fonttype: FONT_TYPE) -> *mut ::std::os::raw::c_char {
         (self
             .iv_get_default_font
             .as_ref()
             .expect("Expected function, got error."))(fonttype)
-    }
-    pub unsafe fn GetHardwareDepth(&self) -> ::std::os::raw::c_int {
-        (self
-            .GetHardwareDepth
-            .as_ref()
-            .expect("Expected function, got error."))()
     }
     pub unsafe fn OpenScreen(&self) {
         (self
@@ -35731,153 +35081,6 @@ impl inkview {
             .as_ref()
             .expect("Expected function, got error."))(x0, y0, radius, color)
     }
-    pub unsafe fn DrawHorizontalSeparator(
-        &self,
-        x0: ::std::os::raw::c_int,
-        y: ::std::os::raw::c_int,
-        w: ::std::os::raw::c_int,
-        type_: ::std::os::raw::c_int,
-    ) {
-        (self
-            .DrawHorizontalSeparator
-            .as_ref()
-            .expect("Expected function, got error."))(x0, y, w, type_)
-    }
-    #[doc = " @brief DrawCircleQuarter - draw smooth circle (background is considered white)\n @param x0 - x coordinate of center\n @param y0 - y coordinate of center\n @param radius - outer radius ( so if width > 0 then inner radius is radius - width + 1)\n @param direction - part of circle to draw\n @param thickness - circle line width\n @param color - circle color\n @param bg_color - background color (use with flag ROUND_FILL_OUTSIDE_BG)"]
-    pub unsafe fn DrawCircleQuarter(
-        &self,
-        x0: ::std::os::raw::c_int,
-        y0: ::std::os::raw::c_int,
-        radius: ::std::os::raw::c_int,
-        direction: ::std::os::raw::c_int,
-        thickness: ::std::os::raw::c_int,
-        color: ::std::os::raw::c_int,
-        bg_color: ::std::os::raw::c_int,
-    ) {
-        (self
-            .DrawCircleQuarter
-            .as_ref()
-            .expect("Expected function, got error."))(
-            x0, y0, radius, direction, thickness, color, bg_color,
-        )
-    }
-    #[doc = " @brief GetDefaultFrameCertifiedThickness\n @param thickness - negative value - certified default thickness\n @return certified thickness according \"edef_thickness\""]
-    pub unsafe fn GetDefaultFrameCertifiedThickness(
-        &self,
-        thickness: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int {
-        (self
-            .GetDefaultFrameCertifiedThickness
-            .as_ref()
-            .expect("Expected function, got error."))(thickness)
-    }
-    #[doc = " @brief getDefaultFrameCertifiedRadius\n @param thickness - using line thickness for line (-1 - use certified default thickness)\n @return certified radius according \"thickness\""]
-    pub unsafe fn GetDefaultFrameCertifiedRadius(
-        &self,
-        thickness: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int {
-        (self
-            .GetDefaultFrameCertifiedRadius
-            .as_ref()
-            .expect("Expected function, got error."))(thickness)
-    }
-    #[doc = " @brief DrawFrameCertified - draw rect (x, y, w, h) with round corners\n call DrawFrameCertifiedEx(x, y, w, h, thickness, SIDE_ALL, ROUND_DEFAULT, RADIUS_DEPEND_ON_THICKNESS, BLACK, WHITE);"]
-    pub unsafe fn DrawFrameCertified(
-        &self,
-        x: ::std::os::raw::c_int,
-        y: ::std::os::raw::c_int,
-        w: ::std::os::raw::c_int,
-        h: ::std::os::raw::c_int,
-        thickness: ::std::os::raw::c_int,
-    ) {
-        (self
-            .DrawFrameCertified
-            .as_ref()
-            .expect("Expected function, got error."))(x, y, w, h, thickness)
-    }
-    #[doc = " @brief DrawFrameRectCertified - draw rect (x, y, w, h) with round corners\n call DrawFrameCertified(x, y, w, h, thickness);"]
-    pub unsafe fn DrawFrameRectCertified(&self, rect: irect, thickness: ::std::os::raw::c_int) {
-        (self
-            .DrawFrameRectCertified
-            .as_ref()
-            .expect("Expected function, got error."))(rect, thickness)
-    }
-    #[doc = " @brief DrawFrameCertified - draw rect straight lines on \"sides\" in rect(x, y, w, h) and with round corners in \"direction\"\n @param x, y, w, h - rect margins\n @param thickness - line thickness\n @param sides - draw straight line sides\n @param direction - round corners\n @param radius - round radius of corners (RADIUS_DEPEND_ON_THICKNESS - default value, negative value depend on THICKNESS_DEF_*)\n @param color - line color\n @param bg_color - background color (use with flag ROUND_FILL_OUTSIDE_BG)"]
-    pub unsafe fn DrawFrameCertifiedEx(
-        &self,
-        x: ::std::os::raw::c_int,
-        y: ::std::os::raw::c_int,
-        w: ::std::os::raw::c_int,
-        h: ::std::os::raw::c_int,
-        thickness: ::std::os::raw::c_int,
-        sides: ::std::os::raw::c_int,
-        direction: ::std::os::raw::c_int,
-        radius: ::std::os::raw::c_int,
-        color: ::std::os::raw::c_int,
-        bg_color: ::std::os::raw::c_int,
-    ) {
-        (self
-            .DrawFrameCertifiedEx
-            .as_ref()
-            .expect("Expected function, got error."))(
-            x, y, w, h, thickness, sides, direction, radius, color, bg_color,
-        )
-    }
-    #[doc = " @brief DrawFrameRectCertified - draw rect straight lines on \"sides\" in rect(x, y, w, h) and with round corners in \"direction\"\n @param rect - rect margins\n @param thickness - line thickness\n @param sides - draw straight line sides\n @param direction - round corners\n @param radius - round radius of corners (RADIUS_DEPEND_ON_THICKNESS - default value, negative value depend on THICKNESS_DEF_*)\n @param color - line color\n @param bg_color - background color (use with flag ROUND_FILL_OUTSIDE_BG)"]
-    pub unsafe fn DrawFrameRectCertifiedEx(
-        &self,
-        rect: irect,
-        thickness: ::std::os::raw::c_int,
-        sides: ::std::os::raw::c_int,
-        direction: ::std::os::raw::c_int,
-        radius: ::std::os::raw::c_int,
-        color: ::std::os::raw::c_int,
-        bg_color: ::std::os::raw::c_int,
-    ) {
-        (self
-            .DrawFrameRectCertifiedEx
-            .as_ref()
-            .expect("Expected function, got error."))(
-            rect, thickness, sides, direction, radius, color, bg_color,
-        )
-    }
-    #[doc = " @brief processCircle - call cb for each circle line once (order of lines is not specified).\n    cb is (*)(void* context, int x_from, int y, int x_to, int re, int is_first)\n    x_from, x_to - left and right edge of circle in line y\n @param center_x, center_y - center of circle\n @param radius - radius\n @param context - context to pass to cb"]
-    pub unsafe fn processCircle(
-        &self,
-        center_x: ::std::os::raw::c_int,
-        center_y: ::std::os::raw::c_int,
-        radius: ::std::os::raw::c_int,
-        context: *mut ::std::os::raw::c_void,
-        cb: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *mut ::std::os::raw::c_void,
-                arg2: ::std::os::raw::c_int,
-                arg3: ::std::os::raw::c_int,
-                arg4: ::std::os::raw::c_int,
-                arg5: ::std::os::raw::c_int,
-                arg6: ::std::os::raw::c_int,
-            ),
-        >,
-    ) {
-        (self
-            .processCircle
-            .as_ref()
-            .expect("Expected function, got error."))(
-            center_x, center_y, radius, context, cb
-        )
-    }
-    pub unsafe fn invertCircle(
-        &self,
-        center_x: ::std::os::raw::c_int,
-        center_y: ::std::os::raw::c_int,
-        radius: ::std::os::raw::c_int,
-        canvas: *mut icanvas,
-    ) {
-        (self
-            .invertCircle
-            .as_ref()
-            .expect("Expected function, got error."))(center_x, center_y, radius, canvas)
-    }
     pub unsafe fn DrawPickOut(
         &self,
         x: ::std::os::raw::c_int,
@@ -36050,24 +35253,6 @@ impl inkview {
             x, y, w, h, icon, title, flags, clientarea
         )
     }
-    pub unsafe fn DrawFrameDialog(
-        &self,
-        x: ::std::os::raw::c_int,
-        y: ::std::os::raw::c_int,
-        w: ::std::os::raw::c_int,
-        h: ::std::os::raw::c_int,
-        icon: *mut ibitmap,
-        title: *mut ::std::os::raw::c_char,
-        flags: ::std::os::raw::c_int,
-        clientarea: *mut irect,
-    ) {
-        (self
-            .DrawFrameDialog
-            .as_ref()
-            .expect("Expected function, got error."))(
-            x, y, w, h, icon, title, flags, clientarea
-        )
-    }
     pub unsafe fn CheckFramePointer(
         &self,
         x: ::std::os::raw::c_int,
@@ -36199,44 +35384,6 @@ impl inkview {
             .as_ref()
             .expect("Expected function, got error."))(rect, percent)
     }
-    #[doc = " @brief TransparentGradientData, TransparentGradient, TransparentGradientRect - Draw gradient transparent\n @param x\n @param y\n @param w\n @param h\n @param direction - gradient direction"]
-    pub unsafe fn TransparentGradientData(
-        &self,
-        data: *mut ::std::os::raw::c_uchar,
-        depth: ::std::os::raw::c_int,
-        scanline: ::std::os::raw::c_int,
-        x: ::std::os::raw::c_int,
-        y: ::std::os::raw::c_int,
-        w: ::std::os::raw::c_int,
-        h: ::std::os::raw::c_int,
-        direction: ::std::os::raw::c_int,
-    ) {
-        (self
-            .TransparentGradientData
-            .as_ref()
-            .expect("Expected function, got error."))(
-            data, depth, scanline, x, y, w, h, direction
-        )
-    }
-    pub unsafe fn TransparentGradient(
-        &self,
-        x: ::std::os::raw::c_int,
-        y: ::std::os::raw::c_int,
-        w: ::std::os::raw::c_int,
-        h: ::std::os::raw::c_int,
-        direction: ::std::os::raw::c_int,
-    ) {
-        (self
-            .TransparentGradient
-            .as_ref()
-            .expect("Expected function, got error."))(x, y, w, h, direction)
-    }
-    pub unsafe fn TransparentGradientRect(&self, rect: irect, direction: ::std::os::raw::c_int) {
-        (self
-            .TransparentGradientRect
-            .as_ref()
-            .expect("Expected function, got error."))(rect, direction)
-    }
     pub unsafe fn LoadBitmap(&self, filename: *const ::std::os::raw::c_char) -> *mut ibitmap {
         (self
             .LoadBitmap
@@ -36262,20 +35409,6 @@ impl inkview {
             .SaveBitmap
             .as_ref()
             .expect("Expected function, got error."))(filename, bm)
-    }
-    pub unsafe fn BitmapFromCanvas(
-        &self,
-        x: ::std::os::raw::c_int,
-        y: ::std::os::raw::c_int,
-        w: ::std::os::raw::c_int,
-        h: ::std::os::raw::c_int,
-        rotate: ::std::os::raw::c_int,
-        canvas: *mut icanvas,
-    ) -> *mut ibitmap {
-        (self
-            .BitmapFromCanvas
-            .as_ref()
-            .expect("Expected function, got error."))(x, y, w, h, rotate, canvas)
     }
     pub unsafe fn BitmapFromScreen(
         &self,
@@ -36382,105 +35515,6 @@ impl inkview {
             path, width, height, proportional, dither
         )
     }
-    pub unsafe fn GetImageType(&self, path: *const ::std::os::raw::c_char) -> ImageSignatureType {
-        (self
-            .GetImageType
-            .as_ref()
-            .expect("Expected function, got error."))(path)
-    }
-    pub unsafe fn LoadImageToFormat(
-        &self,
-        path: *const ::std::os::raw::c_char,
-        format: PixelFormat,
-    ) -> *mut ibitmap {
-        (self
-            .LoadImageToFormat
-            .as_ref()
-            .expect("Expected function, got error."))(path, format)
-    }
-    pub unsafe fn LoadGIFToFormat(
-        &self,
-        path: *const ::std::os::raw::c_char,
-        format: PixelFormat,
-    ) -> *mut ibitmap {
-        (self
-            .LoadGIFToFormat
-            .as_ref()
-            .expect("Expected function, got error."))(path, format)
-    }
-    pub unsafe fn LoadPNGToFormat(
-        &self,
-        path: *const ::std::os::raw::c_char,
-        format: PixelFormat,
-    ) -> *mut ibitmap {
-        (self
-            .LoadPNGToFormat
-            .as_ref()
-            .expect("Expected function, got error."))(path, format)
-    }
-    pub unsafe fn LoadJPEGToFormat(
-        &self,
-        path: *const ::std::os::raw::c_char,
-        format: PixelFormat,
-    ) -> *mut ibitmap {
-        (self
-            .LoadJPEGToFormat
-            .as_ref()
-            .expect("Expected function, got error."))(path, format)
-    }
-    pub unsafe fn LoadTiffToFormat(
-        &self,
-        path: *const ::std::os::raw::c_char,
-        format: PixelFormat,
-    ) -> *mut ibitmap {
-        (self
-            .LoadTiffToFormat
-            .as_ref()
-            .expect("Expected function, got error."))(path, format)
-    }
-    pub unsafe fn NewBitmapWithFormat(
-        &self,
-        width: ::std::os::raw::c_int,
-        height: ::std::os::raw::c_int,
-        format: PixelFormat,
-    ) -> *mut ibitmap {
-        (self
-            .NewBitmapWithFormat
-            .as_ref()
-            .expect("Expected function, got error."))(width, height, format)
-    }
-    pub unsafe fn LoadPNG8(&self, path: *const ::std::os::raw::c_char) -> *mut ibitmap {
-        (self
-            .LoadPNG8
-            .as_ref()
-            .expect("Expected function, got error."))(path)
-    }
-    pub unsafe fn LoadJPEG8(&self, path: *const ::std::os::raw::c_char) -> *mut ibitmap {
-        (self
-            .LoadJPEG8
-            .as_ref()
-            .expect("Expected function, got error."))(path)
-    }
-    pub unsafe fn NewBitmap8(
-        &self,
-        width: ::std::os::raw::c_int,
-        height: ::std::os::raw::c_int,
-    ) -> *mut ibitmap {
-        (self
-            .NewBitmap8
-            .as_ref()
-            .expect("Expected function, got error."))(width, height)
-    }
-    pub unsafe fn NewBitmap24(
-        &self,
-        width: ::std::os::raw::c_int,
-        height: ::std::os::raw::c_int,
-    ) -> *mut ibitmap {
-        (self
-            .NewBitmap24
-            .as_ref()
-            .expect("Expected function, got error."))(width, height)
-    }
     pub unsafe fn SavePNG(
         &self,
         path: *const ::std::os::raw::c_char,
@@ -36521,27 +35555,6 @@ impl inkview {
             .as_ref()
             .expect("Expected function, got error."))(bm, offset)
     }
-    pub unsafe fn FindAverageBitmapColor(
-        &self,
-        bmp: *const ibitmap,
-        side: ::std::os::raw::c_int,
-        percent: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int {
-        (self
-            .FindAverageBitmapColor
-            .as_ref()
-            .expect("Expected function, got error."))(bmp, side, percent)
-    }
-    pub unsafe fn ApplyContrastToBitmap8(
-        &self,
-        bmp: *mut ibitmap,
-        contrast: ::std::os::raw::c_int,
-    ) {
-        (self
-            .ApplyContrastToBitmap8
-            .as_ref()
-            .expect("Expected function, got error."))(bmp, contrast)
-    }
     #[doc = " @brief BitmapStretchCopy function copies a part of an other bitmap to the newly created bitmap\n @param bmp source image\n @param sx, @param sy, @param sw, @param sh are coordinates of source image part to be copied\n @param width and @param height are size of the new bitmap\n @return a pointer of the new bitmap"]
     pub unsafe fn BitmapStretchCopy(
         &self,
@@ -36557,176 +35570,6 @@ impl inkview {
             .BitmapStretchCopy
             .as_ref()
             .expect("Expected function, got error."))(bmp, sx, sy, sw, sh, width, height)
-    }
-    pub unsafe fn BitmapStretchProportionally(
-        &self,
-        bmp: *const ibitmap,
-        width: ::std::os::raw::c_int,
-        height: ::std::os::raw::c_int,
-    ) -> *mut ibitmap {
-        (self
-            .BitmapStretchProportionally
-            .as_ref()
-            .expect("Expected function, got error."))(bmp, width, height)
-    }
-    pub unsafe fn BitmapStretchFill(
-        &self,
-        bmp: *const ibitmap,
-        width: ::std::os::raw::c_int,
-        height: ::std::os::raw::c_int,
-    ) -> *mut ibitmap {
-        (self
-            .BitmapStretchFill
-            .as_ref()
-            .expect("Expected function, got error."))(bmp, width, height)
-    }
-    #[doc = " @brief adjustBitmapDefault make default ajustment of bitmap with adjustBitmapWithSaturationBrightnessAndDithering\n @param bmp - bitmap to make adjustment"]
-    pub unsafe fn adjustBitmapDefault(&self, bmp: *mut ibitmap) {
-        (self
-            .adjustBitmapDefault
-            .as_ref()
-            .expect("Expected function, got error."))(bmp)
-    }
-    #[doc = " @brief adjustBitmapWithSaturationBrightnessAndDithering - change saturation and value of bitmap pixels (as in HVS color representation)\n        and optionally apply ordered dithering\n @param bmp - bitmap to adjust\n @param saturation_table - table with 256 elements each element - what substitute corresponding saturation with.\n @param value_table - same as saturation table but fur value\n @param dithering - apply dithering or not."]
-    pub unsafe fn adjustBitmapWithSaturationBrightnessAndDithering(
-        &self,
-        bmp: *mut ibitmap,
-        saturation_table: *mut ::std::os::raw::c_int,
-        value_table: *mut ::std::os::raw::c_int,
-        dithering: bool,
-    ) {
-        (self
-            .adjustBitmapWithSaturationBrightnessAndDithering
-            .as_ref()
-            .expect("Expected function, got error."))(
-            bmp, saturation_table, value_table, dithering
-        )
-    }
-    pub unsafe fn adjustAreaWithSaturationBrightnessAndDithering(
-        &self,
-        data: *mut ::std::os::raw::c_uchar,
-        scanline: ::std::os::raw::c_int,
-        width: ::std::os::raw::c_int,
-        height: ::std::os::raw::c_int,
-        saturation_table: *mut ::std::os::raw::c_int,
-        value_table: *mut ::std::os::raw::c_int,
-        dithering: bool,
-    ) {
-        (self
-            .adjustAreaWithSaturationBrightnessAndDithering
-            .as_ref()
-            .expect("Expected function, got error."))(
-            data,
-            scanline,
-            width,
-            height,
-            saturation_table,
-            value_table,
-            dithering,
-        )
-    }
-    pub unsafe fn adjustAreaWithLabColorsSaturation(
-        &self,
-        data: *mut ::std::os::raw::c_uchar,
-        scanline: ::std::os::raw::c_int,
-        width: ::std::os::raw::c_int,
-        height: ::std::os::raw::c_int,
-        koef: f64,
-    ) {
-        (self
-            .adjustAreaWithLabColorsSaturation
-            .as_ref()
-            .expect("Expected function, got error."))(data, scanline, width, height, koef)
-    }
-    pub unsafe fn adjustAreaWithVibrance(
-        &self,
-        data: *mut ::std::os::raw::c_uchar,
-        scanline: ::std::os::raw::c_int,
-        width: ::std::os::raw::c_int,
-        height: ::std::os::raw::c_int,
-        vibrance: f32,
-    ) {
-        (self
-            .adjustAreaWithVibrance
-            .as_ref()
-            .expect("Expected function, got error."))(
-            data, scanline, width, height, vibrance
-        )
-    }
-    pub unsafe fn adjustAreaDefault(
-        &self,
-        data: *mut ::std::os::raw::c_uchar,
-        scanline: ::std::os::raw::c_int,
-        width: ::std::os::raw::c_int,
-        height: ::std::os::raw::c_int,
-    ) {
-        (self
-            .adjustAreaDefault
-            .as_ref()
-            .expect("Expected function, got error."))(data, scanline, width, height)
-    }
-    pub unsafe fn ditherAndAdjustArea(
-        &self,
-        data: *mut ::std::os::raw::c_uchar,
-        scanline: ::std::os::raw::c_int,
-        width: ::std::os::raw::c_int,
-        height: ::std::os::raw::c_int,
-        params: *mut AdjustmentParams,
-    ) {
-        (self
-            .ditherAndAdjustArea
-            .as_ref()
-            .expect("Expected function, got error."))(data, scanline, width, height, params)
-    }
-    pub unsafe fn adjustAreaWithBrightnessContrastGamma(
-        &self,
-        data: *mut ::std::os::raw::c_uchar,
-        scanline: ::std::os::raw::c_int,
-        width: ::std::os::raw::c_int,
-        height: ::std::os::raw::c_int,
-        brightness: f64,
-        contrast: f64,
-        gamma: f64,
-    ) {
-        (self
-            .adjustAreaWithBrightnessContrastGamma
-            .as_ref()
-            .expect("Expected function, got error."))(
-            data, scanline, width, height, brightness, contrast, gamma,
-        )
-    }
-    pub unsafe fn getBrightnessContrastGammaAdjustParams(
-        &self,
-        brightness: *mut ::std::os::raw::c_int,
-        contrast: *mut ::std::os::raw::c_int,
-        gamma: *mut ::std::os::raw::c_int,
-    ) {
-        (self
-            .getBrightnessContrastGammaAdjustParams
-            .as_ref()
-            .expect("Expected function, got error."))(brightness, contrast, gamma)
-    }
-    pub unsafe fn bm_stretch8(
-        &self,
-        in_: *mut ::std::os::raw::c_uchar,
-        ix: ::std::os::raw::c_int,
-        iy: ::std::os::raw::c_int,
-        iw: ::std::os::raw::c_int,
-        ih: ::std::os::raw::c_int,
-        ilw: ::std::os::raw::c_int,
-        out: *mut ::std::os::raw::c_uchar,
-        ox: ::std::os::raw::c_int,
-        oy: ::std::os::raw::c_int,
-        ow: ::std::os::raw::c_int,
-        oh: ::std::os::raw::c_int,
-        olw: ::std::os::raw::c_int,
-    ) {
-        (self
-            .bm_stretch8
-            .as_ref()
-            .expect("Expected function, got error."))(
-            in_, ix, iy, iw, ih, ilw, out, ox, oy, ow, oh, olw,
-        )
     }
     pub unsafe fn DrawBitmap(
         &self,
@@ -36861,18 +35704,6 @@ impl inkview {
             .OpenFont
             .as_ref()
             .expect("Expected function, got error."))(name, size, aa)
-    }
-    pub unsafe fn OpenFontEx(
-        &self,
-        name: *const ::std::os::raw::c_char,
-        size: ::std::os::raw::c_int,
-        line_height: ::std::os::raw::c_int,
-        aa: ::std::os::raw::c_int,
-    ) -> *mut ifont {
-        (self
-            .OpenFontEx
-            .as_ref()
-            .expect("Expected function, got error."))(name, size, line_height, aa)
     }
     pub unsafe fn CloseFont(&self, f: *mut ifont) {
         (self
@@ -37212,12 +36043,6 @@ impl inkview {
             .WaitForUpdateComplete
             .as_ref()
             .expect("Expected function, got error."))()
-    }
-    pub unsafe fn GetWaveformTimes(&self, result: *mut ::std::os::raw::c_ushort) {
-        (self
-            .GetWaveformTimes
-            .as_ref()
-            .expect("Expected function, got error."))(result)
     }
     pub unsafe fn SetEventHandler(&self, hproc: iv_handler) -> iv_handler {
         (self
@@ -37561,36 +36386,6 @@ impl inkview {
             title, buffer, maxlen, flags, hproc, cb_data
         )
     }
-    pub unsafe fn KeyboardProcessTextChanges(
-        &self,
-        text_before: *const ::std::os::raw::c_char,
-        text_after: *const ::std::os::raw::c_char,
-    ) {
-        (self
-            .KeyboardProcessTextChanges
-            .as_ref()
-            .expect("Expected function, got error."))(text_before, text_after)
-    }
-    pub unsafe fn KeyboardNotifyTextChanges(
-        &self,
-        text_before: *const ::std::os::raw::c_char,
-        text_after: *const ::std::os::raw::c_char,
-    ) {
-        (self
-            .KeyboardNotifyTextChanges
-            .as_ref()
-            .expect("Expected function, got error."))(text_before, text_after)
-    }
-    pub unsafe fn setKeyboardTextChangeCallback(
-        &self,
-        cb: keyboard_text_change_callback,
-        context: *mut ::std::os::raw::c_void,
-    ) {
-        (self
-            .setKeyboardTextChangeCallback
-            .as_ref()
-            .expect("Expected function, got error."))(cb, context)
-    }
     pub unsafe fn DrawKeyboard(&self) {
         (self
             .DrawKeyboard
@@ -37641,12 +36436,6 @@ impl inkview {
             .IsKeyboardOpened
             .as_ref()
             .expect("Expected function, got error."))()
-    }
-    pub unsafe fn setDrawTopLine(&self, kbd_draw_top_line_: ::std::os::raw::c_int) {
-        (self
-            .setDrawTopLine
-            .as_ref()
-            .expect("Expected function, got error."))(kbd_draw_top_line_)
     }
     pub unsafe fn OpenPageSelector(&self, hproc: iv_pageselecthandler) {
         (self
@@ -37754,6 +36543,18 @@ impl inkview {
             .expect("Expected function, got error."))(
             page, position, bmklist, poslist, bmkcount, maxbmks, hproc,
         )
+    }
+    pub unsafe fn OpenContents(
+        &self,
+        toc: *mut tocentry,
+        count: ::std::os::raw::c_int,
+        position: ::std::os::raw::c_longlong,
+        hproc: iv_tochandler,
+    ) {
+        (self
+            .OpenContents
+            .as_ref()
+            .expect("Expected function, got error."))(toc, count, position, hproc)
     }
     pub unsafe fn OpenRotateBox(&self, hproc: iv_rotatehandler) {
         (self
@@ -37982,12 +36783,6 @@ impl inkview {
             .as_ref()
             .expect("Expected function, got error."))(key)
     }
-    pub unsafe fn SetPanelTransparent(&self, value: ::std::os::raw::c_int) {
-        (self
-            .SetPanelTransparent
-            .as_ref()
-            .expect("Expected function, got error."))(value)
-    }
     #[doc = " @brief StartPanelProgress start gui animation on panel\n @param progress currently not used, but may be used in future, values between 0 - 100\n after @param timeoutMs will be automatically stoped, negative value meens animation will run always"]
     pub unsafe fn StartPanelProgress(
         &self,
@@ -38005,16 +36800,6 @@ impl inkview {
             .StopPanelProgress
             .as_ref()
             .expect("Expected function, got error."))()
-    }
-    pub unsafe fn ShowPanelPackageProgress(
-        &self,
-        progress: ::std::os::raw::c_int,
-        timeout: ::std::os::raw::c_int,
-    ) {
-        (self
-            .ShowPanelPackageProgress
-            .as_ref()
-            .expect("Expected function, got error."))(progress, timeout)
     }
     pub unsafe fn DrawPanel(
         &self,
@@ -38094,6 +36879,17 @@ impl inkview {
             icon, text, title, percent, readingModeEnable
         )
     }
+    pub unsafe fn DrawTabs(
+        &self,
+        icon: *const ibitmap,
+        current: ::std::os::raw::c_int,
+        total: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int {
+        (self
+            .DrawTabs
+            .as_ref()
+            .expect("Expected function, got error."))(icon, current, total)
+    }
     #[doc = " @brief OpenControlPanel calls control panel application\n @param ctx is parameter wich contains\n special panel configurations options"]
     pub unsafe fn OpenControlPanel(&self, ctx: *mut control_panel) {
         (self
@@ -38104,12 +36900,6 @@ impl inkview {
     pub unsafe fn PanelHeight(&self) -> ::std::os::raw::c_int {
         (self
             .PanelHeight
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn PanelHeightFBOffset(&self) -> ::std::os::raw::c_int {
-        (self
-            .PanelHeightFBOffset
             .as_ref()
             .expect("Expected function, got error."))()
     }
@@ -38285,17 +37075,6 @@ impl inkview {
             .as_ref()
             .expect("Expected function, got error."))(cfg, name, deflt)
     }
-    pub unsafe fn ReadLongLong(
-        &self,
-        cfg: *mut iconfig,
-        name: *const ::std::os::raw::c_char,
-        deflt: ::std::os::raw::c_longlong,
-    ) -> ::std::os::raw::c_longlong {
-        (self
-            .ReadLongLong
-            .as_ref()
-            .expect("Expected function, got error."))(cfg, name, deflt)
-    }
     pub unsafe fn ReadString(
         &self,
         cfg: *mut iconfig,
@@ -38326,17 +37105,6 @@ impl inkview {
     ) {
         (self
             .WriteInt
-            .as_ref()
-            .expect("Expected function, got error."))(cfg, name, value)
-    }
-    pub unsafe fn WriteLongLong(
-        &self,
-        cfg: *mut iconfig,
-        name: *const ::std::os::raw::c_char,
-        value: ::std::os::raw::c_longlong,
-    ) {
-        (self
-            .WriteLongLong
             .as_ref()
             .expect("Expected function, got error."))(cfg, name, value)
     }
@@ -38470,23 +37238,6 @@ impl inkview {
             .as_ref()
             .expect("Expected function, got error."))(cfg)
     }
-    pub unsafe fn EnumerateConfig(
-        &self,
-        cfg: *mut iconfig,
-        func: ::std::option::Option<
-            unsafe extern "C" fn(
-                name: *mut ::std::os::raw::c_char,
-                value: *mut ::std::os::raw::c_void,
-                userdata: *mut ::std::os::raw::c_void,
-            ) -> ::std::os::raw::c_int,
-        >,
-        user_data: *mut ::std::os::raw::c_void,
-    ) {
-        (self
-            .EnumerateConfig
-            .as_ref()
-            .expect("Expected function, got error."))(cfg, func, user_data)
-    }
     #[doc = " @brief GetKeyMapping used to read TEXT key mapping from default config\n @param act0 and @param act1 are are arrays of CSTtring wich look like \"@KA_...\"\n FOR EXAMPLE act0[KEY_PREV] will contain an action wich should happen when user PRESSES IV_KEY_PREV,\n act1[KEY_PREV] will contain an action wich should happen when user HOLS IV_KEY_PREV,\n IMPORTANT !! pointers are not always valid, use strdup to handle it"]
     pub unsafe fn GetKeyMapping(
         &self,
@@ -38510,19 +37261,6 @@ impl inkview {
             .GetKeyMappingEx
             .as_ref()
             .expect("Expected function, got error."))(what, act0, act1, count)
-    }
-    pub unsafe fn GetKeyMappingExtended(
-        &self,
-        type_: keymap_t,
-        act0: *mut *const ::std::os::raw::c_char,
-        act1: *mut *const ::std::os::raw::c_char,
-        act2: *mut *const ::std::os::raw::c_char,
-        count: ::std::os::raw::c_int,
-    ) {
-        (self
-            .GetKeyMappingExtended
-            .as_ref()
-            .expect("Expected function, got error."))(type_, act0, act1, act2, count)
     }
     pub unsafe fn AdjustDirectionKeys(&self, key: ::std::os::raw::c_int) -> ::std::os::raw::c_int {
         (self
@@ -38551,7 +37289,7 @@ impl inkview {
     pub unsafe fn NewTask(
         &self,
         path: *const ::std::os::raw::c_char,
-        args: *const *const ::std::os::raw::c_char,
+        args: *const *mut ::std::os::raw::c_char,
         appname: *const ::std::os::raw::c_char,
         name: *const ::std::os::raw::c_char,
         icon: *const ibitmap,
@@ -38584,19 +37322,6 @@ impl inkview {
             flags,
             run_as_reader_if_needed,
         )
-    }
-    #[doc = " @brief OpenTask runs child process or make active existing process of specified exe if exist\n @param path - path/to/exe\n @param argc - args ptr\n @param argv - args count\n @param flags - TASK_* macros\n @return 0 if created | 1 if already exist | -1 if fail"]
-    pub unsafe fn OpenTask(
-        &self,
-        path: *const ::std::os::raw::c_char,
-        argc: ::std::os::raw::c_int,
-        argv: *const *const ::std::os::raw::c_char,
-        flags: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int {
-        (self
-            .OpenTask
-            .as_ref()
-            .expect("Expected function, got error."))(path, argc, argv, flags)
     }
     pub unsafe fn NewSubtask(&self, name: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int {
         (self
@@ -39364,12 +38089,6 @@ impl inkview {
             type_, param, data, inlen, outlen, timeout_ms
         )
     }
-    pub unsafe fn currentLang(&self) -> *const ::std::os::raw::c_char {
-        (self
-            .currentLang
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
     pub unsafe fn EnumLanguages(&self) -> *mut *mut ::std::os::raw::c_char {
         (self
             .EnumLanguages
@@ -39419,19 +38138,6 @@ impl inkview {
             .GetLangTextPlural
             .as_ref()
             .expect("Expected function, got error."))(s, amount)
-    }
-    #[doc = " localized value by key should be in part of \"strftime\" format\n return localized time in variable \"buf\" or empty string if \"key\" not found\n return value \"0\" - ok\n return value \"-1\" - no key found (key may be a format)\n return value \"-2\" - not found any replacement of time format\n return value \"-3\" - result not fit in buffer\n return value \"-100\" - not supported format\n Notice: function try to add \"_12\" to key if AM/PM time format turned on in settings\n Requirments for keys:\n \"@TimeFormat\" + <key_words1> + <options> + <key_words2> + <am.pm>\n <options>:\n \"Date\"/\"SDate\" - month name and month day number / short month name and month day number (ex. January/Jan)\n \"Time\" - hours and minutes\n \"WDay\"/\"SWDay\" - Week day name / short week day name (ex. Monday/Mon)\n \"Year\" - year number\n others - other options like \"Seconds\", \"Month\", \"SMonth\", \"SMDay\", etc\n <key_words1>, <key_words2> - optional if need for detalize key\n <am.pm> - if AM/PM time format turned on in settings, auto add \"_12\" in function."]
-    pub unsafe fn GetLangTime(
-        &self,
-        buf: *mut ::std::os::raw::c_char,
-        size: ::std::os::raw::c_int,
-        key: *const ::std::os::raw::c_char,
-        t: *mut tm,
-    ) -> ::std::os::raw::c_int {
-        (self
-            .GetLangTime
-            .as_ref()
-            .expect("Expected function, got error."))(buf, size, key, t)
     }
     pub unsafe fn SetRTLBook(&self, rtl: ::std::os::raw::c_int) {
         (self
@@ -39677,15 +38383,6 @@ impl inkview {
             .as_ref()
             .expect("Expected function, got error."))(name, deflt)
     }
-    pub unsafe fn GetLayoutFromTheme(
-        &self,
-        name: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char {
-        (self
-            .GetLayoutFromTheme
-            .as_ref()
-            .expect("Expected function, got error."))(name)
-    }
     pub unsafe fn GetThemeFont(
         &self,
         name: *const ::std::os::raw::c_char,
@@ -39777,18 +38474,6 @@ impl inkview {
             .GetBookCover
             .as_ref()
             .expect("Expected function, got error."))(name, width, height)
-    }
-    pub unsafe fn GetBookCoverEx(
-        &self,
-        name: *const ::std::os::raw::c_char,
-        width: ::std::os::raw::c_int,
-        height: ::std::os::raw::c_int,
-        pixel_format: PixelFormat,
-    ) -> *mut ibitmap {
-        (self
-            .GetBookCoverEx
-            .as_ref()
-            .expect("Expected function, got error."))(name, width, height, pixel_format)
     }
     pub unsafe fn GetBookSyncStatus(&self, path: *const ::std::os::raw::c_char) -> BookSyncStatus {
         (self
@@ -40124,29 +38809,73 @@ impl inkview {
             .as_ref()
             .expect("Expected function, got error."))()
     }
+    pub unsafe fn EnumNotepads(&self) -> *mut *mut ::std::os::raw::c_char {
+        (self
+            .EnumNotepads
+            .as_ref()
+            .expect("Expected function, got error."))()
+    }
+    pub unsafe fn OpenNotepad(&self, name: *const ::std::os::raw::c_char) {
+        (self
+            .OpenNotepad
+            .as_ref()
+            .expect("Expected function, got error."))(name)
+    }
+    pub unsafe fn CreateNote(
+        &self,
+        filename: *const ::std::os::raw::c_char,
+        title: *const ::std::os::raw::c_char,
+        position: ::std::os::raw::c_longlong,
+    ) {
+        (self
+            .CreateNote
+            .as_ref()
+            .expect("Expected function, got error."))(filename, title, position)
+    }
+    pub unsafe fn CreateNoteFromImages(
+        &self,
+        filename: *const ::std::os::raw::c_char,
+        title: *const ::std::os::raw::c_char,
+        position: ::std::os::raw::c_longlong,
+        img1: *mut ibitmap,
+        img2: *mut ibitmap,
+    ) {
+        (self
+            .CreateNoteFromImages
+            .as_ref()
+            .expect("Expected function, got error."))(filename, title, position, img1, img2)
+    }
+    pub unsafe fn CreateNoteFromPage(
+        &self,
+        filename: *const ::std::os::raw::c_char,
+        title: *const ::std::os::raw::c_char,
+        position: ::std::os::raw::c_longlong,
+    ) {
+        (self
+            .CreateNoteFromPage
+            .as_ref()
+            .expect("Expected function, got error."))(filename, title, position)
+    }
+    pub unsafe fn CreateEmptyNote(&self, text: *const ::std::os::raw::c_char) {
+        (self
+            .CreateEmptyNote
+            .as_ref()
+            .expect("Expected function, got error."))(text)
+    }
+    pub unsafe fn OpenNotesMenu(
+        &self,
+        filename: *const ::std::os::raw::c_char,
+        title: *const ::std::os::raw::c_char,
+        position: ::std::os::raw::c_longlong,
+    ) {
+        (self
+            .OpenNotesMenu
+            .as_ref()
+            .expect("Expected function, got error."))(filename, title, position)
+    }
     pub unsafe fn EnumDictionaries(&self) -> *mut *mut ::std::os::raw::c_char {
         (self
             .EnumDictionaries
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn EnumDictionariesFiles(&self) -> *mut *mut ::std::os::raw::c_char {
-        (self
-            .EnumDictionariesFiles
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn EnumDictionariesFilesCallAfterEnumDictionaries(
-        &self,
-    ) -> *mut *mut ::std::os::raw::c_char {
-        (self
-            .EnumDictionariesFilesCallAfterEnumDictionaries
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn GetKeyboardLayoutForOpenedDictionary(&self) -> *const ::std::os::raw::c_char {
-        (self
-            .GetKeyboardLayoutForOpenedDictionary
             .as_ref()
             .expect("Expected function, got error."))()
     }
@@ -40513,30 +39242,6 @@ impl inkview {
             .as_ref()
             .expect("Expected function, got error."))()
     }
-    pub unsafe fn isUsbStorAttached(&self) -> bool {
-        (self
-            .isUsbStorAttached
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn isUsbStorMounted(&self) -> bool {
-        (self
-            .isUsbStorMounted
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn usbStorEject(&self) {
-        (self
-            .usbStorEject
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn usbStorSerialNumber(&self) -> *mut ::std::os::raw::c_char {
-        (self
-            .usbStorSerialNumber
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
     pub unsafe fn GetSerialSoftwareInfo(
         &self,
         device_model: *mut *mut ::std::os::raw::c_char,
@@ -40553,6 +39258,12 @@ impl inkview {
             minor_version,
             build_version,
         )
+    }
+    pub unsafe fn GetHardwareDepth(&self) -> ::std::os::raw::c_int {
+        (self
+            .GetHardwareDepth
+            .as_ref()
+            .expect("Expected function, got error."))()
     }
     pub unsafe fn GetSerialNumber(&self) -> *mut ::std::os::raw::c_char {
         (self
@@ -40612,15 +39323,9 @@ impl inkview {
             .as_ref()
             .expect("Expected function, got error."))(sec)
     }
-    pub unsafe fn SetAutoPowerOff(&self, en: bool) {
+    pub unsafe fn SetAutoPowerOff(&self, en: ::std::os::raw::c_int) {
         (self
             .SetAutoPowerOff
-            .as_ref()
-            .expect("Expected function, got error."))(en)
-    }
-    pub unsafe fn SetAutoKeylock(&self, en: bool) {
-        (self
-            .SetAutoKeylock
             .as_ref()
             .expect("Expected function, got error."))(en)
     }
@@ -40654,18 +39359,6 @@ impl inkview {
             .as_ref()
             .expect("Expected function, got error."))(bm)
     }
-    pub unsafe fn WritePartnerPowerOffLogo(&self, bm: *const ibitmap) {
-        (self
-            .WritePartnerPowerOffLogo
-            .as_ref()
-            .expect("Expected function, got error."))(bm)
-    }
-    pub unsafe fn WriteLowPoweRLogo(&self, bm: *const ibitmap) -> ::std::os::raw::c_int {
-        (self
-            .WriteLowPoweRLogo
-            .as_ref()
-            .expect("Expected function, got error."))(bm)
-    }
     pub unsafe fn PageSnapshot(&self) -> ::std::os::raw::c_int {
         (self
             .PageSnapshot
@@ -40695,18 +39388,6 @@ impl inkview {
             .CalibrateTouchDevice
             .as_ref()
             .expect("Expected function, got error."))(TouchDevice)
-    }
-    pub unsafe fn TouchScreenEnable(&self, onOff: bool) -> ::std::os::raw::c_int {
-        (self
-            .TouchScreenEnable
-            .as_ref()
-            .expect("Expected function, got error."))(onOff)
-    }
-    pub unsafe fn IsTouchScreenEnabled(&self) -> bool {
-        (self
-            .IsTouchScreenEnabled
-            .as_ref()
-            .expect("Expected function, got error."))()
     }
     pub unsafe fn OpenCalendar(&self) {
         (self
@@ -40877,18 +39558,6 @@ impl inkview {
             .BtSendFiles
             .as_ref()
             .expect("Expected function, got error."))(mac, files)
-    }
-    pub unsafe fn SetFlightMode(&self, fm: bool) -> ::std::os::raw::c_int {
-        (self
-            .SetFlightMode
-            .as_ref()
-            .expect("Expected function, got error."))(fm)
-    }
-    pub unsafe fn IsFlightModeEnabled(&self) -> bool {
-        (self
-            .IsFlightModeEnabled
-            .as_ref()
-            .expect("Expected function, got error."))()
     }
     pub unsafe fn EnumWirelessNetworks(&self) -> *mut *mut ::std::os::raw::c_char {
         (self
@@ -41200,49 +39869,17 @@ impl inkview {
             .as_ref()
             .expect("Expected function, got error."))(port)
     }
+    pub unsafe fn GetTouchInfo(&self) -> *mut iv_mtinfo {
+        (self
+            .GetTouchInfo
+            .as_ref()
+            .expect("Expected function, got error."))()
+    }
     pub unsafe fn GetTouchInfoI(&self, index: ::std::os::raw::c_uint) -> *mut iv_mtinfo {
         (self
             .GetTouchInfoI
             .as_ref()
             .expect("Expected function, got error."))(index)
-    }
-    pub unsafe fn GetTouchContainerLength(
-        &self,
-        index: ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_uint {
-        (self
-            .GetTouchContainerLength
-            .as_ref()
-            .expect("Expected function, got error."))(index)
-    }
-    pub unsafe fn GetTouchSection(
-        &self,
-        index: ::std::os::raw::c_uint,
-        section: ::std::os::raw::c_uint,
-    ) -> *mut iv_mtinfo_section {
-        (self
-            .GetTouchSection
-            .as_ref()
-            .expect("Expected function, got error."))(index, section)
-    }
-    pub unsafe fn GetLastTouchSection(
-        &self,
-        index: ::std::os::raw::c_uint,
-    ) -> *mut iv_mtinfo_section {
-        (self
-            .GetLastTouchSection
-            .as_ref()
-            .expect("Expected function, got error."))(index)
-    }
-    pub unsafe fn PopTouchSection(
-        &self,
-        index: ::std::os::raw::c_uint,
-        count: *mut ::std::os::raw::c_uint,
-    ) -> *mut iv_mtinfo_section {
-        (self
-            .PopTouchSection
-            .as_ref()
-            .expect("Expected function, got error."))(index, count)
     }
     pub unsafe fn QueryHeadphone(&self) -> ::std::os::raw::c_int {
         (self
@@ -41368,18 +40005,6 @@ impl inkview {
             .utf2ucs
             .as_ref()
             .expect("Expected function, got error."))(s, us, maxlen)
-    }
-    pub unsafe fn utf2ucsEx(
-        &self,
-        s: *const ::std::os::raw::c_char,
-        len: ::std::os::raw::c_int,
-        us: *mut ::std::os::raw::c_ushort,
-        maxlen: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int {
-        (self
-            .utf2ucsEx
-            .as_ref()
-            .expect("Expected function, got error."))(s, len, us, maxlen)
     }
     pub unsafe fn utf2ucs4(
         &self,
@@ -41982,147 +40607,5 @@ impl inkview {
             .getAvrcpFocusPid
             .as_ref()
             .expect("Expected function, got error."))()
-    }
-    pub unsafe fn setTaskOomPriority(&self, value: TaskOomPriority) -> ::std::os::raw::c_int {
-        (self
-            .setTaskOomPriority
-            .as_ref()
-            .expect("Expected function, got error."))(value)
-    }
-    pub unsafe fn getDDRMemoryInfo(
-        &self,
-        total: *mut ::std::os::raw::c_int,
-        free: *mut ::std::os::raw::c_int,
-        total_swap: *mut ::std::os::raw::c_int,
-        free_swap: *mut ::std::os::raw::c_int,
-    ) {
-        (self
-            .getDDRMemoryInfo
-            .as_ref()
-            .expect("Expected function, got error."))(total, free, total_swap, free_swap)
-    }
-    pub unsafe fn needCanvasLock(&self) {
-        (self
-            .needCanvasLock
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn lockCanvasDrawing(&self) {
-        (self
-            .lockCanvasDrawing
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn unlockCanvasDrawing(&self) {
-        (self
-            .unlockCanvasDrawing
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn StartCustomGattService(
-        &self,
-        name: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int {
-        (self
-            .StartCustomGattService
-            .as_ref()
-            .expect("Expected function, got error."))(name)
-    }
-    pub unsafe fn StopCustomGattService(&self) -> ::std::os::raw::c_int {
-        (self
-            .StopCustomGattService
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn GetCustomGattSessionStatus(
-        &self,
-        obj: *mut CustomGattSession,
-    ) -> CustomGattSessionStatus_e {
-        (self
-            .GetCustomGattSessionStatus
-            .as_ref()
-            .expect("Expected function, got error."))(obj)
-    }
-    pub unsafe fn Connect2CustomGattService(
-        &self,
-        dest_mac_addr: *mut ::std::os::raw::c_char,
-    ) -> *mut CustomGattSession {
-        (self
-            .Connect2CustomGattService
-            .as_ref()
-            .expect("Expected function, got error."))(dest_mac_addr)
-    }
-    pub unsafe fn CloseCustomGattConnection(
-        &self,
-        s: *mut CustomGattSession,
-    ) -> ::std::os::raw::c_int {
-        (self
-            .CloseCustomGattConnection
-            .as_ref()
-            .expect("Expected function, got error."))(s)
-    }
-    pub unsafe fn ReadCustomGattService(
-        &self,
-        obj: *mut CustomGattSession,
-        data: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int {
-        (self
-            .ReadCustomGattService
-            .as_ref()
-            .expect("Expected function, got error."))(obj, data)
-    }
-    pub unsafe fn WriteCustomGattService(
-        &self,
-        obj: *mut CustomGattSession,
-        data: *const ::std::os::raw::c_char,
-        data_len: usize,
-    ) -> ::std::os::raw::c_int {
-        (self
-            .WriteCustomGattService
-            .as_ref()
-            .expect("Expected function, got error."))(obj, data, data_len)
-    }
-    pub unsafe fn StartScanBTLE(
-        &self,
-        cb: ::std::option::Option<
-            unsafe extern "C" fn(
-                cb_data: *mut ::std::os::raw::c_void,
-                mac: *const ::std::os::raw::c_char,
-                name: *const ::std::os::raw::c_char,
-            ),
-        >,
-        cb_data: *mut ::std::os::raw::c_void,
-    ) -> ::std::os::raw::c_int {
-        (self
-            .StartScanBTLE
-            .as_ref()
-            .expect("Expected function, got error."))(cb, cb_data)
-    }
-    pub unsafe fn StopScanBTLE(&self) -> ::std::os::raw::c_int {
-        (self
-            .StopScanBTLE
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn design_to_pixel(&self, v: ::std::os::raw::c_int) -> ::std::os::raw::c_int {
-        (self
-            .design_to_pixel
-            .as_ref()
-            .expect("Expected function, got error."))(v)
-    }
-    pub unsafe fn GetSoftwareLocalizationType(&self) -> software_localization_type {
-        (self
-            .GetSoftwareLocalizationType
-            .as_ref()
-            .expect("Expected function, got error."))()
-    }
-    pub unsafe fn ltrim_non_alphanum(
-        &self,
-        value: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char {
-        (self
-            .ltrim_non_alphanum
-            .as_ref()
-            .expect("Expected function, got error."))(value)
     }
 }
