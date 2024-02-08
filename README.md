@@ -19,12 +19,12 @@ Execute `bindgen.sh` to regenerate the bindings. See the script source for how t
 
 # inkview-eg
 
-embedded-graphics-core driver for inkview-rs
+[embedded-graphics-core](https://crates.io/crates/embedded-graphics-core) driver for inkview-rs
 
-## Examples
+# Examples
 
 Build examples like so (for SDK v5.19):
 
 ```bash
-cargo zigbuild --target armv7-unknown-linux-gnueabi.2.23 -p inkview-eg --example icons --features="sdk-5-19"
+cargo zigbuild --target armv7-unknown-linux-gnueabi.2.23 -p inkview --example hello_world --features="sdk-5-19"
 ```
