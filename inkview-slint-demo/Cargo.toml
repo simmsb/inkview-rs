@@ -14,3 +14,8 @@ inkview-slint = { path = "../inkview-slint" }
 
 [build-dependencies]
 slint-build = { git = "https://github.com/slint-ui/slint", version = "1.4.0" }
+
+[features]
+default = []
+sdk-5-19 = ["inkview/sdk-5-19"]
+sdk-6-5 = ["inkview/sdk-6-5"]

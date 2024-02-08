@@ -10,3 +10,8 @@ euclid = "0.22.9"
 rgb = "0.8.37"
 slint = { git = "https://github.com/slint-ui/slint", version = "1.4.0", default-features = false, features = ["compat-1-2", "std", "software-renderer-systemfonts", "renderer-software"] }
 inkview = { path = "../inkview" }
+
+[features]
+default = []
+sdk-5-19 = ["inkview/sdk-5-19"]
+sdk-6-5 = ["inkview/sdk-6-5"]
