@@ -14,3 +14,14 @@ embedded-graphics-core = "0.4.0"
 embedded-graphics = "0.8.1"
 anyhow = "1.0"
 embedded-iconoir = { version = "0.2.3", features = ["144px"] }
+
+[features]
+default = []
+sdk-5-19 = ["inkview/sdk-5-19"]
+sdk-6-5 = ["inkview/sdk-6-5"]
+
+[[example]]
+name = "icons"
+
+[[example]]
+name = "shapes_and_text"

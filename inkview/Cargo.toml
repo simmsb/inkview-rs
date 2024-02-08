@@ -9,6 +9,6 @@ edition = "2021"
 libloading = "0.8.1"
 
 [features]
-default = ["sdk-6-5"]
+default = []
 sdk-5-19 = []
 sdk-6-5 = []
