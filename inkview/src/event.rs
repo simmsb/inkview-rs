@@ -1,6 +1,6 @@
 use std::sync::Mutex;
 
-use crate::Inkview;
+use crate::bindings::Inkview;
 
 static IV_EVENT_HANDLER: Mutex<Option<Box<dyn FnMut(Event) -> Option<()> + Send>>> =
     Mutex::new(None);

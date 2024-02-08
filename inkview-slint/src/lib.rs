@@ -82,10 +82,17 @@ impl slint::platform::Platform for Backend {
 
         slint::Window::set_size(
             self.window.borrow().as_ref().unwrap().as_ref(),
-            slint::PhysicalSize::new(self.width as u32, self.height as u32).to_logical(SCALE_FACTOR),
+            slint::PhysicalSize::new(self.width as u32, self.height as u32)
+                .to_logical(SCALE_FACTOR),
         );
 
-        self.window.borrow().as_ref().unwrap().dispatch_event(WindowEvent::ScaleFactorChanged { scale_factor: SCALE_FACTOR });
+        self.window
+            .borrow()
+            .as_ref()
+            .unwrap()
+            .dispatch_event(WindowEvent::ScaleFactorChanged {
+                scale_factor: SCALE_FACTOR,
+            });
 
         // slint::Window::set_size(
         //     self.window.borrow().as_ref().unwrap().as_ref(),
@@ -212,23 +219,14 @@ fn ink_evt_to_slint(evt: Event) -> Option<WindowEvent> {
     println!("evt: {:?}", evt);
     let evt = match evt {
         Event::PointerDown { x, y } => WindowEvent::PointerPressed {
-            position: slint::PhysicalPosition {
-                x,
-                y,
-            }.to_logical(SCALE_FACTOR),
+            position: slint::PhysicalPosition { x, y }.to_logical(SCALE_FACTOR),
             button: slint::platform::PointerEventButton::Left,
         },
         Event::PointerMove { x, y } => WindowEvent::PointerMoved {
-            position: slint::PhysicalPosition {
-                x,
-                y,
-            }.to_logical(SCALE_FACTOR),
+            position: slint::PhysicalPosition { x, y }.to_logical(SCALE_FACTOR),
         },
         Event::PointerUp { x, y } => WindowEvent::PointerReleased {
-            position: slint::PhysicalPosition {
-                x,
-                y,
-            }.to_logical(SCALE_FACTOR),
+            position: slint::PhysicalPosition { x, y }.to_logical(SCALE_FACTOR),
             button: slint::platform::PointerEventButton::Left,
         },
         Event::Foreground { .. } => WindowEvent::WindowActiveChanged(true),
