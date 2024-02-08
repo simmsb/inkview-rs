@@ -32,6 +32,12 @@ impl<'a> Screen<'a> {
         }
     }
 
+    pub fn clear(&mut self) {
+        unsafe {
+            self.iv.ClearScreen();
+        }
+    }
+
     #[inline(always)]
     pub fn draw(&mut self, x: usize, y: usize, c: u8) {
         let i = self.stride * y + x;

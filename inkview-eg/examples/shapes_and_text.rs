@@ -1,5 +1,3 @@
-use std::convert::Infallible;
-
 use embedded_graphics::mono_font::ascii::FONT_6X10;
 use embedded_graphics::mono_font::MonoTextStyle;
 use embedded_graphics::prelude::*;
@@ -8,68 +6,52 @@ use embedded_graphics::primitives::{
 };
 use embedded_graphics::text::{Alignment, Text};
 use embedded_graphics_core::pixelcolor::Gray8;
+use inkview::Event;
 use inkview_eg::InkViewDisplay;
+use std::convert::Infallible;
 
-enum Event {
-    Redraw,
-    Exit,
-}
-
-impl Event {
-    fn from_inkview(event: inkview::Event) -> Option<Event> {
-        match event {
-            inkview::Event::Show | inkview::Event::Repaint => Some(Event::Redraw),
-            inkview::Event::Exit => Some(Event::Exit),
-            _ => None,
-        }
-    }
-}
-
-fn main() -> anyhow::Result<()> {
-    let (event_tx, event_rx) = std::sync::mpsc::channel::<Event>();
+fn main() {
+    let (event_tx, event_rx) = std::sync::mpsc::channel::<inkview::Event>();
     let iv = Box::leak(Box::new(inkview::load())) as &_;
 
     std::thread::spawn(move || -> anyhow::Result<()> {
-        // Create a new inkview display
-        let mut display = InkViewDisplay::new(iv);
-
-        draw_content(&mut display)?;
-        display.flush();
+        // Create a new inkview display which implements [embedded_graphics_core::DrawTarget]
+        let mut display = InkViewDisplay::new(&iv);
 
         loop {
-            match event_rx.recv() {
-                Ok(event) => match event {
-                    Event::Redraw => {
-                        draw_content(&mut display)?;
-                        display.flush();
-                    }
-                    Event::Exit => break,
-                },
+            let event = match event_rx.recv() {
+                Ok(e) => e,
                 Err(e) => {
-                    eprintln!("Receiving event failed, Err: {e:?}");
+                    eprintln!("Receiving inkview event failed, Err: {e:?}");
                     break;
                 }
+            };
+            match event {
+                Event::Init => {
+                    display.screen().clear();
+                }
+                Event::Show | Event::Repaint => {
+                    draw_content(&mut display)?;
+                    display.flush();
+                }
+                Event::KeyDown { .. } | Event::Exit => break,
+                _ => {}
             }
         }
+
+        unsafe { iv.CloseApp() }
 
         Ok(())
     });
 
     inkview::iv_main(&iv, {
         move |event| {
-            if let Some(event) = Event::from_inkview(event) {
-                if let Err(e) = event_tx.send(event) {
-                    eprintln!("Sending Event failed, Err: {e:?}");
-                    unsafe {
-                        iv.CloseApp();
-                    }
-                }
+            if let Err(e) = event_tx.send(event) {
+                eprintln!("Sending inkview event failed, Err: {e:?}");
             }
             Some(())
         }
     });
-
-    Ok(())
 }
 
 fn draw_content(

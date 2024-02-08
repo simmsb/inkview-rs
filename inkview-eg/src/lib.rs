@@ -3,11 +3,10 @@ use embedded_graphics_core::geometry::{OriginDimensions, Size};
 use embedded_graphics_core::pixelcolor::{Gray8, GrayColor};
 use inkview::bindings;
 use inkview::screen::Screen;
-use std::cell::RefCell;
 use std::convert::Infallible;
 
 pub struct InkViewDisplay {
-    screen: RefCell<Screen<'static>>,
+    screen: Screen<'static>,
     width: usize,
     height: usize,
 }
@@ -26,7 +25,11 @@ impl InkViewDisplay {
     }
 
     pub fn flush(&mut self) {
-        self.screen.borrow_mut().full_update()
+        self.screen.full_update()
+    }
+
+    pub fn screen(&mut self) -> &mut Screen<'static> {
+        &mut self.screen
     }
 }
 
@@ -45,12 +48,11 @@ impl DrawTarget for InkViewDisplay {
     where
         I: IntoIterator<Item = embedded_graphics_core::prelude::Pixel<Self::Color>>,
     {
-        let mut screen = self.screen.borrow_mut();
         for pixel in pixels {
             let x = pixel.0.x as usize;
             let y = pixel.0.y as usize;
             let color = pixel.1.luma();
-            screen.draw(x, y, color);
+            self.screen.draw(x, y, color);
         }
         Ok(())
     }
