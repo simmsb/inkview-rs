@@ -1,17 +1,17 @@
-#[allow(nonstandard_style, unused)]
-#[allow(rustdoc::invalid_html_tags, rustdoc::broken_intra_doc_links)]
+#[cfg(not(feature = "_sdk_selected"))]
+compile_error!("No SDK selected, enable one of the 'sdk-*' features.");
+
 pub mod bindings;
 pub mod event;
 pub mod screen;
 
-pub use bindings::inkview as Inkview;
 pub use event::*;
 
-pub fn load() -> Inkview {
+pub fn load() -> bindings::Inkview {
     unsafe {
         let lib = libloading::Library::new("libinkview.so").unwrap();
 
-        let iv = Inkview::from_library(lib).unwrap();
+        let iv = bindings::Inkview::from_library(lib).unwrap();
 
         iv
     }

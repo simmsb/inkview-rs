@@ -7,3 +7,10 @@ edition = "2021"
 
 [dependencies]
 libloading = "0.8.1"
+
+[features]
+default = []
+sdk-5-19 = ["_sdk_selected"]
+sdk-6-5 = ["_sdk_selected"]
+
+_sdk_selected = []

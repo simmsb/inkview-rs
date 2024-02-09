@@ -1,4 +1,4 @@
-use crate::{bindings::icanvas_s, Inkview};
+use crate::{bindings::icanvas_s, bindings::Inkview};
 
 pub struct Screen<'a> {
     iv: &'a Inkview,
@@ -32,12 +32,24 @@ impl<'a> Screen<'a> {
         }
     }
 
+    pub fn clear(&mut self) {
+        unsafe {
+            self.iv.ClearScreen();
+        }
+    }
+
     #[inline(always)]
     pub fn draw(&mut self, x: usize, y: usize, c: u8) {
         let i = self.stride * y + x;
 
         unsafe {
             self.buf.add(i).write(c);
+        }
+    }
+
+    pub fn full_update(&mut self) {
+        unsafe {
+            self.iv.FullUpdate();
         }
     }
 
@@ -69,16 +81,16 @@ impl<'a> Screen<'a> {
             //   0xec -- normal?
             //
             //
-            self.iv.do_partial_update(x, y, w as i32, h as i32, 0, 2);
-            // self.iv.PartialUpdate(x, y, w as i32, h as i32);
+            //self.iv.do_partial_update(x, y, w as i32, h as i32, 0, 2);
+            self.iv.PartialUpdate(x, y, w as i32, h as i32);
         }
     }
 
     /// Fast but ugly
     pub fn dynamic_update(&mut self, x: i32, y: i32, w: u32, h: u32) {
         unsafe {
-            self.iv.do_partial_update(x, y, w as i32, h as i32, 1, 2);
-            // self.iv.DynamicUpdateBW(x, y, w as i32, h as i32);
+            //self.iv.do_partial_update(x, y, w as i32, h as i32, 1, 2);
+            self.iv.DynamicUpdate(x, y, w as i32, h as i32);
         }
     }
 
