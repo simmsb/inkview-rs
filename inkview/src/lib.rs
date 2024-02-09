@@ -1,3 +1,6 @@
+#[cfg(not(feature = "_sdk_selected"))]
+compile_error!("No SDK selected, enable one of the 'sdk-*' features.");
+
 pub mod bindings;
 pub mod event;
 pub mod screen;
