@@ -16,7 +16,7 @@ with inkview. And a demo application `inkview-slint-demo`.
 
 [Zig](https://ziglang.org/learn/getting-started/#installing-zig) must be installed.
 
-To run the justfile, install the [just](https://github.com/casey/just) command runner.
+To run recipes from the justfile, install the [just](https://github.com/casey/just) command runner.
 
 Available recipes can be listed with:
 
@@ -24,7 +24,7 @@ Available recipes can be listed with:
 just --list
 ```
 
-Then run the following recipe to install the `armv7-unknown-linux-gnueabi` rustc target and `cargo-zigbuild`:
+Then execute the following to install the `armv7-unknown-linux-gnueabi` rustc target and `cargo-zigbuild`:
 
 ```bash
 just prerequisites
@@ -49,7 +49,7 @@ just pb_sdk_version=<sdk-version> build-example <crate> <name>
 To transfer a built binary to the device over USB, run the following,  
 assuming the device is connected and appears in path `/run/media/$USER/<pb-device>`:
 
-The path argument is the relative path from `target/armv7-unknown-linux-gnueabi`,  
+The path argument is the relative path from `target/armv7-unknown-linux-gnueabi/<cargo-profile>`,  
 so for example: `examples/hello_world`
 
 ```bash
@@ -58,7 +58,7 @@ just pb_device=<your-device> transfer-app <path-to-binary>
 
 ## Generate bindings
 
-Clone the SDK from here: https://github.com/pocketbook/SDK_6.3.0 and place it next to the `inkview-rs` directory.  
+Clone the SDK from here: https://github.com/pocketbook/SDK_6.3.0 and place it next to the `inkview-rs` folder.  
 Check out the SDK version by switching branch. (currently: 5.19 or 6.5)
 
 Execute the following from the `inkview-rs` directory to regenerate the bindings.
