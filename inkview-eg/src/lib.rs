@@ -7,21 +7,13 @@ use std::convert::Infallible;
 
 pub struct InkViewDisplay {
     screen: Screen<'static>,
-    width: usize,
-    height: usize,
 }
 
 impl InkViewDisplay {
     pub fn new(iv: &'static bindings::inkview) -> Self {
         let screen = inkview::screen::Screen::new(iv);
-        let width = screen.width();
-        let height = screen.height();
 
-        Self {
-            screen: screen.into(),
-            width,
-            height,
-        }
+        Self { screen }
     }
 
     pub fn flush(&mut self) {
@@ -35,7 +27,7 @@ impl InkViewDisplay {
 
 impl OriginDimensions for InkViewDisplay {
     fn size(&self) -> Size {
-        Size::new(self.width as u32, self.height as u32)
+        Size::new(self.screen.width() as u32, self.screen.height() as u32)
     }
 }
 
