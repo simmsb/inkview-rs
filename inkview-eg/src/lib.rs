@@ -5,11 +5,11 @@ use inkview::bindings;
 use inkview::screen::Screen;
 use std::convert::Infallible;
 
-pub struct InkViewDisplay {
+pub struct InkviewDisplay {
     screen: Screen<'static>,
 }
 
-impl InkViewDisplay {
+impl InkviewDisplay {
     pub fn new(iv: &'static bindings::inkview) -> Self {
         let screen = inkview::screen::Screen::new(iv);
 
@@ -25,13 +25,13 @@ impl InkViewDisplay {
     }
 }
 
-impl OriginDimensions for InkViewDisplay {
+impl OriginDimensions for InkviewDisplay {
     fn size(&self) -> Size {
         Size::new(self.screen.width() as u32, self.screen.height() as u32)
     }
 }
 
-impl DrawTarget for InkViewDisplay {
+impl DrawTarget for InkviewDisplay {
     type Color = Gray8;
 
     type Error = Infallible;
