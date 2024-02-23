@@ -133,7 +133,7 @@ impl slint::platform::Platform for Backend {
                     self.evts.recv().ok().and_then(ink_evt_to_slint)
                 };
 
-                if let Some(redraw_region) = dynamic_region_to_redraw.clone() {
+                if let Some(redraw_region) = dynamic_region_to_redraw {
                     if last_draw_at.elapsed() > Duration::from_millis(200) {
                         dynamic_region_to_redraw = None;
                         fulfill_dynamic_updates_after = None;
@@ -234,5 +234,5 @@ fn ink_evt_to_slint(evt: Event) -> Option<WindowEvent> {
         _ => return None,
     };
 
-    return Some(evt);
+    Some(evt)
 }
