@@ -43,6 +43,9 @@ impl<'a> Screen<'a> {
 
     #[inline(always)]
     pub fn draw(&mut self, x: usize, y: usize, c: u8) {
+        if !(0..self.width).contains(&x) || !(0..self.height).contains(&y) {
+            return;
+        }
         let i = self.stride * y + x;
 
         unsafe {
