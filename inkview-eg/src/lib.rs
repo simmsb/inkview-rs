@@ -43,6 +43,9 @@ impl DrawTarget for InkviewDisplay {
         for pixel in pixels {
             let x = pixel.0.x as usize;
             let y = pixel.0.y as usize;
+            if !(0..self.screen.width()).contains(&x) || !(0..self.screen.height()).contains(&y) {
+                continue;
+            }
             let color = pixel.1.luma();
             self.screen.draw(x, y, color);
         }
