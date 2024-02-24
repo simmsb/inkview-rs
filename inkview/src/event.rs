@@ -2,8 +2,9 @@ use std::sync::Mutex;
 
 use crate::bindings::Inkview;
 
-static IV_EVENT_HANDLER: Mutex<Option<Box<dyn FnMut(Event) -> Option<()> + Send>>> =
-    Mutex::new(None);
+type IvEventHandlerType = Mutex<Option<Box<dyn FnMut(Event) -> Option<()> + Send>>>;
+
+static IV_EVENT_HANDLER: IvEventHandlerType = Mutex::new(None);
 
 pub fn iv_main<F: FnMut(Event) -> Option<()> + Send + 'static>(iv: &Inkview, handler: F) {
     unsafe {

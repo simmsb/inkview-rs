@@ -62,11 +62,7 @@ fn main() {
                     let mut undo_stack = undo_stack.borrow_mut();
                     let window = window_weak.unwrap();
 
-                    model.push(ui::Circle {
-                        x: x as f32,
-                        y: y as f32,
-                        d: 30.0,
-                    });
+                    model.push(ui::Circle { x, y, d: 30.0 });
                     undo_stack.push(Change::CircleAdded {
                         row: model.row_count() - 1,
                     });
@@ -124,7 +120,7 @@ fn main() {
         }
     });
 
-    inkview::iv_main(&iv, {
+    inkview::iv_main(iv, {
         move |evt| {
             // println!("got evt: {:?}", evt);
 
@@ -134,11 +130,12 @@ fn main() {
                 }
             }
 
-            return Some(());
+            Some(())
         }
     })
 }
 
+#[allow(clippy::enum_variant_names)]
 enum Change {
     CircleAdded { row: usize },
     CircleRemoved { row: usize, circle: ui::Circle },

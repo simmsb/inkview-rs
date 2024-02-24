@@ -7,16 +7,16 @@ use embedded_graphics::primitives::{
 use embedded_graphics::text::{Alignment, Text};
 use embedded_graphics_core::pixelcolor::Gray8;
 use inkview::Event;
-use inkview_eg::InkViewDisplay;
+use inkview_eg::InkviewDisplay;
+use std::cell::OnceCell;
 use std::convert::Infallible;
 
 fn main() {
     let (event_tx, event_rx) = std::sync::mpsc::channel::<inkview::Event>();
     let iv = Box::leak(Box::new(inkview::load())) as &_;
 
-    std::thread::spawn(move || -> anyhow::Result<()> {
-        // Create a new inkview display which implements [embedded_graphics_core::DrawTarget]
-        let mut display = InkViewDisplay::new(&iv);
+    std::thread::spawn(move || {
+        let mut display = OnceCell::new();
 
         loop {
             let event = match event_rx.recv() {
@@ -28,11 +28,13 @@ fn main() {
             };
             match event {
                 Event::Init => {
-                    display.screen().clear();
+                    // Create a new inkview display which implements [embedded_graphics_core::DrawTarget]
+                    let _ = display.set(InkviewDisplay::new(&iv));
+                    display.get_mut().unwrap().screen().clear();
                 }
                 Event::Show | Event::Repaint => {
-                    draw_content(&mut display)?;
-                    display.flush();
+                    draw_content(display.get_mut().unwrap()).unwrap();
+                    display.get_mut().unwrap().flush();
                 }
                 Event::KeyDown { .. } | Event::Exit => break,
                 _ => {}
@@ -40,8 +42,6 @@ fn main() {
         }
 
         unsafe { iv.CloseApp() }
-
-        Ok(())
     });
 
     inkview::iv_main(&iv, {

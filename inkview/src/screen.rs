@@ -14,7 +14,10 @@ pub struct Screen<'a> {
 
 impl<'a> Screen<'a> {
     pub fn new(iv: &'a Inkview) -> Self {
-        let fb = unsafe { iv.GetTaskFramebuffer(iv.GetCurrentTask()).as_mut().unwrap() };
+        let fb = unsafe { iv.GetTaskFramebuffer(iv.GetCurrentTask()).as_mut() };
+        let Some(fb) = fb else {
+            panic!("Failed to get current task framebuffer while creating new screen.");
+        };
 
         let width = fb.width as usize;
         let height = fb.height as usize;
@@ -40,6 +43,9 @@ impl<'a> Screen<'a> {
 
     #[inline(always)]
     pub fn draw(&mut self, x: usize, y: usize, c: u8) {
+        if !(0..self.width).contains(&x) || !(0..self.height).contains(&y) {
+            return;
+        }
         let i = self.stride * y + x;
 
         unsafe {
