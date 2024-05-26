@@ -7,6 +7,9 @@ edition = "2021"
 
 [dependencies]
 libloading = "0.8.1"
+thiserror = "1.0"
+num-derive = "0.4"
+num-traits = "0.2"
 
 [features]
 default = []

@@ -1,3 +1,4 @@
+use inkview::bindings::APPLICATION_ATTRIBUTE_APPLICATION_READER;
 use inkview::{bindings, Event};
 use std::ffi::{c_int, CString};
 
@@ -8,18 +9,19 @@ fn main() {
     inkview::iv_main(&iv, move |event| {
         match event {
             Event::Init => unsafe {
+                iv.SetCurrentApplicationAttribute(APPLICATION_ATTRIBUTE_APPLICATION_READER, 1);
+
                 let font_name = CString::new("LiberationSans").unwrap();
-                let text = CString::new("Hello, world!").unwrap();
+                let text = CString::new("Hello world!").unwrap();
 
                 let font = iv.OpenFont(font_name.as_ptr(), FONT_SIZE, 0);
                 iv.ClearScreen();
 
                 iv.SetFont(font, bindings::BLACK as c_int);
-                iv.DrawLine(0, 25, iv.ScreenWidth(), 25, 0x00333333);
                 iv.DrawLine(
-                    0,
+                    25,
                     iv.ScreenHeight() - 25,
-                    iv.ScreenWidth(),
+                    iv.ScreenWidth() - 25,
                     iv.ScreenHeight() - 25,
                     0x00666666,
                 );

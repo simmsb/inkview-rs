@@ -44,7 +44,7 @@ To build an example:
 just pb_sdk_version=<sdk-version> build-example <crate> <name>
 ```
 
-## Transfer binary
+## Transfer a binary
 
 To transfer a built binary to the device over USB, run the following,  
 assuming the device is connected and appears in path `/run/media/$USER/<pb-device>`:
@@ -53,7 +53,7 @@ The path argument is the relative path from `target/armv7-unknown-linux-gnueabi/
 so for example: `examples/hello_world`
 
 ```bash
-just pb_device=<your-device> transfer-app <path-to-binary>
+just pb_device=<your-device> transfer-app <path-to-binary> <target-name>
 ```
 
 ## Generate bindings
