@@ -30,7 +30,7 @@ fn main() {
                 Event::Init => {
                     // Create a new inkview display which implements [embedded_graphics_core::DrawTarget]
                     let _ = display.set(InkviewDisplay::new(&iv));
-                    display.get_mut().unwrap().screen().clear();
+                    display.get_mut().unwrap().iv_screen_mut().clear();
                 }
                 Event::Show | Event::Repaint => {
                     draw_content(display.get_mut().unwrap()).unwrap();
@@ -44,13 +44,11 @@ fn main() {
         unsafe { iv.CloseApp() }
     });
 
-    inkview::iv_main(&iv, {
-        move |event| {
-            if let Err(e) = event_tx.send(event) {
-                eprintln!("Sending inkview event failed, Err: {e:?}");
-            }
-            Some(())
+    inkview::iv_main(&iv, move |event| {
+        if let Err(e) = event_tx.send(event) {
+            eprintln!("Sending inkview event failed, Err: {e:?}");
         }
+        Some(())
     });
 }
 

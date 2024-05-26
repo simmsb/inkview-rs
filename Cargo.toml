@@ -1,6 +1,6 @@
 [workspace]
-resolver = "2"
 members = ["inkview", "inkview-eg", "inkview-slint", "inkview-slint-demo"]
+resolver = "2"
 
 [profile.release]
 strip = true
