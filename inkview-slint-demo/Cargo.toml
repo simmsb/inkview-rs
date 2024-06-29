@@ -19,3 +19,4 @@ slint-build = { git = "https://github.com/slint-ui/slint", version = "1.4.0" }
 default = []
 sdk-5-19 = ["inkview/sdk-5-19"]
 sdk-6-5 = ["inkview/sdk-6-5"]
+sdk-6-8 = ["inkview/sdk-6-8"]

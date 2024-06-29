@@ -1,12 +1,14 @@
-# justfile for building for and transferring apps to a pocketbook device
+# justfile for inkview-rs
 
-# the SDK version. Either "5.19" or "6.5"
-pb_sdk_version := "6.5"
-pb_device := "PB626"
-pb_sdk_cross_path := `realpath ../SDK_6.3.0/SDK-B288/usr/arm-obreey-linux-gnueabi`
+# the SDK version. Either "5.19", "6.5", "6.8"
+pb_sdk_version := "6.8"
+# the device identifier as it's folder name when connected with USB.
+# For example for the Touch-Lux-3 "PB626", for the InkPad-4 "PB743G"
+pb_device := "PB743G"
+pb_sdk_cross_path := "../SDK_6.3.0/SDK-B288/usr/arm-obreey-linux-gnueabi"
 gdbserver_port := "10003"
 
-pb_sdk_sysroot := pb_sdk_cross_path / "sysroot"
+pb_sdk_sysroot := absolute_path(pb_sdk_cross_path) / "sysroot"
 cargo_sdk_feature := "sdk-" + replace(pb_sdk_version, ".", "-")
 cargo_profile := "dev"
 build_target := "armv7-unknown-linux-gnueabi"
@@ -16,8 +18,10 @@ bindgen_extra_clang_args := if pb_sdk_version == "5.19" {
     "--target=" + build_target + " --sysroot " + pb_sdk_sysroot + " -isystem" + pb_sdk_sysroot + "/usr/include/freetype2"
 } else if pb_sdk_version == "6.5" {
     "--target=" + build_target + " --sysroot " + pb_sdk_sysroot
+} else if pb_sdk_version == "6.8" {
+    "--target=" + build_target + " --sysroot " + pb_sdk_sysroot
 } else {
-    error("SDK version must be one of: '5.19', '6.5'.")
+    error("SDK version must be one of: '5.19', '6.5', '6.8'.")
 }
 
 default:
@@ -34,7 +38,7 @@ build-example crate name:
     cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{crate}} --example {{name}} --features={{cargo_sdk_feature}}
 
 # Transfer a built app to the device. 'path_to_binary' is a relative path from 'target/<build_target>/<cargo_out_profile>/'.
-transfer-app path_to_binary target_app_name:
+transfer-app-usb path_to_binary target_app_name:
     cp "target/{{build_target / cargo_out_profile / path_to_binary}}" \
         {{"/run/media/$USER" / pb_device / "applications" / target_app_name}}
     sync {{"/run/media/$USER" / pb_device}}

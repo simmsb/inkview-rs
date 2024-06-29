@@ -59,7 +59,11 @@ just pb_device=<your-device> transfer-app <path-to-binary> <target-name>
 ## Generate bindings
 
 Clone the SDK from here: https://github.com/pocketbook/SDK_6.3.0 and place it next to the `inkview-rs` folder.  
-Check out the SDK version by switching branch. (currently: 5.19 or 6.5)
+
+There are currently bindings for the following SDK versions:
+- `v5.19` : accessed by switching to the `5.19` branch
+- `v6.5` : accessed by switching to the `6.5` branch
+- `v6.8` : accessed by downloading the archive from the releases of the repository
 
 Execute the following from the `inkview-rs` directory to regenerate the bindings.
 ```bash
