@@ -15,4 +15,9 @@ mod bindings_6_5;
 #[cfg(feature = "sdk-6-5")]
 pub use bindings_6_5::*;
 
+#[cfg(feature = "sdk-6-8")]
+mod bindings_6_8;
+#[cfg(feature = "sdk-6-8")]
+pub use bindings_6_8::*;
+
 pub use inkview as Inkview;

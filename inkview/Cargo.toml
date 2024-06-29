@@ -15,5 +15,6 @@ num-traits = "0.2"
 default = []
 sdk-5-19 = ["_sdk_selected"]
 sdk-6-5 = ["_sdk_selected"]
+sdk-6-8 = ["_sdk_selected"]
 
 _sdk_selected = []
