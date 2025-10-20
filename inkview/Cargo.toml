@@ -1,12 +1,18 @@
 [package]
 name = "inkview"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
+
+license = "MIT"
+keywords = ["inkview", "pocketbook", "eink"]
+description = "Rust bindings for pocketbook E-Reader devices (inkview)"
+repository = "https://github.com/simmsb/inkview-rs"
+authors = ["Ben Simms", "flxzt"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-libloading = "0.8.1"
+libloading = "0.8.9"
 thiserror = "1.0"
 num-derive = "0.4"
 num-traits = "0.2"
@@ -18,3 +24,6 @@ sdk-6-5 = ["_sdk_selected"]
 sdk-6-8 = ["_sdk_selected"]
 
 _sdk_selected = []
+
+[package.metadata.docs.rs]
+features = ["sdk-6-8"]

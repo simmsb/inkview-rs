@@ -1,4 +1,12 @@
-# Rust bindings for pocketbook E-Reader devices (inkview)
+<h1 align="center">Inkview-rs</h1>
+
+<h2 align="center">Rust bindings for pocketbook E-Reader devices (inkview)</h2>
+
+<p align="center">
+  <a href="https://crates.io/crates/inkview"><img alt="Crates.io Version" src="https://img.shields.io/crates/v/inkview"></a>
+  <a href="https://docs.rs/inkview/"><img alt="docs.rs" src="https://img.shields.io/docsrs/inkview"></a>
+</p>
+
 
 This repo contains bindings for libinkview, which is used by pocketbook devices.
 

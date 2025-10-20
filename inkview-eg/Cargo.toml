@@ -1,13 +1,18 @@
 [package]
 name = "inkview-eg"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "embedded-graphics-core driver for inkview-rs"
+
+license = "MIT"
+keywords = ["inkview", "pocketbook", "eink"]
+repository = "https://github.com/simmsb/inkview-rs"
+authors = ["flxzt"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-inkview = { path = "../inkview" }
+inkview = { path = "../inkview", version = "0.1.1" }
 embedded-graphics-core = "0.4.0"
 
 [dev-dependencies]
@@ -19,3 +24,6 @@ default = []
 sdk-5-19 = ["inkview/sdk-5-19"]
 sdk-6-5 = ["inkview/sdk-6-5"]
 sdk-6-8 = ["inkview/sdk-6-8"]
+
+[package.metadata.docs.rs]
+features = ["sdk-6-8"]
