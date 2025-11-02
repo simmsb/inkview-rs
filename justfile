@@ -61,3 +61,11 @@ generate-bindings:
 [confirm]
 clean:
     cargo clean
+
+# Generate changelog for `target`
+changelog target:
+  cd {{target}} && git cliff -o CHANGELOG.md
+
+# Generate changelog for all
+changelog-all: (changelog 'inkview') (changelog 'inkview-eg') (changelog 'inkview-slint')
+    
