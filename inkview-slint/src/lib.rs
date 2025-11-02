@@ -1,3 +1,4 @@
+use inkview::event::Key;
 use inkview::{screen::Screen, Event};
 use rgb::RGB;
 use slint::platform::{
@@ -215,6 +216,26 @@ impl slint::platform::Platform for Backend {
     }
 }
 
+fn ink_key_to_slint(key: Key) -> Option<slint::platform::Key> {
+    match key {
+        Key::Up => Some(slint::platform::Key::UpArrow),
+        Key::Down => Some(slint::platform::Key::DownArrow),
+        Key::Left => Some(slint::platform::Key::LeftArrow),
+        Key::Prev => Some(slint::platform::Key::LeftArrow),
+        Key::Prev2 => Some(slint::platform::Key::LeftArrow),
+        Key::Right => Some(slint::platform::Key::RightArrow),
+        Key::Next => Some(slint::platform::Key::RightArrow),
+        Key::Next2 => Some(slint::platform::Key::RightArrow),
+        Key::Ok => Some(slint::platform::Key::Return),
+        Key::Back => Some(slint::platform::Key::Backspace),
+        Key::Menu => Some(slint::platform::Key::Menu),
+        Key::Home => Some(slint::platform::Key::Home),
+        Key::Plus => Some(slint::platform::Key::PageUp),
+        Key::Minus => Some(slint::platform::Key::PageDown),
+        _ => None,
+    }
+}
+
 fn ink_evt_to_slint(evt: Event) -> Option<WindowEvent> {
     println!("evt: {:?}", evt);
     let evt = match evt {
@@ -231,6 +252,33 @@ fn ink_evt_to_slint(evt: Event) -> Option<WindowEvent> {
         },
         Event::Foreground { .. } => WindowEvent::WindowActiveChanged(true),
         Event::Background { .. } => WindowEvent::WindowActiveChanged(false),
+        Event::KeyDown { key } => {
+            if let Some(slint_key) = ink_key_to_slint(key) {
+                WindowEvent::KeyPressed {
+                    text: slint_key.into(),
+                }
+            } else {
+                return None;
+            }
+        }
+        Event::KeyRepeat { key } => {
+            if let Some(slint_key) = ink_key_to_slint(key) {
+                WindowEvent::KeyPressRepeated {
+                    text: slint_key.into(),
+                }
+            } else {
+                return None;
+            }
+        }
+        Event::KeyUp { key } => {
+            if let Some(slint_key) = ink_key_to_slint(key) {
+                WindowEvent::KeyReleased {
+                    text: slint_key.into(),
+                }
+            } else {
+                return None;
+            }
+        }
         _ => return None,
     };
 
