@@ -18,7 +18,7 @@ num-derive = "0.4"
 num-traits = "0.2"
 
 [features]
-default = []
+default = ["sdk-6-8"]
 sdk-5-19 = ["_sdk_selected"]
 sdk-6-5 = ["_sdk_selected"]
 sdk-6-8 = ["_sdk_selected"]
