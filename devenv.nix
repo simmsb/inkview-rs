@@ -10,7 +10,9 @@
   ];
 
   # https://devenv.sh/languages/
-  languages.rust.enable = true;
-
-  env.GITHUB_TOKEN = config.secretspec.secrets.GITHUB_TOKEN or "";
+  languages.rust = {
+    enable = true;
+    channel = "stable";
+    targets = [ "armv7-unknown-linux-gnueabi" ];
+  };
 }

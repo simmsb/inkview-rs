@@ -6,14 +6,14 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-euclid = "0.22.9"
-rgb = "0.8.37"
-slint = { version = "1.4.0", default-features = false, features = ["compat-1-2", "std", "software-renderer-systemfonts", "renderer-software"] }
+euclid = "0.22.11"
+rgb = "0.8.52"
+slint = { version = "1.14.1", default-features = false, features = ["compat-1-2", "std", "software-renderer-systemfonts", "renderer-software"] }
 inkview = { path = "../../inkview", version = "0.1.1" }
 inkview-slint = { path = "../../inkview-slint", version = "0.1.1" }
 
 [build-dependencies]
-slint-build = { version = "1.4.0" }
+slint-build = { version = "1.14.1" }
 
 [features]
 default = []
