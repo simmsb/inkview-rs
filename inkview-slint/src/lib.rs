@@ -72,15 +72,6 @@ impl slint::platform::Platform for Backend {
     }
 
     fn run_event_loop(&self) -> Result<(), slint::PlatformError> {
-        // self.window
-        //     .borrow()
-        //     .as_ref()
-        //     .unwrap()
-        //     .set_size(slint::PhysicalSize::new(
-        //         self.width as u32,
-        //         self.height as u32,
-        //     ));
-
         slint::Window::set_size(
             self.window.borrow().as_ref().unwrap().as_ref(),
             slint::PhysicalSize::new(self.width as u32, self.height as u32)
@@ -94,11 +85,6 @@ impl slint::platform::Platform for Backend {
             .dispatch_event(WindowEvent::ScaleFactorChanged {
                 scale_factor: SCALE_FACTOR,
             });
-
-        // slint::Window::set_size(
-        //     self.window.borrow().as_ref().unwrap().as_ref(),
-        //     slint::PhysicalSize::new(self.width as u32, self.height as u32).to_logical(SCALE_FACTOR),
-        // );
 
         // bad naming, oops
         let mut fulfill_dynamic_updates_after: Option<Instant> = None;
