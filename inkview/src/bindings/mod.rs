@@ -2,7 +2,8 @@
     clippy::all,
     non_snake_case,
     non_camel_case_types,
-    non_upper_case_globals
+    non_upper_case_globals,
+    rustdoc::all
 )]
 
 #[cfg(feature = "sdk-5-19")]
@@ -21,3 +22,6 @@ mod bindings_6_8;
 pub use bindings_6_8::*;
 
 pub use inkview as Inkview;
+
+unsafe impl Send for inkview {}
+unsafe impl Sync for inkview {}
