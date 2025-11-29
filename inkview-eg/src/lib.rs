@@ -2,7 +2,7 @@ use embedded_graphics_core::draw_target::DrawTarget;
 use embedded_graphics_core::geometry::{OriginDimensions, Size};
 use embedded_graphics_core::pixelcolor::{Gray8, GrayColor};
 use inkview::bindings;
-use inkview::screen::{Screen, ScreenOrientation};
+use inkview::screen::{Screen, ScreenOrientation, BB8};
 use std::convert::Infallible;
 
 pub struct InkviewDisplay {
@@ -69,7 +69,7 @@ impl DrawTarget for InkviewDisplay {
             let x = pixel.0.x as usize;
             let y = pixel.0.y as usize;
             let color = pixel.1.luma();
-            self.iv_screen.draw(x, y, color);
+            self.iv_screen.draw(x, y, BB8(color));
         }
         Ok(())
     }

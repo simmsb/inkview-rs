@@ -1,4 +1,5 @@
 use inkview::event::Key;
+use inkview::screen::RGB24;
 use inkview::{screen::Screen, Event};
 use rgb::RGB;
 use slint::platform::{
@@ -13,16 +14,6 @@ use std::{
 };
 
 const SCALE_FACTOR: f32 = 3.0;
-
-#[repr(transparent)]
-#[derive(Clone, Copy)]
-struct GrayScalePixel(u8);
-
-impl GrayScalePixel {
-    fn from_rgb(red: u8, green: u8, blue: u8) -> Self {
-        Self(((red as u16 + green as u16 + blue as u16) / 3) as u8)
-    }
-}
 
 pub struct Backend {
     screen: RefCell<Screen<'static>>,
@@ -151,11 +142,9 @@ impl slint::platform::Platform for Backend {
                         for dx in 0..damage.bounding_box_size().width {
                             let x = damage.bounding_box_origin().x + dx as i32;
                             let y = damage.bounding_box_origin().y + dy as i32;
-                            let c = buffer[y as usize * self.width + x as usize];
-
-                            let c = GrayScalePixel::from_rgb(c.r, c.g, c.b);
-
-                            screen.draw(x as usize, y as usize, c.0);
+                            let idx = y as usize * self.width + x as usize;
+                            let c = buffer[idx];
+                            screen.draw(x as usize, y as usize, RGB24(c.r, c.g, c.b));
                         }
                     }
 
