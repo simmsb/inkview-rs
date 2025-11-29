@@ -61,7 +61,8 @@ impl<'a> Screen<'a> {
             .expect("Failed to get current task framebuffer while creating new screen.");
 
         let fbinfo = unsafe {
-            iv.GetTaskFramebufferInfo(iv.GetCurrentTask()).as_mut()
+            iv.GetTaskFramebufferInfo(iv.GetCurrentTask())
+                .as_mut()
                 .expect("Failed to get current task framebuffer info.")
         };
 
@@ -104,7 +105,6 @@ impl<'a> Screen<'a> {
         if !(0..self.width).contains(&x) || !(0..self.height).contains(&y) {
             return;
         }
-
 
         if self.depth == 1 {
             let i = self.stride * y + x;
@@ -151,7 +151,14 @@ impl<'a> Screen<'a> {
     // ExitUpdateE2:          0xe7, 0
     pub fn do_partial_update(&mut self, x: i32, y: i32, w: u32, h: u32, flags: u32, dynamic: bool) {
         unsafe {
-            self.iv.do_partial_update(x, y, w as i32, h as i32, flags as i32, if dynamic { 1 } else { 0 });
+            self.iv.do_partial_update(
+                x,
+                y,
+                w as i32,
+                h as i32,
+                flags as i32,
+                if dynamic { 1 } else { 0 },
+            );
         }
     }
 
