@@ -58,7 +58,7 @@ generate-bindings:
     export BINDGEN_EXTRA_CLANG_ARGS="{{bindgen_extra_clang_args}}"
     cp {{pb_sdk_sysroot}}/usr/local/include/inkview.h {{pb_sdk_sysroot}}/usr/local/include/inkview_tampered.h
     printf "\nvoid do_partial_update(int x, int y, int w, int h, int flags0, int flags1);\n" >> {{pb_sdk_sysroot}}/usr/local/include/inkview_tampered.h
-    bindgen --blocklist-function "_.*" --blocklist-item "timer.*" --blocklist-item ".*sigevent.*" --blocklist-item ".*PTHREAD.*" --blocklist-item ".*pthread.*" --blocklist-var ".*pthread.*" --blocklist-function ".*pthread.*" --blocklist-type ".*pthread.*" --dynamic-loading inkview {{pb_sdk_sysroot}}/usr/local/include/inkview_tampered.h -o inkview/src/bindings/bindings_{{replace(pb_sdk_version, ".", "_")}}.rs
+    bindgen --no-layout-tests --blocklist-function "_.*" --blocklist-item "timer.*" --blocklist-item ".*sigevent.*" --blocklist-item ".*PTHREAD.*" --blocklist-item ".*pthread.*" --blocklist-var ".*pthread.*" --blocklist-function ".*pthread.*" --blocklist-type ".*pthread.*" --dynamic-loading inkview {{pb_sdk_sysroot}}/usr/local/include/inkview_tampered.h -o inkview/src/bindings/bindings_{{replace(pb_sdk_version, ".", "_")}}.rs
 
 [confirm]
 clean:
