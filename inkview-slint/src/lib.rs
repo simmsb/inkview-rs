@@ -13,8 +13,6 @@ use std::{
     time::{Duration, Instant},
 };
 
-const SCALE_FACTOR: f32 = 3.0;
-
 pub struct Backend {
     screen: RefCell<Screen<'static>>,
     evts: Receiver<Event>,
@@ -52,6 +50,12 @@ fn rect_from_phys(r: PhysicalRegion) -> euclid::Rect<i32, euclid::UnknownUnit> {
     )
 }
 
+fn scale_from_screen(screen: &Screen) -> f32 {
+    let dpi = screen.dpi() as f32 / 100.0;
+
+    return dpi * screen.scale();
+}
+
 impl slint::platform::Platform for Backend {
     fn create_window_adapter(
         &self,
@@ -63,19 +67,21 @@ impl slint::platform::Platform for Backend {
     }
 
     fn run_event_loop(&self) -> Result<(), slint::PlatformError> {
+        let scale_factor = scale_from_screen(&*self.screen.borrow());
+
+        let convert_evt = |evt| ink_evt_to_slint(scale_factor, evt);
+
         slint::Window::set_size(
             self.window.borrow().as_ref().unwrap().as_ref(),
             slint::PhysicalSize::new(self.width as u32, self.height as u32)
-                .to_logical(SCALE_FACTOR),
+                .to_logical(scale_factor),
         );
 
         self.window
             .borrow()
             .as_ref()
             .unwrap()
-            .dispatch_event(WindowEvent::ScaleFactorChanged {
-                scale_factor: SCALE_FACTOR,
-            });
+            .dispatch_event(WindowEvent::ScaleFactorChanged { scale_factor });
 
         // bad naming, oops
         let mut fulfill_dynamic_updates_after: Option<Instant> = None;
@@ -101,14 +107,11 @@ impl slint::platform::Platform for Backend {
                 };
 
                 let evt = if let Some(delay) = delay {
-                    self.evts
-                        .recv_timeout(delay)
-                        .ok()
-                        .and_then(ink_evt_to_slint)
+                    self.evts.recv_timeout(delay).ok().and_then(convert_evt)
                 } else if window.has_active_animations() {
-                    self.evts.try_recv().ok().and_then(ink_evt_to_slint)
+                    self.evts.try_recv().ok().and_then(convert_evt)
                 } else {
-                    self.evts.recv().ok().and_then(ink_evt_to_slint)
+                    self.evts.recv().ok().and_then(convert_evt)
                 };
 
                 if let Some(redraw_region) = dynamic_region_to_redraw {
@@ -211,18 +214,18 @@ fn ink_key_to_slint(key: Key) -> Option<slint::platform::Key> {
     }
 }
 
-fn ink_evt_to_slint(evt: Event) -> Option<WindowEvent> {
+fn ink_evt_to_slint(scale_factor: f32, evt: Event) -> Option<WindowEvent> {
     println!("evt: {:?}", evt);
     let evt = match evt {
         Event::PointerDown { x, y } => WindowEvent::PointerPressed {
-            position: slint::PhysicalPosition { x, y }.to_logical(SCALE_FACTOR),
+            position: slint::PhysicalPosition { x, y }.to_logical(scale_factor),
             button: slint::platform::PointerEventButton::Left,
         },
         Event::PointerMove { x, y } => WindowEvent::PointerMoved {
-            position: slint::PhysicalPosition { x, y }.to_logical(SCALE_FACTOR),
+            position: slint::PhysicalPosition { x, y }.to_logical(scale_factor),
         },
         Event::PointerUp { x, y } => WindowEvent::PointerReleased {
-            position: slint::PhysicalPosition { x, y }.to_logical(SCALE_FACTOR),
+            position: slint::PhysicalPosition { x, y }.to_logical(scale_factor),
             button: slint::platform::PointerEventButton::Left,
         },
         Event::Foreground { .. } => WindowEvent::WindowActiveChanged(true),
