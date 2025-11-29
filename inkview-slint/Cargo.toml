@@ -17,6 +17,8 @@ euclid = "0.22.11"
 rgb = "0.8.52"
 slint = { version = "1.14.1", default-features = false, features = ["compat-1-2", "std", "software-renderer-systemfonts", "renderer-software"] }
 inkview = { path = "../inkview", version = "0.1.1" }
+pixel_map = "0.4.0"
+itertools = "0.14.0"
 
 [features]
 default = []

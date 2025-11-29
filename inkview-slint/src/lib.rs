@@ -1,11 +1,13 @@
 use inkview::event::Key;
 use inkview::screen::RGB24;
 use inkview::{screen::Screen, Event};
+// use pixel_map::PixelMap;
 use rgb::RGB;
 use slint::platform::{
     software_renderer::{self as renderer, PhysicalRegion},
     WindowEvent,
 };
+use std::collections::{HashMap, HashSet};
 use std::{
     cell::RefCell,
     rc::Rc,
@@ -20,6 +22,7 @@ pub struct Backend {
     height: usize,
     window: RefCell<Option<Rc<renderer::MinimalSoftwareWindow>>>,
     buffer: RefCell<Vec<RGB<u8>>>,
+    // pixelmap: RefCell<PixelMap<rgb::Rgb<u8>>>,
 }
 
 impl Backend {
@@ -28,6 +31,11 @@ impl Backend {
         let height = screen.height();
 
         let buffer = vec![Default::default(); width * height];
+        // let pixelmap = PixelMap::new(
+        //     &(width as u32, height as u32).into(),
+        //     rgb::Rgb::new(0, 0, 0),
+        //     1,
+        // );
 
         Self {
             screen: screen.into(),
@@ -36,6 +44,7 @@ impl Backend {
             height,
             window: Default::default(),
             buffer: buffer.into(),
+            // pixelmap: pixelmap.into(),
         }
     }
 }
@@ -93,6 +102,7 @@ impl slint::platform::Platform for Backend {
             slint::platform::update_timers_and_animations();
 
             if let Some(window) = self.window.borrow().clone() {
+                // let pixelmap = &mut *self.pixelmap.borrow_mut();
                 let delay = if window.has_active_animations() {
                     None
                 } else {
@@ -106,6 +116,7 @@ impl slint::platform::Platform for Backend {
                     }
                 };
 
+                // TODO: receive all events we can
                 let evt = if let Some(delay) = delay {
                     self.evts.recv_timeout(delay).ok().and_then(convert_evt)
                 } else if window.has_active_animations() {
@@ -120,6 +131,7 @@ impl slint::platform::Platform for Backend {
                         fulfill_dynamic_updates_after = None;
 
                         let mut screen = self.screen.borrow_mut();
+                        println!("redraw dynamic {redraw_region:?}");
                         screen.partial_update(
                             redraw_region.origin.x,
                             redraw_region.origin.y,
@@ -148,8 +160,15 @@ impl slint::platform::Platform for Backend {
                             let idx = y as usize * self.width + x as usize;
                             let c = buffer[idx];
                             screen.draw(x as usize, y as usize, RGB24(c.r, c.g, c.b));
+                            // pixelmap.set_pixel((x as u32, y as u32), c);
                         }
                     }
+
+                    // pixelmap.drain_dirty(|r| {
+                    //     if r.is_leaf() {
+                    //         dbg!(r);
+                    //     }
+                    // });
 
                     // println!("Drawing to: {:?}", damage);
 
@@ -162,12 +181,16 @@ impl slint::platform::Platform for Backend {
 
                         if last_draw_at.elapsed() > Duration::from_millis(20) {
                             let redraw_region = accumulated_updates.take().unwrap();
-                            screen.dynamic_update(
+                            println!("partial_update {redraw_region:?}");
+                            screen.do_partial_update(
                                 redraw_region.origin.x,
                                 redraw_region.origin.y,
                                 redraw_region.width() as u32,
                                 redraw_region.height() as u32,
+                                0xef,
+                                true,
                             );
+                            println!("END partial update {redraw_region:?}");
                             last_draw_at = Instant::now();
                         }
 
