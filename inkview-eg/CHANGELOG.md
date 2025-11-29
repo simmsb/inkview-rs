@@ -5,28 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [inkview-eg-0.2.0] - 2025-11-29
+
+### Added
+- Add missing readmes, repo cleanup
 
 ### Changed
+- Bump versions
+- Attempt support for RGB devices, also correct the grayscale conversion in inkview-slint
+- Generate changelogs
 - Some repo work
 
 ## [inkview-eg-0.1.1] - 2025-10-20
 
 ### Added
-- Add bindings for SDK v6.8 by @flxzt in [#7](https://github.com/simmsb/inkview-rs/pull/7)
+- Add bindings for SDK v6.8
 
 ### Changed
-- Prep for crates.io submission by @simmsb
-- Inkview misc improvements, features, fixes by @flxzt in [#5](https://github.com/simmsb/inkview-rs/pull/5)
-- Merge pull request #3 from flxzt/inkview-eg by @simmsb in [#3](https://github.com/simmsb/inkview-rs/pull/3)
-- Clean up inkview-eg impl by @flxzt
-- Move docs in top-level readme by @flxzt
-- Simplify inkview-eg example by @flxzt
-- Inkview-eg uses features for sdk versions by @flxzt
-- Initial inkview-eg impl with examples by @flxzt
+- Prep for crates.io submission
+- Inkview misc improvements, features, fixes
+- Merge pull request #3 from flxzt/inkview-eg
+- Clean up inkview-eg impl
+- Move docs in top-level readme
+- Simplify inkview-eg example
+- Inkview-eg uses features for sdk versions
+- Initial inkview-eg impl with examples
 
 ### Fixed
-- Inkview-eg example, skip applying pixels out of bounds by @flxzt in [#4](https://github.com/simmsb/inkview-rs/pull/4)
+- Inkview-eg example, skip applying pixels out of bounds
 
-[unreleased]: https://github.com/simmsb/inkview-rs/compare/inkview-eg-0.1.1...HEAD
+[inkview-eg-0.2.0]: https://github.com///compare/inkview-eg-0.1.1...inkview-eg-0.2.0
+[inkview-eg-0.1.1]: https://github.com///compare/inkview-eg-0.2.0...inkview-eg-0.1.1
 

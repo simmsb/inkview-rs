@@ -1,6 +1,6 @@
 [package]
 name = "inkview-eg"
-version = "0.1.1"
+version = "0.2.0"
 edition = "2021"
 description = "embedded-graphics-core driver for inkview-rs"
 
@@ -12,7 +12,7 @@ authors = ["flxzt"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-inkview = { path = "../inkview", version = "0.1.1" }
+inkview = { path = "../inkview", version = "0.2.0" }
 embedded-graphics-core = "0.4.0"
 
 [dev-dependencies]

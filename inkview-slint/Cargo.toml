@@ -1,6 +1,6 @@
 [package]
 name = "inkview-slint"
-version = "0.1.2"
+version = "0.2.0"
 edition = "2021"
 
 description = "Slint backend for inkview-rs"
@@ -16,7 +16,7 @@ authors = ["Ben Simms"]
 euclid = "0.22.11"
 rgb = "0.8.52"
 slint = { version = "1.14.1", default-features = false, features = ["compat-1-2", "std", "software-renderer-systemfonts", "renderer-software"] }
-inkview = { path = "../inkview", version = "0.1.1" }
+inkview = { path = "../inkview", version = "0.2.0" }
 
 [features]
 default = []
