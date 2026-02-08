@@ -32,10 +32,12 @@ prerequisites:
     cargo install cargo-zigbuild
 
 build-app name:
-    cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{name}} --features={{cargo_sdk_feature}}
+    cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{name}} --no-default-features \
+        --features={{cargo_sdk_feature}}
 
 build-example crate name:
-    cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{crate}} --example {{name}} --features={{cargo_sdk_feature}}
+    cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{crate}} --example {{name}} \
+        --no-default-features --features={{cargo_sdk_feature}}
 
 # Transfer a built app to the device. 'path_to_binary' is a relative path from 'target/<build_target>/<cargo_out_profile>/'.
 transfer-app-usb path_to_binary target_app_name:

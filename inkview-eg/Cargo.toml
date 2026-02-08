@@ -12,7 +12,7 @@ authors = ["flxzt"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-inkview = { path = "../inkview", version = "0.2.0" }
+inkview = { path = "../inkview", version = "0.2.0", default-features = false}
 embedded-graphics-core = "0.4.0"
 
 [dev-dependencies]
@@ -20,7 +20,7 @@ embedded-graphics = "0.8.1"
 anyhow = "1.0"
 
 [features]
-default = []
+default = ["sdk-6-8"]
 sdk-5-19 = ["inkview/sdk-5-19"]
 sdk-6-5 = ["inkview/sdk-6-5"]
 sdk-6-8 = ["inkview/sdk-6-8"]
