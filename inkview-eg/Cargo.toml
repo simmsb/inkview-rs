@@ -128,8 +128,7 @@ commit_parsers = [
 ]
 # Exclude commits that are not matched by any commit parser.
 filter_commits = false
-# Order releases topologically instead of chronologically.
-topo_order = true
+topo_order = false
 # Order of commits in each group/release within the changelog.
 # Allowed values: newest, oldest
 sort_commits = "newest"
