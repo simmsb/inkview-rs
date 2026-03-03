@@ -5,9 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+- Repo stuff
+
 ## [inkview-0.2.0] - 2025-11-29
 
 ### Changed
+- Cargo fmt
+- Disable generation of bindgen layout tests
 - Bump versions
 - Attempt support for RGB devices, also correct the grayscale conversion in inkview-slint
 - Regen bindings and include do_partial_update
@@ -40,6 +47,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Inkview-eg example, skip applying pixels out of bounds
 - Inkview crate fails to build
 
+[unreleased]: https://github.com///compare/inkview-0.2.0...HEAD
 [inkview-0.2.0]: https://github.com///compare/inkview-0.1.1...inkview-0.2.0
-[inkview-0.1.1]: https://github.com///compare/inkview-0.2.0...inkview-0.1.1
 

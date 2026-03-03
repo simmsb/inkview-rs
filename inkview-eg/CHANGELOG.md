@@ -5,16 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [inkview-eg-0.2.0] - 2025-11-29
+## [Unreleased]
+
+### Changed
+- Repo stuff
+
+## [inkview-eg-0.2.1] - 2026-03-03
 
 ### Added
 - Add missing readmes, repo cleanup
 
 ### Changed
+- Bump versions to push fix
 - Bump versions
 - Attempt support for RGB devices, also correct the grayscale conversion in inkview-slint
 - Generate changelogs
 - Some repo work
+
+### Fixed
+- Build recipes using different sdk version
 
 ## [inkview-eg-0.1.1] - 2025-10-20
 
@@ -34,6 +43,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Inkview-eg example, skip applying pixels out of bounds
 
-[inkview-eg-0.2.0]: https://github.com///compare/inkview-eg-0.1.1...inkview-eg-0.2.0
-[inkview-eg-0.1.1]: https://github.com///compare/inkview-eg-0.2.0...inkview-eg-0.1.1
+[unreleased]: https://github.com///compare/inkview-eg-0.2.1...HEAD
+[inkview-eg-0.2.1]: https://github.com///compare/inkview-eg-0.1.1...inkview-eg-0.2.1
 
