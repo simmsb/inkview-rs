@@ -56,7 +56,7 @@ For example:
 just pb_sdk_version=6.8 build-app inkview-slint
 ```
 
-**NOTE:** while the demo projects lay in the `./examples/` they are still apps,
+**NOTE:** while the demo projects lay in the [./examples/](./examples/) folder they are still apps,
 and therefore should be built with the `build-app` command
 
 To build an example:
