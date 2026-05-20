@@ -11,6 +11,7 @@
 This repo contains bindings for `libinkview`, which is used by pocketbook devices.
 
 ## Overview
+
 - `inkview` is the core of the project.
 It dynamically loads `libinkview` rather than linking it statically, so that users of this
 crate woudln't have to setup the pocketbook SDK during the build.
@@ -25,6 +26,7 @@ crate that works with `inkview`, with a respective demo project under `examples/
 The subprojects may contain examples that lay under `examples/` subfolders (e.g. `inkview/examples`)
 
 ## Prerequisites (Set-up)
+
 1. [Zig](https://ziglang.org/learn/getting-started/#installing-zig) must be installed.
 1. [just](https://github.com/casey/just) command runner must be installed.
     The build and deployment helper commands are defined in the [justfile](./justfile).
@@ -78,7 +80,7 @@ For example:
 just pb_sdk_version=6.8 cargo_profile=release build-app inkview-slint-demo
 ```
 
-## Deploy a binary
+## Deployment
 
 To deploy a built binary to the device over USB, run the following,  
 assuming the device is connected and appears in path `/run/media/$USER/<pb-device>`:
@@ -90,6 +92,6 @@ so for example: `examples/hello_world`
 just pb_device=<your-device> deploy-usb <path-to-binary> <target-name>
 ```
 
-## Generate bindings
+## Bindings generation
 
 See documentation for the `generate-bindings` just recipe.
