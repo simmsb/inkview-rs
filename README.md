@@ -8,22 +8,26 @@
 </p>
 
 
-This repo contains bindings for libinkview, which is used by pocketbook devices.
+This repo contains bindings for `libinkview`, which is used by pocketbook devices.
 
-We load libinkview dynamically rather than linking it so that users of this
-crate don't have to setup the pocketbook SDK. Instead you just need to
-cross-compile to `armv7-unknown-linux-gnueabi.2.23` (`cargo zigbuild` works well
-for this) and your binary will run on a pocketbook E-Reader.
+## Overview
+- `inkview` is the core of the project.
+It dynamically loads `libinkview` rather than linking it statically, so that users of this
+crate woudln't have to setup the pocketbook SDK during the build.
+Instead, one needs to cross-compile to `armv7-unknown-linux-gnueabi.2.23`
+(`cargo zigbuild` works well for this) and the binary will run on a pocketbook E-Reader.
 
-Also in this repo is `inkview-slint` which provides a slint `Backend` that works
-with inkview. And a demo application `inkview-slint-demo`.
+- `inkview-eg` is an [embedded-graphics-core](https://crates.io/crates/embedded-graphics-core) driver for `inkview-rs`.
 
-`inkview-eg` is a [embedded-graphics-core](https://crates.io/crates/embedded-graphics-core) driver for inkview-rs.
+- `inkview-slint` provides a backend for the [slint](https://github.com/slint-ui/slint)
+crate that works with `inkview`, with a respective demo project under `examples/inkview-slint-demo`.
+
+The subprojects may contain examples that lay under `examples/` subfolders (e.g. `inkview/examples`)
 
 ## Prerequisites (Set-up)
-
 1. [Zig](https://ziglang.org/learn/getting-started/#installing-zig) must be installed.
-1. To run recipes from the justfile, install the [just](https://github.com/casey/just) command runner.
+1. [just](https://github.com/casey/just) command runner must be installed.
+    The build and deployment helper commands are defined in the [justfile](./justfile).
     Available recipes can be listed with:
     ```bash
     just --list
@@ -47,10 +51,31 @@ To build a binary crate located in this repo, run:
 just pb_sdk_version=<sdk-version> build-app <name>
 ```
 
+For example:
+```bash
+just pb_sdk_version=6.8 build-app inkview-slint
+```
+
+**NOTE:** while the demo projects lay in the `./examples/` they are still apps,
+and therefore should be built with the `build-app` command
+
 To build an example:
 
 ```bash
 just pb_sdk_version=<sdk-version> build-example <crate> <name>
+```
+
+For example:
+```bash
+just pb_sdk_version=6.8 build-example inkview hello_world
+```
+
+By default, the any build is going to be done with the `debug` profile.
+Changing the profile to `release`, one should add the `cargo_profile=release` argument.
+
+For example:
+```bash
+just pb_sdk_version=6.8 cargo_profile=release build-app inkview-slint-demo
 ```
 
 ## Deploy a binary
