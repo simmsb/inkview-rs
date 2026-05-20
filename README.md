@@ -92,6 +92,8 @@ so for example: `examples/hello_world`
 just pb_device=<your-device> deploy-usb <path-to-binary> <target-name>
 ```
 
+For more information take a look at [utils README.md](./utils/README.md)
+
 ## Bindings generation
 
 See documentation for the `generate-bindings` just recipe.
