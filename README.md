@@ -61,7 +61,7 @@ just pb_sdk_version=6.8 build-app inkview-slint
 **NOTE:** while the demo projects lay in the [./examples/](./examples/) folder they are still apps,
 and therefore should be built with the `build-app` command
 
-To build an example:
+To build an example, run:
 
 ```bash
 just pb_sdk_version=<sdk-version> build-example <crate> <name>
@@ -72,7 +72,7 @@ For example:
 just pb_sdk_version=6.8 build-example inkview hello_world
 ```
 
-By default, the any build is going to be done with the `debug` profile.
+By default, any build is going to be done with the `debug` profile.
 Changing the profile to `release`, one should add the `cargo_profile=release` argument.
 
 For example:
