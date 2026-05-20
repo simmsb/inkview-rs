@@ -20,23 +20,24 @@ with inkview. And a demo application `inkview-slint-demo`.
 
 `inkview-eg` is a [embedded-graphics-core](https://crates.io/crates/embedded-graphics-core) driver for inkview-rs.
 
-## Prerequisites
+## Prerequisites (Set-up)
 
-[Zig](https://ziglang.org/learn/getting-started/#installing-zig) must be installed.
-
-To run recipes from the justfile, install the [just](https://github.com/casey/just) command runner.
-
-Available recipes can be listed with:
-
-```bash
-just --list
-```
-
-Then execute the following to install the `armv7-unknown-linux-gnueabi` rustc target and `cargo-zigbuild`:
-
-```bash
-just prerequisites
-```
+1. [Zig](https://ziglang.org/learn/getting-started/#installing-zig) must be installed.
+1. To run recipes from the justfile, install the [just](https://github.com/casey/just) command runner.
+    Available recipes can be listed with:
+    ```bash
+    just --list
+    ```
+1. To set-up a reproducible sandbox build environment for the target `armv7-unknown-linux-gnueabi.2.23`
+one must install [NIX](https://nixos.org/download/) +
+[direnv](https://direnv.net/docs/installation.html) +
+[devenv](https://devenv.sh/getting-started/).
+    This way Nix installs the exact cross-compilation tools required for the e-reader, 
+    while direnv automatically injects them into your shell the moment you enter the project directory.
+1. Then execute the following to install the `armv7-unknown-linux-gnueabi` rustc target and `cargo-zigbuild`:
+    ```bash
+    just prerequisites
+    ```
 
 ## Build
 
