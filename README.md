@@ -14,7 +14,7 @@ This repo contains bindings for `libinkview`, which is used by pocketbook device
 
 - `inkview` is the core of the project.
 It dynamically loads `libinkview` rather than linking it statically, so that users of this
-crate woudln't have to setup the pocketbook SDK during the build.
+crate don't have to setup the pocketbook SDK.
 Instead, one needs to cross-compile to `armv7-unknown-linux-gnueabi.2.23`
 (`cargo zigbuild` works well for this) and the binary will run on a pocketbook E-Reader.
 
