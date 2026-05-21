@@ -12,6 +12,8 @@ pb_device := "6678-3C5A"
 gdbserver_port := "10003"
 
 [private]
+pb_mount_root := if os() == "macos" { "/Volumes" } else { "/run/media/$USER" }
+[private]
 cargo_sdk_feature := "sdk-" + replace(pb_sdk_version, ".", "-")
 [private]
 sdk_bindings_filename := "bindings_" + replace(pb_sdk_version, ".", "_") + ".rs"
@@ -61,12 +63,17 @@ build-example crate name:
     cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{crate}} --example {{name}} \
         --no-default-features --features={{cargo_sdk_feature}}
 
-[doc('Transfer a built binary to the device.
+[doc('Transfer a built binary to the device via USB.
 `binary` is a relative path starting from "target/<build_target>/<cargo_out_profile>/".')]
 deploy-usb binary target_app_name:
+    # 1. Copying the binary to the device
     cp "target/{{build_target / cargo_out_profile / binary}}" \
-        {{"/run/media/$USER" / pb_device / "applications" / target_app_name}}
-    sync {{"/run/media/$USER" / pb_device}}
+        {{ pb_mount_root / pb_device / "applications" / target_app_name }}
+    # 2. Cleaning up macOS metadata files (if applicable)
+    {{ if os() == "macos" { "rm -f " + (pb_mount_root / pb_device / "applications" / "._") + "*" } else {"echo 'No cleanup needed'"} }}
+    # 3. Flushing the filesytem cache
+    sync {{pb_mount_root / pb_device}}
+    @echo "Deployment successful!"
 
 [doc('Launch `app-receiver.app` first on the device.
 `binary` is a relative path starting from "target/<build_target>/<cargo_out_profile>/".
