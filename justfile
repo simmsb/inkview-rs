@@ -63,8 +63,10 @@ build-example crate name:
     cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{crate}} --example {{name}} \
         --no-default-features --features={{cargo_sdk_feature}}
 
-[doc('Transfer a built binary to the device via USB.
-`binary` is a relative path starting from "target/<build_target>/<cargo_out_profile>/".')]
+[doc("""
+Transfer a built binary to the device via USB.
+`binary` is a relative path starting from "target/<build_target>/<cargo_out_profile>/".
+""")]
 deploy-usb binary target_app_name:
     # 1. Copying the binary to the device
     cp "target/{{build_target / cargo_out_profile / binary}}" \
@@ -75,9 +77,11 @@ deploy-usb binary target_app_name:
     sync {{pb_mount_root / pb_device}}
     @echo "Deployment successful!"
 
-[doc('Launch `app-receiver.app` first on the device.
+[doc("""
+Launch `app-receiver.app` first on the device.
 `binary` is a relative path starting from "target/<build_target>/<cargo_out_profile>/".
-Uses `utils/app-sender.sh` to send the application.')]
+Uses `utils/app-sender.sh` to send the application.
+""")]
 deploy-remote binary remote_app_name remote_ip remote_port="19991":
     echo "Sending application '{{binary}}' .."
     ./utils/app-sender.sh {{"target" / build_target / cargo_out_profile / binary}} {{remote_app_name}} {{remote_ip}} {{remote_port}}
@@ -86,11 +90,13 @@ deploy-remote binary remote_app_name remote_ip remote_port="19991":
 start-gdbserver ssh_target ssh_port executable *args:
     ssh {{ssh_target}} -p {{ssh_port}} "RUST_LOG=debug RUST_BACKTRACE=1 gdbserver 0.0.0.0:{{gdbserver_port}} /mnt/ext1/applications/{{executable}} {{args}}"
 
-[doc('(Re-)generates SDK bindings.
+[doc("""
+(Re-)generates SDK bindings.
 First download and extract SDKs by initializing the git submodule through `git submodule update --init --recursive,
 then executing "./pocketbook-sdks/extract.sh".
 Then adjust variable `pb_sdk_sysroot`.
-Requires tool "7z" and "bindgen" (install with `cargo install bindgen-cli`).')]
+Requires tool "7z" and "bindgen" (install with `cargo install bindgen-cli`).
+""")]
 generate-bindings:
     #!/usr/bin/env bash
     set -euxo pipefail
