@@ -65,7 +65,13 @@ build-example crate name:
 
 [doc("""
 Transfer a built binary to the device via USB.
-`binary` is a relative path starting from "target/<build_target>/<cargo_out_profile>/".
+Options:
+- `binary` - a file path relative to "target/<build_target>/<cargo_out_profile>/".
+- `target_app_name` - name of the application (as is) on the targeted device
+                      the `binary` is going to be renamed to.
+                      For example: inkview-slint-demo.app
+Command example:
+`just cargo_profile=release pb_device=POCKETBOOK deploy-usb inkview-slint-demo inkview-slint-demo.app`
 """)]
 deploy-usb binary target_app_name:
     # 1. Copying the binary to the device
@@ -78,9 +84,16 @@ deploy-usb binary target_app_name:
     @echo "Deployment successful!"
 
 [doc("""
+Transfer a built binary to the device via Wi-Fi.
 Launch `app-receiver.app` first on the device.
-`binary` is a relative path starting from "target/<build_target>/<cargo_out_profile>/".
 Uses `utils/app-sender.sh` to send the application.
+Options:
+- `binary` - a file path relative to "target/<build_target>/<cargo_out_profile>/".
+- `target_app_name` - name of the application (as is) on the targeted device
+                      the `binary` is going to be renamed to.
+                      For example: inkview-slint-demo.app
+Command example:
+`just cargo_profile=release pb_device=POCKETBOOK deploy-remote inkview-slint-demo inkview-slint-demo.app 192.168.1.27`
 """)]
 deploy-remote binary remote_app_name remote_ip remote_port="19991":
     echo "Sending application '{{binary}}' .."
