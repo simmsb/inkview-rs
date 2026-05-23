@@ -78,7 +78,7 @@ deploy-usb binary target_app_name:
     cp "target/{{build_target / cargo_out_profile / binary}}" \
         {{ pb_mount_root / pb_device / "applications" / target_app_name }}
     # 2. Cleaning up macOS metadata files (if applicable)
-    {{ if os() == "macos" { "rm -f " + (pb_mount_root / pb_device / "applications" / "._") + "*" } else {"echo 'No cleanup needed'"} }}
+    {{ if os() == "macos" { "dot_clean " + (pb_mount_root / pb_device / "applications") } else {"echo 'No cleanup needed'"} }}
     # 3. Flushing the filesytem cache
     sync {{pb_mount_root / pb_device}}
     @echo "Deployment successful!"
