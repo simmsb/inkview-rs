@@ -103,3 +103,12 @@ For more information take a look at [utils README.md](./utils/README.md)
 ## Bindings generation
 
 See documentation for the `generate-bindings` just recipe.
+
+## New `inkview-rs` projects templating
+
+Setting up new projects that make use of `inkview-rs` with properly configured linking, building, and deployment from scratch can be quite tedious.
+Often, it would require pretty much the same preconfiguration: `devenv.nix` config, justfile with the basic build and deploy helper comands, etc.
+
+To simplify this repeated process, one can make use of the adjacent templating project [inkview-rs-templates](https://github.com/ihrfv/inkview-rs-templates).
+It only requires `cargo-generate` to be installed, and allows you to create preconfigured basic projects for vanilla `inkview-rs`, `inkview-eg`, and `inkview-slint`.
+
