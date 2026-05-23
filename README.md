@@ -93,6 +93,11 @@ so for example: `examples/hello_world`
 just pb_device=<your-device> deploy-usb <path-to-binary> <target-name>
 ```
 
+For example:
+```bash
+just cargo_profile=release pb_device=PB632 deploy-usb inkview-slint-demo application.app
+```
+
 For more information take a look at [utils README.md](./utils/README.md)
 
 ## Bindings generation
