@@ -38,13 +38,10 @@ The subprojects may contain examples that lay under `examples/` subfolders (e.g.
     1. (EITHER - recommended) one must install [NIX](https://nixos.org/download/) +
     [direnv](https://direnv.net/docs/installation.html) +
     [devenv](https://devenv.sh/getting-started/).
-        This way Nix installs a sandbox environment with the exact cross-compilation tools required for the e-reader, 
+        - This way Nix installs a sandbox environment with the exact cross-compilation tools required for the e-reader, 
         while direnv automatically injects them into your shell the moment you enter the project directory.
-    1. (EITHER) Execute the following to install the `armv7-unknown-linux-gnueabi` rustc target and `cargo-zigbuild` globally:
-    ```bash
-    just prerequisites
-    ```
-    **NOTE:** this way has proved to be problematic in use on macOS when building `inkview-slint` project
+    1. (EITHER) Execute `just prerequisites` to install the `armv7-unknown-linux-gnueabi` rustc target and `cargo-zigbuild` globally
+        - **NOTE:** this way has proved to be problematic in use on macOS when building `inkview-slint` project
 
 ## Build
 
