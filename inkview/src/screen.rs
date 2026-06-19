@@ -53,17 +53,39 @@ pub struct Screen<'a> {
 }
 
 impl<'a> Screen<'a> {
+    /// Whether we're running under the desktop SDK emulator rather than on-device.
+    ///
+    /// The task-framebuffer API (`GetCurrentTask`/`GetTaskFramebuffer`) is only
+    /// wired up on-device: the emulator's `GetCurrentTask()` returns -1 (on both
+    /// the main and worker threads), while the device returns a real task id.
+    fn is_emulator(iv: &Inkview) -> bool {
+        unsafe { iv.GetCurrentTask() < 0 }
+    }
+
     pub fn new(iv: &'a Inkview) -> Self {
         unsafe {
             iv.SetCurrentApplicationAttribute(APPLICATION_ATTRIBUTE_APPLICATION_READER, 1);
         }
-        let fb = unsafe { iv.GetTaskFramebuffer(iv.GetCurrentTask()).as_mut() }
-            .expect("Failed to get current task framebuffer while creating new screen.");
+        // On the emulator the task framebuffer is null, so fall back to the global
+        // canvas (GetCanvas) — the same `icanvas_s`, populated in both environments.
+        // We keep this as a null-check (not gated on `is_emulator`) so it still
+        // recovers if a real task ever hands back a null framebuffer.
+        let fb = unsafe {
+            let task_fb = iv.GetTaskFramebuffer(iv.GetCurrentTask());
+            if task_fb.is_null() {
+                iv.GetCanvas().as_mut()
+            } else {
+                task_fb.as_mut()
+            }
+        }
+        .expect("Failed to get a framebuffer (task framebuffer and GetCanvas both null).");
 
-        let fbinfo = unsafe {
-            iv.GetTaskFramebufferInfo(iv.GetCurrentTask())
-                .as_mut()
-                .expect("Failed to get current task framebuffer info.")
+        // Framebuffer info is informational only and task-only; skip it on the
+        // emulator rather than dereferencing a null pointer.
+        let fbinfo = if Self::is_emulator(iv) {
+            None
+        } else {
+            unsafe { iv.GetTaskFramebufferInfo(iv.GetCurrentTask()).as_mut() }
         };
 
         dbg!(fbinfo);
