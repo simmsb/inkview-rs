@@ -12,6 +12,8 @@ pb_device := "6678-3C5A"
 gdbserver_port := "10003"
 
 [private]
+pb_mount_root := if os() == "macos" { "/Volumes" } else { "/run/media/$USER" }
+[private]
 cargo_sdk_feature := "sdk-" + replace(pb_sdk_version, ".", "-")
 [private]
 sdk_bindings_filename := "bindings_" + replace(pb_sdk_version, ".", "_") + ".rs"
@@ -61,16 +63,38 @@ build-example crate name:
     cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{crate}} --example {{name}} \
         --no-default-features --features={{cargo_sdk_feature}}
 
-[doc('Transfer a built binary to the device.
-`binary` is a relative path starting from "target/<build_target>/<cargo_out_profile>/".')]
+[doc("""
+Transfer a built binary to the device via USB.
+Options:
+- `binary` - a file path relative to "target/<build_target>/<cargo_out_profile>/".
+- `target_app_name` - name of the application (as is) on the targeted device
+                      the `binary` is going to be renamed to.
+                      For example: inkview-slint-demo.app
+Command example:
+`just cargo_profile=release pb_device=POCKETBOOK deploy-usb inkview-slint-demo inkview-slint-demo.app`
+""")]
 deploy-usb binary target_app_name:
+    # 1. Copying the binary to the device
     cp "target/{{build_target / cargo_out_profile / binary}}" \
-        {{"/run/media/$USER" / pb_device / "applications" / target_app_name}}
-    sync {{"/run/media/$USER" / pb_device}}
+        {{ pb_mount_root / pb_device / "applications" / target_app_name }}
+    # 2. Cleaning up macOS metadata files (if applicable)
+    {{ if os() == "macos" { "dot_clean " + (pb_mount_root / pb_device / "applications") } else {"echo 'No cleanup needed'"} }}
+    # 3. Flushing the filesytem cache
+    sync {{pb_mount_root / pb_device}}
+    @echo "Deployment successful!"
 
-[doc('Launch `app-receiver.app` first on the device.
-`binary` is a relative path starting from "target/<build_target>/<cargo_out_profile>/".
-Uses `utils/app-sender.sh` to send the application.')]
+[doc("""
+Transfer a built binary to the device via Wi-Fi.
+Launch `app-receiver.app` first on the device.
+Uses `utils/app-sender.sh` to send the application.
+Options:
+- `binary` - a file path relative to "target/<build_target>/<cargo_out_profile>/".
+- `target_app_name` - name of the application (as is) on the targeted device
+                      the `binary` is going to be renamed to.
+                      For example: inkview-slint-demo.app
+Command example:
+`just cargo_profile=release pb_device=POCKETBOOK deploy-remote inkview-slint-demo inkview-slint-demo.app 192.168.1.27`
+""")]
 deploy-remote binary remote_app_name remote_ip remote_port="19991":
     echo "Sending application '{{binary}}' .."
     ./utils/app-sender.sh {{"target" / build_target / cargo_out_profile / binary}} {{remote_app_name}} {{remote_ip}} {{remote_port}}
@@ -79,11 +103,13 @@ deploy-remote binary remote_app_name remote_ip remote_port="19991":
 start-gdbserver ssh_target ssh_port executable *args:
     ssh {{ssh_target}} -p {{ssh_port}} "RUST_LOG=debug RUST_BACKTRACE=1 gdbserver 0.0.0.0:{{gdbserver_port}} /mnt/ext1/applications/{{executable}} {{args}}"
 
-[doc('(Re-)generates SDK bindings.
+[doc("""
+(Re-)generates SDK bindings.
 First download and extract SDKs by initializing the git submodule through `git submodule update --init --recursive,
 then executing "./pocketbook-sdks/extract.sh".
 Then adjust variable `pb_sdk_sysroot`.
-Requires tool "7z" and "bindgen" (install with `cargo install bindgen-cli`).')]
+Requires tool "7z" and "bindgen" (install with `cargo install bindgen-cli`).
+""")]
 generate-bindings:
     #!/usr/bin/env bash
     set -euxo pipefail
