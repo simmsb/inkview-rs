@@ -53,23 +53,14 @@ pub struct Screen<'a> {
 }
 
 impl<'a> Screen<'a> {
-    /// Whether we're running under the desktop SDK emulator rather than on-device.
-    ///
-    /// The task-framebuffer API (`GetCurrentTask`/`GetTaskFramebuffer`) is only
-    /// wired up on-device: the emulator's `GetCurrentTask()` returns -1 (on both
-    /// the main and worker threads), while the device returns a real task id.
-    fn is_emulator(iv: &Inkview) -> bool {
-        unsafe { iv.GetCurrentTask() < 0 }
-    }
-
     pub fn new(iv: &'a Inkview) -> Self {
         unsafe {
             iv.SetCurrentApplicationAttribute(APPLICATION_ATTRIBUTE_APPLICATION_READER, 1);
         }
         // On the emulator the task framebuffer is null, so fall back to the global
         // canvas (GetCanvas) — the same `icanvas_s`, populated in both environments.
-        // We keep this as a null-check (not gated on `is_emulator`) so it still
-        // recovers if a real task ever hands back a null framebuffer.
+        // We do this with a plain null-check so it also recovers if a real task
+        // ever hands back a null framebuffer.
         let fb = unsafe {
             let task_fb = iv.GetTaskFramebuffer(iv.GetCurrentTask());
             if task_fb.is_null() {
@@ -79,16 +70,6 @@ impl<'a> Screen<'a> {
             }
         }
         .expect("Failed to get a framebuffer (task framebuffer and GetCanvas both null).");
-
-        // Framebuffer info is informational only and task-only; skip it on the
-        // emulator rather than dereferencing a null pointer.
-        let fbinfo = if Self::is_emulator(iv) {
-            None
-        } else {
-            unsafe { iv.GetTaskFramebufferInfo(iv.GetCurrentTask()).as_mut() }
-        };
-
-        dbg!(fbinfo);
         dbg!(fb.depth);
 
         let depth = fb.depth;
