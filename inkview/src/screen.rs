@@ -57,16 +57,19 @@ impl<'a> Screen<'a> {
         unsafe {
             iv.SetCurrentApplicationAttribute(APPLICATION_ATTRIBUTE_APPLICATION_READER, 1);
         }
-        let fb = unsafe { iv.GetTaskFramebuffer(iv.GetCurrentTask()).as_mut() }
-            .expect("Failed to get current task framebuffer while creating new screen.");
-
-        let fbinfo = unsafe {
-            iv.GetTaskFramebufferInfo(iv.GetCurrentTask())
-                .as_mut()
-                .expect("Failed to get current task framebuffer info.")
-        };
-
-        dbg!(fbinfo);
+        // On the emulator the task framebuffer is null, so fall back to the global
+        // canvas (GetCanvas) — the same `icanvas_s`, populated in both environments.
+        // We do this with a plain null-check so it also recovers if a real task
+        // ever hands back a null framebuffer.
+        let fb = unsafe {
+            let task_fb = iv.GetTaskFramebuffer(iv.GetCurrentTask());
+            if task_fb.is_null() {
+                iv.GetCanvas().as_mut()
+            } else {
+                task_fb.as_mut()
+            }
+        }
+        .expect("Failed to get a framebuffer (task framebuffer and GetCanvas both null).");
         dbg!(fb.depth);
 
         let depth = fb.depth;
