@@ -9,35 +9,40 @@
 </p>
 
 
-This repo contains bindings for libinkview, which is used by pocketbook devices.
+This repo contains bindings for `libinkview`, which is used by pocketbook devices.
 
-We load libinkview dynamically rather than linking it so that users of this
-crate don't have to setup the pocketbook SDK. Instead you just need to
-cross-compile to `armv7-unknown-linux-gnueabi.2.23` (`cargo zigbuild` works well
-for this) and your binary will run on a pocketbook E-Reader.
+## Overview
 
-Also in this repo is `inkview-slint` which provides a slint `Backend` that works
-with inkview. And a demo application `inkview-slint-demo`.
+- `inkview` is the core of the project.
+It dynamically loads `libinkview` rather than linking it statically, so that users of this
+crate don't have to setup the pocketbook SDK.
+Instead, one needs to cross-compile to `armv7-unknown-linux-gnueabi.2.23`
+(`cargo zigbuild` works well for this) and the binary will run on a pocketbook E-Reader.
 
-`inkview-eg` is a [embedded-graphics-core](https://crates.io/crates/embedded-graphics-core) driver for inkview-rs.
+- `inkview-eg` is an [embedded-graphics-core](https://crates.io/crates/embedded-graphics-core) driver for `inkview-rs`.
 
-## Prerequisites
+- `inkview-slint` provides a backend for the [slint](https://github.com/slint-ui/slint)
+crate that works with `inkview`, with a respective demo project under `examples/inkview-slint-demo`.
 
-[Zig](https://ziglang.org/learn/getting-started/#installing-zig) must be installed.
+The subprojects may contain examples that lay under `examples/` subfolders (e.g. `inkview/examples`)
 
-To run recipes from the justfile, install the [just](https://github.com/casey/just) command runner.
+## Prerequisites (Set-up)
 
-Available recipes can be listed with:
-
-```bash
-just --list
-```
-
-Then execute the following to install the `armv7-unknown-linux-gnueabi` rustc target and `cargo-zigbuild`:
-
-```bash
-just prerequisites
-```
+1. [Zig](https://ziglang.org/learn/getting-started/#installing-zig) must be installed.
+1. [just](https://github.com/casey/just) command runner must be installed.
+    The build and deployment helper commands are defined in the [justfile](./justfile).
+    Available recipes can be listed with:
+    ```bash
+    just --list
+    ```
+1. Set-up a reproducible build environment for the target `armv7-unknown-linux-gnueabi.2.23` (two ways):
+    1. (EITHER - recommended) one must install [NIX](https://nixos.org/download/) +
+    [direnv](https://direnv.net/docs/installation.html) +
+    [devenv](https://devenv.sh/getting-started/).
+        - This way Nix installs a sandbox environment with the exact cross-compilation tools required for the e-reader, 
+        while direnv automatically injects them into your shell the moment you enter the project directory.
+    1. (EITHER) Execute `just prerequisites` to install the `armv7-unknown-linux-gnueabi` rustc target and `cargo-zigbuild` globally
+        - **NOTE:** this way has proved to be problematic in use on macOS when building `inkview-slint` project
 
 ## Build
 
@@ -47,13 +52,34 @@ To build a binary crate located in this repo, run:
 just pb_sdk_version=<sdk-version> build-app <name>
 ```
 
-To build an example:
+For example:
+```bash
+just pb_sdk_version=6.8 build-app inkview-slint
+```
+
+**NOTE:** while the demo projects lay in the [./examples/](./examples/) folder they are still apps,
+and therefore should be built with the `build-app` command
+
+To build an example, run:
 
 ```bash
 just pb_sdk_version=<sdk-version> build-example <crate> <name>
 ```
 
-## Deploy a binary
+For example:
+```bash
+just pb_sdk_version=6.8 build-example inkview hello_world
+```
+
+By default, any build is going to be done with the `debug` profile.
+Changing the profile to `release`, one should add the `cargo_profile=release` argument.
+
+For example:
+```bash
+just pb_sdk_version=6.8 cargo_profile=release build-app inkview-slint-demo
+```
+
+## Deployment
 
 To deploy a built binary to the device over USB, run the following,  
 assuming the device is connected and appears in path `/run/media/$USER/<pb-device>`:
@@ -65,6 +91,22 @@ so for example: `examples/hello_world`
 just pb_device=<your-device> deploy-usb <path-to-binary> <target-name>
 ```
 
-## Generate bindings
+For example:
+```bash
+just cargo_profile=release pb_device=PB632 deploy-usb inkview-slint-demo application.app
+```
+
+For more information take a look at [utils README.md](./utils/README.md)
+
+## Bindings generation
 
 See documentation for the `generate-bindings` just recipe.
+
+## New `inkview-rs` projects templating
+
+Setting up new projects that make use of `inkview-rs` with properly configured linking, building, and deployment from scratch can be quite tedious.
+Often, it would require pretty much the same preconfiguration: `devenv.nix` config, justfile with the basic build and deploy helper comands, etc.
+
+To simplify this repeated process, one can make use of the adjacent templating project [inkview-rs-templates](https://github.com/ihrfv/inkview-rs-templates).
+It only requires `cargo-generate` to be installed, and allows you to create preconfigured basic projects for vanilla `inkview-rs`, `inkview-eg`, and `inkview-slint`.
+
