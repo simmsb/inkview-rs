@@ -98,6 +98,20 @@ just cargo_profile=release pb_device=PB632 deploy-usb inkview-slint-demo applica
 
 For more information take a look at [utils README.md](./utils/README.md)
 
+## Running without a device
+
+Some PocketBook SDK archives ship a **host x86_64 build of `libinkview.so`** beside the ARM one, and
+since `inkview` resolves its library by name at runtime rather than linking it, a build for
+`x86_64-unknown-linux-gnu` against that copy runs the real app on a desktop, in an X11 window.
+
+[inkview-rs-emu](https://github.com/ihrfv/inkview-rs-emu) packages that up — it builds, stages and
+runs any inkview-rs project against the SDK's host library, headless or windowed, and can drive the
+app with tap/swipe/key input. It is a separate project; nothing in this repo depends on it.
+
+It is not a device: e-ink refresh behaviour is only real on hardware. For questions that need the
+firmware itself, that project also documents running PocketBook firmware under
+[pbemu](https://codeberg.org/datyoma/pbemu).
+
 ## Bindings generation
 
 See documentation for the `generate-bindings` just recipe.

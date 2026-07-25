@@ -71,17 +71,20 @@ impl slint::platform::Platform for Backend {
 
         let convert_evt = |evt| ink_evt_to_slint(scale_factor, evt);
 
-        slint::Window::set_size(
-            self.window.borrow().as_ref().unwrap().as_ref(),
-            slint::PhysicalSize::new(self.width as u32, self.height as u32)
-                .to_logical(scale_factor),
-        );
-
+        // The scale factor has to be announced before the size is set: `set_size`
+        // is resolved against the window's *current* scale, so sizing first makes
+        // slint record the logical size as the physical one and lay the UI out for
+        // a window of the wrong height.
         self.window
             .borrow()
             .as_ref()
             .unwrap()
             .dispatch_event(WindowEvent::ScaleFactorChanged { scale_factor });
+
+        slint::Window::set_size(
+            self.window.borrow().as_ref().unwrap().as_ref(),
+            slint::PhysicalSize::new(self.width as u32, self.height as u32),
+        );
 
         // bad naming, oops
         let mut fulfill_dynamic_updates_after: Option<Instant> = None;

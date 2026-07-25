@@ -1,4 +1,4 @@
-use crate::bindings::APPLICATION_ATTRIBUTE_APPLICATION_READER;
+use crate::bindings::{APPLICATION_ATTRIBUTE_APPLICATION_READER, PANEL_FLAGS_PANEL_DISABLED};
 use crate::error;
 use crate::{bindings::icanvas_s, bindings::Inkview};
 use core::ffi::c_int;
@@ -64,6 +64,12 @@ impl<'a> Screen<'a> {
         let fb = unsafe {
             let task_fb = iv.GetTaskFramebuffer(iv.GetCurrentTask());
             if task_fb.is_null() {
+                // Once the panel is active the global canvas starts
+                // `PanelHeightFBOffset()` rows into the framebuffer, so anything
+                // drawn lands that far down the screen and the last rows wrap
+                // around to the top. The app declared itself a reader just
+                // above, so take the panel down and own the whole screen.
+                iv.SetPanelType(PANEL_FLAGS_PANEL_DISABLED as c_int);
                 iv.GetCanvas().as_mut()
             } else {
                 task_fb.as_mut()
