@@ -1,4 +1,4 @@
-use crate::bindings::APPLICATION_ATTRIBUTE_APPLICATION_READER;
+use crate::bindings::{APPLICATION_ATTRIBUTE_APPLICATION_READER, PANEL_FLAGS_PANEL_NO_FB_OFFSET};
 use crate::error;
 use crate::{bindings::icanvas_s, bindings::Inkview};
 use core::ffi::c_int;
@@ -176,6 +176,9 @@ impl<'a, P> Screen<'a, P> {
     pub fn new(iv: &'a Inkview) -> Self {
         unsafe {
             iv.SetCurrentApplicationAttribute(APPLICATION_ATTRIBUTE_APPLICATION_READER, 1);
+        }
+        unsafe {
+            iv.SetPanelType(PANEL_FLAGS_PANEL_NO_FB_OFFSET as c_int);
         }
         // On the emulator the task framebuffer is null, so fall back to the global
         // canvas (GetCanvas) — the same `icanvas_s`, populated in both environments.
