@@ -63,10 +63,12 @@ prerequisites:
 build-app name:
     cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{name}} --no-default-features \
         --features={{cargo_sdk_feature}}
+    execstack -s "target/{{build_target / cargo_out_profile / name}}"
 
 build-example crate name:
     cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{crate}} --example {{name}} \
         --no-default-features --features={{cargo_sdk_feature}}
+    execstack -s "target/{{build_target / cargo_out_profile / 'examples' / name}}"
 
 [doc("""
 Transfer a built binary to the device via USB.
