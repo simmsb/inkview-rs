@@ -19,11 +19,12 @@ slint = { version = "1.17.1", default-features = false, features = ["compat-1-2"
 inkview = { path = "../inkview", version = "0.3.0", default-features = false}
 
 [features]
-default = ["sdk-6-10"]
+default = ["sdk-6-11"]
 sdk-5-19 = ["inkview/sdk-5-19"]
 sdk-6-5 = ["inkview/sdk-6-5"]
 sdk-6-8 = ["inkview/sdk-6-8"]
 sdk-6-10 = ["inkview/sdk-6-10"]
+sdk-6-11 = ["inkview/sdk-6-11"]
 
 [package.metadata.docs.rs]
 features = ["sdk-6-10"]

@@ -2,27 +2,33 @@
 
 # Cargo build profile.
 cargo_profile := "dev"
-# Pocketbook SDK version. Either "5.19", "6.5", "6.8", "6.10"
-pb_sdk_version := "6.10"
 # Pocketbook device identifier as it's folder name when connected with USB.
-# - Pocketbook Inkpad 4: "6678-3C5A"
+# - Pocketbook Inkpad 4: "PB743G"
 # - Pocketbook Touch Lux 3: "PB626"
-pb_device := "6678-3C5A"
+pb_device := "PB743G"
+# Pocketbook libc version
+# - Pocketbook Inkpad 4: "2.41"
+# - Pocketbook Touch Lux 3: "2.23"
+pb_libc_version := "2.41"
+# Build target triple for Pocketbook device
+pb_build_target := "armv7-unknown-linux-gnueabi"
+# Pocketbook SDK version. Either "5.19", "6.5", "6.8", "6.10", "6.11"
+pb_sdk_version := "6.11"
 # GDB server port, used for debugging.
 gdbserver_port := "10003"
 
 [private]
 pb_mount_root := if os() == "macos" { "/Volumes" } else { "/run/media/$USER" }
 [private]
-cargo_sdk_feature := "sdk-" + replace(pb_sdk_version, ".", "-")
-[private]
 sdk_bindings_filename := "bindings_" + replace(pb_sdk_version, ".", "_") + ".rs"
 [private]
-build_target := "armv7-unknown-linux-gnueabi"
+build_target := pb_build_target
 [private]
-zigbuild_target := "armv7-unknown-linux-gnueabi.2.23"
+zigbuild_target := pb_build_target + "." + pb_libc_version
 [private]
 cargo_out_profile := if cargo_profile == "dev" { "debug" } else { cargo_profile }
+[private]
+cargo_sdk_feature := "sdk-" + replace(pb_sdk_version, ".", "-")
 [private]
 pb_sdk_sysroot := if pb_sdk_version == "5.19" {
     absolute_path("pocketbook-sdks/SDK-B288-5.19/SDK-B288/usr/arm-obreey-linux-gnueabi/sysroot")
@@ -32,20 +38,19 @@ pb_sdk_sysroot := if pb_sdk_version == "5.19" {
     absolute_path("pocketbook-sdks/SDK-B288-6.8/SDK-B288/usr/arm-obreey-linux-gnueabi/sysroot")
 } else if pb_sdk_version == "6.10" {
     absolute_path("pocketbook-sdks/SDK-B288-6.10/SDK-B288-6.10/usr/arm-obreey-linux-gnueabi/sysroot")
+} else if pb_sdk_version == "6.11" {
+    absolute_path("pocketbook-sdks/SDK-RK3566-6.11/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot")
 } else {
-    error("SDK version must be one of: '5.19', '6.5', '6.8', '6.10'.")
+    error("SDK version must be one of: '5.19', '6.5', '6.8', '6.10', '6.11'.")
 }
+# Certain SDK versions need special clang arguments
 [private]
 bindgen_extra_clang_args := if pb_sdk_version == "5.19" {
     "--target=" + build_target + " --sysroot " + pb_sdk_sysroot + " -isystem" + pb_sdk_sysroot + "/usr/include/freetype2"
-} else if pb_sdk_version == "6.5" {
-    "--target=" + build_target + " --sysroot " + pb_sdk_sysroot
-} else if pb_sdk_version == "6.8" {
-    "--target=" + build_target + " --sysroot " + pb_sdk_sysroot
-} else if pb_sdk_version == "6.10" {
-    "--target=" + build_target + " --sysroot " + pb_sdk_sysroot
+} else if pb_sdk_version == "6.11" {
+    "--target=" + build_target + " --sysroot " + pb_sdk_sysroot + " -D__ARM_PCS_VFP"
 } else {
-    error("SDK version must be one of: '5.19', '6.5', '6.8', '6.10'.")
+    "--target=" + build_target + " --sysroot " + pb_sdk_sysroot
 }
 
 default:
@@ -58,10 +63,12 @@ prerequisites:
 build-app name:
     cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{name}} --no-default-features \
         --features={{cargo_sdk_feature}}
+    execstack -s "target/{{build_target / cargo_out_profile / name}}"
 
 build-example crate name:
     cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{crate}} --example {{name}} \
         --no-default-features --features={{cargo_sdk_feature}}
+    execstack -s "target/{{build_target / cargo_out_profile / 'examples' / name}}"
 
 [doc("""
 Transfer a built binary to the device via USB.
@@ -115,11 +122,14 @@ generate-bindings:
     set -euxo pipefail
     export BINDGEN_EXTRA_CLANG_ARGS="{{bindgen_extra_clang_args}}"
     inkview_h="{{pb_sdk_sysroot}}/usr/local/include/inkview.h"
-    # Injecting this into the header breaks generating bindings for SDK v6.10.
+
+    # Injecting this into the header breaks generating bindings for SDKs >= v6.10.
     # Manually enable this when needed.
-    inkview_h_tampered="$(mktemp)"
-    cp "${inkview_h}" "${inkview_h_tampered}"
-    printf "\nvoid do_partial_update(int x, int y, int w, int h, int flags0, int flags1);\n" >> "${inkview_h_tampered}"
+    #inkview_h_tampered="$(mktemp)"
+    #cp "${inkview_h}" "${inkview_h_tampered}"
+    #printf "\nvoid do_partial_update(int x, int y, int w, int h, int flags0, int flags1);\n" >> "${inkview_h_tampered}"
+    #inkview_h="${inkview_h_tampered}"
+
     bindgen \
         --dynamic-loading inkview \
         --no-layout-tests \
@@ -133,7 +143,8 @@ generate-bindings:
         --blocklist-type ".*pthread.*" \
         "${inkview_h}" \
         -o inkview/src/bindings/{{sdk_bindings_filename}}
-    rm "${inkview_h_tampered}"
+
+    #rm "${inkview_h_tampered}"
 
 [confirm]
 clean:

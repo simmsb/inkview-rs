@@ -25,6 +25,10 @@ pub use bindings_6_8::*;
 mod bindings_6_10;
 #[cfg(feature = "sdk-6-10")]
 pub use bindings_6_10::*;
+#[cfg(feature = "sdk-6-11")]
+mod bindings_6_11;
+#[cfg(feature = "sdk-6-11")]
+pub use bindings_6_11::*;
 
 pub use inkview as Inkview;
 
