@@ -1,0 +1,10 @@
+{
+    "rust-analyzer.cargo.features": [
+        "sdk-6-11",
+        "guillotine",
+    ],
+    "rust-analyzer.cargo.noDefaultFeatures": true,
+    "search.exclude": {
+        "**/pocketbook-sdks": true,
+    }
+}
