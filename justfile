@@ -2,6 +2,8 @@
 
 # Cargo build profile.
 cargo_profile := "dev"
+# Additional cargo features
+cargo_features := ""
 # Pocketbook device identifier as it's folder name when connected with USB.
 # - Pocketbook Inkpad 4: "PB743G"
 # - Pocketbook Touch Lux 3: "PB626"
@@ -62,12 +64,12 @@ prerequisites:
 
 build-app name:
     cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{name}} --no-default-features \
-        --features={{cargo_sdk_feature}}
+        --features="{{cargo_features}} {{cargo_sdk_feature}}"
     execstack -s "target/{{build_target / cargo_out_profile / name}}"
 
 build-example crate name:
     cargo zigbuild --target {{zigbuild_target}} --profile {{cargo_profile}} -p {{crate}} --example {{name}} \
-        --no-default-features --features={{cargo_sdk_feature}}
+        --no-default-features --features="{{cargo_features}} {{cargo_sdk_feature}}"
     execstack -s "target/{{build_target / cargo_out_profile / 'examples' / name}}"
 
 [doc("""

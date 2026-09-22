@@ -111,3 +111,6 @@ topo_order = false
 # Order of commits in each group/release within the changelog.
 # Allowed values: newest, oldest
 sort_commits = "newest"
+
+[patch.crates-io]
+guillotine = { git = "https://github.com/mempirate/guillotine", branch = "main" }
