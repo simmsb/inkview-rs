@@ -1,31 +1,42 @@
 [package]
+description = "embedded-graphics-core driver and guillotine UI library support for inkview-rs"
+edition = "2024"
 name = "inkview-eg"
 version = "0.3.0"
-edition = "2024"
-description = "embedded-graphics-core driver for inkview-rs"
 
-license = "MIT"
-keywords = ["inkview", "pocketbook", "eink"]
-repository = "https://github.com/simmsb/inkview-rs"
 authors = ["flxzt"]
+keywords = ["inkview", "pocketbook", "eink"]
+license = "MIT"
+repository = "https://github.com/simmsb/inkview-rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-inkview = { path = "../inkview", version = "0.3.0", default-features = false}
+embedded-graphics = { version = "0.8.2", optional = true }
 embedded-graphics-core = "0.4.1"
+guillotine = { version = "0.4.0", optional = true }
+inkview = { path = "../inkview", version = "0.3.0", default-features = false }
 
 [dev-dependencies]
-embedded-graphics = "0.8.2"
 anyhow = "1.0"
+embedded-graphics = "0.8.2"
 
 [features]
 default = ["sdk-6-11"]
+guillotine = ["dep:guillotine", "dep:embedded-graphics", "guillotine/flexbox"]
 sdk-5-19 = ["inkview/sdk-5-19"]
-sdk-6-5 = ["inkview/sdk-6-5"]
-sdk-6-8 = ["inkview/sdk-6-8"]
 sdk-6-10 = ["inkview/sdk-6-10"]
 sdk-6-11 = ["inkview/sdk-6-11"]
+sdk-6-5 = ["inkview/sdk-6-5"]
+sdk-6-8 = ["inkview/sdk-6-8"]
+
+[[example]]
+name = "shapes_and_text"
+required-features = []
+
+[[example]]
+name = "guillotine"
+required-features = ["guillotine"]
 
 [package.metadata.docs.rs]
 features = ["sdk-6-10"]
@@ -109,24 +120,24 @@ conventional_commits = true
 filter_unconventional = false
 # An array of regex based parsers to modify commit messages prior to further processing.
 commit_preprocessors = [
-  # Remove issue numbers.
-  { pattern = '\((\w+\s)?#([0-9]+)\)', replace = "" },
+    # Remove issue numbers.
+    { pattern = '\((\w+\s)?#([0-9]+)\)', replace = "" },
 ]
 # An array of regex based parsers for extracting data from the commit message.
 # Assigns commits to groups.
 # Optionally sets the commit's scope and can decide to exclude commits from further processing.
 commit_parsers = [
-  { message = "^[a|A]dd", group = "Added" },
-  { message = "^[s|S]upport", group = "Added" },
-  { message = "^[r|R]emove", group = "Removed" },
-  { message = "^.*: add", group = "Added" },
-  { message = "^.*: support", group = "Added" },
-  { message = "^.*: remove", group = "Removed" },
-  { message = "^.*: delete", group = "Removed" },
-  { message = "^test", group = "Fixed" },
-  { message = "^fix", group = "Fixed" },
-  { message = "^.*: fix", group = "Fixed" },
-  { message = "^.*", group = "Changed" },
+    { message = "^[a|A]dd", group = "Added" },
+    { message = "^[s|S]upport", group = "Added" },
+    { message = "^[r|R]emove", group = "Removed" },
+    { message = "^.*: add", group = "Added" },
+    { message = "^.*: support", group = "Added" },
+    { message = "^.*: remove", group = "Removed" },
+    { message = "^.*: delete", group = "Removed" },
+    { message = "^test", group = "Fixed" },
+    { message = "^fix", group = "Fixed" },
+    { message = "^.*: fix", group = "Fixed" },
+    { message = "^.*", group = "Changed" },
 ]
 # Exclude commits that are not matched by any commit parser.
 filter_commits = false
