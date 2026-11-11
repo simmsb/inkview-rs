@@ -101,6 +101,14 @@ pub enum WhichScreen<'a> {
     RGB24(Screen<'a, RGB24>),
 }
 
+/// Height of the framebuffer part that the application can draw to
+fn visible_height(iv: &Inkview, fb: &icanvas_s) -> usize {
+    // With the panel enabled, the framebuffer starts below the panel but still
+    // reports the full screen height: rows drawn past the visible part end up
+    // over the panel.
+    (fb.height - crate::panel_fb_offset(iv).max(0)) as usize
+}
+
 impl<'a> WhichScreen<'a> {
     pub fn new(iv: &'a Inkview) -> Self {
         unsafe {
@@ -129,7 +137,7 @@ impl<'a> WhichScreen<'a> {
         dbg!(dpi, scale);
 
         let width = fb.width as usize;
-        let height = fb.height as usize;
+        let height = visible_height(iv, fb);
         let stride = fb.scanline as usize;
         let buf = fb.addr;
 
